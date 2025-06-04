@@ -91,12 +91,15 @@ async function scrapeMatchdayList(pageUrl) {
           // Find the specific cells by data-stat attribute
           const dateCell = row.querySelector('[data-stat="date"]');
           const gameweekCell = row.querySelector('[data-stat="gameweek"]');
+          const matchdayUrlCell = row.querySelector('[data-stat="match_report"] a')
 
 
           // Ensure both required cells are found
           if (dateCell && gameweekCell) {
              const dateValue = dateCell.textContent.trim();
              const gameweekText = gameweekCell.textContent.trim();
+             let matchdayUrlHref = matchdayUrlCell ? matchdayUrlCell.getAttribute("href").trim() : null;
+             let matchdayUrl = matchdayUrlHref ? "https://fbref.com" + (matchdayUrlHref.startsWith("/") ? "" : "/") + matchdayUrlHref : null;
              let gameweekValue = parseInt(gameweekText, 10); // Convert gameweek to a number
 
              // Add validation in case parsing fails (though unlikely for gameweek)
@@ -108,7 +111,8 @@ async function scrapeMatchdayList(pageUrl) {
              // Push an object with both date and gameweek into the array
              matchdayEntries.push({
                 date: dateValue,
-                gameweek: gameweekValue
+                gameweek: gameweekValue,
+                matchdayUrl
              });
 
           } else {
