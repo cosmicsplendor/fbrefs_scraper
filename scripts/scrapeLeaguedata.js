@@ -1,27 +1,27 @@
-import { scrapeMatchDayStats, scrapeMatchList } from '../helpers';
-import fs from 'fs';
-import path from 'path';
+const { scrapeMatchDayStats, scrapeMatchList } = require('../helpers');
+const fs = require('fs');
+const path = require('path');
 
 const leagues = [
     {
         league: "Premier League",
-        seasonUrl: "https://fbref.com/en/comps/9/Premier-League-Stats"
+        seasonUrl: "https://fbref.com/en/comps/9/schedule/Premier-League-Scores-and-Fixtures"
     },
     {
         league: "La Liga",
-        seasonUrl: "https://fbref.com/en/comps/12/La-Liga-Stats"
+        seasonUrl: "https://fbref.com/en/comps/12/schedule/La-Liga-Scores-and-Fixtures"
     },
     {
         league: "Bundesliga",
-        seasonUrl: "https://fbref.com/en/comps/20/Bundesliga-Stats"
+        seasonUrl: "https://fbref.com/en/comps/20/schedule/Bundesliga-Scores-and-Fixtures"
     },
     {
         league: "Serie A",
-        seasonUrl: "https://fbref.com/en/comps/11/Serie-A-Stats"
+        seasonUrl: "https://fbref.com/en/comps/11/schedule/Serie-A-Scores-and-Fixtures"
     },
     {
         league: "Ligue 1",
-        seasonUrl: "https://fbref.com/en/comps/13/Ligue-1-Stats"
+        seasonUrl: "https://fbref.com/en/comps/13/schedule/Ligue-1-Scores-and-Fixtures"
     }
 ];
 
@@ -38,19 +38,35 @@ async function scrapeLeagueData() {
         // Get the matchday list for this league (this list covers the whole season)
         const matchDayList = await scrapeMatchList(league.seasonUrl);
 
+        // Check if we got any matches
+        if (matchDayList.length === 0) {
+            console.log(`No matches found for ${league.league}`);
+            continue;
+        }
+
+        console.log(`Found ${matchDayList.length} match entries for ${league.league}`);
+
         // Initialize an object to hold all data for this league, aggregated by gameweek
         const leagueData = {};
 
         // Process each matchday entry from the list
         for (const matchday of matchDayList) {
+            // Handle flexible property names from scrapeMatchList
+            const gameweek = matchday.gameweek || matchday.round || 'Unknown';
+            const date = matchday.date || 'Unknown';
+            const matchUrl = matchday.matchdayUrl || matchday.url;
+
             // Log using gameweek for clarity, though scraping by URL
-            console.log(`Scraping matchday stats for ${league.league}, Gameweek ${matchday.gameweek} (${matchday.date})...`);
+            console.log(`Scraping matchday stats for ${league.league}, Gameweek ${gameweek} (${date})...`);
+
+            // Skip if no URL available
+            if (!matchUrl) {
+                console.log(`No URL found for matchday entry, skipping...`);
+                continue;
+            }
 
             // Scrape the stats for this specific matchday URL
-            const matchDayStats = await scrapeMatchDayStats(matchday.matchdayUrl);
-
-            // Get the gameweek number
-            const gameweek = matchday.gameweek;
+            const matchDayStats = await scrapeMatchDayStats(matchUrl);
 
             // Aggregate data by gameweek
             if (!leagueData[gameweek]) {
