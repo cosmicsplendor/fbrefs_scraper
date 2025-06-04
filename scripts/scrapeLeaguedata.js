@@ -1,4 +1,4 @@
-import { scrapeMatchDayStats, scrapeMatchdayList } from '../helpers';
+import { scrapeMatchDayStats, scrapeMatchList } from '../helpers';
 import fs from 'fs';
 import path from 'path';
 
@@ -27,43 +27,50 @@ const leagues = [
 
 async function scrapeLeagueData() {
     const dataDir = path.join(__dirname, 'data');
+    // Ensure the 'data' directory exists
     if (!fs.existsSync(dataDir)) {
         fs.mkdirSync(dataDir, { recursive: true });
     }
+
     for (const league of leagues) {
         console.log(`Scraping matchday list for ${league.league}...`);
 
-        // Get the matchday list for this league
-        const matchDayList = await scrapeMatchdayList(league.seasonUrl);
+        // Get the matchday list for this league (this list covers the whole season)
+        const matchDayList = await scrapeMatchList(league.seasonUrl);
 
-        // Process each matchday
+        // Initialize an object to hold all data for this league, aggregated by gameweek
+        const leagueData = {};
+
+        // Process each matchday entry from the list
         for (const matchday of matchDayList) {
-            console.log(`Scraping matchday data for ${league.league} - ${matchday.matchday}...`);
-            const matchDayData = await scrapeMatchDayStats(matchday.matchdayUrl);
+            // Log using gameweek for clarity, though scraping by URL
+            console.log(`Scraping matchday stats for ${league.league}, Gameweek ${matchday.gameweek} (${matchday.date})...`);
 
-            // Organize data by date
-            const organizedData = {};
-            matchDayData.forEach(match => {
-                const date = match.date;
-                if (!organizedData[date]) {
-                    organizedData[date] = [];
-                }
-                organizedData[date].push(match);
-            });
+            // Scrape the stats for this specific matchday URL
+            const matchDayStats = await scrapeMatchDayStats(matchday.matchdayUrl);
 
-            // Save data to file
-            const leagueName = league.league.replace(/[^a-z0-9]/gi, '_'); // Sanitize league name for filename
-            const matchdayName = matchday.matchday.replace(/[^a-z0-9]/gi, '_'); // Sanitize matchday name
-            const filename = `${leagueName}_${matchdayName}.json`;
-            const filepath = path.join(__dirname, 'data', filename); // Assuming a 'data' directory
+            // Get the gameweek number
+            const gameweek = matchday.gameweek;
 
-            // Ensure the 'data' directory exists
+            // Aggregate data by gameweek
+            if (!leagueData[gameweek]) {
+                leagueData[gameweek] = [];
+            }
+            // Append all stats from this matchday to the corresponding gameweek array
+            leagueData[gameweek].push(...matchDayStats); // Use spread syntax to push individual match objects
 
-
-            fs.writeFileSync(filepath, JSON.stringify(organizedData, null, 2));
-
-            console.log(`Data for ${league.league} - ${matchday.matchday} saved to ${filepath}`);
+            console.log(`Aggregated ${matchDayStats.length} matches for Gameweek ${gameweek}. Total for gameweek ${gameweek}: ${leagueData[gameweek].length}`);
         }
+
+        // After processing all matchdays for the league, save the aggregated data
+        const leagueName = league.league.replace(/[^a-z0-9]/gi, '_'); // Sanitize league name for filename
+        const filename = `${leagueName}.json`; // Filename is just the league name
+        const filepath = path.join(dataDir, filename);
+
+        fs.writeFileSync(filepath, JSON.stringify(leagueData, null, 2));
+
+        console.log(`All data for ${league.league} (aggregated by gameweek) saved to ${filepath}`);
+        console.log('---'); // Separator for the next league
     }
 }
 
