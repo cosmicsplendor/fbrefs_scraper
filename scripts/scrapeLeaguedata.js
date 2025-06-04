@@ -2,6 +2,13 @@ const { scrapeMatchDayStats, scrapeMatchList } = require('../helpers');
 const fs = require('fs');
 const path = require('path');
 
+// Random delay function to avoid detection
+function randomDelay(min = 1000, max = 3000) {
+    const delay = Math.floor(Math.random() * (max - min + 1)) + min;
+    console.log(`Waiting ${delay}ms before next request...`);
+    return new Promise(resolve => setTimeout(resolve, delay));
+}
+
 const leagues = [
     {
         league: "Premier League",
@@ -35,6 +42,9 @@ async function scrapeLeagueData() {
     for (const league of leagues) {
         console.log(`Scraping matchday list for ${league.league}...`);
 
+        // Random delay before scraping each league
+        await randomDelay(2000, 5000);
+
         // Get the matchday list for this league (this list covers the whole season)
         const matchDayList = await scrapeMatchList(league.seasonUrl);
 
@@ -64,6 +74,9 @@ async function scrapeLeagueData() {
                 console.log(`No URL found for matchday entry, skipping...`);
                 continue;
             }
+
+            // Random delay before each matchday scrape
+            await randomDelay(1500, 4000);
 
             // Scrape the stats for this specific matchday URL
             const matchDayStats = await scrapeMatchDayStats(matchUrl);
