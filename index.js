@@ -1,11 +1,11 @@
-const { scrapeMatchDayList } = require("./helpers");
+const { scrapeMatchdayList } = require("./helpers");
 
 
 const testUrl = 'https://fbref.com/en/comps/9/schedule/Premier-League-Scores-and-Fixtures';
 
 async function runScrape() {
     try {
-        const matchStats = await scrapeMatchDayList(testUrl);
+        const matchStats = await scrapeMatchdayList(testUrl);
         console.log("\n--- Final Scraped Data ---");
         console.log(`Total player entries found: ${matchStats.length}`);
         // console.log(JSON.stringify(matchStats, null, 2)); // Log the data nicely
@@ -20,5 +20,4 @@ async function runScrape() {
     }
 }
 
-// Execute the example usage
 runScrape();

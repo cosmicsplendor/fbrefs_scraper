@@ -3,15 +3,17 @@ const getStealth = require("./getStealth"); // Assuming this helper exists
 
 // --- Scraper Function ---
 /**
- * Scrapes match dates from a FBRef page containing a schedule table.
- * Fetches the content, parses it, and extracts the 'date' from rows
- * within tables with class 'stats_table' and id containing 'sched'.
- * Returns an object containing an array of extracted dates and the original page URL.
+ * Scrapes match dates and gameweeks from a FBRef page containing a schedule table.
+ * Fetches the content, parses it, and extracts the 'date' and 'gameweek'
+ * from rows within tables with class 'stats_table' and id containing 'sched'.
+ * Returns an object containing an array of objects (each with date and gameweek)
+ * and the original page URL.
  * @param {string} pageUrl The URL of the FBRef page containing the schedule table.
- * @returns {Promise<Object>} A promise that resolves with an object { data: Array<string>, matchdayUrl: string }.
+ * @returns {Promise<Object>} A promise that resolves with an object { data: Array<Object>, matchdayUrl: string }.
+ *                             Each object in the data array will be { date: string, gameweek: number }.
  * @throws {Error} If fetching or parsing fails.
  */
-async function scrapeMatchdayList(pageUrl) { // Renamed function
+async function scrapeMatchdayList(pageUrl) {
   console.log(`scrapeMatchdayList: Function started for URL: ${pageUrl}`);
 
   let htmlContent;
@@ -36,7 +38,7 @@ async function scrapeMatchdayList(pageUrl) { // Renamed function
 
   // Use the document object from JSDOM
   const document = dom.window.document;
-  const extractedDates = []; // Array to hold only the date strings
+  const matchdayEntries = []; // Array to hold objects with date and gameweek
 
   // Select tables with class 'stats_table' and id containing 'sched'
   const tables = Array.from(document.querySelectorAll(".stats_table[id*='sched']"));
@@ -86,15 +88,33 @@ async function scrapeMatchdayList(pageUrl) { // Renamed function
             return; // Skip to the next row
           }
 
-          // Find the specific cell with data-stat="date"
-          const dateCell = row.querySelector('th[data-stat="date"], td[data-stat="date"]');
+          // Find the specific cells by data-stat attribute
+          const dateCell = row.querySelector('[data-stat="date"]');
+          const gameweekCell = row.querySelector('[data-stat="gameweek"]');
 
-          if (dateCell) {
+
+          // Ensure both required cells are found
+          if (dateCell && gameweekCell) {
              const dateValue = dateCell.textContent.trim();
-             // Push only the date string into the array
-             extractedDates.push(dateValue);
+             const gameweekText = gameweekCell.textContent.trim();
+             let gameweekValue = parseInt(gameweekText, 10); // Convert gameweek to a number
+
+             // Add validation in case parsing fails (though unlikely for gameweek)
+             if (isNaN(gameweekValue)) {
+                 console.warn(`scrapeMatchdayList: Table '${tableId}', Row #${rowIndex}: Could not parse gameweek '${gameweekText}' as a number. Skipping row data.`);
+                 return; // Skip this row if gameweek is not a valid number
+             }
+
+             // Push an object with both date and gameweek into the array
+             matchdayEntries.push({
+                date: dateValue,
+                gameweek: gameweekValue
+             });
+
           } else {
-             // console.log(`scrapeMatchdayList: Table '${tableId}', Row #${rowIndex}: No 'date' cell found. Skipping row data.`);
+             // console.log(`scrapeMatchdayList: Table '${tableId}', Row #${rowIndex}: Missing 'date' or 'gameweek' cell. Skipping row data.`);
+             // Optionally log which one is missing if needed for debugging
+             // console.log(`Missing date: ${!dateCell}, Missing gameweek: ${!gameweekCell}`);
           }
 
         } catch (rowError) {
@@ -113,14 +133,11 @@ async function scrapeMatchdayList(pageUrl) { // Renamed function
     }
   });
 
-  console.log(`scrapeMatchdayList: Function finished. Successfully collected ${extractedDates.length} dates.`);
-  // console.log(extractedDates); // Optional: Log the final array
+  console.log(`scrapeMatchdayList: Function finished. Successfully collected ${matchdayEntries.length} matchday entries.`);
+  // console.log(matchdayEntries); // Optional: Log the final array
 
   // 3. Return results in the specified format
-  return {
-    data: extractedDates, // Array of date strings
-    matchdayUrl: pageUrl // Return the original URL that was passed in
-  };
+  return matchdayEntries;
 }
 
 module.exports = scrapeMatchdayList;
