@@ -33,4 +33,5 @@ class RateLimiter {
         await new Promise(resolve => setTimeout(resolve, minDelay));
     }
 }
-export default RateLimiter
+
+module.exports =RateLimiter

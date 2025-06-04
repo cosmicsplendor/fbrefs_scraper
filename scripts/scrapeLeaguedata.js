@@ -1,7 +1,6 @@
-const { scrapeMatchDayStats, scrapeMatchList } = require('../helpers');
+const { scrapeMatchdayStats, scrapeMatchList, RateLimiter } = require('../helpers/index.js');
 const fs = require('fs');
 const path = require('path');
-
 // Create rate limiter instance
 const rateLimiter = new RateLimiter(10, 60000); // 10 requests per minute
 
@@ -81,7 +80,7 @@ async function scrapeLeagueData() {
             console.log(`Scraping matchday stats...`);
 
             // Scrape the stats for this specific matchday URL
-            const matchDayStats = await scrapeMatchDayStats(matchUrl);
+            const matchDayStats = await scrapeMatchdayStats(matchUrl);
 
             // Aggregate data by gameweek
             if (!leagueData[gameweek]) {
