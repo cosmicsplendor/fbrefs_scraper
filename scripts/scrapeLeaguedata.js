@@ -1,22 +1,23 @@
 const { scrapeMatchdayStats, scrapeMatchList, RateLimiter } = require('../helpers/index.js');
 const fs = require('fs');
 const path = require('path');
+
 // Create rate limiter instance
 const rateLimiter = new RateLimiter(10, 60000); // 10 requests per minute
 
 const leagues = [
-    {
-        league: "Premier League",
-        seasonUrl: "https://fbref.com/en/comps/9/schedule/Premier-League-Scores-and-Fixtures"
-    },
-    {
-        league: "La Liga",
-        seasonUrl: "https://fbref.com/en/comps/12/schedule/La-Liga-Scores-and-Fixtures"
-    },
-    {
-        league: "Bundesliga",
-        seasonUrl: "https://fbref.com/en/comps/20/schedule/Bundesliga-Scores-and-Fixtures"
-    },
+    // {
+    //     league: "Premier League",
+    //     seasonUrl: "https://fbref.com/en/comps/9/schedule/Premier-League-Scores-and-Fixtures"
+    // },
+    // {
+    //     league: "La Liga",
+    //     seasonUrl: "https://fbref.com/en/comps/12/schedule/La-Liga-Scores-and-Fixtures"
+    // },
+    // {
+    //     league: "Bundesliga",
+    //     seasonUrl: "https://fbref.com/en/comps/20/schedule/Bundesliga-Scores-and-Fixtures"
+    // },
     {
         league: "Serie A",
         seasonUrl: "https://fbref.com/en/comps/11/schedule/Serie-A-Scores-and-Fixtures"
@@ -34,18 +35,17 @@ async function scrapeLeagueData() {
         fs.mkdirSync(dataDir, { recursive: true });
     }
 
-    console.log('Starting scrape with rate limiting: max 10 requests per minute');
-    console.log('Expected minimum time between requests: ~6.5 seconds');
+    console.log('Starting scrape with optimized rate limiting: max 10 requests per minute');
+    console.log('Rate limiter now accounts for actual request duration');
 
     for (const league of leagues) {
         console.log(`\n=== Scraping ${league.league} ===`);
 
-        // Wait for rate limiter before making league request
-        await rateLimiter.waitForSlot();
+        // Use the new executeWithRateLimit method that accounts for request duration
         console.log(`Scraping matchday list for ${league.league}...`);
-
-        // Get the matchday list for this league (this list covers the whole season)
-        const matchDayList = await scrapeMatchList(league.seasonUrl);
+        const matchDayList = await rateLimiter.executeWithRateLimit(async () => {
+            return await scrapeMatchList(league.seasonUrl);
+        });
 
         // Check if we got any matches
         if (matchDayList.length === 0) {
@@ -75,12 +75,11 @@ async function scrapeLeagueData() {
                 continue;
             }
 
-            // Wait for rate limiter before making matchday request
-            await rateLimiter.waitForSlot();
+            // Use executeWithRateLimit to properly account for request duration
             console.log(`Scraping matchday stats...`);
-
-            // Scrape the stats for this specific matchday URL
-            const matchDayStats = await scrapeMatchdayStats(matchUrl);
+            const matchDayStats = await rateLimiter.executeWithRateLimit(async () => {
+                return await scrapeMatchdayStats(matchUrl);
+            });
 
             // Aggregate data by gameweek
             if (!leagueData[gameweek]) {
