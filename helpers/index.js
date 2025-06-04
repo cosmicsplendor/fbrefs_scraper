@@ -1,5 +1,7 @@
-const scrapeMatchDayStats = require("./scrapeMatchdayStats")
+const scrapeMatchdayStats = require("./scrapeMatchdayStats")
+const scrapeMatchDayList = require("./scrapeMatchdayList")
 
 module.exports = {
-    scrapeMatchDayStats
+    scrapeMatchdayStats,
+    scrapeMatchdayList
 }

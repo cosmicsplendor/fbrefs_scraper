@@ -8,16 +8,16 @@ const getStealth = require("./getStealth")
  * @returns {Promise<Array<Object>>} A promise that resolves with a merged array of player data objects.
  * @throws {Error} If fetching or parsing fails.
  */
-async function scrapeMatchDayStats(matchUrl) {
-  console.log(`scrapeMatchDayStats: Function started for URL: ${matchUrl}`);
+async function scrapeMatchdayStats(matchUrl) {
+  console.log(`scrapeMatchdayStats: Function started for URL: ${matchUrl}`);
 
   let htmlContent;
   try {
     // 1. Get the string content via helper that uses axios
     htmlContent = await getStealth(matchUrl);
-    console.log(`scrapeMatchDayStats: Successfully fetched HTML content.`);
+    console.log(`scrapeMatchdayStats: Successfully fetched HTML content.`);
   } catch (fetchError) {
-    console.error(`scrapeMatchDayStats: Failed to fetch HTML content for ${matchUrl}:`, fetchError);
+    console.error(`scrapeMatchdayStats: Failed to fetch HTML content for ${matchUrl}:`, fetchError);
     throw new Error(`Failed to fetch page content: ${fetchError.message}`);
   }
 
@@ -25,9 +25,9 @@ async function scrapeMatchDayStats(matchUrl) {
   let dom;
   try {
       dom = new JSDOM(htmlContent);
-      console.log(`scrapeMatchDayStats: Successfully parsed HTML content.`);
+      console.log(`scrapeMatchdayStats: Successfully parsed HTML content.`);
   } catch (parseError) {
-      console.error(`scrapeMatchDayStats: Failed to parse HTML content for ${matchUrl}:`, parseError);
+      console.error(`scrapeMatchdayStats: Failed to parse HTML content for ${matchUrl}:`, parseError);
       throw new Error(`Failed to parse HTML: ${parseError.message}`);
   }
 
@@ -38,19 +38,19 @@ async function scrapeMatchDayStats(matchUrl) {
   // Select tables with class 'stats_table' and id containing 'summary'
   const tables = Array.from(document.querySelectorAll(".stats_table[id*='summary']"));
 
-  console.log(`scrapeMatchDayStats: Found ${tables.length} tables with class '.stats_table' and ID containing 'summary'.`);
+  console.log(`scrapeMatchdayStats: Found ${tables.length} tables with class '.stats_table' and ID containing 'summary'.`);
 
   if (tables.length === 0) {
-    console.warn("scrapeMatchDayStats: No relevant tables found on the page. Returning empty array.");
+    console.warn("scrapeMatchdayStats: No relevant tables found on the page. Returning empty array.");
     return []; // Return empty array if no relevant tables are found
   }
 
   tables.forEach((table, tableIndex) => {
     const tableId = table.id;
-    console.log(`scrapeMatchDayStats: Processing table #${tableIndex + 1}/${tables.length}, ID: '${tableId || 'N/A'}'.`);
+    console.log(`scrapeMatchdayStats: Processing table #${tableIndex + 1}/${tables.length}, ID: '${tableId || 'N/A'}'.`);
 
     if (!tableId) {
-      console.warn(`scrapeMatchDayStats: Table #${tableIndex} has no ID. Skipping.`);
+      console.warn(`scrapeMatchdayStats: Table #${tableIndex} has no ID. Skipping.`);
       return; // Skip to the next table in the forEach
     }
 
@@ -58,24 +58,24 @@ async function scrapeMatchDayStats(matchUrl) {
       const tbody = table.querySelector("tbody");
 
       if (!tbody) {
-        console.warn(`scrapeMatchDayStats: Table '${tableId}' does not have a <tbody> element. Skipping rows for this table.`);
+        console.warn(`scrapeMatchdayStats: Table '${tableId}' does not have a <tbody> element. Skipping rows for this table.`);
         return; // Skip to the next table in the forEach
       }
 
       // Get only direct children <tr> elements of the <tbody>
       const rows = tbody.querySelectorAll(":scope > tr");
-      console.log(`scrapeMatchDayStats: Table '${tableId}': found ${rows.length} potential data rows within <tbody>.`);
+      console.log(`scrapeMatchdayStats: Table '${tableId}': found ${rows.length} potential data rows within <tbody>.`);
 
       rows.forEach((row, rowIndex) => {
         try {
           // Skip rows that are likely headers or spacers
           if (row.classList.contains("spacer") || row.classList.contains("thead") || row.classList.contains("partial_table_thead")) {
-            // console.log(`scrapeMatchDayStats: Table '${tableId}', Row #${rowIndex}: Skipping spacer/header row.`);
+            // console.log(`scrapeMatchdayStats: Table '${tableId}', Row #${rowIndex}: Skipping spacer/header row.`);
             return; // Skip to the next row
           }
           // Skip if row only contains <th> elements (likely a header row within tbody)
           if (row.querySelectorAll("th").length === row.children.length && row.querySelectorAll("td").length === 0) {
-            // console.log(`scrapeMatchDayStats: Table '${tableId}', Row #${rowIndex}: Skipping potential header row (all th).`);
+            // console.log(`scrapeMatchdayStats: Table '${tableId}', Row #${rowIndex}: Skipping potential header row (all th).`);
             return; // Skip to the next row
           }
 
@@ -83,7 +83,7 @@ async function scrapeMatchDayStats(matchUrl) {
           const cells = row.querySelectorAll("th[data-stat], td[data-stat]");
 
           if (cells.length === 0) {
-            // console.log(`scrapeMatchDayStats: Table '${tableId}', Row #${rowIndex}: Skipping row with no data-stat cells.`);
+            // console.log(`scrapeMatchdayStats: Table '${tableId}', Row #${rowIndex}: Skipping row with no data-stat cells.`);
             return; // Skip to the next row
           }
 
@@ -136,29 +136,29 @@ async function scrapeMatchDayStats(matchUrl) {
           if (Object.keys(playerData).length > 0) {
             mergedStats.push(playerData);
           } else {
-             // console.log(`scrapeMatchDayStats: Table '${tableId}', Row #${rowIndex}: Generated empty playerData object. Skipping.`);
+             // console.log(`scrapeMatchdayStats: Table '${tableId}', Row #${rowIndex}: Generated empty playerData object. Skipping.`);
           }
         } catch (rowError) {
-          console.error(`scrapeMatchDayStats: Error processing row #${rowIndex} in table '${tableId}':`, rowError);
-          console.error(`scrapeMatchDayStats: Problematic row HTML (first 200 chars):`, row.outerHTML.substring(0, 200) + "...");
+          console.error(`scrapeMatchdayStats: Error processing row #${rowIndex} in table '${tableId}':`, rowError);
+          console.error(`scrapeMatchdayStats: Problematic row HTML (first 200 chars):`, row.outerHTML.substring(0, 200) + "...");
           // Continue to the next row
         }
       });
 
-      console.log(`scrapeMatchDayStats: Table '${tableId}': Finished processing rows.`);
+      console.log(`scrapeMatchdayStats: Table '${tableId}': Finished processing rows.`);
 
     } catch (tableError) {
-      console.error(`scrapeMatchDayStats: Error processing table '${tableId}':`, tableError);
-      console.error(`scrapeMatchDayStats: Problematic table HTML (first 500 chars of outerHTML):`, table.outerHTML.substring(0, 500) + "...");
+      console.error(`scrapeMatchdayStats: Error processing table '${tableId}':`, tableError);
+      console.error(`scrapeMatchdayStats: Problematic table HTML (first 500 chars of outerHTML):`, table.outerHTML.substring(0, 500) + "...");
       // Continue to the next table
     }
   });
 
-  console.log(`scrapeMatchDayStats: Function finished. Successfully collected ${mergedStats.length} player entries.`);
+  console.log(`scrapeMatchdayStats: Function finished. Successfully collected ${mergedStats.length} player entries.`);
   // console.log(mergedStats); // Optional: Log the final array
 
   // 3. Return results
   return mergedStats;
 }
 
-module.exports = scrapeMatchDayStats
+module.exports = scrapeMatchdayStats

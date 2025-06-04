@@ -1,11 +1,11 @@
-const { scrapeMatchDayStats } = require("./helpers");
+const { scrapeMatchDayList } = require("./helpers");
 
 
-const testUrl = 'https://fbref.com/en/matches/cc5b4244/Manchester-United-Fulham-August-16-2024-Premier-League';
+const testUrl = 'https://fbref.com/en/comps/9/schedule/Premier-League-Scores-and-Fixtures';
 
 async function runScrape() {
     try {
-        const matchStats = await scrapeMatchDayStats(testUrl);
+        const matchStats = await scrapeMatchDayList(testUrl);
         console.log("\n--- Final Scraped Data ---");
         console.log(`Total player entries found: ${matchStats.length}`);
         // console.log(JSON.stringify(matchStats, null, 2)); // Log the data nicely
