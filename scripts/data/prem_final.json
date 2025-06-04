@@ -1,0 +1,2016 @@
+[
+  {
+    "date": "MD1",
+    "data": [
+      {
+        "name": "Mohamed Salah",
+        "value": 1
+      },
+      {
+        "name": "Erling Haaland",
+        "value": 1
+      },
+      {
+        "name": "Chris Wood",
+        "value": 1
+      },
+      {
+        "name": "Bryan Mbeumo",
+        "value": 1
+      },
+      {
+        "name": "Yoane Wissa",
+        "value": 1
+      },
+      {
+        "name": "Antoine Semenyo",
+        "value": 1
+      },
+      {
+        "name": "Danny Welbeck",
+        "value": 1
+      },
+      {
+        "name": "Kaoru Mitoma",
+        "value": 1
+      },
+      {
+        "name": "Kai Havertz",
+        "value": 1
+      },
+      {
+        "name": "Jamie Vardy",
+        "value": 1
+      },
+      {
+        "name": "Jáder Durán",
+        "value": 1
+      },
+      {
+        "name": "Diogo Jota",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "date": "MD2",
+    "data": [
+      {
+        "name": "Erling Haaland",
+        "value": 4
+      },
+      {
+        "name": "Noni Madueke",
+        "value": 3
+      },
+      {
+        "name": "Mohamed Salah",
+        "value": 2
+      },
+      {
+        "name": "Danny Welbeck",
+        "value": 2
+      },
+      {
+        "name": "Son Heung-min",
+        "value": 2
+      },
+      {
+        "name": "Chris Wood",
+        "value": 1
+      },
+      {
+        "name": "Bryan Mbeumo",
+        "value": 1
+      },
+      {
+        "name": "Yoane Wissa",
+        "value": 1
+      },
+      {
+        "name": "Matheus Cunha",
+        "value": 1
+      },
+      {
+        "name": "Cole Palmer",
+        "value": 1
+      },
+      {
+        "name": "Jørgen Strand Larsen",
+        "value": 1
+      },
+      {
+        "name": "Jarrod Bowen",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "date": "MD3",
+    "data": [
+      {
+        "name": "Erling Haaland",
+        "value": 7
+      },
+      {
+        "name": "Mohamed Salah",
+        "value": 3
+      },
+      {
+        "name": "Bryan Mbeumo",
+        "value": 3
+      },
+      {
+        "name": "Luis Díaz",
+        "value": 3
+      },
+      {
+        "name": "Noni Madueke",
+        "value": 3
+      },
+      {
+        "name": "Chris Wood",
+        "value": 2
+      },
+      {
+        "name": "Yoane Wissa",
+        "value": 2
+      },
+      {
+        "name": "Antoine Semenyo",
+        "value": 2
+      },
+      {
+        "name": "Danny Welbeck",
+        "value": 2
+      },
+      {
+        "name": "João Pedro",
+        "value": 2
+      },
+      {
+        "name": "Nicolas Jackson",
+        "value": 2
+      },
+      {
+        "name": "Kai Havertz",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "date": "MD4",
+    "data": [
+      {
+        "name": "Erling Haaland",
+        "value": 9
+      },
+      {
+        "name": "Mohamed Salah",
+        "value": 3
+      },
+      {
+        "name": "Bryan Mbeumo",
+        "value": 3
+      },
+      {
+        "name": "Yoane Wissa",
+        "value": 3
+      },
+      {
+        "name": "Luis Díaz",
+        "value": 3
+      },
+      {
+        "name": "Jáder Durán",
+        "value": 3
+      },
+      {
+        "name": "Noni Madueke",
+        "value": 3
+      },
+      {
+        "name": "Chris Wood",
+        "value": 2
+      },
+      {
+        "name": "Ollie Watkins",
+        "value": 2
+      },
+      {
+        "name": "Jean-Philippe Mateta",
+        "value": 2
+      },
+      {
+        "name": "Antoine Semenyo",
+        "value": 2
+      },
+      {
+        "name": "Danny Welbeck",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "date": "MD5",
+    "data": [
+      {
+        "name": "Erling Haaland",
+        "value": 10
+      },
+      {
+        "name": "Luis Díaz",
+        "value": 5
+      },
+      {
+        "name": "Bryan Mbeumo",
+        "value": 4
+      },
+      {
+        "name": "Nicolas Jackson",
+        "value": 4
+      },
+      {
+        "name": "Jáder Durán",
+        "value": 4
+      },
+      {
+        "name": "Mohamed Salah",
+        "value": 3
+      },
+      {
+        "name": "Chris Wood",
+        "value": 3
+      },
+      {
+        "name": "Yoane Wissa",
+        "value": 3
+      },
+      {
+        "name": "Ollie Watkins",
+        "value": 3
+      },
+      {
+        "name": "Danny Welbeck",
+        "value": 3
+      },
+      {
+        "name": "Harvey Barnes",
+        "value": 3
+      },
+      {
+        "name": "Noni Madueke",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "date": "MD6",
+    "data": [
+      {
+        "name": "Erling Haaland",
+        "value": 10
+      },
+      {
+        "name": "Cole Palmer",
+        "value": 6
+      },
+      {
+        "name": "Bryan Mbeumo",
+        "value": 5
+      },
+      {
+        "name": "Luis Díaz",
+        "value": 5
+      },
+      {
+        "name": "Mohamed Salah",
+        "value": 4
+      },
+      {
+        "name": "Ollie Watkins",
+        "value": 4
+      },
+      {
+        "name": "Nicolas Jackson",
+        "value": 4
+      },
+      {
+        "name": "Jáder Durán",
+        "value": 4
+      },
+      {
+        "name": "Chris Wood",
+        "value": 3
+      },
+      {
+        "name": "Yoane Wissa",
+        "value": 3
+      },
+      {
+        "name": "Liam Delap",
+        "value": 3
+      },
+      {
+        "name": "Raúl Jiménez",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "date": "MD7",
+    "data": [
+      {
+        "name": "Erling Haaland",
+        "value": 10
+      },
+      {
+        "name": "Bryan Mbeumo",
+        "value": 6
+      },
+      {
+        "name": "Cole Palmer",
+        "value": 6
+      },
+      {
+        "name": "Luis Díaz",
+        "value": 5
+      },
+      {
+        "name": "Mohamed Salah",
+        "value": 4
+      },
+      {
+        "name": "Chris Wood",
+        "value": 4
+      },
+      {
+        "name": "Ollie Watkins",
+        "value": 4
+      },
+      {
+        "name": "Liam Delap",
+        "value": 4
+      },
+      {
+        "name": "Danny Welbeck",
+        "value": 4
+      },
+      {
+        "name": "Nicolas Jackson",
+        "value": 4
+      },
+      {
+        "name": "Kai Havertz",
+        "value": 4
+      },
+      {
+        "name": "Jáder Durán",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "date": "MD8",
+    "data": [
+      {
+        "name": "Erling Haaland",
+        "value": 10
+      },
+      {
+        "name": "Bryan Mbeumo",
+        "value": 6
+      },
+      {
+        "name": "Cole Palmer",
+        "value": 6
+      },
+      {
+        "name": "Mohamed Salah",
+        "value": 5
+      },
+      {
+        "name": "Chris Wood",
+        "value": 5
+      },
+      {
+        "name": "Ollie Watkins",
+        "value": 5
+      },
+      {
+        "name": "Luis Díaz",
+        "value": 5
+      },
+      {
+        "name": "Danny Welbeck",
+        "value": 5
+      },
+      {
+        "name": "Nicolas Jackson",
+        "value": 5
+      },
+      {
+        "name": "Liam Delap",
+        "value": 4
+      },
+      {
+        "name": "Raúl Jiménez",
+        "value": 4
+      },
+      {
+        "name": "Kai Havertz",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "date": "MD9",
+    "data": [
+      {
+        "name": "Erling Haaland",
+        "value": 11
+      },
+      {
+        "name": "Bryan Mbeumo",
+        "value": 8
+      },
+      {
+        "name": "Chris Wood",
+        "value": 7
+      },
+      {
+        "name": "Cole Palmer",
+        "value": 7
+      },
+      {
+        "name": "Mohamed Salah",
+        "value": 6
+      },
+      {
+        "name": "Danny Welbeck",
+        "value": 6
+      },
+      {
+        "name": "Nicolas Jackson",
+        "value": 6
+      },
+      {
+        "name": "Yoane Wissa",
+        "value": 5
+      },
+      {
+        "name": "Ollie Watkins",
+        "value": 5
+      },
+      {
+        "name": "Luis Díaz",
+        "value": 5
+      },
+      {
+        "name": "Liam Delap",
+        "value": 5
+      },
+      {
+        "name": "Matheus Cunha",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "date": "MD10",
+    "data": [
+      {
+        "name": "Erling Haaland",
+        "value": 11
+      },
+      {
+        "name": "Chris Wood",
+        "value": 8
+      },
+      {
+        "name": "Bryan Mbeumo",
+        "value": 8
+      },
+      {
+        "name": "Mohamed Salah",
+        "value": 7
+      },
+      {
+        "name": "Cole Palmer",
+        "value": 7
+      },
+      {
+        "name": "Danny Welbeck",
+        "value": 6
+      },
+      {
+        "name": "Nicolas Jackson",
+        "value": 6
+      },
+      {
+        "name": "Yoane Wissa",
+        "value": 5
+      },
+      {
+        "name": "Ollie Watkins",
+        "value": 5
+      },
+      {
+        "name": "Luis Díaz",
+        "value": 5
+      },
+      {
+        "name": "Liam Delap",
+        "value": 5
+      },
+      {
+        "name": "Matheus Cunha",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "date": "MD11",
+    "data": [
+      {
+        "name": "Erling Haaland",
+        "value": 12
+      },
+      {
+        "name": "Mohamed Salah",
+        "value": 8
+      },
+      {
+        "name": "Chris Wood",
+        "value": 8
+      },
+      {
+        "name": "Bryan Mbeumo",
+        "value": 8
+      },
+      {
+        "name": "Yoane Wissa",
+        "value": 7
+      },
+      {
+        "name": "Cole Palmer",
+        "value": 7
+      },
+      {
+        "name": "Liam Delap",
+        "value": 6
+      },
+      {
+        "name": "Danny Welbeck",
+        "value": 6
+      },
+      {
+        "name": "Nicolas Jackson",
+        "value": 6
+      },
+      {
+        "name": "Ollie Watkins",
+        "value": 5
+      },
+      {
+        "name": "Matheus Cunha",
+        "value": 5
+      },
+      {
+        "name": "Luis Díaz",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "date": "MD12",
+    "data": [
+      {
+        "name": "Erling Haaland",
+        "value": 12
+      },
+      {
+        "name": "Mohamed Salah",
+        "value": 10
+      },
+      {
+        "name": "Chris Wood",
+        "value": 8
+      },
+      {
+        "name": "Bryan Mbeumo",
+        "value": 8
+      },
+      {
+        "name": "Yoane Wissa",
+        "value": 7
+      },
+      {
+        "name": "Matheus Cunha",
+        "value": 7
+      },
+      {
+        "name": "Cole Palmer",
+        "value": 7
+      },
+      {
+        "name": "Nicolas Jackson",
+        "value": 7
+      },
+      {
+        "name": "Ollie Watkins",
+        "value": 6
+      },
+      {
+        "name": "Liam Delap",
+        "value": 6
+      },
+      {
+        "name": "Danny Welbeck",
+        "value": 6
+      },
+      {
+        "name": "Luis Díaz",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "date": "MD13",
+    "data": [
+      {
+        "name": "Erling Haaland",
+        "value": 12
+      },
+      {
+        "name": "Mohamed Salah",
+        "value": 11
+      },
+      {
+        "name": "Chris Wood",
+        "value": 9
+      },
+      {
+        "name": "Bryan Mbeumo",
+        "value": 8
+      },
+      {
+        "name": "Yoane Wissa",
+        "value": 8
+      },
+      {
+        "name": "Cole Palmer",
+        "value": 8
+      },
+      {
+        "name": "Nicolas Jackson",
+        "value": 8
+      },
+      {
+        "name": "Matheus Cunha",
+        "value": 7
+      },
+      {
+        "name": "Ollie Watkins",
+        "value": 6
+      },
+      {
+        "name": "Jørgen Strand Larsen",
+        "value": 6
+      },
+      {
+        "name": "Liam Delap",
+        "value": 6
+      },
+      {
+        "name": "Brennan Johnson",
+        "value": 6
+      }
+    ]
+  },
+  {
+    "date": "MD14",
+    "data": [
+      {
+        "name": "Mohamed Salah",
+        "value": 13
+      },
+      {
+        "name": "Erling Haaland",
+        "value": 12
+      },
+      {
+        "name": "Chris Wood",
+        "value": 9
+      },
+      {
+        "name": "Cole Palmer",
+        "value": 9
+      },
+      {
+        "name": "Bryan Mbeumo",
+        "value": 8
+      },
+      {
+        "name": "Yoane Wissa",
+        "value": 8
+      },
+      {
+        "name": "Nicolas Jackson",
+        "value": 8
+      },
+      {
+        "name": "Ollie Watkins",
+        "value": 7
+      },
+      {
+        "name": "Matheus Cunha",
+        "value": 7
+      },
+      {
+        "name": "Jørgen Strand Larsen",
+        "value": 6
+      },
+      {
+        "name": "Liam Delap",
+        "value": 6
+      },
+      {
+        "name": "Brennan Johnson",
+        "value": 6
+      }
+    ]
+  },
+  {
+    "date": "MD15",
+    "data": [
+      {
+        "name": "Mohamed Salah",
+        "value": 14
+      },
+      {
+        "name": "Erling Haaland",
+        "value": 13
+      },
+      {
+        "name": "Cole Palmer",
+        "value": 11
+      },
+      {
+        "name": "Chris Wood",
+        "value": 10
+      },
+      {
+        "name": "Bryan Mbeumo",
+        "value": 9
+      },
+      {
+        "name": "Yoane Wissa",
+        "value": 9
+      },
+      {
+        "name": "Nicolas Jackson",
+        "value": 8
+      },
+      {
+        "name": "Ollie Watkins",
+        "value": 7
+      },
+      {
+        "name": "Matheus Cunha",
+        "value": 7
+      },
+      {
+        "name": "Alexander Isak",
+        "value": 6
+      },
+      {
+        "name": "Jørgen Strand Larsen",
+        "value": 6
+      },
+      {
+        "name": "Liam Delap",
+        "value": 6
+      }
+    ]
+  },
+  {
+    "date": "MD16",
+    "data": [
+      {
+        "name": "Mohamed Salah",
+        "value": 14
+      },
+      {
+        "name": "Erling Haaland",
+        "value": 13
+      },
+      {
+        "name": "Cole Palmer",
+        "value": 11
+      },
+      {
+        "name": "Chris Wood",
+        "value": 10
+      },
+      {
+        "name": "Bryan Mbeumo",
+        "value": 10
+      },
+      {
+        "name": "Yoane Wissa",
+        "value": 9
+      },
+      {
+        "name": "Nicolas Jackson",
+        "value": 9
+      },
+      {
+        "name": "Matheus Cunha",
+        "value": 8
+      },
+      {
+        "name": "Alexander Isak",
+        "value": 7
+      },
+      {
+        "name": "Ollie Watkins",
+        "value": 7
+      },
+      {
+        "name": "James Maddison",
+        "value": 7
+      },
+      {
+        "name": "Jørgen Strand Larsen",
+        "value": 6
+      }
+    ]
+  },
+  {
+    "date": "MD17",
+    "data": [
+      {
+        "name": "Mohamed Salah",
+        "value": 16
+      },
+      {
+        "name": "Erling Haaland",
+        "value": 13
+      },
+      {
+        "name": "Cole Palmer",
+        "value": 11
+      },
+      {
+        "name": "Alexander Isak",
+        "value": 10
+      },
+      {
+        "name": "Chris Wood",
+        "value": 10
+      },
+      {
+        "name": "Bryan Mbeumo",
+        "value": 10
+      },
+      {
+        "name": "Yoane Wissa",
+        "value": 9
+      },
+      {
+        "name": "Matheus Cunha",
+        "value": 9
+      },
+      {
+        "name": "Nicolas Jackson",
+        "value": 9
+      },
+      {
+        "name": "James Maddison",
+        "value": 8
+      },
+      {
+        "name": "Ollie Watkins",
+        "value": 7
+      },
+      {
+        "name": "Luis Díaz",
+        "value": 7
+      }
+    ]
+  },
+  {
+    "date": "MD18",
+    "data": [
+      {
+        "name": "Mohamed Salah",
+        "value": 17
+      },
+      {
+        "name": "Erling Haaland",
+        "value": 13
+      },
+      {
+        "name": "Cole Palmer",
+        "value": 12
+      },
+      {
+        "name": "Alexander Isak",
+        "value": 11
+      },
+      {
+        "name": "Chris Wood",
+        "value": 10
+      },
+      {
+        "name": "Bryan Mbeumo",
+        "value": 10
+      },
+      {
+        "name": "Matheus Cunha",
+        "value": 10
+      },
+      {
+        "name": "Yoane Wissa",
+        "value": 9
+      },
+      {
+        "name": "Nicolas Jackson",
+        "value": 9
+      },
+      {
+        "name": "James Maddison",
+        "value": 8
+      },
+      {
+        "name": "Ollie Watkins",
+        "value": 7
+      },
+      {
+        "name": "Luis Díaz",
+        "value": 7
+      }
+    ]
+  },
+  {
+    "date": "MD19",
+    "data": [
+      {
+        "name": "Mohamed Salah",
+        "value": 18
+      },
+      {
+        "name": "Erling Haaland",
+        "value": 14
+      },
+      {
+        "name": "Alexander Isak",
+        "value": 12
+      },
+      {
+        "name": "Cole Palmer",
+        "value": 12
+      },
+      {
+        "name": "Chris Wood",
+        "value": 11
+      },
+      {
+        "name": "Bryan Mbeumo",
+        "value": 11
+      },
+      {
+        "name": "Matheus Cunha",
+        "value": 10
+      },
+      {
+        "name": "Yoane Wissa",
+        "value": 9
+      },
+      {
+        "name": "Nicolas Jackson",
+        "value": 9
+      },
+      {
+        "name": "Ollie Watkins",
+        "value": 8
+      },
+      {
+        "name": "Luis Díaz",
+        "value": 8
+      },
+      {
+        "name": "James Maddison",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "date": "MD20",
+    "data": [
+      {
+        "name": "Mohamed Salah",
+        "value": 19
+      },
+      {
+        "name": "Erling Haaland",
+        "value": 16
+      },
+      {
+        "name": "Alexander Isak",
+        "value": 13
+      },
+      {
+        "name": "Bryan Mbeumo",
+        "value": 13
+      },
+      {
+        "name": "Cole Palmer",
+        "value": 13
+      },
+      {
+        "name": "Chris Wood",
+        "value": 12
+      },
+      {
+        "name": "Yoane Wissa",
+        "value": 10
+      },
+      {
+        "name": "Matheus Cunha",
+        "value": 10
+      },
+      {
+        "name": "Nicolas Jackson",
+        "value": 9
+      },
+      {
+        "name": "Ollie Watkins",
+        "value": 8
+      },
+      {
+        "name": "Luis Díaz",
+        "value": 8
+      },
+      {
+        "name": "Liam Delap",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "date": "MD21",
+    "data": [
+      {
+        "name": "Mohamed Salah",
+        "value": 19
+      },
+      {
+        "name": "Erling Haaland",
+        "value": 16
+      },
+      {
+        "name": "Alexander Isak",
+        "value": 15
+      },
+      {
+        "name": "Cole Palmer",
+        "value": 14
+      },
+      {
+        "name": "Chris Wood",
+        "value": 13
+      },
+      {
+        "name": "Bryan Mbeumo",
+        "value": 13
+      },
+      {
+        "name": "Yoane Wissa",
+        "value": 11
+      },
+      {
+        "name": "Matheus Cunha",
+        "value": 10
+      },
+      {
+        "name": "Ollie Watkins",
+        "value": 9
+      },
+      {
+        "name": "Nicolas Jackson",
+        "value": 9
+      },
+      {
+        "name": "Luis Díaz",
+        "value": 8
+      },
+      {
+        "name": "Liam Delap",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "date": "MD22",
+    "data": [
+      {
+        "name": "Mohamed Salah",
+        "value": 19
+      },
+      {
+        "name": "Erling Haaland",
+        "value": 17
+      },
+      {
+        "name": "Alexander Isak",
+        "value": 15
+      },
+      {
+        "name": "Chris Wood",
+        "value": 14
+      },
+      {
+        "name": "Cole Palmer",
+        "value": 14
+      },
+      {
+        "name": "Bryan Mbeumo",
+        "value": 13
+      },
+      {
+        "name": "Yoane Wissa",
+        "value": 11
+      },
+      {
+        "name": "Ollie Watkins",
+        "value": 10
+      },
+      {
+        "name": "Matheus Cunha",
+        "value": 10
+      },
+      {
+        "name": "Justin Kluivert",
+        "value": 10
+      },
+      {
+        "name": "Nicolas Jackson",
+        "value": 9
+      },
+      {
+        "name": "Jean-Philippe Mateta",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "date": "MD23",
+    "data": [
+      {
+        "name": "Mohamed Salah",
+        "value": 20
+      },
+      {
+        "name": "Erling Haaland",
+        "value": 18
+      },
+      {
+        "name": "Alexander Isak",
+        "value": 17
+      },
+      {
+        "name": "Chris Wood",
+        "value": 14
+      },
+      {
+        "name": "Bryan Mbeumo",
+        "value": 14
+      },
+      {
+        "name": "Cole Palmer",
+        "value": 14
+      },
+      {
+        "name": "Yoane Wissa",
+        "value": 11
+      },
+      {
+        "name": "Justin Kluivert",
+        "value": 11
+      },
+      {
+        "name": "Ollie Watkins",
+        "value": 10
+      },
+      {
+        "name": "Matheus Cunha",
+        "value": 10
+      },
+      {
+        "name": "Nicolas Jackson",
+        "value": 9
+      },
+      {
+        "name": "Jean-Philippe Mateta",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "date": "MD24",
+    "data": [
+      {
+        "name": "Mohamed Salah",
+        "value": 22
+      },
+      {
+        "name": "Erling Haaland",
+        "value": 19
+      },
+      {
+        "name": "Alexander Isak",
+        "value": 17
+      },
+      {
+        "name": "Chris Wood",
+        "value": 17
+      },
+      {
+        "name": "Bryan Mbeumo",
+        "value": 14
+      },
+      {
+        "name": "Cole Palmer",
+        "value": 14
+      },
+      {
+        "name": "Yoane Wissa",
+        "value": 11
+      },
+      {
+        "name": "Matheus Cunha",
+        "value": 11
+      },
+      {
+        "name": "Justin Kluivert",
+        "value": 11
+      },
+      {
+        "name": "Ollie Watkins",
+        "value": 10
+      },
+      {
+        "name": "Jean-Philippe Mateta",
+        "value": 10
+      },
+      {
+        "name": "Liam Delap",
+        "value": 9
+      }
+    ]
+  },
+  {
+    "date": "MD25",
+    "data": [
+      {
+        "name": "Mohamed Salah",
+        "value": 23
+      },
+      {
+        "name": "Erling Haaland",
+        "value": 19
+      },
+      {
+        "name": "Chris Wood",
+        "value": 18
+      },
+      {
+        "name": "Alexander Isak",
+        "value": 17
+      },
+      {
+        "name": "Bryan Mbeumo",
+        "value": 14
+      },
+      {
+        "name": "Cole Palmer",
+        "value": 14
+      },
+      {
+        "name": "Matheus Cunha",
+        "value": 12
+      },
+      {
+        "name": "Yoane Wissa",
+        "value": 11
+      },
+      {
+        "name": "Ollie Watkins",
+        "value": 11
+      },
+      {
+        "name": "Jean-Philippe Mateta",
+        "value": 11
+      },
+      {
+        "name": "Justin Kluivert",
+        "value": 11
+      },
+      {
+        "name": "Liam Delap",
+        "value": 10
+      }
+    ]
+  },
+  {
+    "date": "MD26",
+    "data": [
+      {
+        "name": "Mohamed Salah",
+        "value": 24
+      },
+      {
+        "name": "Alexander Isak",
+        "value": 19
+      },
+      {
+        "name": "Erling Haaland",
+        "value": 19
+      },
+      {
+        "name": "Chris Wood",
+        "value": 18
+      },
+      {
+        "name": "Bryan Mbeumo",
+        "value": 15
+      },
+      {
+        "name": "Cole Palmer",
+        "value": 14
+      },
+      {
+        "name": "Matheus Cunha",
+        "value": 13
+      },
+      {
+        "name": "Yoane Wissa",
+        "value": 12
+      },
+      {
+        "name": "Ollie Watkins",
+        "value": 11
+      },
+      {
+        "name": "Jean-Philippe Mateta",
+        "value": 11
+      },
+      {
+        "name": "Justin Kluivert",
+        "value": 11
+      },
+      {
+        "name": "Liam Delap",
+        "value": 10
+      }
+    ]
+  },
+  {
+    "date": "MD27",
+    "data": [
+      {
+        "name": "Mohamed Salah",
+        "value": 24
+      },
+      {
+        "name": "Erling Haaland",
+        "value": 20
+      },
+      {
+        "name": "Alexander Isak",
+        "value": 19
+      },
+      {
+        "name": "Chris Wood",
+        "value": 18
+      },
+      {
+        "name": "Bryan Mbeumo",
+        "value": 15
+      },
+      {
+        "name": "Cole Palmer",
+        "value": 14
+      },
+      {
+        "name": "Yoane Wissa",
+        "value": 13
+      },
+      {
+        "name": "Matheus Cunha",
+        "value": 13
+      },
+      {
+        "name": "Jean-Philippe Mateta",
+        "value": 12
+      },
+      {
+        "name": "Justin Kluivert",
+        "value": 12
+      },
+      {
+        "name": "Ollie Watkins",
+        "value": 11
+      },
+      {
+        "name": "Liam Delap",
+        "value": 10
+      }
+    ]
+  },
+  {
+    "date": "MD28",
+    "data": [
+      {
+        "name": "Mohamed Salah",
+        "value": 26
+      },
+      {
+        "name": "Erling Haaland",
+        "value": 20
+      },
+      {
+        "name": "Alexander Isak",
+        "value": 19
+      },
+      {
+        "name": "Chris Wood",
+        "value": 18
+      },
+      {
+        "name": "Bryan Mbeumo",
+        "value": 15
+      },
+      {
+        "name": "Cole Palmer",
+        "value": 14
+      },
+      {
+        "name": "Yoane Wissa",
+        "value": 13
+      },
+      {
+        "name": "Matheus Cunha",
+        "value": 13
+      },
+      {
+        "name": "Ollie Watkins",
+        "value": 12
+      },
+      {
+        "name": "Jean-Philippe Mateta",
+        "value": 12
+      },
+      {
+        "name": "Justin Kluivert",
+        "value": 12
+      },
+      {
+        "name": "Liam Delap",
+        "value": 10
+      }
+    ]
+  },
+  {
+    "date": "MD29",
+    "data": [
+      {
+        "name": "Mohamed Salah",
+        "value": 27
+      },
+      {
+        "name": "Erling Haaland",
+        "value": 21
+      },
+      {
+        "name": "Alexander Isak",
+        "value": 20
+      },
+      {
+        "name": "Chris Wood",
+        "value": 18
+      },
+      {
+        "name": "Bryan Mbeumo",
+        "value": 15
+      },
+      {
+        "name": "Yoane Wissa",
+        "value": 14
+      },
+      {
+        "name": "Cole Palmer",
+        "value": 14
+      },
+      {
+        "name": "Ollie Watkins",
+        "value": 13
+      },
+      {
+        "name": "Matheus Cunha",
+        "value": 13
+      },
+      {
+        "name": "Jean-Philippe Mateta",
+        "value": 12
+      },
+      {
+        "name": "Justin Kluivert",
+        "value": 12
+      },
+      {
+        "name": "Liam Delap",
+        "value": 10
+      }
+    ]
+  },
+  {
+    "date": "MD30",
+    "data": [
+      {
+        "name": "Mohamed Salah",
+        "value": 27
+      },
+      {
+        "name": "Alexander Isak",
+        "value": 21
+      },
+      {
+        "name": "Erling Haaland",
+        "value": 21
+      },
+      {
+        "name": "Chris Wood",
+        "value": 18
+      },
+      {
+        "name": "Bryan Mbeumo",
+        "value": 16
+      },
+      {
+        "name": "Yoane Wissa",
+        "value": 14
+      },
+      {
+        "name": "Cole Palmer",
+        "value": 14
+      },
+      {
+        "name": "Ollie Watkins",
+        "value": 13
+      },
+      {
+        "name": "Matheus Cunha",
+        "value": 13
+      },
+      {
+        "name": "Jean-Philippe Mateta",
+        "value": 12
+      },
+      {
+        "name": "Justin Kluivert",
+        "value": 12
+      },
+      {
+        "name": "Liam Delap",
+        "value": 11
+      }
+    ]
+  },
+  {
+    "date": "MD31",
+    "data": [
+      {
+        "name": "Mohamed Salah",
+        "value": 27
+      },
+      {
+        "name": "Alexander Isak",
+        "value": 21
+      },
+      {
+        "name": "Erling Haaland",
+        "value": 21
+      },
+      {
+        "name": "Chris Wood",
+        "value": 18
+      },
+      {
+        "name": "Bryan Mbeumo",
+        "value": 16
+      },
+      {
+        "name": "Yoane Wissa",
+        "value": 14
+      },
+      {
+        "name": "Cole Palmer",
+        "value": 14
+      },
+      {
+        "name": "Ollie Watkins",
+        "value": 13
+      },
+      {
+        "name": "Matheus Cunha",
+        "value": 13
+      },
+      {
+        "name": "Jean-Philippe Mateta",
+        "value": 13
+      },
+      {
+        "name": "Liam Delap",
+        "value": 12
+      },
+      {
+        "name": "Justin Kluivert",
+        "value": 12
+      }
+    ]
+  },
+  {
+    "date": "MD32",
+    "data": [
+      {
+        "name": "Mohamed Salah",
+        "value": 27
+      },
+      {
+        "name": "Alexander Isak",
+        "value": 21
+      },
+      {
+        "name": "Erling Haaland",
+        "value": 21
+      },
+      {
+        "name": "Chris Wood",
+        "value": 18
+      },
+      {
+        "name": "Bryan Mbeumo",
+        "value": 16
+      },
+      {
+        "name": "Yoane Wissa",
+        "value": 15
+      },
+      {
+        "name": "Ollie Watkins",
+        "value": 14
+      },
+      {
+        "name": "Matheus Cunha",
+        "value": 14
+      },
+      {
+        "name": "Cole Palmer",
+        "value": 14
+      },
+      {
+        "name": "Jean-Philippe Mateta",
+        "value": 13
+      },
+      {
+        "name": "Jørgen Strand Larsen",
+        "value": 12
+      },
+      {
+        "name": "Liam Delap",
+        "value": 12
+      }
+    ]
+  },
+  {
+    "date": "MD33",
+    "data": [
+      {
+        "name": "Mohamed Salah",
+        "value": 27
+      },
+      {
+        "name": "Alexander Isak",
+        "value": 21
+      },
+      {
+        "name": "Erling Haaland",
+        "value": 21
+      },
+      {
+        "name": "Chris Wood",
+        "value": 19
+      },
+      {
+        "name": "Bryan Mbeumo",
+        "value": 18
+      },
+      {
+        "name": "Yoane Wissa",
+        "value": 16
+      },
+      {
+        "name": "Ollie Watkins",
+        "value": 15
+      },
+      {
+        "name": "Matheus Cunha",
+        "value": 14
+      },
+      {
+        "name": "Cole Palmer",
+        "value": 14
+      },
+      {
+        "name": "Jean-Philippe Mateta",
+        "value": 13
+      },
+      {
+        "name": "Jørgen Strand Larsen",
+        "value": 12
+      },
+      {
+        "name": "Liam Delap",
+        "value": 12
+      }
+    ]
+  },
+  {
+    "date": "MD34",
+    "data": [
+      {
+        "name": "Mohamed Salah",
+        "value": 28
+      },
+      {
+        "name": "Alexander Isak",
+        "value": 22
+      },
+      {
+        "name": "Erling Haaland",
+        "value": 21
+      },
+      {
+        "name": "Chris Wood",
+        "value": 19
+      },
+      {
+        "name": "Bryan Mbeumo",
+        "value": 18
+      },
+      {
+        "name": "Yoane Wissa",
+        "value": 17
+      },
+      {
+        "name": "Ollie Watkins",
+        "value": 15
+      },
+      {
+        "name": "Matheus Cunha",
+        "value": 15
+      },
+      {
+        "name": "Cole Palmer",
+        "value": 14
+      },
+      {
+        "name": "Jean-Philippe Mateta",
+        "value": 14
+      },
+      {
+        "name": "Jørgen Strand Larsen",
+        "value": 13
+      },
+      {
+        "name": "Luis Díaz",
+        "value": 12
+      }
+    ]
+  },
+  {
+    "date": "MD35",
+    "data": [
+      {
+        "name": "Mohamed Salah",
+        "value": 28
+      },
+      {
+        "name": "Alexander Isak",
+        "value": 23
+      },
+      {
+        "name": "Erling Haaland",
+        "value": 21
+      },
+      {
+        "name": "Chris Wood",
+        "value": 19
+      },
+      {
+        "name": "Bryan Mbeumo",
+        "value": 18
+      },
+      {
+        "name": "Yoane Wissa",
+        "value": 18
+      },
+      {
+        "name": "Ollie Watkins",
+        "value": 15
+      },
+      {
+        "name": "Matheus Cunha",
+        "value": 15
+      },
+      {
+        "name": "Cole Palmer",
+        "value": 15
+      },
+      {
+        "name": "Jean-Philippe Mateta",
+        "value": 14
+      },
+      {
+        "name": "Jørgen Strand Larsen",
+        "value": 13
+      },
+      {
+        "name": "Luis Díaz",
+        "value": 12
+      }
+    ]
+  },
+  {
+    "date": "MD36",
+    "data": [
+      {
+        "name": "Mohamed Salah",
+        "value": 28
+      },
+      {
+        "name": "Alexander Isak",
+        "value": 23
+      },
+      {
+        "name": "Erling Haaland",
+        "value": 21
+      },
+      {
+        "name": "Chris Wood",
+        "value": 20
+      },
+      {
+        "name": "Bryan Mbeumo",
+        "value": 18
+      },
+      {
+        "name": "Yoane Wissa",
+        "value": 18
+      },
+      {
+        "name": "Ollie Watkins",
+        "value": 16
+      },
+      {
+        "name": "Matheus Cunha",
+        "value": 15
+      },
+      {
+        "name": "Cole Palmer",
+        "value": 15
+      },
+      {
+        "name": "Jean-Philippe Mateta",
+        "value": 14
+      },
+      {
+        "name": "Jørgen Strand Larsen",
+        "value": 13
+      },
+      {
+        "name": "Luis Díaz",
+        "value": 13
+      }
+    ]
+  },
+  {
+    "date": "MD37",
+    "data": [
+      {
+        "name": "Mohamed Salah",
+        "value": 28
+      },
+      {
+        "name": "Alexander Isak",
+        "value": 23
+      },
+      {
+        "name": "Erling Haaland",
+        "value": 21
+      },
+      {
+        "name": "Chris Wood",
+        "value": 20
+      },
+      {
+        "name": "Bryan Mbeumo",
+        "value": 19
+      },
+      {
+        "name": "Yoane Wissa",
+        "value": 19
+      },
+      {
+        "name": "Ollie Watkins",
+        "value": 16
+      },
+      {
+        "name": "Matheus Cunha",
+        "value": 15
+      },
+      {
+        "name": "Cole Palmer",
+        "value": 15
+      },
+      {
+        "name": "Jørgen Strand Larsen",
+        "value": 14
+      },
+      {
+        "name": "Jean-Philippe Mateta",
+        "value": 14
+      },
+      {
+        "name": "Luis Díaz",
+        "value": 13
+      }
+    ]
+  },
+  {
+    "date": "MD38",
+    "data": [
+      {
+        "name": "Mohamed Salah",
+        "value": 29
+      },
+      {
+        "name": "Alexander Isak",
+        "value": 23
+      },
+      {
+        "name": "Erling Haaland",
+        "value": 22
+      },
+      {
+        "name": "Chris Wood",
+        "value": 20
+      },
+      {
+        "name": "Bryan Mbeumo",
+        "value": 20
+      },
+      {
+        "name": "Yoane Wissa",
+        "value": 19
+      },
+      {
+        "name": "Ollie Watkins",
+        "value": 16
+      },
+      {
+        "name": "Matheus Cunha",
+        "value": 15
+      },
+      {
+        "name": "Cole Palmer",
+        "value": 15
+      },
+      {
+        "name": "Jørgen Strand Larsen",
+        "value": 14
+      },
+      {
+        "name": "Jean-Philippe Mateta",
+        "value": 14
+      },
+      {
+        "name": "Jarrod Bowen",
+        "value": 13
+      }
+    ]
+  }
+]
