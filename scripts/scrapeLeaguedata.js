@@ -26,9 +26,13 @@ const leagues = [
     //     league: "Ligue 1",
     //     seasonUrl: "https://fbref.com/en/comps/13/schedule/Ligue-1-Scores-and-Fixtures"
     // },
+    // {
+    //     "league": "Saudi",
+    //     "seasonUrl": "https://fbref.com/en/comps/70/schedule/Saudi-Professional-League-Scores-and-Fixtures"
+    // }
     {
-        "league": "Saudi",
-        "seasonUrl": "https://fbref.com/en/comps/70/schedule/Saudi-Professional-League-Scores-and-Fixtures"
+        "league": "Liga Nos",
+        "seasonUrl": "https://fbref.com/en/comps/32/schedule/Liga-Portugal-Scores-and-Fixtures"
     }
 ];
 
@@ -65,7 +69,7 @@ async function scrapeLeagueData() {
         // Process each matchday entry from the list
         for (let i = 0; i < matchDayList.length; i++) {
             const matchday = matchDayList[i];
-            
+
             // Handle flexible property names from scrapeMatchList
             const gameweek = matchday.gameweek || matchday.round || 'Unknown';
             const date = matchday.date || 'Unknown';
