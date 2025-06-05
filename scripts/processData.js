@@ -1,14 +1,51 @@
 const fs = require('fs');
 
-// Import your data file
-const rawData = require('./data/Premier_League.json'); // Replace with your actual file path
+function loadAndMergeData(filePaths) {
+    let mergedData = {};
+    let maxMatchday = 0;
+    
+    // Load and merge data from all files
+    filePaths.forEach(filePath => {
+        try {
+            console.log(`Loading data from: ${filePath}`);
+            const rawData = require(filePath);
+            
+            // Find the maximum matchday in this dataset
+            const matchdays = Object.keys(rawData).map(Number).filter(n => !isNaN(n));
+            const fileMaxMD = Math.max(...matchdays);
+            maxMatchday = Math.max(maxMatchday, fileMaxMD);
+            
+            // Merge the data
+            Object.keys(rawData).forEach(md => {
+                const matchdayNum = parseInt(md);
+                if (!isNaN(matchdayNum)) {
+                    if (!mergedData[matchdayNum]) {
+                        mergedData[matchdayNum] = [];
+                    }
+                    // Add all players from this matchday to the merged data
+                    mergedData[matchdayNum] = mergedData[matchdayNum].concat(rawData[md]);
+                }
+            });
+            
+            console.log(`  - Max matchday in file: ${fileMaxMD}`);
+        } catch (error) {
+            console.error(`Error loading file ${filePath}:`, error.message);
+        }
+    });
+    
+    console.log(`Overall max matchday: ${maxMatchday}`);
+    return { mergedData, maxMatchday };
+}
 
-function processGoalsData(data) {
+function processGoalsData(filePaths) {
+    // Load and merge data from all files
+    const { mergedData: data, maxMatchday } = loadAndMergeData(filePaths);
+    
     // Phase 1: Calculate final season totals for each player
     const finalTotals = {};
     
     // Go through all matchdays to get final totals
-    for (let md = 1; md <= 38; md++) {
+    for (let md = 1; md <= maxMatchday; md++) {
         if (data[md]) {
             data[md].forEach(player => {
                 if (player.goals > 0) { // Only players with goals
@@ -22,7 +59,7 @@ function processGoalsData(data) {
     const frames = [];
     let cumulativeGoals = {}; // Track cumulative goals for each player
     
-    for (let md = 1; md <= 38; md++) {
+    for (let md = 1; md <= maxMatchday; md++) {
         // Add goals from current matchday
         if (data[md]) {
             data[md].forEach(player => {
@@ -65,19 +102,31 @@ function processGoalsData(data) {
     return frames;
 }
 
+// Example usage:
+const filePaths = [
+    './data/Premier_League.json',
+    './data/Bundesliga.json',
+    './data/La_Liga.json',
+    './data/Ligue_1.json',
+    './data/Serie_A.json'
+    // Add more leagues as needed
+];
+
 // Process the data
-const frames = processGoalsData(rawData);
+const frames = processGoalsData(filePaths);
 
 // Optional: Save processed data to file
-fs.writeFileSync('./scripts/data/prem_final.json', JSON.stringify(frames, null, 2));
+fs.writeFileSync('./scripts/data/multi_league_final.json', JSON.stringify(frames, null, 2));
 
 // Optional: Print some stats
 console.log(`Generated ${frames.length} frames`);
-console.log('Sample frame (MD1):');
-console.log(JSON.stringify(frames[0], null, 2));
+if (frames.length > 0) {
+    console.log('Sample frame (MD1):');
+    console.log(JSON.stringify(frames[0], null, 2));
 
-console.log('Final frame (MD38):');
-console.log(JSON.stringify(frames[frames.length - 1], null, 2));
+    console.log('Final frame:');
+    console.log(JSON.stringify(frames[frames.length - 1], null, 2));
+}
 
 // Optional: Count unique players across all frames
 const allPlayers = new Set();
@@ -89,4 +138,4 @@ frames.forEach(frame => {
 console.log(`Total unique players across all frames: ${allPlayers.size}`);
 
 // Export for use in other modules
-module.exports = { processGoalsData, frames };
+module.exports = { processGoalsData, loadAndMergeData, frames };

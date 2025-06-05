@@ -1,0 +1,2016 @@
+[
+  {
+    "date": "MD1",
+    "data": [
+      {
+        "name": "Andrej Kramarić",
+        "value": 6
+      },
+      {
+        "name": "Mason Greenwood",
+        "value": 4
+      },
+      {
+        "name": "Florian Wirtz",
+        "value": 4
+      },
+      {
+        "name": "Jamie Gittens",
+        "value": 4
+      },
+      {
+        "name": "Luis Henrique",
+        "value": 4
+      },
+      {
+        "name": "Lukas Kübler",
+        "value": 4
+      },
+      {
+        "name": "Lovro Majer",
+        "value": 4
+      },
+      {
+        "name": "Ousmane Dembélé",
+        "value": 2
+      },
+      {
+        "name": "Tim Kleindienst",
+        "value": 2
+      },
+      {
+        "name": "Jonathan David",
+        "value": 2
+      },
+      {
+        "name": "Ermedin Demirović",
+        "value": 2
+      },
+      {
+        "name": "Bradley Barcola",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "date": "MD2",
+    "data": [
+      {
+        "name": "Andrej Kramarić",
+        "value": 8
+      },
+      {
+        "name": "Mason Greenwood",
+        "value": 6
+      },
+      {
+        "name": "Bradley Barcola",
+        "value": 6
+      },
+      {
+        "name": "Tim Kleindienst",
+        "value": 4
+      },
+      {
+        "name": "Erling Haaland",
+        "value": 4
+      },
+      {
+        "name": "Florian Wirtz",
+        "value": 4
+      },
+      {
+        "name": "Loïs Openda",
+        "value": 4
+      },
+      {
+        "name": "Jamie Gittens",
+        "value": 4
+      },
+      {
+        "name": "Nadiem Amiri",
+        "value": 4
+      },
+      {
+        "name": "Luis Henrique",
+        "value": 4
+      },
+      {
+        "name": "Lee Kang-in",
+        "value": 4
+      },
+      {
+        "name": "Lukas Kübler",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "date": "MD3",
+    "data": [
+      {
+        "name": "Mason Greenwood",
+        "value": 10
+      },
+      {
+        "name": "Harry Kane",
+        "value": 8
+      },
+      {
+        "name": "Bradley Barcola",
+        "value": 8
+      },
+      {
+        "name": "Andrej Kramarić",
+        "value": 8
+      },
+      {
+        "name": "Erling Haaland",
+        "value": 7
+      },
+      {
+        "name": "Omar Marmoush",
+        "value": 6
+      },
+      {
+        "name": "Ermedin Demirović",
+        "value": 6
+      },
+      {
+        "name": "Florian Wirtz",
+        "value": 6
+      },
+      {
+        "name": "Tim Kleindienst",
+        "value": 4
+      },
+      {
+        "name": "Emanuel Emegha",
+        "value": 4
+      },
+      {
+        "name": "Jamal Musiala",
+        "value": 4
+      },
+      {
+        "name": "Evann Guessand",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "date": "MD4",
+    "data": [
+      {
+        "name": "Harry Kane",
+        "value": 10
+      },
+      {
+        "name": "Mason Greenwood",
+        "value": 10
+      },
+      {
+        "name": "Erling Haaland",
+        "value": 9
+      },
+      {
+        "name": "Omar Marmoush",
+        "value": 8
+      },
+      {
+        "name": "Ermedin Demirović",
+        "value": 8
+      },
+      {
+        "name": "Bradley Barcola",
+        "value": 8
+      },
+      {
+        "name": "Andrej Kramarić",
+        "value": 8
+      },
+      {
+        "name": "Florian Wirtz",
+        "value": 8
+      },
+      {
+        "name": "Ousmane Dembélé",
+        "value": 6
+      },
+      {
+        "name": "Jonathan Burkardt",
+        "value": 6
+      },
+      {
+        "name": "Jamal Musiala",
+        "value": 6
+      },
+      {
+        "name": "Michael Olise",
+        "value": 6
+      }
+    ]
+  },
+  {
+    "date": "MD5",
+    "data": [
+      {
+        "name": "Omar Marmoush",
+        "value": 12
+      },
+      {
+        "name": "Harry Kane",
+        "value": 10
+      },
+      {
+        "name": "Mason Greenwood",
+        "value": 10
+      },
+      {
+        "name": "Erling Haaland",
+        "value": 10
+      },
+      {
+        "name": "Ousmane Dembélé",
+        "value": 8
+      },
+      {
+        "name": "Ermedin Demirović",
+        "value": 8
+      },
+      {
+        "name": "Bradley Barcola",
+        "value": 8
+      },
+      {
+        "name": "Andrej Kramarić",
+        "value": 8
+      },
+      {
+        "name": "Shuto Machino",
+        "value": 8
+      },
+      {
+        "name": "Florian Wirtz",
+        "value": 8
+      },
+      {
+        "name": "Deniz Undav",
+        "value": 8
+      },
+      {
+        "name": "Serhou Guirassy",
+        "value": 6
+      }
+    ]
+  },
+  {
+    "date": "MD6",
+    "data": [
+      {
+        "name": "Omar Marmoush",
+        "value": 16
+      },
+      {
+        "name": "Bradley Barcola",
+        "value": 12
+      },
+      {
+        "name": "Harry Kane",
+        "value": 10
+      },
+      {
+        "name": "Mason Greenwood",
+        "value": 10
+      },
+      {
+        "name": "Jonathan Burkardt",
+        "value": 10
+      },
+      {
+        "name": "Jonathan David",
+        "value": 10
+      },
+      {
+        "name": "Ermedin Demirović",
+        "value": 10
+      },
+      {
+        "name": "Erling Haaland",
+        "value": 10
+      },
+      {
+        "name": "Ousmane Dembélé",
+        "value": 8
+      },
+      {
+        "name": "Michael Olise",
+        "value": 8
+      },
+      {
+        "name": "Andrej Kramarić",
+        "value": 8
+      },
+      {
+        "name": "Shuto Machino",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "date": "MD7",
+    "data": [
+      {
+        "name": "Omar Marmoush",
+        "value": 18
+      },
+      {
+        "name": "Harry Kane",
+        "value": 16
+      },
+      {
+        "name": "Bradley Barcola",
+        "value": 12
+      },
+      {
+        "name": "Mason Greenwood",
+        "value": 10
+      },
+      {
+        "name": "Jonathan Burkardt",
+        "value": 10
+      },
+      {
+        "name": "Tim Kleindienst",
+        "value": 10
+      },
+      {
+        "name": "Jonathan David",
+        "value": 10
+      },
+      {
+        "name": "Ermedin Demirović",
+        "value": 10
+      },
+      {
+        "name": "Erling Haaland",
+        "value": 10
+      },
+      {
+        "name": "Andrej Kramarić",
+        "value": 10
+      },
+      {
+        "name": "Victor Boniface",
+        "value": 10
+      },
+      {
+        "name": "Ousmane Dembélé",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "date": "MD8",
+    "data": [
+      {
+        "name": "Harry Kane",
+        "value": 18
+      },
+      {
+        "name": "Omar Marmoush",
+        "value": 18
+      },
+      {
+        "name": "Bradley Barcola",
+        "value": 14
+      },
+      {
+        "name": "Mason Greenwood",
+        "value": 12
+      },
+      {
+        "name": "Tim Kleindienst",
+        "value": 12
+      },
+      {
+        "name": "Victor Boniface",
+        "value": 12
+      },
+      {
+        "name": "Jonathan Burkardt",
+        "value": 10
+      },
+      {
+        "name": "Jonathan David",
+        "value": 10
+      },
+      {
+        "name": "Ermedin Demirović",
+        "value": 10
+      },
+      {
+        "name": "Michael Olise",
+        "value": 10
+      },
+      {
+        "name": "Erling Haaland",
+        "value": 10
+      },
+      {
+        "name": "Andrej Kramarić",
+        "value": 10
+      }
+    ]
+  },
+  {
+    "date": "MD9",
+    "data": [
+      {
+        "name": "Harry Kane",
+        "value": 22
+      },
+      {
+        "name": "Omar Marmoush",
+        "value": 20
+      },
+      {
+        "name": "Bradley Barcola",
+        "value": 16
+      },
+      {
+        "name": "Mason Greenwood",
+        "value": 12
+      },
+      {
+        "name": "Tim Kleindienst",
+        "value": 12
+      },
+      {
+        "name": "Jonathan David",
+        "value": 12
+      },
+      {
+        "name": "Victor Boniface",
+        "value": 12
+      },
+      {
+        "name": "Erling Haaland",
+        "value": 11
+      },
+      {
+        "name": "Serhou Guirassy",
+        "value": 10
+      },
+      {
+        "name": "Jonathan Burkardt",
+        "value": 10
+      },
+      {
+        "name": "Ermedin Demirović",
+        "value": 10
+      },
+      {
+        "name": "Robert Lewandowski",
+        "value": 10
+      }
+    ]
+  },
+  {
+    "date": "MD10",
+    "data": [
+      {
+        "name": "Harry Kane",
+        "value": 22
+      },
+      {
+        "name": "Omar Marmoush",
+        "value": 22
+      },
+      {
+        "name": "Bradley Barcola",
+        "value": 16
+      },
+      {
+        "name": "Mason Greenwood",
+        "value": 14
+      },
+      {
+        "name": "Jonathan David",
+        "value": 14
+      },
+      {
+        "name": "Serhou Guirassy",
+        "value": 12
+      },
+      {
+        "name": "Jonathan Burkardt",
+        "value": 12
+      },
+      {
+        "name": "Tim Kleindienst",
+        "value": 12
+      },
+      {
+        "name": "Robert Lewandowski",
+        "value": 12
+      },
+      {
+        "name": "Evann Guessand",
+        "value": 12
+      },
+      {
+        "name": "Victor Boniface",
+        "value": 12
+      },
+      {
+        "name": "Erling Haaland",
+        "value": 11
+      }
+    ]
+  },
+  {
+    "date": "MD11",
+    "data": [
+      {
+        "name": "Harry Kane",
+        "value": 28
+      },
+      {
+        "name": "Omar Marmoush",
+        "value": 22
+      },
+      {
+        "name": "Bradley Barcola",
+        "value": 20
+      },
+      {
+        "name": "Mason Greenwood",
+        "value": 16
+      },
+      {
+        "name": "Jonathan Burkardt",
+        "value": 14
+      },
+      {
+        "name": "Tim Kleindienst",
+        "value": 14
+      },
+      {
+        "name": "Jonathan David",
+        "value": 14
+      },
+      {
+        "name": "Robert Lewandowski",
+        "value": 14
+      },
+      {
+        "name": "Serhou Guirassy",
+        "value": 12
+      },
+      {
+        "name": "Evann Guessand",
+        "value": 12
+      },
+      {
+        "name": "Erling Haaland",
+        "value": 12
+      },
+      {
+        "name": "Keito Nakamura",
+        "value": 12
+      }
+    ]
+  },
+  {
+    "date": "MD12",
+    "data": [
+      {
+        "name": "Harry Kane",
+        "value": 28
+      },
+      {
+        "name": "Omar Marmoush",
+        "value": 26
+      },
+      {
+        "name": "Bradley Barcola",
+        "value": 20
+      },
+      {
+        "name": "Jonathan Burkardt",
+        "value": 18
+      },
+      {
+        "name": "Mason Greenwood",
+        "value": 16
+      },
+      {
+        "name": "Tim Kleindienst",
+        "value": 16
+      },
+      {
+        "name": "Jonathan David",
+        "value": 14
+      },
+      {
+        "name": "Ermedin Demirović",
+        "value": 14
+      },
+      {
+        "name": "Robert Lewandowski",
+        "value": 14
+      },
+      {
+        "name": "Serhou Guirassy",
+        "value": 12
+      },
+      {
+        "name": "Hugo Ekitike",
+        "value": 12
+      },
+      {
+        "name": "Jamal Musiala",
+        "value": 12
+      }
+    ]
+  },
+  {
+    "date": "MD13",
+    "data": [
+      {
+        "name": "Harry Kane",
+        "value": 28
+      },
+      {
+        "name": "Omar Marmoush",
+        "value": 26
+      },
+      {
+        "name": "Jonathan Burkardt",
+        "value": 20
+      },
+      {
+        "name": "Bradley Barcola",
+        "value": 20
+      },
+      {
+        "name": "Mason Greenwood",
+        "value": 18
+      },
+      {
+        "name": "Jonathan David",
+        "value": 18
+      },
+      {
+        "name": "Tim Kleindienst",
+        "value": 16
+      },
+      {
+        "name": "Jamal Musiala",
+        "value": 16
+      },
+      {
+        "name": "Ermedin Demirović",
+        "value": 14
+      },
+      {
+        "name": "Hugo Ekitike",
+        "value": 14
+      },
+      {
+        "name": "Robert Lewandowski",
+        "value": 14
+      },
+      {
+        "name": "Serhou Guirassy",
+        "value": 12
+      }
+    ]
+  },
+  {
+    "date": "MD14",
+    "data": [
+      {
+        "name": "Harry Kane",
+        "value": 28
+      },
+      {
+        "name": "Omar Marmoush",
+        "value": 26
+      },
+      {
+        "name": "Jonathan David",
+        "value": 22
+      },
+      {
+        "name": "Mason Greenwood",
+        "value": 20
+      },
+      {
+        "name": "Jonathan Burkardt",
+        "value": 20
+      },
+      {
+        "name": "Bradley Barcola",
+        "value": 20
+      },
+      {
+        "name": "Tim Kleindienst",
+        "value": 18
+      },
+      {
+        "name": "Jamal Musiala",
+        "value": 16
+      },
+      {
+        "name": "Robert Lewandowski",
+        "value": 15
+      },
+      {
+        "name": "Ermedin Demirović",
+        "value": 14
+      },
+      {
+        "name": "Hugo Ekitike",
+        "value": 14
+      },
+      {
+        "name": "Mohamed Salah",
+        "value": 13
+      }
+    ]
+  },
+  {
+    "date": "MD15",
+    "data": [
+      {
+        "name": "Harry Kane",
+        "value": 28
+      },
+      {
+        "name": "Omar Marmoush",
+        "value": 26
+      },
+      {
+        "name": "Jonathan David",
+        "value": 22
+      },
+      {
+        "name": "Mason Greenwood",
+        "value": 20
+      },
+      {
+        "name": "Jonathan Burkardt",
+        "value": 20
+      },
+      {
+        "name": "Bradley Barcola",
+        "value": 20
+      },
+      {
+        "name": "Patrik Schick",
+        "value": 18
+      },
+      {
+        "name": "Tim Kleindienst",
+        "value": 18
+      },
+      {
+        "name": "Jamal Musiala",
+        "value": 18
+      },
+      {
+        "name": "Robert Lewandowski",
+        "value": 15
+      },
+      {
+        "name": "Ermedin Demirović",
+        "value": 14
+      },
+      {
+        "name": "Hugo Ekitike",
+        "value": 14
+      }
+    ]
+  },
+  {
+    "date": "MD16",
+    "data": [
+      {
+        "name": "Harry Kane",
+        "value": 30
+      },
+      {
+        "name": "Omar Marmoush",
+        "value": 28
+      },
+      {
+        "name": "Jonathan Burkardt",
+        "value": 24
+      },
+      {
+        "name": "Patrik Schick",
+        "value": 22
+      },
+      {
+        "name": "Jonathan David",
+        "value": 22
+      },
+      {
+        "name": "Mason Greenwood",
+        "value": 20
+      },
+      {
+        "name": "Bradley Barcola",
+        "value": 20
+      },
+      {
+        "name": "Tim Kleindienst",
+        "value": 18
+      },
+      {
+        "name": "Jamal Musiala",
+        "value": 18
+      },
+      {
+        "name": "Ousmane Dembélé",
+        "value": 16
+      },
+      {
+        "name": "Robert Lewandowski",
+        "value": 16
+      },
+      {
+        "name": "Serhou Guirassy",
+        "value": 14
+      }
+    ]
+  },
+  {
+    "date": "MD17",
+    "data": [
+      {
+        "name": "Harry Kane",
+        "value": 32
+      },
+      {
+        "name": "Omar Marmoush",
+        "value": 30
+      },
+      {
+        "name": "Jonathan Burkardt",
+        "value": 24
+      },
+      {
+        "name": "Mason Greenwood",
+        "value": 22
+      },
+      {
+        "name": "Patrik Schick",
+        "value": 22
+      },
+      {
+        "name": "Jonathan David",
+        "value": 22
+      },
+      {
+        "name": "Ousmane Dembélé",
+        "value": 20
+      },
+      {
+        "name": "Bradley Barcola",
+        "value": 20
+      },
+      {
+        "name": "Tim Kleindienst",
+        "value": 18
+      },
+      {
+        "name": "Jamal Musiala",
+        "value": 18
+      },
+      {
+        "name": "Arnaud Kalimuendo",
+        "value": 16
+      },
+      {
+        "name": "Hugo Ekitike",
+        "value": 16
+      }
+    ]
+  },
+  {
+    "date": "MD18",
+    "data": [
+      {
+        "name": "Harry Kane",
+        "value": 32
+      },
+      {
+        "name": "Omar Marmoush",
+        "value": 30
+      },
+      {
+        "name": "Mason Greenwood",
+        "value": 24
+      },
+      {
+        "name": "Patrik Schick",
+        "value": 24
+      },
+      {
+        "name": "Jonathan Burkardt",
+        "value": 24
+      },
+      {
+        "name": "Jonathan David",
+        "value": 22
+      },
+      {
+        "name": "Bradley Barcola",
+        "value": 22
+      },
+      {
+        "name": "Ousmane Dembélé",
+        "value": 20
+      },
+      {
+        "name": "Tim Kleindienst",
+        "value": 20
+      },
+      {
+        "name": "Hugo Ekitike",
+        "value": 18
+      },
+      {
+        "name": "Jamal Musiala",
+        "value": 18
+      },
+      {
+        "name": "Florian Wirtz",
+        "value": 18
+      }
+    ]
+  },
+  {
+    "date": "MD19",
+    "data": [
+      {
+        "name": "Harry Kane",
+        "value": 34
+      },
+      {
+        "name": "Omar Marmoush",
+        "value": 30
+      },
+      {
+        "name": "Patrik Schick",
+        "value": 26
+      },
+      {
+        "name": "Mason Greenwood",
+        "value": 24
+      },
+      {
+        "name": "Jonathan Burkardt",
+        "value": 24
+      },
+      {
+        "name": "Ousmane Dembélé",
+        "value": 22
+      },
+      {
+        "name": "Tim Kleindienst",
+        "value": 22
+      },
+      {
+        "name": "Jonathan David",
+        "value": 22
+      },
+      {
+        "name": "Hugo Ekitike",
+        "value": 22
+      },
+      {
+        "name": "Bradley Barcola",
+        "value": 22
+      },
+      {
+        "name": "Mohamed Salah",
+        "value": 18
+      },
+      {
+        "name": "Jamal Musiala",
+        "value": 18
+      }
+    ]
+  },
+  {
+    "date": "MD20",
+    "data": [
+      {
+        "name": "Harry Kane",
+        "value": 38
+      },
+      {
+        "name": "Omar Marmoush",
+        "value": 30
+      },
+      {
+        "name": "Ousmane Dembélé",
+        "value": 28
+      },
+      {
+        "name": "Patrik Schick",
+        "value": 28
+      },
+      {
+        "name": "Mason Greenwood",
+        "value": 26
+      },
+      {
+        "name": "Jonathan Burkardt",
+        "value": 24
+      },
+      {
+        "name": "Tim Kleindienst",
+        "value": 24
+      },
+      {
+        "name": "Jonathan David",
+        "value": 24
+      },
+      {
+        "name": "Hugo Ekitike",
+        "value": 22
+      },
+      {
+        "name": "Bradley Barcola",
+        "value": 22
+      },
+      {
+        "name": "Jamal Musiala",
+        "value": 20
+      },
+      {
+        "name": "Mohamed Salah",
+        "value": 19
+      }
+    ]
+  },
+  {
+    "date": "MD21",
+    "data": [
+      {
+        "name": "Harry Kane",
+        "value": 42
+      },
+      {
+        "name": "Ousmane Dembélé",
+        "value": 32
+      },
+      {
+        "name": "Omar Marmoush",
+        "value": 30
+      },
+      {
+        "name": "Patrik Schick",
+        "value": 28
+      },
+      {
+        "name": "Mason Greenwood",
+        "value": 26
+      },
+      {
+        "name": "Tim Kleindienst",
+        "value": 26
+      },
+      {
+        "name": "Jonathan Burkardt",
+        "value": 24
+      },
+      {
+        "name": "Jonathan David",
+        "value": 24
+      },
+      {
+        "name": "Hugo Ekitike",
+        "value": 24
+      },
+      {
+        "name": "Bradley Barcola",
+        "value": 22
+      },
+      {
+        "name": "Jamal Musiala",
+        "value": 20
+      },
+      {
+        "name": "Mohamed Salah",
+        "value": 19
+      }
+    ]
+  },
+  {
+    "date": "MD22",
+    "data": [
+      {
+        "name": "Harry Kane",
+        "value": 42
+      },
+      {
+        "name": "Ousmane Dembélé",
+        "value": 32
+      },
+      {
+        "name": "Omar Marmoush",
+        "value": 30
+      },
+      {
+        "name": "Mason Greenwood",
+        "value": 28
+      },
+      {
+        "name": "Patrik Schick",
+        "value": 28
+      },
+      {
+        "name": "Tim Kleindienst",
+        "value": 28
+      },
+      {
+        "name": "Jonathan Burkardt",
+        "value": 26
+      },
+      {
+        "name": "Jonathan David",
+        "value": 24
+      },
+      {
+        "name": "Hugo Ekitike",
+        "value": 24
+      },
+      {
+        "name": "Bradley Barcola",
+        "value": 22
+      },
+      {
+        "name": "Emanuel Emegha",
+        "value": 20
+      },
+      {
+        "name": "Ludovic Ajorque",
+        "value": 20
+      }
+    ]
+  },
+  {
+    "date": "MD23",
+    "data": [
+      {
+        "name": "Harry Kane",
+        "value": 42
+      },
+      {
+        "name": "Ousmane Dembélé",
+        "value": 34
+      },
+      {
+        "name": "Patrik Schick",
+        "value": 30
+      },
+      {
+        "name": "Omar Marmoush",
+        "value": 30
+      },
+      {
+        "name": "Mason Greenwood",
+        "value": 28
+      },
+      {
+        "name": "Tim Kleindienst",
+        "value": 28
+      },
+      {
+        "name": "Serhou Guirassy",
+        "value": 26
+      },
+      {
+        "name": "Jonathan Burkardt",
+        "value": 26
+      },
+      {
+        "name": "Jonathan David",
+        "value": 24
+      },
+      {
+        "name": "Hugo Ekitike",
+        "value": 24
+      },
+      {
+        "name": "Bradley Barcola",
+        "value": 22
+      },
+      {
+        "name": "Jamal Musiala",
+        "value": 22
+      }
+    ]
+  },
+  {
+    "date": "MD24",
+    "data": [
+      {
+        "name": "Harry Kane",
+        "value": 42
+      },
+      {
+        "name": "Ousmane Dembélé",
+        "value": 36
+      },
+      {
+        "name": "Patrik Schick",
+        "value": 32
+      },
+      {
+        "name": "Mason Greenwood",
+        "value": 30
+      },
+      {
+        "name": "Omar Marmoush",
+        "value": 30
+      },
+      {
+        "name": "Serhou Guirassy",
+        "value": 28
+      },
+      {
+        "name": "Jonathan Burkardt",
+        "value": 28
+      },
+      {
+        "name": "Tim Kleindienst",
+        "value": 28
+      },
+      {
+        "name": "Jonathan David",
+        "value": 26
+      },
+      {
+        "name": "Hugo Ekitike",
+        "value": 26
+      },
+      {
+        "name": "Bradley Barcola",
+        "value": 24
+      },
+      {
+        "name": "Arnaud Kalimuendo",
+        "value": 22
+      }
+    ]
+  },
+  {
+    "date": "MD25",
+    "data": [
+      {
+        "name": "Harry Kane",
+        "value": 42
+      },
+      {
+        "name": "Ousmane Dembélé",
+        "value": 40
+      },
+      {
+        "name": "Omar Marmoush",
+        "value": 33
+      },
+      {
+        "name": "Patrik Schick",
+        "value": 32
+      },
+      {
+        "name": "Mason Greenwood",
+        "value": 30
+      },
+      {
+        "name": "Serhou Guirassy",
+        "value": 28
+      },
+      {
+        "name": "Jonathan Burkardt",
+        "value": 28
+      },
+      {
+        "name": "Tim Kleindienst",
+        "value": 28
+      },
+      {
+        "name": "Jonathan David",
+        "value": 28
+      },
+      {
+        "name": "Hugo Ekitike",
+        "value": 26
+      },
+      {
+        "name": "Bradley Barcola",
+        "value": 26
+      },
+      {
+        "name": "Mohamed Salah",
+        "value": 23
+      }
+    ]
+  },
+  {
+    "date": "MD26",
+    "data": [
+      {
+        "name": "Harry Kane",
+        "value": 42
+      },
+      {
+        "name": "Ousmane Dembélé",
+        "value": 42
+      },
+      {
+        "name": "Patrik Schick",
+        "value": 34
+      },
+      {
+        "name": "Omar Marmoush",
+        "value": 33
+      },
+      {
+        "name": "Mason Greenwood",
+        "value": 30
+      },
+      {
+        "name": "Jonathan Burkardt",
+        "value": 30
+      },
+      {
+        "name": "Tim Kleindienst",
+        "value": 30
+      },
+      {
+        "name": "Serhou Guirassy",
+        "value": 28
+      },
+      {
+        "name": "Jonathan David",
+        "value": 28
+      },
+      {
+        "name": "Hugo Ekitike",
+        "value": 26
+      },
+      {
+        "name": "Bradley Barcola",
+        "value": 26
+      },
+      {
+        "name": "Mohamed Salah",
+        "value": 24
+      }
+    ]
+  },
+  {
+    "date": "MD27",
+    "data": [
+      {
+        "name": "Harry Kane",
+        "value": 44
+      },
+      {
+        "name": "Ousmane Dembélé",
+        "value": 42
+      },
+      {
+        "name": "Patrik Schick",
+        "value": 34
+      },
+      {
+        "name": "Omar Marmoush",
+        "value": 33
+      },
+      {
+        "name": "Mason Greenwood",
+        "value": 30
+      },
+      {
+        "name": "Jonathan Burkardt",
+        "value": 30
+      },
+      {
+        "name": "Tim Kleindienst",
+        "value": 30
+      },
+      {
+        "name": "Serhou Guirassy",
+        "value": 28
+      },
+      {
+        "name": "Jonathan David",
+        "value": 28
+      },
+      {
+        "name": "Arnaud Kalimuendo",
+        "value": 26
+      },
+      {
+        "name": "Hugo Ekitike",
+        "value": 26
+      },
+      {
+        "name": "Bradley Barcola",
+        "value": 26
+      }
+    ]
+  },
+  {
+    "date": "MD28",
+    "data": [
+      {
+        "name": "Harry Kane",
+        "value": 46
+      },
+      {
+        "name": "Ousmane Dembélé",
+        "value": 42
+      },
+      {
+        "name": "Patrik Schick",
+        "value": 34
+      },
+      {
+        "name": "Omar Marmoush",
+        "value": 33
+      },
+      {
+        "name": "Mason Greenwood",
+        "value": 32
+      },
+      {
+        "name": "Serhou Guirassy",
+        "value": 30
+      },
+      {
+        "name": "Jonathan Burkardt",
+        "value": 30
+      },
+      {
+        "name": "Tim Kleindienst",
+        "value": 30
+      },
+      {
+        "name": "Jonathan David",
+        "value": 28
+      },
+      {
+        "name": "Arnaud Kalimuendo",
+        "value": 26
+      },
+      {
+        "name": "Ermedin Demirović",
+        "value": 26
+      },
+      {
+        "name": "Hugo Ekitike",
+        "value": 26
+      }
+    ]
+  },
+  {
+    "date": "MD29",
+    "data": [
+      {
+        "name": "Harry Kane",
+        "value": 46
+      },
+      {
+        "name": "Ousmane Dembélé",
+        "value": 42
+      },
+      {
+        "name": "Patrik Schick",
+        "value": 34
+      },
+      {
+        "name": "Omar Marmoush",
+        "value": 34
+      },
+      {
+        "name": "Mason Greenwood",
+        "value": 32
+      },
+      {
+        "name": "Serhou Guirassy",
+        "value": 30
+      },
+      {
+        "name": "Jonathan Burkardt",
+        "value": 30
+      },
+      {
+        "name": "Tim Kleindienst",
+        "value": 30
+      },
+      {
+        "name": "Arnaud Kalimuendo",
+        "value": 28
+      },
+      {
+        "name": "Jonathan David",
+        "value": 28
+      },
+      {
+        "name": "Hugo Ekitike",
+        "value": 28
+      },
+      {
+        "name": "Mohamed Salah",
+        "value": 27
+      }
+    ]
+  },
+  {
+    "date": "MD30",
+    "data": [
+      {
+        "name": "Harry Kane",
+        "value": 48
+      },
+      {
+        "name": "Ousmane Dembélé",
+        "value": 42
+      },
+      {
+        "name": "Mason Greenwood",
+        "value": 36
+      },
+      {
+        "name": "Patrik Schick",
+        "value": 36
+      },
+      {
+        "name": "Omar Marmoush",
+        "value": 35
+      },
+      {
+        "name": "Serhou Guirassy",
+        "value": 32
+      },
+      {
+        "name": "Jonathan David",
+        "value": 32
+      },
+      {
+        "name": "Jonathan Burkardt",
+        "value": 30
+      },
+      {
+        "name": "Tim Kleindienst",
+        "value": 30
+      },
+      {
+        "name": "Arnaud Kalimuendo",
+        "value": 28
+      },
+      {
+        "name": "Hugo Ekitike",
+        "value": 28
+      },
+      {
+        "name": "Mohamed Salah",
+        "value": 27
+      }
+    ]
+  },
+  {
+    "date": "MD31",
+    "data": [
+      {
+        "name": "Harry Kane",
+        "value": 48
+      },
+      {
+        "name": "Ousmane Dembélé",
+        "value": 42
+      },
+      {
+        "name": "Patrik Schick",
+        "value": 38
+      },
+      {
+        "name": "Mason Greenwood",
+        "value": 36
+      },
+      {
+        "name": "Omar Marmoush",
+        "value": 35
+      },
+      {
+        "name": "Serhou Guirassy",
+        "value": 34
+      },
+      {
+        "name": "Jonathan David",
+        "value": 32
+      },
+      {
+        "name": "Jonathan Burkardt",
+        "value": 30
+      },
+      {
+        "name": "Tim Kleindienst",
+        "value": 30
+      },
+      {
+        "name": "Hugo Ekitike",
+        "value": 30
+      },
+      {
+        "name": "Arnaud Kalimuendo",
+        "value": 28
+      },
+      {
+        "name": "Emanuel Emegha",
+        "value": 28
+      }
+    ]
+  },
+  {
+    "date": "MD32",
+    "data": [
+      {
+        "name": "Harry Kane",
+        "value": 48
+      },
+      {
+        "name": "Ousmane Dembélé",
+        "value": 42
+      },
+      {
+        "name": "Serhou Guirassy",
+        "value": 38
+      },
+      {
+        "name": "Patrik Schick",
+        "value": 38
+      },
+      {
+        "name": "Mason Greenwood",
+        "value": 36
+      },
+      {
+        "name": "Omar Marmoush",
+        "value": 36
+      },
+      {
+        "name": "Jonathan Burkardt",
+        "value": 32
+      },
+      {
+        "name": "Tim Kleindienst",
+        "value": 32
+      },
+      {
+        "name": "Jonathan David",
+        "value": 32
+      },
+      {
+        "name": "Arnaud Kalimuendo",
+        "value": 30
+      },
+      {
+        "name": "Hugo Ekitike",
+        "value": 30
+      },
+      {
+        "name": "Bradley Barcola",
+        "value": 28
+      }
+    ]
+  },
+  {
+    "date": "MD33",
+    "data": [
+      {
+        "name": "Harry Kane",
+        "value": 50
+      },
+      {
+        "name": "Ousmane Dembélé",
+        "value": 42
+      },
+      {
+        "name": "Serhou Guirassy",
+        "value": 40
+      },
+      {
+        "name": "Mason Greenwood",
+        "value": 38
+      },
+      {
+        "name": "Patrik Schick",
+        "value": 38
+      },
+      {
+        "name": "Omar Marmoush",
+        "value": 36
+      },
+      {
+        "name": "Jonathan Burkardt",
+        "value": 34
+      },
+      {
+        "name": "Arnaud Kalimuendo",
+        "value": 34
+      },
+      {
+        "name": "Tim Kleindienst",
+        "value": 32
+      },
+      {
+        "name": "Jonathan David",
+        "value": 32
+      },
+      {
+        "name": "Hugo Ekitike",
+        "value": 30
+      },
+      {
+        "name": "Ermedin Demirović",
+        "value": 28
+      }
+    ]
+  },
+  {
+    "date": "MD34",
+    "data": [
+      {
+        "name": "Harry Kane",
+        "value": 52
+      },
+      {
+        "name": "Ousmane Dembélé",
+        "value": 42
+      },
+      {
+        "name": "Mason Greenwood",
+        "value": 42
+      },
+      {
+        "name": "Serhou Guirassy",
+        "value": 42
+      },
+      {
+        "name": "Patrik Schick",
+        "value": 42
+      },
+      {
+        "name": "Omar Marmoush",
+        "value": 36
+      },
+      {
+        "name": "Jonathan Burkardt",
+        "value": 36
+      },
+      {
+        "name": "Arnaud Kalimuendo",
+        "value": 34
+      },
+      {
+        "name": "Tim Kleindienst",
+        "value": 32
+      },
+      {
+        "name": "Jonathan David",
+        "value": 32
+      },
+      {
+        "name": "Ermedin Demirović",
+        "value": 30
+      },
+      {
+        "name": "Hugo Ekitike",
+        "value": 30
+      }
+    ]
+  },
+  {
+    "date": "MD35",
+    "data": [
+      {
+        "name": "Harry Kane",
+        "value": 52
+      },
+      {
+        "name": "Ousmane Dembélé",
+        "value": 42
+      },
+      {
+        "name": "Mason Greenwood",
+        "value": 42
+      },
+      {
+        "name": "Serhou Guirassy",
+        "value": 42
+      },
+      {
+        "name": "Patrik Schick",
+        "value": 42
+      },
+      {
+        "name": "Omar Marmoush",
+        "value": 36
+      },
+      {
+        "name": "Jonathan Burkardt",
+        "value": 36
+      },
+      {
+        "name": "Arnaud Kalimuendo",
+        "value": 34
+      },
+      {
+        "name": "Tim Kleindienst",
+        "value": 32
+      },
+      {
+        "name": "Jonathan David",
+        "value": 32
+      },
+      {
+        "name": "Ermedin Demirović",
+        "value": 30
+      },
+      {
+        "name": "Hugo Ekitike",
+        "value": 30
+      }
+    ]
+  },
+  {
+    "date": "MD36",
+    "data": [
+      {
+        "name": "Harry Kane",
+        "value": 52
+      },
+      {
+        "name": "Ousmane Dembélé",
+        "value": 42
+      },
+      {
+        "name": "Mason Greenwood",
+        "value": 42
+      },
+      {
+        "name": "Serhou Guirassy",
+        "value": 42
+      },
+      {
+        "name": "Patrik Schick",
+        "value": 42
+      },
+      {
+        "name": "Omar Marmoush",
+        "value": 36
+      },
+      {
+        "name": "Jonathan Burkardt",
+        "value": 36
+      },
+      {
+        "name": "Arnaud Kalimuendo",
+        "value": 34
+      },
+      {
+        "name": "Tim Kleindienst",
+        "value": 32
+      },
+      {
+        "name": "Jonathan David",
+        "value": 32
+      },
+      {
+        "name": "Ermedin Demirović",
+        "value": 30
+      },
+      {
+        "name": "Hugo Ekitike",
+        "value": 30
+      }
+    ]
+  },
+  {
+    "date": "MD37",
+    "data": [
+      {
+        "name": "Harry Kane",
+        "value": 52
+      },
+      {
+        "name": "Ousmane Dembélé",
+        "value": 42
+      },
+      {
+        "name": "Mason Greenwood",
+        "value": 42
+      },
+      {
+        "name": "Serhou Guirassy",
+        "value": 42
+      },
+      {
+        "name": "Patrik Schick",
+        "value": 42
+      },
+      {
+        "name": "Omar Marmoush",
+        "value": 37
+      },
+      {
+        "name": "Jonathan Burkardt",
+        "value": 36
+      },
+      {
+        "name": "Arnaud Kalimuendo",
+        "value": 34
+      },
+      {
+        "name": "Tim Kleindienst",
+        "value": 32
+      },
+      {
+        "name": "Jonathan David",
+        "value": 32
+      },
+      {
+        "name": "Ermedin Demirović",
+        "value": 30
+      },
+      {
+        "name": "Hugo Ekitike",
+        "value": 30
+      }
+    ]
+  },
+  {
+    "date": "MD38",
+    "data": [
+      {
+        "name": "Harry Kane",
+        "value": 52
+      },
+      {
+        "name": "Ousmane Dembélé",
+        "value": 42
+      },
+      {
+        "name": "Mason Greenwood",
+        "value": 42
+      },
+      {
+        "name": "Serhou Guirassy",
+        "value": 42
+      },
+      {
+        "name": "Patrik Schick",
+        "value": 42
+      },
+      {
+        "name": "Omar Marmoush",
+        "value": 37
+      },
+      {
+        "name": "Jonathan Burkardt",
+        "value": 36
+      },
+      {
+        "name": "Arnaud Kalimuendo",
+        "value": 34
+      },
+      {
+        "name": "Tim Kleindienst",
+        "value": 32
+      },
+      {
+        "name": "Jonathan David",
+        "value": 32
+      },
+      {
+        "name": "Kylian Mbappé",
+        "value": 31
+      },
+      {
+        "name": "Ermedin Demirović",
+        "value": 30
+      }
+    ]
+  }
+]
