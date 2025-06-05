@@ -18,13 +18,17 @@ const leagues = [
     //     league: "Bundesliga",
     //     seasonUrl: "https://fbref.com/en/comps/20/schedule/Bundesliga-Scores-and-Fixtures"
     // },
+    // {
+    //     league: "Serie A",
+    //     seasonUrl: "https://fbref.com/en/comps/11/schedule/Serie-A-Scores-and-Fixtures"
+    // },
+    // {
+    //     league: "Ligue 1",
+    //     seasonUrl: "https://fbref.com/en/comps/13/schedule/Ligue-1-Scores-and-Fixtures"
+    // },
     {
-        league: "Serie A",
-        seasonUrl: "https://fbref.com/en/comps/11/schedule/Serie-A-Scores-and-Fixtures"
-    },
-    {
-        league: "Ligue 1",
-        seasonUrl: "https://fbref.com/en/comps/13/schedule/Ligue-1-Scores-and-Fixtures"
+        "league": "Saudi",
+        "seasonUrl": "https://fbref.com/en/comps/70/schedule/Saudi-Professional-League-Scores-and-Fixtures"
     }
 ];
 

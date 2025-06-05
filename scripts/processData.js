@@ -112,8 +112,8 @@ function processGoalsData(filePaths) {
             return b.value - a.value; // Primary sort: current goals descending
         });
 
-        // Keep top 12
-        playersArray = playersArray.slice(0, 12);
+        // Keep top 10
+        playersArray = playersArray.slice(0, 10);
 
         // Create frame for this matchday
         const frame = {
@@ -136,7 +136,8 @@ const filePaths = [
     './data/Bundesliga.json',
     './data/La_Liga.json',
     './data/Ligue_1.json',
-    './data/Serie_A.json'
+    './data/Serie_A.json',
+    "./data/Saudi.json"
     // Add more leagues as needed
 ];
 
