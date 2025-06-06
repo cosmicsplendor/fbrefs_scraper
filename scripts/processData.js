@@ -137,7 +137,8 @@ const filePaths = [
     './data/La_Liga.json',
     './data/Ligue_1.json',
     './data/Serie_A.json',
-    "./data/Saudi.json"
+    "./data/Saudi.json",
+    "./data/Liga_Nos.json"
     // Add more leagues as needed
 ];
 

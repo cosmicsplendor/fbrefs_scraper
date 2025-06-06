@@ -60,6 +60,10 @@
         "value": 4
       },
       {
+        "name": "Viktor Gyökeres",
+        "value": 3
+      },
+      {
         "name": "Robert Lewandowski",
         "value": 3
       },
@@ -80,12 +84,8 @@
         "value": 3
       },
       {
-        "name": "Mohamed Salah",
-        "value": 2
-      },
-      {
-        "name": "Cristiano Ronaldo",
-        "value": 2
+        "name": "Pedro Gonçalves",
+        "value": 3
       }
     ]
   },
@@ -95,6 +95,10 @@
       {
         "name": "Erling Haaland",
         "value": 7
+      },
+      {
+        "name": "Viktor Gyökeres",
+        "value": 6
       },
       {
         "name": "Mason Greenwood",
@@ -127,10 +131,6 @@
       {
         "name": "Mohamed Salah",
         "value": 3
-      },
-      {
-        "name": "Robert Lewandowski",
-        "value": 3
       }
     ]
   },
@@ -140,6 +140,10 @@
       {
         "name": "Erling Haaland",
         "value": 9
+      },
+      {
+        "name": "Viktor Gyökeres",
+        "value": 7
       },
       {
         "name": "Aleksandar Mitrović",
@@ -172,10 +176,6 @@
       {
         "name": "Ermedin Demirović",
         "value": 4
-      },
-      {
-        "name": "Bradley Barcola",
-        "value": 4
       }
     ]
   },
@@ -185,6 +185,10 @@
       {
         "name": "Erling Haaland",
         "value": 10
+      },
+      {
+        "name": "Viktor Gyökeres",
+        "value": 8
       },
       {
         "name": "Aleksandar Mitrović",
@@ -217,16 +221,16 @@
       {
         "name": "Mateo Retegui",
         "value": 4
-      },
-      {
-        "name": "Cristiano Ronaldo",
-        "value": 4
       }
     ]
   },
   {
     "date": "MD6",
     "data": [
+      {
+        "name": "Viktor Gyökeres",
+        "value": 10
+      },
       {
         "name": "Erling Haaland",
         "value": 10
@@ -262,16 +266,16 @@
       {
         "name": "Cristiano Ronaldo",
         "value": 5
-      },
-      {
-        "name": "Mason Greenwood",
-        "value": 5
       }
     ]
   },
   {
     "date": "MD7",
     "data": [
+      {
+        "name": "Viktor Gyökeres",
+        "value": 10
+      },
       {
         "name": "Erling Haaland",
         "value": 10
@@ -306,10 +310,6 @@
       },
       {
         "name": "Cristiano Ronaldo",
-        "value": 6
-      },
-      {
-        "name": "Bryan Mbeumo",
         "value": 6
       }
     ]
@@ -318,6 +318,10 @@
     "date": "MD8",
     "data": [
       {
+        "name": "Viktor Gyökeres",
+        "value": 11
+      },
+      {
         "name": "Erling Haaland",
         "value": 10
       },
@@ -352,16 +356,16 @@
       {
         "name": "Marcus Thuram",
         "value": 7
-      },
-      {
-        "name": "Cristiano Ronaldo",
-        "value": 6
       }
     ]
   },
   {
     "date": "MD9",
     "data": [
+      {
+        "name": "Viktor Gyökeres",
+        "value": 12
+      },
       {
         "name": "Harry Kane",
         "value": 11
@@ -397,16 +401,16 @@
       {
         "name": "Bradley Barcola",
         "value": 8
-      },
-      {
-        "name": "Chris Wood",
-        "value": 7
       }
     ]
   },
   {
     "date": "MD10",
     "data": [
+      {
+        "name": "Viktor Gyökeres",
+        "value": 16
+      },
       {
         "name": "Robert Lewandowski",
         "value": 12
@@ -441,10 +445,6 @@
       },
       {
         "name": "Bryan Mbeumo",
-        "value": 8
-      },
-      {
-        "name": "Bradley Barcola",
         "value": 8
       }
     ]
@@ -453,6 +453,10 @@
     "date": "MD11",
     "data": [
       {
+        "name": "Viktor Gyökeres",
+        "value": 16
+      },
+      {
         "name": "Robert Lewandowski",
         "value": 14
       },
@@ -486,10 +490,6 @@
       },
       {
         "name": "Mason Greenwood",
-        "value": 8
-      },
-      {
-        "name": "Karim Benzema",
         "value": 8
       }
     ]
@@ -498,6 +498,10 @@
     "date": "MD12",
     "data": [
       {
+        "name": "Viktor Gyökeres",
+        "value": 16
+      },
+      {
         "name": "Robert Lewandowski",
         "value": 14
       },
@@ -532,16 +536,16 @@
       {
         "name": "Cristiano Ronaldo",
         "value": 9
-      },
-      {
-        "name": "Karim Benzema",
-        "value": 9
       }
     ]
   },
   {
     "date": "MD13",
     "data": [
+      {
+        "name": "Viktor Gyökeres",
+        "value": 17
+      },
       {
         "name": "Robert Lewandowski",
         "value": 14
@@ -576,10 +580,6 @@
       },
       {
         "name": "Karim Benzema",
-        "value": 10
-      },
-      {
-        "name": "Jonathan Burkardt",
         "value": 10
       }
     ]
@@ -588,6 +588,10 @@
     "date": "MD14",
     "data": [
       {
+        "name": "Viktor Gyökeres",
+        "value": 18
+      },
+      {
         "name": "Robert Lewandowski",
         "value": 15
       },
@@ -621,10 +625,6 @@
       },
       {
         "name": "Moise Kean",
-        "value": 11
-      },
-      {
-        "name": "Jonathan David",
         "value": 11
       }
     ]
@@ -633,6 +633,10 @@
     "date": "MD15",
     "data": [
       {
+        "name": "Viktor Gyökeres",
+        "value": 18
+      },
+      {
         "name": "Robert Lewandowski",
         "value": 15
       },
@@ -666,10 +670,6 @@
       },
       {
         "name": "Karim Benzema",
-        "value": 11
-      },
-      {
-        "name": "Moise Kean",
         "value": 11
       }
     ]
@@ -678,6 +678,10 @@
     "date": "MD16",
     "data": [
       {
+        "name": "Viktor Gyökeres",
+        "value": 18
+      },
+      {
         "name": "Robert Lewandowski",
         "value": 16
       },
@@ -702,19 +706,15 @@
         "value": 13
       },
       {
+        "name": "Samu Omorodion",
+        "value": 13
+      },
+      {
         "name": "Mateo Retegui",
         "value": 12
       },
       {
         "name": "Karim Benzema",
-        "value": 12
-      },
-      {
-        "name": "Aleksandar Mitrović",
-        "value": 12
-      },
-      {
-        "name": "Jonathan Burkardt",
         "value": 12
       }
     ]
@@ -723,6 +723,10 @@
     "date": "MD17",
     "data": [
       {
+        "name": "Viktor Gyökeres",
+        "value": 21
+      },
+      {
         "name": "Mohamed Salah",
         "value": 16
       },
@@ -751,15 +755,11 @@
         "value": 13
       },
       {
+        "name": "Samu Omorodion",
+        "value": 13
+      },
+      {
         "name": "Mateo Retegui",
-        "value": 12
-      },
-      {
-        "name": "Aleksandar Mitrović",
-        "value": 12
-      },
-      {
-        "name": "Moise Kean",
         "value": 12
       }
     ]
@@ -768,6 +768,10 @@
     "date": "MD18",
     "data": [
       {
+        "name": "Viktor Gyökeres",
+        "value": 22
+      },
+      {
         "name": "Mohamed Salah",
         "value": 17
       },
@@ -800,18 +804,18 @@
         "value": 13
       },
       {
-        "name": "Mateo Retegui",
-        "value": 12
-      },
-      {
-        "name": "Mason Greenwood",
-        "value": 12
+        "name": "Samu Omorodion",
+        "value": 13
       }
     ]
   },
   {
     "date": "MD19",
     "data": [
+      {
+        "name": "Viktor Gyökeres",
+        "value": 22
+      },
       {
         "name": "Mohamed Salah",
         "value": 18
@@ -841,15 +845,11 @@
         "value": 14
       },
       {
+        "name": "Marcos Leonardo",
+        "value": 14
+      },
+      {
         "name": "Mateo Retegui",
-        "value": 13
-      },
-      {
-        "name": "Patrik Schick",
-        "value": 13
-      },
-      {
-        "name": "Moise Kean",
         "value": 13
       }
     ]
@@ -858,6 +858,10 @@
     "date": "MD20",
     "data": [
       {
+        "name": "Viktor Gyökeres",
+        "value": 22
+      },
+      {
         "name": "Mohamed Salah",
         "value": 19
       },
@@ -892,16 +896,16 @@
       {
         "name": "Patrik Schick",
         "value": 14
-      },
-      {
-        "name": "Mateo Retegui",
-        "value": 13
       }
     ]
   },
   {
     "date": "MD21",
     "data": [
+      {
+        "name": "Viktor Gyökeres",
+        "value": 22
+      },
       {
         "name": "Harry Kane",
         "value": 21
@@ -936,10 +940,6 @@
       },
       {
         "name": "Alexander Isak",
-        "value": 15
-      },
-      {
-        "name": "Omar Marmoush",
         "value": 15
       }
     ]
@@ -948,6 +948,10 @@
     "date": "MD22",
     "data": [
       {
+        "name": "Viktor Gyökeres",
+        "value": 22
+      },
+      {
         "name": "Harry Kane",
         "value": 21
       },
@@ -980,18 +984,18 @@
         "value": 16
       },
       {
-        "name": "Kylian Mbappé",
-        "value": 15
-      },
-      {
-        "name": "Alexander Isak",
-        "value": 15
+        "name": "Marcos Leonardo",
+        "value": 16
       }
     ]
   },
   {
     "date": "MD23",
     "data": [
+      {
+        "name": "Viktor Gyökeres",
+        "value": 23
+      },
       {
         "name": "Harry Kane",
         "value": 21
@@ -1021,15 +1025,11 @@
         "value": 17
       },
       {
+        "name": "Marcos Leonardo",
+        "value": 17
+      },
+      {
         "name": "Kylian Mbappé",
-        "value": 16
-      },
-      {
-        "name": "Mateo Retegui",
-        "value": 16
-      },
-      {
-        "name": "Ivan Toney",
         "value": 16
       }
     ]
@@ -1038,6 +1038,10 @@
     "date": "MD24",
     "data": [
       {
+        "name": "Viktor Gyökeres",
+        "value": 25
+      },
+      {
         "name": "Mohamed Salah",
         "value": 22
       },
@@ -1071,10 +1075,6 @@
       },
       {
         "name": "Alexander Isak",
-        "value": 17
-      },
-      {
-        "name": "Chris Wood",
         "value": 17
       }
     ]
@@ -1083,6 +1083,10 @@
     "date": "MD25",
     "data": [
       {
+        "name": "Viktor Gyökeres",
+        "value": 27
+      },
+      {
         "name": "Mohamed Salah",
         "value": 23
       },
@@ -1117,16 +1121,16 @@
       {
         "name": "Chris Wood",
         "value": 18
-      },
-      {
-        "name": "Kylian Mbappé",
-        "value": 17
       }
     ]
   },
   {
     "date": "MD26",
     "data": [
+      {
+        "name": "Viktor Gyökeres",
+        "value": 28
+      },
       {
         "name": "Mohamed Salah",
         "value": 24
@@ -1161,10 +1165,6 @@
       },
       {
         "name": "Omar Marmoush",
-        "value": 18
-      },
-      {
-        "name": "Abderrazak Hamdallah",
         "value": 18
       }
     ]
@@ -1173,6 +1173,10 @@
     "date": "MD27",
     "data": [
       {
+        "name": "Viktor Gyökeres",
+        "value": 30
+      },
+      {
         "name": "Mohamed Salah",
         "value": 24
       },
@@ -1207,16 +1211,16 @@
       {
         "name": "Abderrazak Hamdallah",
         "value": 19
-      },
-      {
-        "name": "Kylian Mbappé",
-        "value": 18
       }
     ]
   },
   {
     "date": "MD28",
     "data": [
+      {
+        "name": "Viktor Gyökeres",
+        "value": 31
+      },
       {
         "name": "Mohamed Salah",
         "value": 26
@@ -1251,10 +1255,6 @@
       },
       {
         "name": "Alexander Isak",
-        "value": 19
-      },
-      {
-        "name": "Ivan Toney",
         "value": 19
       }
     ]
@@ -1263,6 +1263,10 @@
     "date": "MD29",
     "data": [
       {
+        "name": "Viktor Gyökeres",
+        "value": 31
+      },
+      {
         "name": "Mohamed Salah",
         "value": 27
       },
@@ -1297,10 +1301,6 @@
       {
         "name": "Alexander Isak",
         "value": 20
-      },
-      {
-        "name": "Ivan Toney",
-        "value": 19
       }
     ]
   },
@@ -1308,6 +1308,10 @@
     "date": "MD30",
     "data": [
       {
+        "name": "Viktor Gyökeres",
+        "value": 34
+      },
+      {
         "name": "Mohamed Salah",
         "value": 27
       },
@@ -1342,10 +1346,6 @@
       {
         "name": "Ousmane Dembélé",
         "value": 21
-      },
-      {
-        "name": "Ivan Toney",
-        "value": 20
       }
     ]
   },
@@ -1353,6 +1353,10 @@
     "date": "MD31",
     "data": [
       {
+        "name": "Viktor Gyökeres",
+        "value": 38
+      },
+      {
         "name": "Mohamed Salah",
         "value": 27
       },
@@ -1386,10 +1390,6 @@
       },
       {
         "name": "Ousmane Dembélé",
-        "value": 21
-      },
-      {
-        "name": "Karim Benzema",
         "value": 21
       }
     ]
@@ -1398,6 +1398,10 @@
     "date": "MD32",
     "data": [
       {
+        "name": "Viktor Gyökeres",
+        "value": 38
+      },
+      {
         "name": "Mohamed Salah",
         "value": 27
       },
@@ -1431,10 +1435,6 @@
       },
       {
         "name": "Erling Haaland",
-        "value": 21
-      },
-      {
-        "name": "Omar Marmoush",
         "value": 21
       }
     ]
@@ -1443,6 +1443,10 @@
     "date": "MD33",
     "data": [
       {
+        "name": "Viktor Gyökeres",
+        "value": 38
+      },
+      {
         "name": "Mohamed Salah",
         "value": 27
       },
@@ -1476,10 +1480,6 @@
       },
       {
         "name": "Erling Haaland",
-        "value": 21
-      },
-      {
-        "name": "Omar Marmoush",
         "value": 21
       }
     ]
@@ -1488,6 +1488,10 @@
     "date": "MD34",
     "data": [
       {
+        "name": "Viktor Gyökeres",
+        "value": 39
+      },
+      {
         "name": "Mohamed Salah",
         "value": 28
       },
@@ -1522,16 +1526,16 @@
       {
         "name": "Erling Haaland",
         "value": 21
-      },
-      {
-        "name": "Omar Marmoush",
-        "value": 21
       }
     ]
   },
   {
     "date": "MD35",
     "data": [
+      {
+        "name": "Viktor Gyökeres",
+        "value": 39
+      },
       {
         "name": "Mohamed Salah",
         "value": 28
@@ -1567,16 +1571,16 @@
       {
         "name": "Erling Haaland",
         "value": 21
-      },
-      {
-        "name": "Omar Marmoush",
-        "value": 21
       }
     ]
   },
   {
     "date": "MD36",
     "data": [
+      {
+        "name": "Viktor Gyökeres",
+        "value": 39
+      },
       {
         "name": "Kylian Mbappé",
         "value": 28
@@ -1612,16 +1616,16 @@
       {
         "name": "Erling Haaland",
         "value": 21
-      },
-      {
-        "name": "Omar Marmoush",
-        "value": 21
       }
     ]
   },
   {
     "date": "MD37",
     "data": [
+      {
+        "name": "Viktor Gyökeres",
+        "value": 39
+      },
       {
         "name": "Kylian Mbappé",
         "value": 29
@@ -1657,16 +1661,16 @@
       {
         "name": "Omar Marmoush",
         "value": 22
-      },
-      {
-        "name": "Erling Haaland",
-        "value": 21
       }
     ]
   },
   {
     "date": "MD38",
     "data": [
+      {
+        "name": "Viktor Gyökeres",
+        "value": 39
+      },
       {
         "name": "Kylian Mbappé",
         "value": 31
@@ -1701,10 +1705,6 @@
       },
       {
         "name": "Erling Haaland",
-        "value": 22
-      },
-      {
-        "name": "Omar Marmoush",
         "value": 22
       }
     ]
