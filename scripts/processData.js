@@ -1,5 +1,8 @@
 const fs = require('fs');
 
+// Configure fields here - change this array to modify what gets accumulated and sorted
+const FIELDS = ['assists']; // Examples: ['goals'], ['assists'], ['goals', 'assists']
+
 function loadAndMergeData(filePaths) {
     let mergedData = {};
     let maxMatchday = 0;
@@ -42,12 +45,15 @@ function loadAndMergeData(filePaths) {
         if (!isNaN(matchdayNum) && mergedData[matchdayNum]) {
             const originalCount = mergedData[matchdayNum].length;
 
-            // Create a map to track unique players and keep the one with highest goals if duplicates exist
+            // Create a map to track unique players and keep the one with highest total value if duplicates exist
             const uniquePlayers = new Map();
 
             mergedData[matchdayNum].forEach(player => {
                 const playerName = player.player;
-                if (!uniquePlayers.has(playerName) || uniquePlayers.get(playerName).goals < player.goals) {
+                const playerValue = FIELDS.reduce((sum, field) => sum + (player[field] || 0), 0);
+                
+                if (!uniquePlayers.has(playerName) || 
+                    FIELDS.reduce((sum, field) => sum + (uniquePlayers.get(playerName)[field] || 0), 0) < playerValue) {
                     uniquePlayers.set(playerName, player);
                 }
             });
@@ -66,6 +72,8 @@ function loadAndMergeData(filePaths) {
 }
 
 function processGoalsData(filePaths) {
+    console.log(`Processing data with fields: ${FIELDS.join(', ')}`);
+    
     // Load and merge data from all files
     const { mergedData: data, maxMatchday } = loadAndMergeData(filePaths);
 
@@ -76,40 +84,42 @@ function processGoalsData(filePaths) {
     for (let md = 1; md <= maxMatchday; md++) {
         if (data[md]) {
             data[md].forEach(player => {
-                if (player.goals > 0) { // Only players with goals
-                    finalTotals[player.player] = (finalTotals[player.player] || 0) + player.goals;
+                const playerValue = FIELDS.reduce((sum, field) => sum + (player[field] || 0), 0);
+                if (playerValue > 0) { // Only players with positive values
+                    finalTotals[player.player] = (finalTotals[player.player] || 0) + playerValue;
                 }
             });
         }
     }
 
-    // Phase 2: Process matchday by matchday with cumulative goals
+    // Phase 2: Process matchday by matchday with cumulative values
     const frames = [];
-    let cumulativeGoals = {}; // Track cumulative goals for each player
+    let cumulativeValues = {}; // Track cumulative values for each player
 
     for (let md = 1; md <= maxMatchday; md++) {
-        // Add goals from current matchday
+        // Add values from current matchday
         if (data[md]) {
             data[md].forEach(player => {
-                if (player.goals > 0) { // Filter out zero goals
-                    cumulativeGoals[player.player] = (cumulativeGoals[player.player] || 0) + player.goals;
+                const playerValue = FIELDS.reduce((sum, field) => sum + (player[field] || 0), 0);
+                if (playerValue > 0) { // Filter out zero values
+                    cumulativeValues[player.player] = (cumulativeValues[player.player] || 0) + playerValue;
                 }
             });
         }
 
         // Convert to array and sort for this matchday
-        let playersArray = Object.entries(cumulativeGoals).map(([name, goals]) => ({
+        let playersArray = Object.entries(cumulativeValues).map(([name, value]) => ({
             name,
-            value: goals,
+            value: value,
             finalTotal: finalTotals[name] || 0
         }));
 
-        // Sort by current goals, then by final season total for ties
+        // Sort by current values, then by final season total for ties
         playersArray.sort((a, b) => {
             if (b.value === a.value) {
                 return b.finalTotal - a.finalTotal; // Tie-breaker: higher final total wins
             }
-            return b.value - a.value; // Primary sort: current goals descending
+            return b.value - a.value; // Primary sort: current values descending
         });
 
         // Keep top 10
@@ -137,7 +147,7 @@ const filePaths = [
     './data/La_Liga.json',
     './data/Ligue_1.json',
     './data/Serie_A.json',
-    "./data/Saudi.json",
+    // "./data/Saudi.json",
     "./data/Liga_Nos.json"
     // Add more leagues as needed
 ];

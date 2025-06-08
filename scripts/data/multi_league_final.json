@@ -19,14 +19,6 @@
         "value": 2
       },
       {
-        "name": "Julián Quiñones",
-        "value": 2
-      },
-      {
-        "name": "Aleksandar Mitrović",
-        "value": 2
-      },
-      {
         "name": "Marcus Thuram",
         "value": 2
       },
@@ -41,6 +33,14 @@
       {
         "name": "Luis Henrique",
         "value": 2
+      },
+      {
+        "name": "Lukas Kübler",
+        "value": 2
+      },
+      {
+        "name": "Daniel Mosquera",
+        "value": 2
       }
     ]
   },
@@ -49,10 +49,6 @@
     "data": [
       {
         "name": "Erling Haaland",
-        "value": 4
-      },
-      {
-        "name": "Aleksandar Mitrović",
         "value": 4
       },
       {
@@ -86,6 +82,10 @@
       {
         "name": "Pedro Gonçalves",
         "value": 3
+      },
+      {
+        "name": "Kanya Fujimoto",
+        "value": 3
       }
     ]
   },
@@ -105,15 +105,7 @@
         "value": 5
       },
       {
-        "name": "Aleksandar Mitrović",
-        "value": 5
-      },
-      {
         "name": "Harry Kane",
-        "value": 4
-      },
-      {
-        "name": "Karim Benzema",
         "value": 4
       },
       {
@@ -131,6 +123,14 @@
       {
         "name": "Mohamed Salah",
         "value": 3
+      },
+      {
+        "name": "Robert Lewandowski",
+        "value": 3
+      },
+      {
+        "name": "Mateo Retegui",
+        "value": 3
       }
     ]
   },
@@ -146,19 +146,11 @@
         "value": 7
       },
       {
-        "name": "Aleksandar Mitrović",
-        "value": 7
-      },
-      {
         "name": "Harry Kane",
         "value": 5
       },
       {
         "name": "Mason Greenwood",
-        "value": 5
-      },
-      {
-        "name": "Karim Benzema",
         "value": 5
       },
       {
@@ -176,6 +168,14 @@
       {
         "name": "Ermedin Demirović",
         "value": 4
+      },
+      {
+        "name": "Bradley Barcola",
+        "value": 4
+      },
+      {
+        "name": "Marcus Thuram",
+        "value": 4
       }
     ]
   },
@@ -191,15 +191,7 @@
         "value": 8
       },
       {
-        "name": "Aleksandar Mitrović",
-        "value": 7
-      },
-      {
         "name": "Omar Marmoush",
-        "value": 6
-      },
-      {
-        "name": "Karim Benzema",
         "value": 6
       },
       {
@@ -221,6 +213,14 @@
       {
         "name": "Mateo Retegui",
         "value": 4
+      },
+      {
+        "name": "Ousmane Dembélé",
+        "value": 4
+      },
+      {
+        "name": "Bryan Mbeumo",
+        "value": 4
       }
     ]
   },
@@ -236,16 +236,8 @@
         "value": 10
       },
       {
-        "name": "Aleksandar Mitrović",
-        "value": 9
-      },
-      {
         "name": "Omar Marmoush",
         "value": 8
-      },
-      {
-        "name": "Karim Benzema",
-        "value": 7
       },
       {
         "name": "Robert Lewandowski",
@@ -264,7 +256,15 @@
         "value": 5
       },
       {
-        "name": "Cristiano Ronaldo",
+        "name": "Mason Greenwood",
+        "value": 5
+      },
+      {
+        "name": "Bryan Mbeumo",
+        "value": 5
+      },
+      {
+        "name": "Jonathan Burkardt",
         "value": 5
       }
     ]
@@ -285,15 +285,7 @@
         "value": 9
       },
       {
-        "name": "Aleksandar Mitrović",
-        "value": 9
-      },
-      {
         "name": "Harry Kane",
-        "value": 8
-      },
-      {
-        "name": "Karim Benzema",
         "value": 8
       },
       {
@@ -309,7 +301,15 @@
         "value": 7
       },
       {
-        "name": "Cristiano Ronaldo",
+        "name": "Bryan Mbeumo",
+        "value": 6
+      },
+      {
+        "name": "Ayoze Pérez",
+        "value": 6
+      },
+      {
+        "name": "Cole Palmer",
         "value": 6
       }
     ]
@@ -326,10 +326,6 @@
         "value": 10
       },
       {
-        "name": "Aleksandar Mitrović",
-        "value": 10
-      },
-      {
         "name": "Harry Kane",
         "value": 9
       },
@@ -339,10 +335,6 @@
       },
       {
         "name": "Mateo Retegui",
-        "value": 8
-      },
-      {
-        "name": "Karim Benzema",
         "value": 8
       },
       {
@@ -356,6 +348,14 @@
       {
         "name": "Marcus Thuram",
         "value": 7
+      },
+      {
+        "name": "Mason Greenwood",
+        "value": 6
+      },
+      {
+        "name": "Bryan Mbeumo",
+        "value": 6
       }
     ]
   },
@@ -387,20 +387,20 @@
         "value": 10
       },
       {
-        "name": "Aleksandar Mitrović",
-        "value": 10
-      },
-      {
-        "name": "Karim Benzema",
-        "value": 8
-      },
-      {
         "name": "Bryan Mbeumo",
         "value": 8
       },
       {
         "name": "Bradley Barcola",
         "value": 8
+      },
+      {
+        "name": "Chris Wood",
+        "value": 7
+      },
+      {
+        "name": "Samu Omorodion",
+        "value": 7
       }
     ]
   },
@@ -428,16 +428,8 @@
         "value": 11
       },
       {
-        "name": "Aleksandar Mitrović",
-        "value": 11
-      },
-      {
         "name": "Mateo Retegui",
         "value": 10
-      },
-      {
-        "name": "Karim Benzema",
-        "value": 8
       },
       {
         "name": "Chris Wood",
@@ -445,6 +437,14 @@
       },
       {
         "name": "Bryan Mbeumo",
+        "value": 8
+      },
+      {
+        "name": "Bradley Barcola",
+        "value": 8
+      },
+      {
+        "name": "Galeno",
         "value": 8
       }
     ]
@@ -469,10 +469,6 @@
         "value": 12
       },
       {
-        "name": "Aleksandar Mitrović",
-        "value": 12
-      },
-      {
         "name": "Mateo Retegui",
         "value": 11
       },
@@ -490,6 +486,10 @@
       },
       {
         "name": "Mason Greenwood",
+        "value": 8
+      },
+      {
+        "name": "Chris Wood",
         "value": 8
       }
     ]
@@ -518,10 +518,6 @@
         "value": 12
       },
       {
-        "name": "Aleksandar Mitrović",
-        "value": 12
-      },
-      {
         "name": "Mateo Retegui",
         "value": 11
       },
@@ -534,7 +530,11 @@
         "value": 10
       },
       {
-        "name": "Cristiano Ronaldo",
+        "name": "Samu Omorodion",
+        "value": 9
+      },
+      {
+        "name": "Jonathan Burkardt",
         "value": 9
       }
     ]
@@ -567,19 +567,19 @@
         "value": 12
       },
       {
-        "name": "Aleksandar Mitrović",
-        "value": 12
-      },
-      {
         "name": "Mohamed Salah",
         "value": 11
       },
       {
-        "name": "Cristiano Ronaldo",
+        "name": "Samu Omorodion",
         "value": 10
       },
       {
-        "name": "Karim Benzema",
+        "name": "Jonathan Burkardt",
+        "value": 10
+      },
+      {
+        "name": "Bradley Barcola",
         "value": 10
       }
     ]
@@ -616,16 +616,16 @@
         "value": 12
       },
       {
-        "name": "Aleksandar Mitrović",
-        "value": 12
-      },
-      {
-        "name": "Cristiano Ronaldo",
-        "value": 11
-      },
-      {
         "name": "Moise Kean",
         "value": 11
+      },
+      {
+        "name": "Jonathan David",
+        "value": 11
+      },
+      {
+        "name": "Mason Greenwood",
+        "value": 10
       }
     ]
   },
@@ -661,15 +661,15 @@
         "value": 12
       },
       {
-        "name": "Aleksandar Mitrović",
-        "value": 12
-      },
-      {
-        "name": "Cristiano Ronaldo",
+        "name": "Moise Kean",
         "value": 11
       },
       {
-        "name": "Karim Benzema",
+        "name": "Samu Omorodion",
+        "value": 11
+      },
+      {
+        "name": "Jonathan David",
         "value": 11
       }
     ]
@@ -698,10 +698,6 @@
         "value": 14
       },
       {
-        "name": "Cristiano Ronaldo",
-        "value": 13
-      },
-      {
         "name": "Erling Haaland",
         "value": 13
       },
@@ -714,8 +710,12 @@
         "value": 12
       },
       {
-        "name": "Karim Benzema",
+        "name": "Jonathan Burkardt",
         "value": 12
+      },
+      {
+        "name": "Patrik Schick",
+        "value": 11
       }
     ]
   },
@@ -743,15 +743,7 @@
         "value": 15
       },
       {
-        "name": "Cristiano Ronaldo",
-        "value": 14
-      },
-      {
         "name": "Erling Haaland",
-        "value": 13
-      },
-      {
-        "name": "Karim Benzema",
         "value": 13
       },
       {
@@ -760,6 +752,14 @@
       },
       {
         "name": "Mateo Retegui",
+        "value": 12
+      },
+      {
+        "name": "Moise Kean",
+        "value": 12
+      },
+      {
+        "name": "Jonathan Burkardt",
         "value": 12
       }
     ]
@@ -784,19 +784,11 @@
         "value": 16
       },
       {
-        "name": "Cristiano Ronaldo",
-        "value": 15
-      },
-      {
         "name": "Omar Marmoush",
         "value": 15
       },
       {
         "name": "Erling Haaland",
-        "value": 13
-      },
-      {
-        "name": "Karim Benzema",
         "value": 13
       },
       {
@@ -806,6 +798,14 @@
       {
         "name": "Samu Omorodion",
         "value": 13
+      },
+      {
+        "name": "Mateo Retegui",
+        "value": 12
+      },
+      {
+        "name": "Mason Greenwood",
+        "value": 12
       }
     ]
   },
@@ -829,10 +829,6 @@
         "value": 16
       },
       {
-        "name": "Cristiano Ronaldo",
-        "value": 16
-      },
-      {
         "name": "Omar Marmoush",
         "value": 15
       },
@@ -841,15 +837,19 @@
         "value": 14
       },
       {
-        "name": "Karim Benzema",
-        "value": 14
-      },
-      {
-        "name": "Marcos Leonardo",
-        "value": 14
-      },
-      {
         "name": "Mateo Retegui",
+        "value": 13
+      },
+      {
+        "name": "Patrik Schick",
+        "value": 13
+      },
+      {
+        "name": "Moise Kean",
+        "value": 13
+      },
+      {
+        "name": "Samu Omorodion",
         "value": 13
       }
     ]
@@ -874,19 +874,11 @@
         "value": 16
       },
       {
-        "name": "Cristiano Ronaldo",
-        "value": 16
-      },
-      {
         "name": "Erling Haaland",
         "value": 16
       },
       {
         "name": "Omar Marmoush",
-        "value": 15
-      },
-      {
-        "name": "Karim Benzema",
         "value": 15
       },
       {
@@ -896,6 +888,14 @@
       {
         "name": "Patrik Schick",
         "value": 14
+      },
+      {
+        "name": "Mateo Retegui",
+        "value": 13
+      },
+      {
+        "name": "Alexander Isak",
+        "value": 13
       }
     ]
   },
@@ -919,19 +919,11 @@
         "value": 17
       },
       {
-        "name": "Cristiano Ronaldo",
-        "value": 16
-      },
-      {
         "name": "Erling Haaland",
         "value": 16
       },
       {
         "name": "Ousmane Dembélé",
-        "value": 16
-      },
-      {
-        "name": "Karim Benzema",
         "value": 16
       },
       {
@@ -941,6 +933,14 @@
       {
         "name": "Alexander Isak",
         "value": 15
+      },
+      {
+        "name": "Omar Marmoush",
+        "value": 15
+      },
+      {
+        "name": "Mateo Retegui",
+        "value": 14
       }
     ]
   },
@@ -964,10 +964,6 @@
         "value": 18
       },
       {
-        "name": "Cristiano Ronaldo",
-        "value": 17
-      },
-      {
         "name": "Erling Haaland",
         "value": 17
       },
@@ -980,12 +976,16 @@
         "value": 16
       },
       {
-        "name": "Karim Benzema",
-        "value": 16
+        "name": "Kylian Mbappé",
+        "value": 15
       },
       {
-        "name": "Marcos Leonardo",
-        "value": 16
+        "name": "Alexander Isak",
+        "value": 15
+      },
+      {
+        "name": "Omar Marmoush",
+        "value": 15
       }
     ]
   },
@@ -1013,10 +1013,6 @@
         "value": 18
       },
       {
-        "name": "Cristiano Ronaldo",
-        "value": 17
-      },
-      {
         "name": "Alexander Isak",
         "value": 17
       },
@@ -1025,12 +1021,16 @@
         "value": 17
       },
       {
-        "name": "Marcos Leonardo",
-        "value": 17
-      },
-      {
         "name": "Kylian Mbappé",
         "value": 16
+      },
+      {
+        "name": "Mateo Retegui",
+        "value": 16
+      },
+      {
+        "name": "Omar Marmoush",
+        "value": 15
       }
     ]
   },
@@ -1062,10 +1062,6 @@
         "value": 19
       },
       {
-        "name": "Cristiano Ronaldo",
-        "value": 18
-      },
-      {
         "name": "Ousmane Dembélé",
         "value": 18
       },
@@ -1075,6 +1071,10 @@
       },
       {
         "name": "Alexander Isak",
+        "value": 17
+      },
+      {
+        "name": "Chris Wood",
         "value": 17
       }
     ]
@@ -1107,10 +1107,6 @@
         "value": 20
       },
       {
-        "name": "Cristiano Ronaldo",
-        "value": 19
-      },
-      {
         "name": "Erling Haaland",
         "value": 19
       },
@@ -1121,6 +1117,10 @@
       {
         "name": "Chris Wood",
         "value": 18
+      },
+      {
+        "name": "Kylian Mbappé",
+        "value": 17
       }
     ]
   },
@@ -1148,10 +1148,6 @@
         "value": 21
       },
       {
-        "name": "Cristiano Ronaldo",
-        "value": 21
-      },
-      {
         "name": "Ousmane Dembélé",
         "value": 21
       },
@@ -1166,6 +1162,10 @@
       {
         "name": "Omar Marmoush",
         "value": 18
+      },
+      {
+        "name": "Chris Wood",
+        "value": 18
       }
     ]
   },
@@ -1179,10 +1179,6 @@
       {
         "name": "Mohamed Salah",
         "value": 24
-      },
-      {
-        "name": "Cristiano Ronaldo",
-        "value": 23
       },
       {
         "name": "Robert Lewandowski",
@@ -1209,8 +1205,12 @@
         "value": 19
       },
       {
-        "name": "Abderrazak Hamdallah",
-        "value": 19
+        "name": "Kylian Mbappé",
+        "value": 18
+      },
+      {
+        "name": "Omar Marmoush",
+        "value": 18
       }
     ]
   },
@@ -1234,10 +1234,6 @@
         "value": 23
       },
       {
-        "name": "Cristiano Ronaldo",
-        "value": 23
-      },
-      {
         "name": "Mateo Retegui",
         "value": 22
       },
@@ -1256,6 +1252,10 @@
       {
         "name": "Alexander Isak",
         "value": 19
+      },
+      {
+        "name": "Omar Marmoush",
+        "value": 18
       }
     ]
   },
@@ -1279,10 +1279,6 @@
         "value": 23
       },
       {
-        "name": "Cristiano Ronaldo",
-        "value": 23
-      },
-      {
         "name": "Kylian Mbappé",
         "value": 22
       },
@@ -1301,6 +1297,10 @@
       {
         "name": "Alexander Isak",
         "value": 20
+      },
+      {
+        "name": "Omar Marmoush",
+        "value": 19
       }
     ]
   },
@@ -1324,10 +1324,6 @@
         "value": 24
       },
       {
-        "name": "Cristiano Ronaldo",
-        "value": 23
-      },
-      {
         "name": "Kylian Mbappé",
         "value": 22
       },
@@ -1346,6 +1342,10 @@
       {
         "name": "Ousmane Dembélé",
         "value": 21
+      },
+      {
+        "name": "Omar Marmoush",
+        "value": 20
       }
     ]
   },
@@ -1369,10 +1369,6 @@
         "value": 24
       },
       {
-        "name": "Cristiano Ronaldo",
-        "value": 23
-      },
-      {
         "name": "Kylian Mbappé",
         "value": 22
       },
@@ -1391,6 +1387,10 @@
       {
         "name": "Ousmane Dembélé",
         "value": 21
+      },
+      {
+        "name": "Omar Marmoush",
+        "value": 20
       }
     ]
   },
@@ -1418,10 +1418,6 @@
         "value": 23
       },
       {
-        "name": "Cristiano Ronaldo",
-        "value": 23
-      },
-      {
         "name": "Kylian Mbappé",
         "value": 22
       },
@@ -1430,11 +1426,15 @@
         "value": 21
       },
       {
-        "name": "Ivan Toney",
+        "name": "Erling Haaland",
         "value": 21
       },
       {
-        "name": "Erling Haaland",
+        "name": "Omar Marmoush",
+        "value": 21
+      },
+      {
+        "name": "Ousmane Dembélé",
         "value": 21
       }
     ]
@@ -1459,10 +1459,6 @@
         "value": 25
       },
       {
-        "name": "Cristiano Ronaldo",
-        "value": 24
-      },
-      {
         "name": "Mateo Retegui",
         "value": 23
       },
@@ -1471,15 +1467,19 @@
         "value": 22
       },
       {
-        "name": "Ivan Toney",
-        "value": 22
-      },
-      {
         "name": "Alexander Isak",
         "value": 21
       },
       {
         "name": "Erling Haaland",
+        "value": 21
+      },
+      {
+        "name": "Omar Marmoush",
+        "value": 21
+      },
+      {
+        "name": "Ousmane Dembélé",
         "value": 21
       }
     ]
@@ -1504,10 +1504,6 @@
         "value": 25
       },
       {
-        "name": "Cristiano Ronaldo",
-        "value": 25
-      },
-      {
         "name": "Kylian Mbappé",
         "value": 24
       },
@@ -1516,15 +1512,19 @@
         "value": 24
       },
       {
-        "name": "Ivan Toney",
-        "value": 23
-      },
-      {
         "name": "Alexander Isak",
         "value": 22
       },
       {
         "name": "Erling Haaland",
+        "value": 21
+      },
+      {
+        "name": "Omar Marmoush",
+        "value": 21
+      },
+      {
+        "name": "Ousmane Dembélé",
         "value": 21
       }
     ]
@@ -1553,10 +1553,6 @@
         "value": 25
       },
       {
-        "name": "Cristiano Ronaldo",
-        "value": 25
-      },
-      {
         "name": "Mateo Retegui",
         "value": 24
       },
@@ -1565,11 +1561,15 @@
         "value": 23
       },
       {
-        "name": "Ivan Toney",
-        "value": 23
+        "name": "Erling Haaland",
+        "value": 21
       },
       {
-        "name": "Erling Haaland",
+        "name": "Omar Marmoush",
+        "value": 21
+      },
+      {
+        "name": "Ousmane Dembélé",
         "value": 21
       }
     ]
@@ -1598,10 +1598,6 @@
         "value": 25
       },
       {
-        "name": "Cristiano Ronaldo",
-        "value": 25
-      },
-      {
         "name": "Mateo Retegui",
         "value": 24
       },
@@ -1610,11 +1606,15 @@
         "value": 23
       },
       {
-        "name": "Ivan Toney",
-        "value": 23
+        "name": "Erling Haaland",
+        "value": 21
       },
       {
-        "name": "Erling Haaland",
+        "name": "Omar Marmoush",
+        "value": 21
+      },
+      {
+        "name": "Ousmane Dembélé",
         "value": 21
       }
     ]
@@ -1647,20 +1647,20 @@
         "value": 25
       },
       {
-        "name": "Cristiano Ronaldo",
-        "value": 25
-      },
-      {
         "name": "Alexander Isak",
-        "value": 23
-      },
-      {
-        "name": "Ivan Toney",
         "value": 23
       },
       {
         "name": "Omar Marmoush",
         "value": 22
+      },
+      {
+        "name": "Erling Haaland",
+        "value": 21
+      },
+      {
+        "name": "Ousmane Dembélé",
+        "value": 21
       }
     ]
   },
@@ -1692,20 +1692,20 @@
         "value": 25
       },
       {
-        "name": "Cristiano Ronaldo",
-        "value": 25
-      },
-      {
         "name": "Alexander Isak",
-        "value": 23
-      },
-      {
-        "name": "Ivan Toney",
         "value": 23
       },
       {
         "name": "Erling Haaland",
         "value": 22
+      },
+      {
+        "name": "Omar Marmoush",
+        "value": 22
+      },
+      {
+        "name": "Ousmane Dembélé",
+        "value": 21
       }
     ]
   }
