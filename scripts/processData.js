@@ -86,16 +86,15 @@ function processGoalsData(filePaths, FIELDS, COUNT, POSITION_FILTER = null) {
         if (!POSITION_FILTER || POSITION_FILTER.length === 0) {
             return true; // No filter applied
         }
-        
+
         const playerPosition = player.position;
         if (!playerPosition) {
             return false; // Player has no position data
         }
-        
-        // Check if player's position matches any of the filtered positions
-        return POSITION_FILTER.some(pos => 
-            playerPosition.toLowerCase().includes(pos.toLowerCase()) ||
-            pos.toLowerCase().includes(playerPosition.toLowerCase())
+
+        // Check if player's position exactly matches any of the filtered positions (case insensitive)
+        return POSITION_FILTER.some(pos =>
+            playerPosition.toLowerCase() === pos.toLowerCase()
         );
     };
 
@@ -148,8 +147,7 @@ function processGoalsData(filePaths, FIELDS, COUNT, POSITION_FILTER = null) {
         let playersArray = Object.entries(cumulativeValues).map(([name, value]) => ({
             name,
             value: value,
-            finalTotal: finalTotals[name] || 0,
-            position: playerPositions[name] || 'Unknown'
+            finalTotal: finalTotals[name] || 0
         }));
 
         // Sort by current values, then by final season total for ties
@@ -187,27 +185,32 @@ const filePaths = [
     './data/Ligue_1.json',
     './data/Serie_A.json',
     // "./data/Saudi.json",
-    "./data/Liga_Nos.json"
+    // "./data/Liga_Nos.json"
     // Add more leagues as needed
 ];
 
 const FIELDS = [
-    'progressive_passes',
-    'progressive_carries',
-    "take_ons_won",
-    "interceptions"
+    'xg',
+    'xg_assist',
+    // "take_ons_won",
+    // "interceptions",
+    // "tackles_won"
 ]; // Examples: ['goals'], ['assists'], ['goals', 'assists']
 
-const COUNT = 100;
+const COUNT = 10;
 
 // Position filter - set to null, empty array, or specific positions
 // Examples:
 // const POSITION_FILTER = null; // No filter
 // const POSITION_FILTER = []; // No filter
-// const POSITION_FILTER = ['Forward', 'Midfielder']; // Filter for forwards and midfielders
-// const POSITION_FILTER = ['GK']; // Filter for goalkeepers only
-// const POSITION_FILTER = ['CB', 'LB', 'RB']; // Filter for defenders
-const POSITION_FILTER = null; // Change this to filter by position
+// const POSITION_FILTER = ["LB", "RB"]; // Filter for left and right backs
+// const POSITION_FILTER = ["CM", "CDM", "CAM"]; // Filter for central midfielders
+// const POSITION_FILTER = ["GK"]; // Filter for goalkeepers only
+// const POSITION_FILTER = ["CF", "LW", "RW"]; // Filter for forwards/wingers
+const POSITION_FILTER = [
+    "LB",
+    // "RB"
+]; // Change this to filter by position
 
 // Process the data
 const frames = processGoalsData(filePaths, FIELDS, COUNT, POSITION_FILTER);
