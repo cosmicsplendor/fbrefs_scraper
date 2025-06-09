@@ -70,9 +70,12 @@ function loadAndMergeData(filePaths, FIELDS) {
     return { mergedData, maxMatchday };
 }
 
-function processGoalsData(filePaths, FIELDS, COUNT, POSITION_FILTER = null, VALUE_TYPE = "aggregate") {
+function processGoalsData(filePaths, FIELDS, COUNT, POSITION_FILTER = null, VALUE_TYPE = "aggregate", MIN_MATCHES = 1) {
     console.log(`Processing data with fields: ${FIELDS.join(', ')}`);
     console.log(`Value calculation type: ${VALUE_TYPE}`);
+    if (VALUE_TYPE === "average") {
+        console.log(`Minimum matches required: ${MIN_MATCHES}`);
+    }
     if (POSITION_FILTER && POSITION_FILTER.length > 0) {
         console.log(`Filtering by positions: ${POSITION_FILTER.join(', ')}`);
     } else {
@@ -156,10 +159,20 @@ function processGoalsData(filePaths, FIELDS, COUNT, POSITION_FILTER = null, VALU
                 value: displayValue,
                 cumulativeValue: cumulativeValue,
                 appearances: appearances,
-                finalTotal: finalTotals[name] || 0,
-                position: playerPositions[name] || 'Unknown'
+                finalTotal: finalTotals[name] || 0
             };
         });
+
+        // Apply minimum matches filter for average mode
+        if (VALUE_TYPE === "average") {
+            const beforeFilter = playersArray.length;
+            playersArray = playersArray.filter(player => player.appearances >= MIN_MATCHES);
+            const afterFilter = playersArray.length;
+            
+            if (md === maxMatchday && beforeFilter !== afterFilter) {
+                console.log(`Final frame: Filtered out ${beforeFilter - afterFilter} players with less than ${MIN_MATCHES} matches`);
+            }
+        }
 
         // Sort by display values, then by final season total for ties
         playersArray.sort((a, b) => {
@@ -200,23 +213,34 @@ const filePaths = [
     './data/Ligue_1.json',
     './data/Serie_A.json',
     // "./data/Saudi.json",
-    "./data/Liga_Nos.json"
+    // "./data/Liga_Nos.json"
     // Add more leagues as needed
 ];
 
 const FIELDS = [
-    'progressive_passes',
-    'progressive_carries',
-    "take_ons_won",
-    "interceptions"
+    "goals",
+    "assists"
+    // 'progressive_passes',
+
+    // 'progressive_carries',
+    // "take_ons_won"
 ]; // Examples: ['goals'], ['assists'], ['goals', 'assists']
 
-const COUNT = 100;
+const COUNT = 10;
 
 // Value calculation type - "aggregate" (cumulative) or "average" (per match)
 // "aggregate": Shows cumulative totals (current behavior)
 // "average": Shows per-match averages (fairer for players with different playing time)
-const VALUE_TYPE = "aggregate"; // Change to "average" for per-match calculations
+const VALUE_TYPE = "average"; // Change to "average" for per-match calculations
+
+// Minimum matches required for average mode
+// Only applies when VALUE_TYPE is "average"
+// Players with fewer appearances will be filtered out
+// Examples: 
+// const MIN_MATCHES = 1;  // Include all players (no filtering)
+// const MIN_MATCHES = 5;  // Require at least 5 matches
+// const MIN_MATCHES = 10; // Require at least 10 matches for more stable averages
+const MIN_MATCHES = 5; // Adjust this value based on your requirements
 
 // Position filter - set to null, empty array, or specific positions
 // Examples:
@@ -226,10 +250,12 @@ const VALUE_TYPE = "aggregate"; // Change to "average" for per-match calculation
 // const POSITION_FILTER = ["CM", "CDM", "CAM"]; // Filter for central midfielders
 // const POSITION_FILTER = ["GK"]; // Filter for goalkeepers only
 // const POSITION_FILTER = ["CF", "LW", "RW"]; // Filter for forwards/wingers
-const POSITION_FILTER = ["LB", "RB"]; // Change this to filter by position
+const POSITION_FILTER = [
+    "LB", 
+]; // Change this to filter by position
 
 // Process the data
-const frames = processGoalsData(filePaths, FIELDS, COUNT, POSITION_FILTER, VALUE_TYPE);
+const frames = processGoalsData(filePaths, FIELDS, COUNT, POSITION_FILTER, VALUE_TYPE, MIN_MATCHES);
 
 // Optional: Save processed data to file
 fs.writeFileSync('./scripts/data/multi_league_final.json', JSON.stringify(frames, null, 2));
@@ -269,9 +295,9 @@ if (VALUE_TYPE === "average") {
     console.log('\nAverage mode statistics:');
     const lastFrame = frames[frames.length - 1];
     if (lastFrame && lastFrame.data.length > 0) {
-        console.log('Top 5 players by average (final frame):');
-        lastFrame.data.slice(0, 5).forEach((player, index) => {
-            console.log(`  ${index + 1}. ${player.name} (${player.position}): ${player.value.toFixed(2)} avg (${player.cumulative} total in ${player.appearances} matches)`);
+        console.log(`Top ${Math.min(10, lastFrame.data.length)} players by average (final frame, min ${MIN_MATCHES} matches):`);
+        lastFrame.data.slice(0, 10).forEach((player, index) => {
+            console.log(`  ${index + 1}. ${player.name} (${player.value.toFixed(2)} avg, ${player.cumulative} total in ${player.appearances} matches)`);
         });
     }
 }

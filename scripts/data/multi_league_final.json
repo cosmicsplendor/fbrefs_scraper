@@ -3,44 +3,16 @@
     "date": "MD1",
     "data": [
       {
-        "name": "Andrej Kramarić",
-        "value": 3
+        "name": "Javi Hernández",
+        "value": 1,
+        "appearances": 1,
+        "cumulative": 1
       },
       {
-        "name": "Robert Lewandowski",
-        "value": 2
-      },
-      {
-        "name": "Mateo Retegui",
-        "value": 2
-      },
-      {
-        "name": "Mason Greenwood",
-        "value": 2
-      },
-      {
-        "name": "Marcus Thuram",
-        "value": 2
-      },
-      {
-        "name": "Florian Wirtz",
-        "value": 2
-      },
-      {
-        "name": "Jamie Gittens",
-        "value": 2
-      },
-      {
-        "name": "Luis Henrique",
-        "value": 2
-      },
-      {
-        "name": "Lukas Kübler",
-        "value": 2
-      },
-      {
-        "name": "Daniel Mosquera",
-        "value": 2
+        "name": "Christopher Operi",
+        "value": 1,
+        "appearances": 1,
+        "cumulative": 1
       }
     ]
   },
@@ -48,44 +20,58 @@
     "date": "MD2",
     "data": [
       {
-        "name": "Erling Haaland",
-        "value": 4
+        "name": "Antonee Robinson",
+        "value": 1,
+        "appearances": 1,
+        "cumulative": 1
       },
       {
-        "name": "Andrej Kramarić",
-        "value": 4
+        "name": "Emanuele Valeri",
+        "value": 1,
+        "appearances": 1,
+        "cumulative": 1
       },
       {
-        "name": "Viktor Gyökeres",
-        "value": 3
+        "name": "Rayan Aït-Nouri",
+        "value": 1,
+        "appearances": 1,
+        "cumulative": 1
       },
       {
-        "name": "Robert Lewandowski",
-        "value": 3
+        "name": "Javi Hernández",
+        "value": 1,
+        "appearances": 1,
+        "cumulative": 1
       },
       {
-        "name": "Mateo Retegui",
-        "value": 3
+        "name": "Sergio Akieme",
+        "value": 1,
+        "appearances": 1,
+        "cumulative": 1
       },
       {
-        "name": "Mason Greenwood",
-        "value": 3
+        "name": "Christopher Operi",
+        "value": 1,
+        "appearances": 1,
+        "cumulative": 1
       },
       {
-        "name": "Bradley Barcola",
-        "value": 3
+        "name": "Nuno Mendes",
+        "value": 1,
+        "appearances": 1,
+        "cumulative": 1
       },
       {
-        "name": "Noni Madueke",
-        "value": 3
+        "name": "Yanis Zouaoui",
+        "value": 1,
+        "appearances": 1,
+        "cumulative": 1
       },
       {
-        "name": "Pedro Gonçalves",
-        "value": 3
-      },
-      {
-        "name": "Kanya Fujimoto",
-        "value": 3
+        "name": "Quentin Merlin",
+        "value": 1,
+        "appearances": 1,
+        "cumulative": 1
       }
     ]
   },
@@ -93,44 +79,64 @@
     "date": "MD3",
     "data": [
       {
-        "name": "Erling Haaland",
-        "value": 7
+        "name": "Sergi Cardona",
+        "value": 2,
+        "appearances": 1,
+        "cumulative": 2
       },
       {
-        "name": "Viktor Gyökeres",
-        "value": 6
+        "name": "Nuno Tavares",
+        "value": 2,
+        "appearances": 1,
+        "cumulative": 2
       },
       {
-        "name": "Mason Greenwood",
-        "value": 5
+        "name": "Antonee Robinson",
+        "value": 1,
+        "appearances": 2,
+        "cumulative": 2
       },
       {
-        "name": "Harry Kane",
-        "value": 4
+        "name": "Emanuele Valeri",
+        "value": 1,
+        "appearances": 1,
+        "cumulative": 1
       },
       {
-        "name": "Bradley Barcola",
-        "value": 4
+        "name": "Caio Henrique Oliveira Silva",
+        "value": 1,
+        "appearances": 1,
+        "cumulative": 1
       },
       {
-        "name": "Marcus Thuram",
-        "value": 4
+        "name": "Rayan Aït-Nouri",
+        "value": 1,
+        "appearances": 1,
+        "cumulative": 1
       },
       {
-        "name": "Andrej Kramarić",
-        "value": 4
+        "name": "Lucas Digne",
+        "value": 1,
+        "appearances": 1,
+        "cumulative": 1
       },
       {
-        "name": "Mohamed Salah",
-        "value": 3
+        "name": "Javi Hernández",
+        "value": 1,
+        "appearances": 1,
+        "cumulative": 1
       },
       {
-        "name": "Robert Lewandowski",
-        "value": 3
+        "name": "Sergio Akieme",
+        "value": 1,
+        "appearances": 1,
+        "cumulative": 1
       },
       {
-        "name": "Mateo Retegui",
-        "value": 3
+        "name": "Leif Davis",
+        "value": 1,
+        "appearances": 1,
+        "cumulative": 1
       }
     ]
   },
@@ -138,44 +144,64 @@
     "date": "MD4",
     "data": [
       {
-        "name": "Erling Haaland",
-        "value": 9
+        "name": "Sergi Cardona",
+        "value": 2,
+        "appearances": 1,
+        "cumulative": 2
       },
       {
-        "name": "Viktor Gyökeres",
-        "value": 7
+        "name": "Nuno Tavares",
+        "value": 2,
+        "appearances": 1,
+        "cumulative": 2
       },
       {
-        "name": "Harry Kane",
-        "value": 5
+        "name": "Maximilian Mittelstädt",
+        "value": 2,
+        "appearances": 1,
+        "cumulative": 2
       },
       {
-        "name": "Mason Greenwood",
-        "value": 5
+        "name": "Antonee Robinson",
+        "value": 1,
+        "appearances": 2,
+        "cumulative": 2
       },
       {
-        "name": "Robert Lewandowski",
-        "value": 4
+        "name": "Emanuele Valeri",
+        "value": 1,
+        "appearances": 1,
+        "cumulative": 1
       },
       {
-        "name": "Mateo Retegui",
-        "value": 4
+        "name": "Caio Henrique Oliveira Silva",
+        "value": 1,
+        "appearances": 1,
+        "cumulative": 1
       },
       {
-        "name": "Omar Marmoush",
-        "value": 4
+        "name": "Theo Hernández",
+        "value": 1,
+        "appearances": 1,
+        "cumulative": 1
       },
       {
-        "name": "Ermedin Demirović",
-        "value": 4
+        "name": "Rayan Aït-Nouri",
+        "value": 1,
+        "appearances": 1,
+        "cumulative": 1
       },
       {
-        "name": "Bradley Barcola",
-        "value": 4
+        "name": "Lucas Digne",
+        "value": 1,
+        "appearances": 2,
+        "cumulative": 2
       },
       {
-        "name": "Marcus Thuram",
-        "value": 4
+        "name": "Javi Hernández",
+        "value": 1,
+        "appearances": 1,
+        "cumulative": 1
       }
     ]
   },
@@ -183,44 +209,64 @@
     "date": "MD5",
     "data": [
       {
-        "name": "Erling Haaland",
-        "value": 10
+        "name": "Sergi Cardona",
+        "value": 2,
+        "appearances": 1,
+        "cumulative": 2
       },
       {
-        "name": "Viktor Gyökeres",
-        "value": 8
+        "name": "Nuno Tavares",
+        "value": 1.5,
+        "appearances": 2,
+        "cumulative": 3
       },
       {
-        "name": "Omar Marmoush",
-        "value": 6
+        "name": "Maximilian Mittelstädt",
+        "value": 1.5,
+        "appearances": 2,
+        "cumulative": 3
       },
       {
-        "name": "Harry Kane",
-        "value": 5
+        "name": "Antonee Robinson",
+        "value": 1,
+        "appearances": 2,
+        "cumulative": 2
       },
       {
-        "name": "Mason Greenwood",
-        "value": 5
+        "name": "Emanuele Valeri",
+        "value": 1,
+        "appearances": 1,
+        "cumulative": 1
       },
       {
-        "name": "Luis Díaz",
-        "value": 5
+        "name": "Caio Henrique Oliveira Silva",
+        "value": 1,
+        "appearances": 1,
+        "cumulative": 1
       },
       {
-        "name": "Robert Lewandowski",
-        "value": 4
+        "name": "Theo Hernández",
+        "value": 1,
+        "appearances": 1,
+        "cumulative": 1
       },
       {
-        "name": "Mateo Retegui",
-        "value": 4
+        "name": "Rayan Aït-Nouri",
+        "value": 1,
+        "appearances": 1,
+        "cumulative": 1
       },
       {
-        "name": "Ousmane Dembélé",
-        "value": 4
+        "name": "Lucas Digne",
+        "value": 1,
+        "appearances": 2,
+        "cumulative": 2
       },
       {
-        "name": "Bryan Mbeumo",
-        "value": 4
+        "name": "David Raum",
+        "value": 1,
+        "appearances": 1,
+        "cumulative": 1
       }
     ]
   },
@@ -228,44 +274,64 @@
     "date": "MD6",
     "data": [
       {
-        "name": "Viktor Gyökeres",
-        "value": 10
+        "name": "Sergi Cardona",
+        "value": 2,
+        "appearances": 1,
+        "cumulative": 2
       },
       {
-        "name": "Erling Haaland",
-        "value": 10
+        "name": "Maximilian Mittelstädt",
+        "value": 1.5,
+        "appearances": 2,
+        "cumulative": 3
       },
       {
-        "name": "Omar Marmoush",
-        "value": 8
+        "name": "Theo Hernández",
+        "value": 1.5,
+        "appearances": 2,
+        "cumulative": 3
       },
       {
-        "name": "Robert Lewandowski",
-        "value": 6
+        "name": "Nuno Tavares",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Cole Palmer",
-        "value": 6
+        "name": "Antonee Robinson",
+        "value": 1,
+        "appearances": 2,
+        "cumulative": 2
       },
       {
-        "name": "Bradley Barcola",
-        "value": 6
+        "name": "Emanuele Valeri",
+        "value": 1,
+        "appearances": 1,
+        "cumulative": 1
       },
       {
-        "name": "Harry Kane",
-        "value": 5
+        "name": "Caio Henrique Oliveira Silva",
+        "value": 1,
+        "appearances": 1,
+        "cumulative": 1
       },
       {
-        "name": "Mason Greenwood",
-        "value": 5
+        "name": "Rayan Aït-Nouri",
+        "value": 1,
+        "appearances": 2,
+        "cumulative": 2
       },
       {
-        "name": "Bryan Mbeumo",
-        "value": 5
+        "name": "Lucas Digne",
+        "value": 1,
+        "appearances": 2,
+        "cumulative": 2
       },
       {
-        "name": "Jonathan Burkardt",
-        "value": 5
+        "name": "David Raum",
+        "value": 1,
+        "appearances": 1,
+        "cumulative": 1
       }
     ]
   },
@@ -273,44 +339,64 @@
     "date": "MD7",
     "data": [
       {
-        "name": "Viktor Gyökeres",
-        "value": 10
+        "name": "Sergi Cardona",
+        "value": 2,
+        "appearances": 1,
+        "cumulative": 2
       },
       {
-        "name": "Erling Haaland",
-        "value": 10
+        "name": "Maximilian Mittelstädt",
+        "value": 1.5,
+        "appearances": 2,
+        "cumulative": 3
       },
       {
-        "name": "Omar Marmoush",
-        "value": 9
+        "name": "Theo Hernández",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Harry Kane",
-        "value": 8
+        "name": "Rayan Aït-Nouri",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Robert Lewandowski",
-        "value": 7
+        "name": "Nuno Tavares",
+        "value": 1.25,
+        "appearances": 4,
+        "cumulative": 5
       },
       {
-        "name": "Mateo Retegui",
-        "value": 7
+        "name": "Antonee Robinson",
+        "value": 1,
+        "appearances": 2,
+        "cumulative": 2
       },
       {
-        "name": "Marcus Thuram",
-        "value": 7
+        "name": "Emanuele Valeri",
+        "value": 1,
+        "appearances": 1,
+        "cumulative": 1
       },
       {
-        "name": "Bryan Mbeumo",
-        "value": 6
+        "name": "Caio Henrique Oliveira Silva",
+        "value": 1,
+        "appearances": 1,
+        "cumulative": 1
       },
       {
-        "name": "Ayoze Pérez",
-        "value": 6
+        "name": "Lucas Digne",
+        "value": 1,
+        "appearances": 2,
+        "cumulative": 2
       },
       {
-        "name": "Cole Palmer",
-        "value": 6
+        "name": "David Raum",
+        "value": 1,
+        "appearances": 1,
+        "cumulative": 1
       }
     ]
   },
@@ -318,44 +404,64 @@
     "date": "MD8",
     "data": [
       {
-        "name": "Viktor Gyökeres",
-        "value": 11
+        "name": "Sergi Cardona",
+        "value": 2,
+        "appearances": 1,
+        "cumulative": 2
       },
       {
-        "name": "Erling Haaland",
-        "value": 10
+        "name": "Maximilian Mittelstädt",
+        "value": 1.5,
+        "appearances": 2,
+        "cumulative": 3
       },
       {
-        "name": "Harry Kane",
-        "value": 9
+        "name": "Theo Hernández",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Omar Marmoush",
-        "value": 9
+        "name": "Rayan Aït-Nouri",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Mateo Retegui",
-        "value": 8
+        "name": "Nuno Tavares",
+        "value": 1.25,
+        "appearances": 4,
+        "cumulative": 5
       },
       {
-        "name": "Robert Lewandowski",
-        "value": 7
+        "name": "Antonee Robinson",
+        "value": 1,
+        "appearances": 2,
+        "cumulative": 2
       },
       {
-        "name": "Bradley Barcola",
-        "value": 7
+        "name": "Emanuele Valeri",
+        "value": 1,
+        "appearances": 1,
+        "cumulative": 1
       },
       {
-        "name": "Marcus Thuram",
-        "value": 7
+        "name": "Caio Henrique Oliveira Silva",
+        "value": 1,
+        "appearances": 1,
+        "cumulative": 1
       },
       {
-        "name": "Mason Greenwood",
-        "value": 6
+        "name": "Lucas Digne",
+        "value": 1,
+        "appearances": 2,
+        "cumulative": 2
       },
       {
-        "name": "Bryan Mbeumo",
-        "value": 6
+        "name": "David Raum",
+        "value": 1,
+        "appearances": 1,
+        "cumulative": 1
       }
     ]
   },
@@ -363,44 +469,64 @@
     "date": "MD9",
     "data": [
       {
-        "name": "Viktor Gyökeres",
-        "value": 12
+        "name": "Sergi Cardona",
+        "value": 2,
+        "appearances": 1,
+        "cumulative": 2
       },
       {
-        "name": "Harry Kane",
-        "value": 11
+        "name": "Maximilian Mittelstädt",
+        "value": 1.5,
+        "appearances": 2,
+        "cumulative": 3
       },
       {
-        "name": "Erling Haaland",
-        "value": 11
+        "name": "Nuno Tavares",
+        "value": 1.4,
+        "appearances": 5,
+        "cumulative": 7
       },
       {
-        "name": "Robert Lewandowski",
-        "value": 10
+        "name": "Theo Hernández",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Mateo Retegui",
-        "value": 10
+        "name": "Rayan Aït-Nouri",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Omar Marmoush",
-        "value": 10
+        "name": "Antonee Robinson",
+        "value": 1,
+        "appearances": 2,
+        "cumulative": 2
       },
       {
-        "name": "Bryan Mbeumo",
-        "value": 8
+        "name": "Emanuele Valeri",
+        "value": 1,
+        "appearances": 2,
+        "cumulative": 2
       },
       {
-        "name": "Bradley Barcola",
-        "value": 8
+        "name": "Caio Henrique Oliveira Silva",
+        "value": 1,
+        "appearances": 1,
+        "cumulative": 1
       },
       {
-        "name": "Chris Wood",
-        "value": 7
+        "name": "Lucas Digne",
+        "value": 1,
+        "appearances": 2,
+        "cumulative": 2
       },
       {
-        "name": "Samu Omorodion",
-        "value": 7
+        "name": "David Raum",
+        "value": 1,
+        "appearances": 1,
+        "cumulative": 1
       }
     ]
   },
@@ -408,44 +534,64 @@
     "date": "MD10",
     "data": [
       {
-        "name": "Viktor Gyökeres",
-        "value": 16
+        "name": "Sergi Cardona",
+        "value": 2,
+        "appearances": 1,
+        "cumulative": 2
       },
       {
-        "name": "Robert Lewandowski",
-        "value": 12
+        "name": "Milos Kerkez",
+        "value": 2,
+        "appearances": 1,
+        "cumulative": 2
       },
       {
-        "name": "Harry Kane",
-        "value": 11
+        "name": "Maximilian Mittelstädt",
+        "value": 1.5,
+        "appearances": 2,
+        "cumulative": 3
       },
       {
-        "name": "Erling Haaland",
-        "value": 11
+        "name": "Nuno Tavares",
+        "value": 1.3333333333333333,
+        "appearances": 6,
+        "cumulative": 8
       },
       {
-        "name": "Omar Marmoush",
-        "value": 11
+        "name": "Theo Hernández",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Mateo Retegui",
-        "value": 10
+        "name": "Rayan Aït-Nouri",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Chris Wood",
-        "value": 8
+        "name": "Antonee Robinson",
+        "value": 1,
+        "appearances": 3,
+        "cumulative": 3
       },
       {
-        "name": "Bryan Mbeumo",
-        "value": 8
+        "name": "Emanuele Valeri",
+        "value": 1,
+        "appearances": 2,
+        "cumulative": 2
       },
       {
-        "name": "Bradley Barcola",
-        "value": 8
+        "name": "Caio Henrique Oliveira Silva",
+        "value": 1,
+        "appearances": 1,
+        "cumulative": 1
       },
       {
-        "name": "Galeno",
-        "value": 8
+        "name": "Lucas Digne",
+        "value": 1,
+        "appearances": 2,
+        "cumulative": 2
       }
     ]
   },
@@ -453,44 +599,64 @@
     "date": "MD11",
     "data": [
       {
-        "name": "Viktor Gyökeres",
-        "value": 16
+        "name": "Sergi Cardona",
+        "value": 2,
+        "appearances": 1,
+        "cumulative": 2
       },
       {
-        "name": "Robert Lewandowski",
-        "value": 14
+        "name": "Milos Kerkez",
+        "value": 2,
+        "appearances": 1,
+        "cumulative": 2
       },
       {
-        "name": "Harry Kane",
-        "value": 14
+        "name": "Maximilian Mittelstädt",
+        "value": 1.5,
+        "appearances": 2,
+        "cumulative": 3
       },
       {
-        "name": "Erling Haaland",
-        "value": 12
+        "name": "Ramy Bensebaini",
+        "value": 1.5,
+        "appearances": 2,
+        "cumulative": 3
       },
       {
-        "name": "Mateo Retegui",
-        "value": 11
+        "name": "Nuno Tavares",
+        "value": 1.3333333333333333,
+        "appearances": 6,
+        "cumulative": 8
       },
       {
-        "name": "Omar Marmoush",
-        "value": 11
+        "name": "Theo Hernández",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Bradley Barcola",
-        "value": 10
+        "name": "Rayan Aït-Nouri",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Mohamed Salah",
-        "value": 8
+        "name": "Antonee Robinson",
+        "value": 1,
+        "appearances": 3,
+        "cumulative": 3
       },
       {
-        "name": "Mason Greenwood",
-        "value": 8
+        "name": "Emanuele Valeri",
+        "value": 1,
+        "appearances": 2,
+        "cumulative": 2
       },
       {
-        "name": "Chris Wood",
-        "value": 8
+        "name": "Caio Henrique Oliveira Silva",
+        "value": 1,
+        "appearances": 1,
+        "cumulative": 1
       }
     ]
   },
@@ -498,44 +664,64 @@
     "date": "MD12",
     "data": [
       {
-        "name": "Viktor Gyökeres",
-        "value": 16
+        "name": "Sergi Cardona",
+        "value": 2,
+        "appearances": 1,
+        "cumulative": 2
       },
       {
-        "name": "Robert Lewandowski",
-        "value": 14
+        "name": "Milos Kerkez",
+        "value": 2,
+        "appearances": 1,
+        "cumulative": 2
       },
       {
-        "name": "Harry Kane",
-        "value": 14
+        "name": "Ramy Bensebaini",
+        "value": 1.5,
+        "appearances": 2,
+        "cumulative": 3
       },
       {
-        "name": "Omar Marmoush",
-        "value": 13
+        "name": "Nuno Tavares",
+        "value": 1.3333333333333333,
+        "appearances": 6,
+        "cumulative": 8
       },
       {
-        "name": "Erling Haaland",
-        "value": 12
+        "name": "Maximilian Mittelstädt",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Mateo Retegui",
-        "value": 11
+        "name": "Theo Hernández",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Mohamed Salah",
-        "value": 10
+        "name": "Rayan Aït-Nouri",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Bradley Barcola",
-        "value": 10
+        "name": "Antonee Robinson",
+        "value": 1,
+        "appearances": 3,
+        "cumulative": 3
       },
       {
-        "name": "Samu Omorodion",
-        "value": 9
+        "name": "Emanuele Valeri",
+        "value": 1,
+        "appearances": 3,
+        "cumulative": 3
       },
       {
-        "name": "Jonathan Burkardt",
-        "value": 9
+        "name": "Caio Henrique Oliveira Silva",
+        "value": 1,
+        "appearances": 1,
+        "cumulative": 1
       }
     ]
   },
@@ -543,44 +729,64 @@
     "date": "MD13",
     "data": [
       {
-        "name": "Viktor Gyökeres",
-        "value": 17
+        "name": "Sergi Cardona",
+        "value": 2,
+        "appearances": 1,
+        "cumulative": 2
       },
       {
-        "name": "Robert Lewandowski",
-        "value": 14
+        "name": "Milos Kerkez",
+        "value": 1.5,
+        "appearances": 2,
+        "cumulative": 3
       },
       {
-        "name": "Harry Kane",
-        "value": 14
+        "name": "Ramy Bensebaini",
+        "value": 1.5,
+        "appearances": 2,
+        "cumulative": 3
       },
       {
-        "name": "Omar Marmoush",
-        "value": 13
+        "name": "Nuno Tavares",
+        "value": 1.3333333333333333,
+        "appearances": 6,
+        "cumulative": 8
       },
       {
-        "name": "Mateo Retegui",
-        "value": 12
+        "name": "Maximilian Mittelstädt",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Erling Haaland",
-        "value": 12
+        "name": "Theo Hernández",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Mohamed Salah",
-        "value": 11
+        "name": "Rayan Aït-Nouri",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Samu Omorodion",
-        "value": 10
+        "name": "Antonee Robinson",
+        "value": 1,
+        "appearances": 3,
+        "cumulative": 3
       },
       {
-        "name": "Jonathan Burkardt",
-        "value": 10
+        "name": "Emanuele Valeri",
+        "value": 1,
+        "appearances": 3,
+        "cumulative": 3
       },
       {
-        "name": "Bradley Barcola",
-        "value": 10
+        "name": "Caio Henrique Oliveira Silva",
+        "value": 1,
+        "appearances": 1,
+        "cumulative": 1
       }
     ]
   },
@@ -588,44 +794,64 @@
     "date": "MD14",
     "data": [
       {
-        "name": "Viktor Gyökeres",
-        "value": 18
+        "name": "Sergi Cardona",
+        "value": 2,
+        "appearances": 1,
+        "cumulative": 2
       },
       {
-        "name": "Robert Lewandowski",
-        "value": 15
+        "name": "Johan Mojica",
+        "value": 2,
+        "appearances": 1,
+        "cumulative": 2
       },
       {
-        "name": "Harry Kane",
-        "value": 14
+        "name": "Milos Kerkez",
+        "value": 1.5,
+        "appearances": 2,
+        "cumulative": 3
       },
       {
-        "name": "Mohamed Salah",
-        "value": 13
+        "name": "Ramy Bensebaini",
+        "value": 1.5,
+        "appearances": 2,
+        "cumulative": 3
       },
       {
-        "name": "Omar Marmoush",
-        "value": 13
+        "name": "Nuno Tavares",
+        "value": 1.3333333333333333,
+        "appearances": 6,
+        "cumulative": 8
       },
       {
-        "name": "Mateo Retegui",
-        "value": 12
+        "name": "Maximilian Mittelstädt",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Erling Haaland",
-        "value": 12
+        "name": "Theo Hernández",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Moise Kean",
-        "value": 11
+        "name": "Rayan Aït-Nouri",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Jonathan David",
-        "value": 11
+        "name": "Antonee Robinson",
+        "value": 1,
+        "appearances": 4,
+        "cumulative": 4
       },
       {
-        "name": "Mason Greenwood",
-        "value": 10
+        "name": "Emanuele Valeri",
+        "value": 1,
+        "appearances": 3,
+        "cumulative": 3
       }
     ]
   },
@@ -633,44 +859,64 @@
     "date": "MD15",
     "data": [
       {
-        "name": "Viktor Gyökeres",
-        "value": 18
+        "name": "Sergi Cardona",
+        "value": 2,
+        "appearances": 1,
+        "cumulative": 2
       },
       {
-        "name": "Robert Lewandowski",
-        "value": 15
+        "name": "Johan Mojica",
+        "value": 2,
+        "appearances": 1,
+        "cumulative": 2
       },
       {
-        "name": "Mohamed Salah",
-        "value": 14
+        "name": "Milos Kerkez",
+        "value": 1.5,
+        "appearances": 2,
+        "cumulative": 3
       },
       {
-        "name": "Harry Kane",
-        "value": 14
+        "name": "Alphonso Davies",
+        "value": 1.5,
+        "appearances": 2,
+        "cumulative": 3
       },
       {
-        "name": "Erling Haaland",
-        "value": 13
+        "name": "Nuno Tavares",
+        "value": 1.3333333333333333,
+        "appearances": 6,
+        "cumulative": 8
       },
       {
-        "name": "Omar Marmoush",
-        "value": 13
+        "name": "Maximilian Mittelstädt",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Mateo Retegui",
-        "value": 12
+        "name": "Theo Hernández",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Moise Kean",
-        "value": 11
+        "name": "Rayan Aït-Nouri",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Samu Omorodion",
-        "value": 11
+        "name": "Ramy Bensebaini",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Jonathan David",
-        "value": 11
+        "name": "Antonee Robinson",
+        "value": 1,
+        "appearances": 4,
+        "cumulative": 4
       }
     ]
   },
@@ -678,44 +924,64 @@
     "date": "MD16",
     "data": [
       {
-        "name": "Viktor Gyökeres",
-        "value": 18
+        "name": "Sergi Cardona",
+        "value": 2,
+        "appearances": 1,
+        "cumulative": 2
       },
       {
-        "name": "Robert Lewandowski",
-        "value": 16
+        "name": "Johan Mojica",
+        "value": 2,
+        "appearances": 1,
+        "cumulative": 2
       },
       {
-        "name": "Harry Kane",
-        "value": 15
+        "name": "Milos Kerkez",
+        "value": 1.5,
+        "appearances": 2,
+        "cumulative": 3
       },
       {
-        "name": "Mohamed Salah",
-        "value": 14
+        "name": "Alphonso Davies",
+        "value": 1.5,
+        "appearances": 2,
+        "cumulative": 3
       },
       {
-        "name": "Omar Marmoush",
-        "value": 14
+        "name": "Nuno Tavares",
+        "value": 1.3333333333333333,
+        "appearances": 6,
+        "cumulative": 8
       },
       {
-        "name": "Erling Haaland",
-        "value": 13
+        "name": "Maximilian Mittelstädt",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Samu Omorodion",
-        "value": 13
+        "name": "Theo Hernández",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Mateo Retegui",
-        "value": 12
+        "name": "Rayan Aït-Nouri",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Jonathan Burkardt",
-        "value": 12
+        "name": "Ramy Bensebaini",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Patrik Schick",
-        "value": 11
+        "name": "Antonee Robinson",
+        "value": 1.2,
+        "appearances": 5,
+        "cumulative": 6
       }
     ]
   },
@@ -723,44 +989,64 @@
     "date": "MD17",
     "data": [
       {
-        "name": "Viktor Gyökeres",
-        "value": 21
+        "name": "Sergi Cardona",
+        "value": 2,
+        "appearances": 1,
+        "cumulative": 2
       },
       {
-        "name": "Mohamed Salah",
-        "value": 16
+        "name": "Johan Mojica",
+        "value": 2,
+        "appearances": 1,
+        "cumulative": 2
       },
       {
-        "name": "Robert Lewandowski",
-        "value": 16
+        "name": "Milos Kerkez",
+        "value": 1.5,
+        "appearances": 2,
+        "cumulative": 3
       },
       {
-        "name": "Harry Kane",
-        "value": 16
+        "name": "Alphonso Davies",
+        "value": 1.5,
+        "appearances": 2,
+        "cumulative": 3
       },
       {
-        "name": "Omar Marmoush",
-        "value": 15
+        "name": "Nuno Tavares",
+        "value": 1.3333333333333333,
+        "appearances": 6,
+        "cumulative": 8
       },
       {
-        "name": "Erling Haaland",
-        "value": 13
+        "name": "Maximilian Mittelstädt",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Samu Omorodion",
-        "value": 13
+        "name": "Theo Hernández",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Mateo Retegui",
-        "value": 12
+        "name": "Rayan Aït-Nouri",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Moise Kean",
-        "value": 12
+        "name": "Ramy Bensebaini",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Jonathan Burkardt",
-        "value": 12
+        "name": "Joakim Mæhle",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       }
     ]
   },
@@ -768,44 +1054,64 @@
     "date": "MD18",
     "data": [
       {
-        "name": "Viktor Gyökeres",
-        "value": 22
+        "name": "Sergi Cardona",
+        "value": 2,
+        "appearances": 1,
+        "cumulative": 2
       },
       {
-        "name": "Mohamed Salah",
-        "value": 17
+        "name": "Johan Mojica",
+        "value": 2,
+        "appearances": 1,
+        "cumulative": 2
       },
       {
-        "name": "Robert Lewandowski",
-        "value": 16
+        "name": "Milos Kerkez",
+        "value": 1.5,
+        "appearances": 2,
+        "cumulative": 3
       },
       {
-        "name": "Harry Kane",
-        "value": 16
+        "name": "Alphonso Davies",
+        "value": 1.5,
+        "appearances": 2,
+        "cumulative": 3
       },
       {
-        "name": "Omar Marmoush",
-        "value": 15
+        "name": "Nuno Tavares",
+        "value": 1.3333333333333333,
+        "appearances": 6,
+        "cumulative": 8
       },
       {
-        "name": "Erling Haaland",
-        "value": 13
+        "name": "Maximilian Mittelstädt",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Moise Kean",
-        "value": 13
+        "name": "Theo Hernández",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Samu Omorodion",
-        "value": 13
+        "name": "Rayan Aït-Nouri",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Mateo Retegui",
-        "value": 12
+        "name": "Ramy Bensebaini",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Mason Greenwood",
-        "value": 12
+        "name": "Joakim Mæhle",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       }
     ]
   },
@@ -813,44 +1119,64 @@
     "date": "MD19",
     "data": [
       {
-        "name": "Viktor Gyökeres",
-        "value": 22
+        "name": "Sergi Cardona",
+        "value": 2,
+        "appearances": 1,
+        "cumulative": 2
       },
       {
-        "name": "Mohamed Salah",
-        "value": 18
+        "name": "Johan Mojica",
+        "value": 2,
+        "appearances": 1,
+        "cumulative": 2
       },
       {
-        "name": "Harry Kane",
-        "value": 17
+        "name": "Milos Kerkez",
+        "value": 1.5,
+        "appearances": 2,
+        "cumulative": 3
       },
       {
-        "name": "Robert Lewandowski",
-        "value": 16
+        "name": "Alphonso Davies",
+        "value": 1.5,
+        "appearances": 2,
+        "cumulative": 3
       },
       {
-        "name": "Omar Marmoush",
-        "value": 15
+        "name": "Nuno Tavares",
+        "value": 1.3333333333333333,
+        "appearances": 6,
+        "cumulative": 8
       },
       {
-        "name": "Erling Haaland",
-        "value": 14
+        "name": "Maximilian Mittelstädt",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Mateo Retegui",
-        "value": 13
+        "name": "Rayan Aït-Nouri",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Patrik Schick",
-        "value": 13
+        "name": "Ramy Bensebaini",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Moise Kean",
-        "value": 13
+        "name": "Joakim Mæhle",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Samu Omorodion",
-        "value": 13
+        "name": "Theo Hernández",
+        "value": 1.25,
+        "appearances": 4,
+        "cumulative": 5
       }
     ]
   },
@@ -858,44 +1184,64 @@
     "date": "MD20",
     "data": [
       {
-        "name": "Viktor Gyökeres",
-        "value": 22
+        "name": "Sergi Cardona",
+        "value": 2,
+        "appearances": 2,
+        "cumulative": 4
       },
       {
-        "name": "Mohamed Salah",
-        "value": 19
+        "name": "Johan Mojica",
+        "value": 2,
+        "appearances": 1,
+        "cumulative": 2
       },
       {
-        "name": "Harry Kane",
-        "value": 19
+        "name": "Alphonso Davies",
+        "value": 1.5,
+        "appearances": 2,
+        "cumulative": 3
       },
       {
-        "name": "Robert Lewandowski",
-        "value": 16
+        "name": "Nuno Tavares",
+        "value": 1.3333333333333333,
+        "appearances": 6,
+        "cumulative": 8
       },
       {
-        "name": "Erling Haaland",
-        "value": 16
+        "name": "Milos Kerkez",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Omar Marmoush",
-        "value": 15
+        "name": "Maximilian Mittelstädt",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Ousmane Dembélé",
-        "value": 14
+        "name": "Rayan Aït-Nouri",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Patrik Schick",
-        "value": 14
+        "name": "Ramy Bensebaini",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Mateo Retegui",
-        "value": 13
+        "name": "Joakim Mæhle",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Alexander Isak",
-        "value": 13
+        "name": "Theo Hernández",
+        "value": 1.25,
+        "appearances": 4,
+        "cumulative": 5
       }
     ]
   },
@@ -903,44 +1249,64 @@
     "date": "MD21",
     "data": [
       {
-        "name": "Viktor Gyökeres",
-        "value": 22
+        "name": "Sergi Cardona",
+        "value": 2,
+        "appearances": 2,
+        "cumulative": 4
       },
       {
-        "name": "Harry Kane",
-        "value": 21
+        "name": "Johan Mojica",
+        "value": 2,
+        "appearances": 1,
+        "cumulative": 2
       },
       {
-        "name": "Mohamed Salah",
-        "value": 19
+        "name": "Alphonso Davies",
+        "value": 1.5,
+        "appearances": 2,
+        "cumulative": 3
       },
       {
-        "name": "Robert Lewandowski",
-        "value": 17
+        "name": "Antonee Robinson",
+        "value": 1.3333333333333333,
+        "appearances": 6,
+        "cumulative": 8
       },
       {
-        "name": "Erling Haaland",
-        "value": 16
+        "name": "Nuno Tavares",
+        "value": 1.3333333333333333,
+        "appearances": 6,
+        "cumulative": 8
       },
       {
-        "name": "Ousmane Dembélé",
-        "value": 16
+        "name": "Milos Kerkez",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Kylian Mbappé",
-        "value": 15
+        "name": "Maximilian Mittelstädt",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Alexander Isak",
-        "value": 15
+        "name": "Rayan Aït-Nouri",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Omar Marmoush",
-        "value": 15
+        "name": "Ramy Bensebaini",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Mateo Retegui",
-        "value": 14
+        "name": "Joakim Mæhle",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       }
     ]
   },
@@ -948,44 +1314,64 @@
     "date": "MD22",
     "data": [
       {
-        "name": "Viktor Gyökeres",
-        "value": 22
+        "name": "Sergi Cardona",
+        "value": 2,
+        "appearances": 3,
+        "cumulative": 6
       },
       {
-        "name": "Harry Kane",
-        "value": 21
+        "name": "Johan Mojica",
+        "value": 2,
+        "appearances": 1,
+        "cumulative": 2
       },
       {
-        "name": "Mohamed Salah",
-        "value": 19
+        "name": "Alphonso Davies",
+        "value": 1.5,
+        "appearances": 2,
+        "cumulative": 3
       },
       {
-        "name": "Robert Lewandowski",
-        "value": 18
+        "name": "Antonee Robinson",
+        "value": 1.3333333333333333,
+        "appearances": 6,
+        "cumulative": 8
       },
       {
-        "name": "Erling Haaland",
-        "value": 17
+        "name": "Nuno Tavares",
+        "value": 1.3333333333333333,
+        "appearances": 6,
+        "cumulative": 8
       },
       {
-        "name": "Mateo Retegui",
-        "value": 16
+        "name": "Maximilian Mittelstädt",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Ousmane Dembélé",
-        "value": 16
+        "name": "Rayan Aït-Nouri",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Kylian Mbappé",
-        "value": 15
+        "name": "Ramy Bensebaini",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Alexander Isak",
-        "value": 15
+        "name": "Joakim Mæhle",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Omar Marmoush",
-        "value": 15
+        "name": "Milos Kerkez",
+        "value": 1.25,
+        "appearances": 4,
+        "cumulative": 5
       }
     ]
   },
@@ -993,44 +1379,64 @@
     "date": "MD23",
     "data": [
       {
-        "name": "Viktor Gyökeres",
-        "value": 23
+        "name": "Johan Mojica",
+        "value": 2,
+        "appearances": 1,
+        "cumulative": 2
       },
       {
-        "name": "Harry Kane",
-        "value": 21
+        "name": "Sergi Cardona",
+        "value": 1.75,
+        "appearances": 4,
+        "cumulative": 7
       },
       {
-        "name": "Mohamed Salah",
-        "value": 20
+        "name": "Alphonso Davies",
+        "value": 1.5,
+        "appearances": 2,
+        "cumulative": 3
       },
       {
-        "name": "Robert Lewandowski",
-        "value": 19
+        "name": "Antonee Robinson",
+        "value": 1.3333333333333333,
+        "appearances": 6,
+        "cumulative": 8
       },
       {
-        "name": "Erling Haaland",
-        "value": 18
+        "name": "Nuno Tavares",
+        "value": 1.3333333333333333,
+        "appearances": 6,
+        "cumulative": 8
       },
       {
-        "name": "Alexander Isak",
-        "value": 17
+        "name": "Rayan Aït-Nouri",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Ousmane Dembélé",
-        "value": 17
+        "name": "Ramy Bensebaini",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Kylian Mbappé",
-        "value": 16
+        "name": "Joakim Mæhle",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Mateo Retegui",
-        "value": 16
+        "name": "Milos Kerkez",
+        "value": 1.25,
+        "appearances": 4,
+        "cumulative": 5
       },
       {
-        "name": "Omar Marmoush",
-        "value": 15
+        "name": "Maximilian Mittelstädt",
+        "value": 1.25,
+        "appearances": 4,
+        "cumulative": 5
       }
     ]
   },
@@ -1038,44 +1444,64 @@
     "date": "MD24",
     "data": [
       {
-        "name": "Viktor Gyökeres",
-        "value": 25
+        "name": "Sergi Cardona",
+        "value": 1.75,
+        "appearances": 4,
+        "cumulative": 7
       },
       {
-        "name": "Mohamed Salah",
-        "value": 22
+        "name": "Deiver Machado",
+        "value": 1.5,
+        "appearances": 2,
+        "cumulative": 3
       },
       {
-        "name": "Harry Kane",
-        "value": 21
+        "name": "Alphonso Davies",
+        "value": 1.5,
+        "appearances": 2,
+        "cumulative": 3
       },
       {
-        "name": "Robert Lewandowski",
-        "value": 20
+        "name": "Johan Mojica",
+        "value": 1.5,
+        "appearances": 2,
+        "cumulative": 3
       },
       {
-        "name": "Mateo Retegui",
-        "value": 20
+        "name": "Nuno Tavares",
+        "value": 1.3333333333333333,
+        "appearances": 6,
+        "cumulative": 8
       },
       {
-        "name": "Erling Haaland",
-        "value": 19
+        "name": "Rayan Aït-Nouri",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Ousmane Dembélé",
-        "value": 18
+        "name": "Ramy Bensebaini",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Kylian Mbappé",
-        "value": 17
+        "name": "Joakim Mæhle",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Alexander Isak",
-        "value": 17
+        "name": "Antonee Robinson",
+        "value": 1.2857142857142858,
+        "appearances": 7,
+        "cumulative": 9
       },
       {
-        "name": "Chris Wood",
-        "value": 17
+        "name": "Milos Kerkez",
+        "value": 1.25,
+        "appearances": 4,
+        "cumulative": 5
       }
     ]
   },
@@ -1083,44 +1509,64 @@
     "date": "MD25",
     "data": [
       {
-        "name": "Viktor Gyökeres",
-        "value": 27
+        "name": "Yuri Berchiche",
+        "value": 2,
+        "appearances": 1,
+        "cumulative": 2
       },
       {
-        "name": "Mohamed Salah",
-        "value": 23
+        "name": "Sergi Cardona",
+        "value": 1.75,
+        "appearances": 4,
+        "cumulative": 7
       },
       {
-        "name": "Harry Kane",
-        "value": 21
+        "name": "Alphonso Davies",
+        "value": 1.5,
+        "appearances": 2,
+        "cumulative": 3
       },
       {
-        "name": "Robert Lewandowski",
-        "value": 20
+        "name": "Johan Mojica",
+        "value": 1.5,
+        "appearances": 2,
+        "cumulative": 3
       },
       {
-        "name": "Mateo Retegui",
-        "value": 20
+        "name": "Nuno Tavares",
+        "value": 1.3333333333333333,
+        "appearances": 6,
+        "cumulative": 8
       },
       {
-        "name": "Ousmane Dembélé",
-        "value": 20
+        "name": "Rayan Aït-Nouri",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Erling Haaland",
-        "value": 19
+        "name": "Ramy Bensebaini",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Omar Marmoush",
-        "value": 18
+        "name": "Joakim Mæhle",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Chris Wood",
-        "value": 18
+        "name": "Deiver Machado",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Kylian Mbappé",
-        "value": 17
+        "name": "Antonee Robinson",
+        "value": 1.2857142857142858,
+        "appearances": 7,
+        "cumulative": 9
       }
     ]
   },
@@ -1128,44 +1574,64 @@
     "date": "MD26",
     "data": [
       {
-        "name": "Viktor Gyökeres",
-        "value": 28
+        "name": "Yuri Berchiche",
+        "value": 2,
+        "appearances": 1,
+        "cumulative": 2
       },
       {
-        "name": "Mohamed Salah",
-        "value": 24
+        "name": "Sergi Cardona",
+        "value": 1.75,
+        "appearances": 4,
+        "cumulative": 7
       },
       {
-        "name": "Robert Lewandowski",
-        "value": 21
+        "name": "Alphonso Davies",
+        "value": 1.5,
+        "appearances": 2,
+        "cumulative": 3
       },
       {
-        "name": "Harry Kane",
-        "value": 21
+        "name": "Johan Mojica",
+        "value": 1.5,
+        "appearances": 2,
+        "cumulative": 3
       },
       {
-        "name": "Mateo Retegui",
-        "value": 21
+        "name": "Nuno Tavares",
+        "value": 1.3333333333333333,
+        "appearances": 6,
+        "cumulative": 8
       },
       {
-        "name": "Ousmane Dembélé",
-        "value": 21
+        "name": "Rayan Aït-Nouri",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Alexander Isak",
-        "value": 19
+        "name": "Ramy Bensebaini",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Erling Haaland",
-        "value": 19
+        "name": "Joakim Mæhle",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Omar Marmoush",
-        "value": 18
+        "name": "Deiver Machado",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Chris Wood",
-        "value": 18
+        "name": "Antonee Robinson",
+        "value": 1.2857142857142858,
+        "appearances": 7,
+        "cumulative": 9
       }
     ]
   },
@@ -1173,44 +1639,64 @@
     "date": "MD27",
     "data": [
       {
-        "name": "Viktor Gyökeres",
-        "value": 30
+        "name": "Yuri Berchiche",
+        "value": 2,
+        "appearances": 1,
+        "cumulative": 2
       },
       {
-        "name": "Mohamed Salah",
-        "value": 24
+        "name": "Sergi Cardona",
+        "value": 1.75,
+        "appearances": 4,
+        "cumulative": 7
       },
       {
-        "name": "Robert Lewandowski",
-        "value": 22
+        "name": "Alphonso Davies",
+        "value": 1.5,
+        "appearances": 2,
+        "cumulative": 3
       },
       {
-        "name": "Harry Kane",
-        "value": 22
+        "name": "Johan Mojica",
+        "value": 1.5,
+        "appearances": 2,
+        "cumulative": 3
       },
       {
-        "name": "Mateo Retegui",
-        "value": 21
+        "name": "Nuno Tavares",
+        "value": 1.3333333333333333,
+        "appearances": 6,
+        "cumulative": 8
       },
       {
-        "name": "Ousmane Dembélé",
-        "value": 21
+        "name": "Rayan Aït-Nouri",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Erling Haaland",
-        "value": 20
+        "name": "Ramy Bensebaini",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Alexander Isak",
-        "value": 19
+        "name": "Joakim Mæhle",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Kylian Mbappé",
-        "value": 18
+        "name": "Deiver Machado",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Omar Marmoush",
-        "value": 18
+        "name": "Antonee Robinson",
+        "value": 1.2857142857142858,
+        "appearances": 7,
+        "cumulative": 9
       }
     ]
   },
@@ -1218,44 +1704,64 @@
     "date": "MD28",
     "data": [
       {
-        "name": "Viktor Gyökeres",
-        "value": 31
+        "name": "Yuri Berchiche",
+        "value": 2,
+        "appearances": 1,
+        "cumulative": 2
       },
       {
-        "name": "Mohamed Salah",
-        "value": 26
+        "name": "Sergi Cardona",
+        "value": 1.75,
+        "appearances": 4,
+        "cumulative": 7
       },
       {
-        "name": "Robert Lewandowski",
-        "value": 23
+        "name": "Alphonso Davies",
+        "value": 1.5,
+        "appearances": 2,
+        "cumulative": 3
       },
       {
-        "name": "Harry Kane",
-        "value": 23
+        "name": "Johan Mojica",
+        "value": 1.5,
+        "appearances": 2,
+        "cumulative": 3
       },
       {
-        "name": "Mateo Retegui",
-        "value": 22
+        "name": "Nuno Tavares",
+        "value": 1.3333333333333333,
+        "appearances": 6,
+        "cumulative": 8
       },
       {
-        "name": "Ousmane Dembélé",
-        "value": 21
+        "name": "Rayan Aït-Nouri",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Kylian Mbappé",
-        "value": 20
+        "name": "Ramy Bensebaini",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Erling Haaland",
-        "value": 20
+        "name": "Joakim Mæhle",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Alexander Isak",
-        "value": 19
+        "name": "Deiver Machado",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Omar Marmoush",
-        "value": 18
+        "name": "Antonee Robinson",
+        "value": 1.2857142857142858,
+        "appearances": 7,
+        "cumulative": 9
       }
     ]
   },
@@ -1263,44 +1769,64 @@
     "date": "MD29",
     "data": [
       {
-        "name": "Viktor Gyökeres",
-        "value": 31
+        "name": "Yuri Berchiche",
+        "value": 2,
+        "appearances": 1,
+        "cumulative": 2
       },
       {
-        "name": "Mohamed Salah",
-        "value": 27
+        "name": "Sergi Cardona",
+        "value": 1.75,
+        "appearances": 4,
+        "cumulative": 7
       },
       {
-        "name": "Robert Lewandowski",
-        "value": 25
+        "name": "Alphonso Davies",
+        "value": 1.5,
+        "appearances": 2,
+        "cumulative": 3
       },
       {
-        "name": "Harry Kane",
-        "value": 23
+        "name": "Johan Mojica",
+        "value": 1.5,
+        "appearances": 2,
+        "cumulative": 3
       },
       {
-        "name": "Kylian Mbappé",
-        "value": 22
+        "name": "Nuno Tavares",
+        "value": 1.3333333333333333,
+        "appearances": 6,
+        "cumulative": 8
       },
       {
-        "name": "Mateo Retegui",
-        "value": 22
+        "name": "Rayan Aït-Nouri",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Erling Haaland",
-        "value": 21
+        "name": "Ramy Bensebaini",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Ousmane Dembélé",
-        "value": 21
+        "name": "Joakim Mæhle",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Alexander Isak",
-        "value": 20
+        "name": "Deiver Machado",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Omar Marmoush",
-        "value": 19
+        "name": "Antonee Robinson",
+        "value": 1.2857142857142858,
+        "appearances": 7,
+        "cumulative": 9
       }
     ]
   },
@@ -1308,44 +1834,64 @@
     "date": "MD30",
     "data": [
       {
-        "name": "Viktor Gyökeres",
-        "value": 34
+        "name": "Yuri Berchiche",
+        "value": 2,
+        "appearances": 1,
+        "cumulative": 2
       },
       {
-        "name": "Mohamed Salah",
-        "value": 27
+        "name": "Sergi Cardona",
+        "value": 1.75,
+        "appearances": 4,
+        "cumulative": 7
       },
       {
-        "name": "Robert Lewandowski",
-        "value": 25
+        "name": "Alphonso Davies",
+        "value": 1.5,
+        "appearances": 2,
+        "cumulative": 3
       },
       {
-        "name": "Harry Kane",
-        "value": 24
+        "name": "Johan Mojica",
+        "value": 1.5,
+        "appearances": 2,
+        "cumulative": 3
       },
       {
-        "name": "Kylian Mbappé",
-        "value": 22
+        "name": "Nuno Tavares",
+        "value": 1.3333333333333333,
+        "appearances": 6,
+        "cumulative": 8
       },
       {
-        "name": "Mateo Retegui",
-        "value": 22
+        "name": "Rayan Aït-Nouri",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Alexander Isak",
-        "value": 21
+        "name": "Ramy Bensebaini",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Erling Haaland",
-        "value": 21
+        "name": "Joakim Mæhle",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Ousmane Dembélé",
-        "value": 21
+        "name": "Deiver Machado",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Omar Marmoush",
-        "value": 20
+        "name": "Raphaël Guerreiro",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       }
     ]
   },
@@ -1353,44 +1899,64 @@
     "date": "MD31",
     "data": [
       {
-        "name": "Viktor Gyökeres",
-        "value": 38
+        "name": "Yuri Berchiche",
+        "value": 2,
+        "appearances": 1,
+        "cumulative": 2
       },
       {
-        "name": "Mohamed Salah",
-        "value": 27
+        "name": "Sergi Cardona",
+        "value": 1.75,
+        "appearances": 4,
+        "cumulative": 7
       },
       {
-        "name": "Robert Lewandowski",
-        "value": 25
+        "name": "Alphonso Davies",
+        "value": 1.5,
+        "appearances": 2,
+        "cumulative": 3
       },
       {
-        "name": "Harry Kane",
-        "value": 24
+        "name": "Johan Mojica",
+        "value": 1.5,
+        "appearances": 2,
+        "cumulative": 3
       },
       {
-        "name": "Kylian Mbappé",
-        "value": 22
+        "name": "Nuno Tavares",
+        "value": 1.3333333333333333,
+        "appearances": 6,
+        "cumulative": 8
       },
       {
-        "name": "Mateo Retegui",
-        "value": 22
+        "name": "Rayan Aït-Nouri",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Alexander Isak",
-        "value": 21
+        "name": "Ramy Bensebaini",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Erling Haaland",
-        "value": 21
+        "name": "Joakim Mæhle",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Ousmane Dembélé",
-        "value": 21
+        "name": "Deiver Machado",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Omar Marmoush",
-        "value": 20
+        "name": "Raphaël Guerreiro",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       }
     ]
   },
@@ -1398,44 +1964,64 @@
     "date": "MD32",
     "data": [
       {
-        "name": "Viktor Gyökeres",
-        "value": 38
+        "name": "Yuri Berchiche",
+        "value": 2,
+        "appearances": 1,
+        "cumulative": 2
       },
       {
-        "name": "Mohamed Salah",
-        "value": 27
+        "name": "Sergi Cardona",
+        "value": 1.6,
+        "appearances": 5,
+        "cumulative": 8
       },
       {
-        "name": "Robert Lewandowski",
-        "value": 25
+        "name": "Alphonso Davies",
+        "value": 1.5,
+        "appearances": 2,
+        "cumulative": 3
       },
       {
-        "name": "Harry Kane",
-        "value": 24
+        "name": "Johan Mojica",
+        "value": 1.5,
+        "appearances": 2,
+        "cumulative": 3
       },
       {
-        "name": "Mateo Retegui",
-        "value": 23
+        "name": "Nuno Tavares",
+        "value": 1.3333333333333333,
+        "appearances": 6,
+        "cumulative": 8
       },
       {
-        "name": "Kylian Mbappé",
-        "value": 22
+        "name": "Rayan Aït-Nouri",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Alexander Isak",
-        "value": 21
+        "name": "Ramy Bensebaini",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Erling Haaland",
-        "value": 21
+        "name": "Joakim Mæhle",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Omar Marmoush",
-        "value": 21
+        "name": "Deiver Machado",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Ousmane Dembélé",
-        "value": 21
+        "name": "Raphaël Guerreiro",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       }
     ]
   },
@@ -1443,44 +2029,64 @@
     "date": "MD33",
     "data": [
       {
-        "name": "Viktor Gyökeres",
-        "value": 38
+        "name": "Yuri Berchiche",
+        "value": 2,
+        "appearances": 1,
+        "cumulative": 2
       },
       {
-        "name": "Mohamed Salah",
-        "value": 27
+        "name": "Sergi Cardona",
+        "value": 1.6,
+        "appearances": 5,
+        "cumulative": 8
       },
       {
-        "name": "Robert Lewandowski",
-        "value": 25
+        "name": "Alphonso Davies",
+        "value": 1.5,
+        "appearances": 2,
+        "cumulative": 3
       },
       {
-        "name": "Harry Kane",
-        "value": 25
+        "name": "Johan Mojica",
+        "value": 1.5,
+        "appearances": 2,
+        "cumulative": 3
       },
       {
-        "name": "Mateo Retegui",
-        "value": 23
+        "name": "Nuno Tavares",
+        "value": 1.3333333333333333,
+        "appearances": 6,
+        "cumulative": 8
       },
       {
-        "name": "Kylian Mbappé",
-        "value": 22
+        "name": "Rayan Aït-Nouri",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Alexander Isak",
-        "value": 21
+        "name": "Ramy Bensebaini",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Erling Haaland",
-        "value": 21
+        "name": "Joakim Mæhle",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Omar Marmoush",
-        "value": 21
+        "name": "Deiver Machado",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Ousmane Dembélé",
-        "value": 21
+        "name": "Raphaël Guerreiro",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       }
     ]
   },
@@ -1488,44 +2094,64 @@
     "date": "MD34",
     "data": [
       {
-        "name": "Viktor Gyökeres",
-        "value": 39
+        "name": "Yuri Berchiche",
+        "value": 2,
+        "appearances": 1,
+        "cumulative": 2
       },
       {
-        "name": "Mohamed Salah",
-        "value": 28
+        "name": "Sergi Cardona",
+        "value": 1.6,
+        "appearances": 5,
+        "cumulative": 8
       },
       {
-        "name": "Harry Kane",
-        "value": 26
+        "name": "Alphonso Davies",
+        "value": 1.5,
+        "appearances": 2,
+        "cumulative": 3
       },
       {
-        "name": "Robert Lewandowski",
-        "value": 25
+        "name": "Johan Mojica",
+        "value": 1.5,
+        "appearances": 2,
+        "cumulative": 3
       },
       {
-        "name": "Kylian Mbappé",
-        "value": 24
+        "name": "Nuno Tavares",
+        "value": 1.3333333333333333,
+        "appearances": 6,
+        "cumulative": 8
       },
       {
-        "name": "Mateo Retegui",
-        "value": 24
+        "name": "Rayan Aït-Nouri",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Alexander Isak",
-        "value": 22
+        "name": "Ramy Bensebaini",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Erling Haaland",
-        "value": 21
+        "name": "Joakim Mæhle",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Omar Marmoush",
-        "value": 21
+        "name": "Deiver Machado",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Ousmane Dembélé",
-        "value": 21
+        "name": "Raphaël Guerreiro",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       }
     ]
   },
@@ -1533,44 +2159,64 @@
     "date": "MD35",
     "data": [
       {
-        "name": "Viktor Gyökeres",
-        "value": 39
+        "name": "Yuri Berchiche",
+        "value": 2,
+        "appearances": 1,
+        "cumulative": 2
       },
       {
-        "name": "Mohamed Salah",
-        "value": 28
+        "name": "Sergi Cardona",
+        "value": 1.6,
+        "appearances": 5,
+        "cumulative": 8
       },
       {
-        "name": "Kylian Mbappé",
-        "value": 27
+        "name": "Alphonso Davies",
+        "value": 1.5,
+        "appearances": 2,
+        "cumulative": 3
       },
       {
-        "name": "Harry Kane",
-        "value": 26
+        "name": "Johan Mojica",
+        "value": 1.5,
+        "appearances": 2,
+        "cumulative": 3
       },
       {
-        "name": "Robert Lewandowski",
-        "value": 25
+        "name": "Nuno Tavares",
+        "value": 1.3333333333333333,
+        "appearances": 6,
+        "cumulative": 8
       },
       {
-        "name": "Mateo Retegui",
-        "value": 24
+        "name": "Rayan Aït-Nouri",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Alexander Isak",
-        "value": 23
+        "name": "Ramy Bensebaini",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Erling Haaland",
-        "value": 21
+        "name": "Joakim Mæhle",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Omar Marmoush",
-        "value": 21
+        "name": "Deiver Machado",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Ousmane Dembélé",
-        "value": 21
+        "name": "Raphaël Guerreiro",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       }
     ]
   },
@@ -1578,44 +2224,64 @@
     "date": "MD36",
     "data": [
       {
-        "name": "Viktor Gyökeres",
-        "value": 39
+        "name": "Yuri Berchiche",
+        "value": 2,
+        "appearances": 1,
+        "cumulative": 2
       },
       {
-        "name": "Kylian Mbappé",
-        "value": 28
+        "name": "Sergi Cardona",
+        "value": 1.6,
+        "appearances": 5,
+        "cumulative": 8
       },
       {
-        "name": "Mohamed Salah",
-        "value": 28
+        "name": "Alphonso Davies",
+        "value": 1.5,
+        "appearances": 2,
+        "cumulative": 3
       },
       {
-        "name": "Harry Kane",
-        "value": 26
+        "name": "Johan Mojica",
+        "value": 1.5,
+        "appearances": 2,
+        "cumulative": 3
       },
       {
-        "name": "Robert Lewandowski",
-        "value": 25
+        "name": "Nuno Tavares",
+        "value": 1.3333333333333333,
+        "appearances": 6,
+        "cumulative": 8
       },
       {
-        "name": "Mateo Retegui",
-        "value": 24
+        "name": "Rayan Aït-Nouri",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Alexander Isak",
-        "value": 23
+        "name": "Ramy Bensebaini",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Erling Haaland",
-        "value": 21
+        "name": "Joakim Mæhle",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Omar Marmoush",
-        "value": 21
+        "name": "Deiver Machado",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Ousmane Dembélé",
-        "value": 21
+        "name": "Raphaël Guerreiro",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       }
     ]
   },
@@ -1623,44 +2289,64 @@
     "date": "MD37",
     "data": [
       {
-        "name": "Viktor Gyökeres",
-        "value": 39
+        "name": "Yuri Berchiche",
+        "value": 2,
+        "appearances": 1,
+        "cumulative": 2
       },
       {
-        "name": "Kylian Mbappé",
-        "value": 29
+        "name": "Sergi Cardona",
+        "value": 1.6,
+        "appearances": 5,
+        "cumulative": 8
       },
       {
-        "name": "Mohamed Salah",
-        "value": 28
+        "name": "Alphonso Davies",
+        "value": 1.5,
+        "appearances": 2,
+        "cumulative": 3
       },
       {
-        "name": "Harry Kane",
-        "value": 26
+        "name": "Johan Mojica",
+        "value": 1.5,
+        "appearances": 2,
+        "cumulative": 3
       },
       {
-        "name": "Robert Lewandowski",
-        "value": 25
+        "name": "Nuno Tavares",
+        "value": 1.3333333333333333,
+        "appearances": 6,
+        "cumulative": 8
       },
       {
-        "name": "Mateo Retegui",
-        "value": 25
+        "name": "Rayan Aït-Nouri",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Alexander Isak",
-        "value": 23
+        "name": "Ramy Bensebaini",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Omar Marmoush",
-        "value": 22
+        "name": "Joakim Mæhle",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Erling Haaland",
-        "value": 21
+        "name": "Deiver Machado",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Ousmane Dembélé",
-        "value": 21
+        "name": "Raphaël Guerreiro",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       }
     ]
   },
@@ -1668,44 +2354,64 @@
     "date": "MD38",
     "data": [
       {
-        "name": "Viktor Gyökeres",
-        "value": 39
+        "name": "Yuri Berchiche",
+        "value": 2,
+        "appearances": 1,
+        "cumulative": 2
       },
       {
-        "name": "Kylian Mbappé",
-        "value": 31
+        "name": "Sergi Cardona",
+        "value": 1.6,
+        "appearances": 5,
+        "cumulative": 8
       },
       {
-        "name": "Mohamed Salah",
-        "value": 29
+        "name": "Alphonso Davies",
+        "value": 1.5,
+        "appearances": 2,
+        "cumulative": 3
       },
       {
-        "name": "Robert Lewandowski",
-        "value": 27
+        "name": "Johan Mojica",
+        "value": 1.5,
+        "appearances": 2,
+        "cumulative": 3
       },
       {
-        "name": "Harry Kane",
-        "value": 26
+        "name": "Nuno Tavares",
+        "value": 1.3333333333333333,
+        "appearances": 6,
+        "cumulative": 8
       },
       {
-        "name": "Mateo Retegui",
-        "value": 25
+        "name": "Rayan Aït-Nouri",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Alexander Isak",
-        "value": 23
+        "name": "Ramy Bensebaini",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Erling Haaland",
-        "value": 22
+        "name": "Joakim Mæhle",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Omar Marmoush",
-        "value": 22
+        "name": "Deiver Machado",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       },
       {
-        "name": "Ousmane Dembélé",
-        "value": 21
+        "name": "Raphaël Guerreiro",
+        "value": 1.3333333333333333,
+        "appearances": 3,
+        "cumulative": 4
       }
     ]
   }
