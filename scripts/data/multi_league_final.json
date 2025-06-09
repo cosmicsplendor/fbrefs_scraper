@@ -1,597 +1,56 @@
 [
   {
     "date": "MD1",
-    "data": [
-      {
-        "name": "Javi Hernández",
-        "value": 1,
-        "appearances": 1,
-        "cumulative": 1
-      },
-      {
-        "name": "Christopher Operi",
-        "value": 1,
-        "appearances": 1,
-        "cumulative": 1
-      }
-    ]
+    "data": []
   },
   {
     "date": "MD2",
-    "data": [
-      {
-        "name": "Antonee Robinson",
-        "value": 1,
-        "appearances": 1,
-        "cumulative": 1
-      },
-      {
-        "name": "Emanuele Valeri",
-        "value": 1,
-        "appearances": 1,
-        "cumulative": 1
-      },
-      {
-        "name": "Rayan Aït-Nouri",
-        "value": 1,
-        "appearances": 1,
-        "cumulative": 1
-      },
-      {
-        "name": "Javi Hernández",
-        "value": 1,
-        "appearances": 1,
-        "cumulative": 1
-      },
-      {
-        "name": "Sergio Akieme",
-        "value": 1,
-        "appearances": 1,
-        "cumulative": 1
-      },
-      {
-        "name": "Christopher Operi",
-        "value": 1,
-        "appearances": 1,
-        "cumulative": 1
-      },
-      {
-        "name": "Nuno Mendes",
-        "value": 1,
-        "appearances": 1,
-        "cumulative": 1
-      },
-      {
-        "name": "Yanis Zouaoui",
-        "value": 1,
-        "appearances": 1,
-        "cumulative": 1
-      },
-      {
-        "name": "Quentin Merlin",
-        "value": 1,
-        "appearances": 1,
-        "cumulative": 1
-      }
-    ]
+    "data": []
   },
   {
     "date": "MD3",
-    "data": [
-      {
-        "name": "Sergi Cardona",
-        "value": 2,
-        "appearances": 1,
-        "cumulative": 2
-      },
-      {
-        "name": "Nuno Tavares",
-        "value": 2,
-        "appearances": 1,
-        "cumulative": 2
-      },
-      {
-        "name": "Antonee Robinson",
-        "value": 1,
-        "appearances": 2,
-        "cumulative": 2
-      },
-      {
-        "name": "Emanuele Valeri",
-        "value": 1,
-        "appearances": 1,
-        "cumulative": 1
-      },
-      {
-        "name": "Caio Henrique Oliveira Silva",
-        "value": 1,
-        "appearances": 1,
-        "cumulative": 1
-      },
-      {
-        "name": "Rayan Aït-Nouri",
-        "value": 1,
-        "appearances": 1,
-        "cumulative": 1
-      },
-      {
-        "name": "Lucas Digne",
-        "value": 1,
-        "appearances": 1,
-        "cumulative": 1
-      },
-      {
-        "name": "Javi Hernández",
-        "value": 1,
-        "appearances": 1,
-        "cumulative": 1
-      },
-      {
-        "name": "Sergio Akieme",
-        "value": 1,
-        "appearances": 1,
-        "cumulative": 1
-      },
-      {
-        "name": "Leif Davis",
-        "value": 1,
-        "appearances": 1,
-        "cumulative": 1
-      }
-    ]
+    "data": []
   },
   {
     "date": "MD4",
-    "data": [
-      {
-        "name": "Sergi Cardona",
-        "value": 2,
-        "appearances": 1,
-        "cumulative": 2
-      },
-      {
-        "name": "Nuno Tavares",
-        "value": 2,
-        "appearances": 1,
-        "cumulative": 2
-      },
-      {
-        "name": "Maximilian Mittelstädt",
-        "value": 2,
-        "appearances": 1,
-        "cumulative": 2
-      },
-      {
-        "name": "Antonee Robinson",
-        "value": 1,
-        "appearances": 2,
-        "cumulative": 2
-      },
-      {
-        "name": "Emanuele Valeri",
-        "value": 1,
-        "appearances": 1,
-        "cumulative": 1
-      },
-      {
-        "name": "Caio Henrique Oliveira Silva",
-        "value": 1,
-        "appearances": 1,
-        "cumulative": 1
-      },
-      {
-        "name": "Theo Hernández",
-        "value": 1,
-        "appearances": 1,
-        "cumulative": 1
-      },
-      {
-        "name": "Rayan Aït-Nouri",
-        "value": 1,
-        "appearances": 1,
-        "cumulative": 1
-      },
-      {
-        "name": "Lucas Digne",
-        "value": 1,
-        "appearances": 2,
-        "cumulative": 2
-      },
-      {
-        "name": "Javi Hernández",
-        "value": 1,
-        "appearances": 1,
-        "cumulative": 1
-      }
-    ]
+    "data": []
   },
   {
     "date": "MD5",
-    "data": [
-      {
-        "name": "Sergi Cardona",
-        "value": 2,
-        "appearances": 1,
-        "cumulative": 2
-      },
-      {
-        "name": "Nuno Tavares",
-        "value": 1.5,
-        "appearances": 2,
-        "cumulative": 3
-      },
-      {
-        "name": "Maximilian Mittelstädt",
-        "value": 1.5,
-        "appearances": 2,
-        "cumulative": 3
-      },
-      {
-        "name": "Antonee Robinson",
-        "value": 1,
-        "appearances": 2,
-        "cumulative": 2
-      },
-      {
-        "name": "Emanuele Valeri",
-        "value": 1,
-        "appearances": 1,
-        "cumulative": 1
-      },
-      {
-        "name": "Caio Henrique Oliveira Silva",
-        "value": 1,
-        "appearances": 1,
-        "cumulative": 1
-      },
-      {
-        "name": "Theo Hernández",
-        "value": 1,
-        "appearances": 1,
-        "cumulative": 1
-      },
-      {
-        "name": "Rayan Aït-Nouri",
-        "value": 1,
-        "appearances": 1,
-        "cumulative": 1
-      },
-      {
-        "name": "Lucas Digne",
-        "value": 1,
-        "appearances": 2,
-        "cumulative": 2
-      },
-      {
-        "name": "David Raum",
-        "value": 1,
-        "appearances": 1,
-        "cumulative": 1
-      }
-    ]
+    "data": []
   },
   {
     "date": "MD6",
-    "data": [
-      {
-        "name": "Sergi Cardona",
-        "value": 2,
-        "appearances": 1,
-        "cumulative": 2
-      },
-      {
-        "name": "Maximilian Mittelstädt",
-        "value": 1.5,
-        "appearances": 2,
-        "cumulative": 3
-      },
-      {
-        "name": "Theo Hernández",
-        "value": 1.5,
-        "appearances": 2,
-        "cumulative": 3
-      },
-      {
-        "name": "Nuno Tavares",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
-      },
-      {
-        "name": "Antonee Robinson",
-        "value": 1,
-        "appearances": 2,
-        "cumulative": 2
-      },
-      {
-        "name": "Emanuele Valeri",
-        "value": 1,
-        "appearances": 1,
-        "cumulative": 1
-      },
-      {
-        "name": "Caio Henrique Oliveira Silva",
-        "value": 1,
-        "appearances": 1,
-        "cumulative": 1
-      },
-      {
-        "name": "Rayan Aït-Nouri",
-        "value": 1,
-        "appearances": 2,
-        "cumulative": 2
-      },
-      {
-        "name": "Lucas Digne",
-        "value": 1,
-        "appearances": 2,
-        "cumulative": 2
-      },
-      {
-        "name": "David Raum",
-        "value": 1,
-        "appearances": 1,
-        "cumulative": 1
-      }
-    ]
+    "data": []
   },
   {
     "date": "MD7",
-    "data": [
-      {
-        "name": "Sergi Cardona",
-        "value": 2,
-        "appearances": 1,
-        "cumulative": 2
-      },
-      {
-        "name": "Maximilian Mittelstädt",
-        "value": 1.5,
-        "appearances": 2,
-        "cumulative": 3
-      },
-      {
-        "name": "Theo Hernández",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
-      },
-      {
-        "name": "Rayan Aït-Nouri",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
-      },
-      {
-        "name": "Nuno Tavares",
-        "value": 1.25,
-        "appearances": 4,
-        "cumulative": 5
-      },
-      {
-        "name": "Antonee Robinson",
-        "value": 1,
-        "appearances": 2,
-        "cumulative": 2
-      },
-      {
-        "name": "Emanuele Valeri",
-        "value": 1,
-        "appearances": 1,
-        "cumulative": 1
-      },
-      {
-        "name": "Caio Henrique Oliveira Silva",
-        "value": 1,
-        "appearances": 1,
-        "cumulative": 1
-      },
-      {
-        "name": "Lucas Digne",
-        "value": 1,
-        "appearances": 2,
-        "cumulative": 2
-      },
-      {
-        "name": "David Raum",
-        "value": 1,
-        "appearances": 1,
-        "cumulative": 1
-      }
-    ]
+    "data": []
   },
   {
     "date": "MD8",
-    "data": [
-      {
-        "name": "Sergi Cardona",
-        "value": 2,
-        "appearances": 1,
-        "cumulative": 2
-      },
-      {
-        "name": "Maximilian Mittelstädt",
-        "value": 1.5,
-        "appearances": 2,
-        "cumulative": 3
-      },
-      {
-        "name": "Theo Hernández",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
-      },
-      {
-        "name": "Rayan Aït-Nouri",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
-      },
-      {
-        "name": "Nuno Tavares",
-        "value": 1.25,
-        "appearances": 4,
-        "cumulative": 5
-      },
-      {
-        "name": "Antonee Robinson",
-        "value": 1,
-        "appearances": 2,
-        "cumulative": 2
-      },
-      {
-        "name": "Emanuele Valeri",
-        "value": 1,
-        "appearances": 1,
-        "cumulative": 1
-      },
-      {
-        "name": "Caio Henrique Oliveira Silva",
-        "value": 1,
-        "appearances": 1,
-        "cumulative": 1
-      },
-      {
-        "name": "Lucas Digne",
-        "value": 1,
-        "appearances": 2,
-        "cumulative": 2
-      },
-      {
-        "name": "David Raum",
-        "value": 1,
-        "appearances": 1,
-        "cumulative": 1
-      }
-    ]
+    "data": []
   },
   {
     "date": "MD9",
-    "data": [
-      {
-        "name": "Sergi Cardona",
-        "value": 2,
-        "appearances": 1,
-        "cumulative": 2
-      },
-      {
-        "name": "Maximilian Mittelstädt",
-        "value": 1.5,
-        "appearances": 2,
-        "cumulative": 3
-      },
-      {
-        "name": "Nuno Tavares",
-        "value": 1.4,
-        "appearances": 5,
-        "cumulative": 7
-      },
-      {
-        "name": "Theo Hernández",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
-      },
-      {
-        "name": "Rayan Aït-Nouri",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
-      },
-      {
-        "name": "Antonee Robinson",
-        "value": 1,
-        "appearances": 2,
-        "cumulative": 2
-      },
-      {
-        "name": "Emanuele Valeri",
-        "value": 1,
-        "appearances": 2,
-        "cumulative": 2
-      },
-      {
-        "name": "Caio Henrique Oliveira Silva",
-        "value": 1,
-        "appearances": 1,
-        "cumulative": 1
-      },
-      {
-        "name": "Lucas Digne",
-        "value": 1,
-        "appearances": 2,
-        "cumulative": 2
-      },
-      {
-        "name": "David Raum",
-        "value": 1,
-        "appearances": 1,
-        "cumulative": 1
-      }
-    ]
+    "data": []
   },
   {
     "date": "MD10",
     "data": [
       {
-        "name": "Sergi Cardona",
-        "value": 2,
-        "appearances": 1,
-        "cumulative": 2
-      },
-      {
-        "name": "Milos Kerkez",
-        "value": 2,
-        "appearances": 1,
-        "cumulative": 2
-      },
-      {
-        "name": "Maximilian Mittelstädt",
-        "value": 1.5,
-        "appearances": 2,
-        "cumulative": 3
-      },
-      {
-        "name": "Nuno Tavares",
-        "value": 1.3333333333333333,
-        "appearances": 6,
-        "cumulative": 8
-      },
-      {
-        "name": "Theo Hernández",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
-      },
-      {
-        "name": "Rayan Aït-Nouri",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
-      },
-      {
         "name": "Antonee Robinson",
-        "value": 1,
-        "appearances": 3,
-        "cumulative": 3
+        "value": 9.7,
+        "position": "LB",
+        "totalMinutes": 900,
+        "cumulative": 97
       },
       {
-        "name": "Emanuele Valeri",
-        "value": 1,
-        "appearances": 2,
-        "cumulative": 2
-      },
-      {
-        "name": "Caio Henrique Oliveira Silva",
-        "value": 1,
-        "appearances": 1,
-        "cumulative": 1
-      },
-      {
-        "name": "Lucas Digne",
-        "value": 1,
-        "appearances": 2,
-        "cumulative": 2
+        "name": "Leif Davis",
+        "value": 9.1,
+        "position": "LB",
+        "totalMinutes": 900,
+        "cumulative": 91
       }
     ]
   },
@@ -599,64 +58,46 @@
     "date": "MD11",
     "data": [
       {
-        "name": "Sergi Cardona",
-        "value": 2,
-        "appearances": 1,
-        "cumulative": 2
+        "name": "Destiny Udogie",
+        "value": 12.098360655737704,
+        "position": "LB",
+        "totalMinutes": 915,
+        "cumulative": 123
       },
       {
         "name": "Milos Kerkez",
-        "value": 2,
-        "appearances": 1,
-        "cumulative": 2
-      },
-      {
-        "name": "Maximilian Mittelstädt",
-        "value": 1.5,
-        "appearances": 2,
-        "cumulative": 3
-      },
-      {
-        "name": "Ramy Bensebaini",
-        "value": 1.5,
-        "appearances": 2,
-        "cumulative": 3
-      },
-      {
-        "name": "Nuno Tavares",
-        "value": 1.3333333333333333,
-        "appearances": 6,
-        "cumulative": 8
-      },
-      {
-        "name": "Theo Hernández",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
-      },
-      {
-        "name": "Rayan Aït-Nouri",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "value": 10.970873786407767,
+        "position": "LB",
+        "totalMinutes": 927,
+        "cumulative": 113
       },
       {
         "name": "Antonee Robinson",
-        "value": 1,
-        "appearances": 3,
-        "cumulative": 3
+        "value": 9.545454545454545,
+        "position": "LB",
+        "totalMinutes": 990,
+        "cumulative": 105
       },
       {
-        "name": "Emanuele Valeri",
-        "value": 1,
-        "appearances": 2,
-        "cumulative": 2
+        "name": "Leif Davis",
+        "value": 9.181818181818182,
+        "position": "LB",
+        "totalMinutes": 990,
+        "cumulative": 101
       },
       {
-        "name": "Caio Henrique Oliveira Silva",
-        "value": 1,
-        "appearances": 1,
-        "cumulative": 1
+        "name": "Sergi Cardona",
+        "value": 7.008196721311475,
+        "position": "LB",
+        "totalMinutes": 976,
+        "cumulative": 76
+      },
+      {
+        "name": "Christian Günter",
+        "value": 5.566037735849057,
+        "position": "LB",
+        "totalMinutes": 954,
+        "cumulative": 59
       }
     ]
   },
@@ -664,64 +105,74 @@
     "date": "MD12",
     "data": [
       {
-        "name": "Sergi Cardona",
-        "value": 2,
-        "appearances": 1,
-        "cumulative": 2
+        "name": "Alphonso Davies",
+        "value": 16.81967213114754,
+        "position": "LB",
+        "totalMinutes": 915,
+        "cumulative": 171
+      },
+      {
+        "name": "Destiny Udogie",
+        "value": 11.653386454183266,
+        "position": "LB",
+        "totalMinutes": 1004,
+        "cumulative": 130
       },
       {
         "name": "Milos Kerkez",
-        "value": 2,
-        "appearances": 1,
-        "cumulative": 2
+        "value": 11.350546176762663,
+        "position": "LB",
+        "totalMinutes": 1007,
+        "cumulative": 127
       },
       {
-        "name": "Ramy Bensebaini",
-        "value": 1.5,
-        "appearances": 2,
-        "cumulative": 3
-      },
-      {
-        "name": "Nuno Tavares",
-        "value": 1.3333333333333333,
-        "appearances": 6,
-        "cumulative": 8
-      },
-      {
-        "name": "Maximilian Mittelstädt",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
-      },
-      {
-        "name": "Theo Hernández",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
-      },
-      {
-        "name": "Rayan Aït-Nouri",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Antonino Gallo",
+        "value": 10.181430096051228,
+        "position": "LB",
+        "totalMinutes": 937,
+        "cumulative": 106
       },
       {
         "name": "Antonee Robinson",
-        "value": 1,
-        "appearances": 3,
-        "cumulative": 3
+        "value": 9.583333333333334,
+        "position": "LB",
+        "totalMinutes": 1080,
+        "cumulative": 115
       },
       {
-        "name": "Emanuele Valeri",
-        "value": 1,
-        "appearances": 3,
-        "cumulative": 3
+        "name": "Diego Rico",
+        "value": 9.209726443768997,
+        "position": "LB",
+        "totalMinutes": 987,
+        "cumulative": 101
       },
       {
-        "name": "Caio Henrique Oliveira Silva",
-        "value": 1,
-        "appearances": 1,
-        "cumulative": 1
+        "name": "Leif Davis",
+        "value": 8.666666666666666,
+        "position": "LB",
+        "totalMinutes": 1080,
+        "cumulative": 104
+      },
+      {
+        "name": "Alberto Moreno",
+        "value": 8.06695464362851,
+        "position": "LB",
+        "totalMinutes": 926,
+        "cumulative": 83
+      },
+      {
+        "name": "Sergi Cardona",
+        "value": 7.008196721311475,
+        "position": "LB",
+        "totalMinutes": 976,
+        "cumulative": 76
+      },
+      {
+        "name": "Christian Günter",
+        "value": 5.517241379310344,
+        "position": "LB",
+        "totalMinutes": 1044,
+        "cumulative": 64
       }
     ]
   },
@@ -729,64 +180,74 @@
     "date": "MD13",
     "data": [
       {
-        "name": "Sergi Cardona",
-        "value": 2,
-        "appearances": 1,
-        "cumulative": 2
+        "name": "Alphonso Davies",
+        "value": 16.567164179104477,
+        "position": "LB",
+        "totalMinutes": 1005,
+        "cumulative": 185
+      },
+      {
+        "name": "Destiny Udogie",
+        "value": 11.59963436928702,
+        "position": "LB",
+        "totalMinutes": 1094,
+        "cumulative": 141
+      },
+      {
+        "name": "Andrew Robertson",
+        "value": 10.865384615384615,
+        "position": "LB",
+        "totalMinutes": 936,
+        "cumulative": 113
       },
       {
         "name": "Milos Kerkez",
-        "value": 1.5,
-        "appearances": 2,
-        "cumulative": 3
+        "value": 10.747493163172289,
+        "position": "LB",
+        "totalMinutes": 1097,
+        "cumulative": 131
       },
       {
-        "name": "Ramy Bensebaini",
-        "value": 1.5,
-        "appearances": 2,
-        "cumulative": 3
-      },
-      {
-        "name": "Nuno Tavares",
-        "value": 1.3333333333333333,
-        "appearances": 6,
-        "cumulative": 8
-      },
-      {
-        "name": "Maximilian Mittelstädt",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
-      },
-      {
-        "name": "Theo Hernández",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
-      },
-      {
-        "name": "Rayan Aït-Nouri",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Antonino Gallo",
+        "value": 10.181430096051228,
+        "position": "LB",
+        "totalMinutes": 937,
+        "cumulative": 106
       },
       {
         "name": "Antonee Robinson",
-        "value": 1,
-        "appearances": 3,
-        "cumulative": 3
+        "value": 10.153846153846153,
+        "position": "LB",
+        "totalMinutes": 1170,
+        "cumulative": 132
       },
       {
-        "name": "Emanuele Valeri",
-        "value": 1,
-        "appearances": 3,
-        "cumulative": 3
+        "name": "Diego Rico",
+        "value": 9.209726443768997,
+        "position": "LB",
+        "totalMinutes": 987,
+        "cumulative": 101
       },
       {
-        "name": "Caio Henrique Oliveira Silva",
-        "value": 1,
-        "appearances": 1,
-        "cumulative": 1
+        "name": "Florent Hanin",
+        "value": 9.04812834224599,
+        "position": "LB",
+        "totalMinutes": 935,
+        "cumulative": 94
+      },
+      {
+        "name": "Leif Davis",
+        "value": 8.846153846153847,
+        "position": "LB",
+        "totalMinutes": 1170,
+        "cumulative": 115
+      },
+      {
+        "name": "Alberto Moreno",
+        "value": 8.06695464362851,
+        "position": "LB",
+        "totalMinutes": 926,
+        "cumulative": 83
       }
     ]
   },
@@ -794,64 +255,74 @@
     "date": "MD14",
     "data": [
       {
-        "name": "Sergi Cardona",
-        "value": 2,
-        "appearances": 1,
-        "cumulative": 2
+        "name": "Alphonso Davies",
+        "value": 16.567164179104477,
+        "position": "LB",
+        "totalMinutes": 1005,
+        "cumulative": 185
       },
       {
-        "name": "Johan Mojica",
-        "value": 2,
-        "appearances": 1,
-        "cumulative": 2
+        "name": "Destiny Udogie",
+        "value": 11.554054054054053,
+        "position": "LB",
+        "totalMinutes": 1184,
+        "cumulative": 152
       },
       {
-        "name": "Milos Kerkez",
-        "value": 1.5,
-        "appearances": 2,
-        "cumulative": 3
-      },
-      {
-        "name": "Ramy Bensebaini",
-        "value": 1.5,
-        "appearances": 2,
-        "cumulative": 3
-      },
-      {
-        "name": "Nuno Tavares",
-        "value": 1.3333333333333333,
-        "appearances": 6,
-        "cumulative": 8
-      },
-      {
-        "name": "Maximilian Mittelstädt",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
-      },
-      {
-        "name": "Theo Hernández",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
-      },
-      {
-        "name": "Rayan Aït-Nouri",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Andrew Robertson",
+        "value": 10.87719298245614,
+        "position": "LB",
+        "totalMinutes": 1026,
+        "cumulative": 124
       },
       {
         "name": "Antonee Robinson",
-        "value": 1,
-        "appearances": 4,
-        "cumulative": 4
+        "value": 10.571428571428571,
+        "position": "LB",
+        "totalMinutes": 1260,
+        "cumulative": 148
       },
       {
-        "name": "Emanuele Valeri",
-        "value": 1,
-        "appearances": 3,
-        "cumulative": 3
+        "name": "Milos Kerkez",
+        "value": 10.387531592249369,
+        "position": "LB",
+        "totalMinutes": 1187,
+        "cumulative": 137
+      },
+      {
+        "name": "Antonino Gallo",
+        "value": 10.235294117647058,
+        "position": "LB",
+        "totalMinutes": 1020,
+        "cumulative": 116
+      },
+      {
+        "name": "Johan Mojica",
+        "value": 9.744637385086824,
+        "position": "LB",
+        "totalMinutes": 979,
+        "cumulative": 106
+      },
+      {
+        "name": "Florent Hanin",
+        "value": 9.445544554455445,
+        "position": "LB",
+        "totalMinutes": 1010,
+        "cumulative": 106
+      },
+      {
+        "name": "Diego Rico",
+        "value": 9.275766016713092,
+        "position": "LB",
+        "totalMinutes": 1077,
+        "cumulative": 111
+      },
+      {
+        "name": "Leif Davis",
+        "value": 8.714285714285715,
+        "position": "LB",
+        "totalMinutes": 1260,
+        "cumulative": 122
       }
     ]
   },
@@ -859,64 +330,74 @@
     "date": "MD15",
     "data": [
       {
-        "name": "Sergi Cardona",
-        "value": 2,
-        "appearances": 1,
-        "cumulative": 2
-      },
-      {
-        "name": "Johan Mojica",
-        "value": 2,
-        "appearances": 1,
-        "cumulative": 2
-      },
-      {
-        "name": "Milos Kerkez",
-        "value": 1.5,
-        "appearances": 2,
-        "cumulative": 3
-      },
-      {
         "name": "Alphonso Davies",
-        "value": 1.5,
-        "appearances": 2,
-        "cumulative": 3
-      },
-      {
-        "name": "Nuno Tavares",
-        "value": 1.3333333333333333,
-        "appearances": 6,
-        "cumulative": 8
-      },
-      {
-        "name": "Maximilian Mittelstädt",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "value": 17.32044198895028,
+        "position": "LB",
+        "totalMinutes": 1086,
+        "cumulative": 209
       },
       {
         "name": "Theo Hernández",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "value": 11.83957219251337,
+        "position": "LB",
+        "totalMinutes": 935,
+        "cumulative": 123
       },
       {
-        "name": "Rayan Aït-Nouri",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Juan Miranda",
+        "value": 11.58227848101266,
+        "position": "LB",
+        "totalMinutes": 948,
+        "cumulative": 122
       },
       {
-        "name": "Ramy Bensebaini",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Destiny Udogie",
+        "value": 11.09105180533752,
+        "position": "LB",
+        "totalMinutes": 1274,
+        "cumulative": 157
+      },
+      {
+        "name": "Milos Kerkez",
+        "value": 10.71260767423649,
+        "position": "LB",
+        "totalMinutes": 1277,
+        "cumulative": 152
+      },
+      {
+        "name": "Andrew Robertson",
+        "value": 10.447897623400365,
+        "position": "LB",
+        "totalMinutes": 1094,
+        "cumulative": 127
+      },
+      {
+        "name": "Yuri Berchiche",
+        "value": 10.342541436464089,
+        "position": "LB",
+        "totalMinutes": 905,
+        "cumulative": 104
+      },
+      {
+        "name": "Antonino Gallo",
+        "value": 10.235294117647058,
+        "position": "LB",
+        "totalMinutes": 1020,
+        "cumulative": 116
       },
       {
         "name": "Antonee Robinson",
-        "value": 1,
-        "appearances": 4,
-        "cumulative": 4
+        "value": 10.133333333333333,
+        "position": "LB",
+        "totalMinutes": 1350,
+        "cumulative": 152
+      },
+      {
+        "name": "Diego Rico",
+        "value": 9.56298200514139,
+        "position": "LB",
+        "totalMinutes": 1167,
+        "cumulative": 124
       }
     ]
   },
@@ -924,64 +405,74 @@
     "date": "MD16",
     "data": [
       {
-        "name": "Sergi Cardona",
-        "value": 2,
-        "appearances": 1,
-        "cumulative": 2
-      },
-      {
-        "name": "Johan Mojica",
-        "value": 2,
-        "appearances": 1,
-        "cumulative": 2
-      },
-      {
-        "name": "Milos Kerkez",
-        "value": 1.5,
-        "appearances": 2,
-        "cumulative": 3
+        "name": "Nuno Tavares",
+        "value": 17.303867403314914,
+        "position": "LB",
+        "totalMinutes": 905,
+        "cumulative": 174
       },
       {
         "name": "Alphonso Davies",
-        "value": 1.5,
-        "appearances": 2,
-        "cumulative": 3
-      },
-      {
-        "name": "Nuno Tavares",
-        "value": 1.3333333333333333,
-        "appearances": 6,
-        "cumulative": 8
-      },
-      {
-        "name": "Maximilian Mittelstädt",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "value": 17.066326530612244,
+        "position": "LB",
+        "totalMinutes": 1176,
+        "cumulative": 223
       },
       {
         "name": "Theo Hernández",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "value": 11.83957219251337,
+        "position": "LB",
+        "totalMinutes": 935,
+        "cumulative": 123
       },
       {
-        "name": "Rayan Aït-Nouri",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Juan Miranda",
+        "value": 11.58227848101266,
+        "position": "LB",
+        "totalMinutes": 948,
+        "cumulative": 122
       },
       {
-        "name": "Ramy Bensebaini",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Alejandro Balde",
+        "value": 11.346982758620689,
+        "position": "LB",
+        "totalMinutes": 928,
+        "cumulative": 117
+      },
+      {
+        "name": "Destiny Udogie",
+        "value": 11.137586471944658,
+        "position": "LB",
+        "totalMinutes": 1301,
+        "cumulative": 161
+      },
+      {
+        "name": "Milos Kerkez",
+        "value": 10.731528895391367,
+        "position": "LB",
+        "totalMinutes": 1367,
+        "cumulative": 163
       },
       {
         "name": "Antonee Robinson",
-        "value": 1.2,
-        "appearances": 5,
-        "cumulative": 6
+        "value": 10.5,
+        "position": "LB",
+        "totalMinutes": 1440,
+        "cumulative": 168
+      },
+      {
+        "name": "Andrew Robertson",
+        "value": 10.30658250676285,
+        "position": "LB",
+        "totalMinutes": 1109,
+        "cumulative": 127
+      },
+      {
+        "name": "Antonino Gallo",
+        "value": 10.235294117647058,
+        "position": "LB",
+        "totalMinutes": 1020,
+        "cumulative": 116
       }
     ]
   },
@@ -989,64 +480,74 @@
     "date": "MD17",
     "data": [
       {
-        "name": "Sergi Cardona",
-        "value": 2,
-        "appearances": 1,
-        "cumulative": 2
-      },
-      {
-        "name": "Johan Mojica",
-        "value": 2,
-        "appearances": 1,
-        "cumulative": 2
-      },
-      {
-        "name": "Milos Kerkez",
-        "value": 1.5,
-        "appearances": 2,
-        "cumulative": 3
-      },
-      {
         "name": "Alphonso Davies",
-        "value": 1.5,
-        "appearances": 2,
-        "cumulative": 3
+        "value": 17.77251184834123,
+        "position": "LB",
+        "totalMinutes": 1266,
+        "cumulative": 250
       },
       {
         "name": "Nuno Tavares",
-        "value": 1.3333333333333333,
-        "appearances": 6,
-        "cumulative": 8
+        "value": 17.279260780287473,
+        "position": "LB",
+        "totalMinutes": 974,
+        "cumulative": 187
       },
       {
-        "name": "Maximilian Mittelstädt",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Alejandro Balde",
+        "value": 12.465618860510805,
+        "position": "LB",
+        "totalMinutes": 1018,
+        "cumulative": 141
+      },
+      {
+        "name": "Juan Miranda",
+        "value": 11.842105263157894,
+        "position": "LB",
+        "totalMinutes": 1026,
+        "cumulative": 135
       },
       {
         "name": "Theo Hernández",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "value": 11.498993963782697,
+        "position": "LB",
+        "totalMinutes": 994,
+        "cumulative": 127
       },
       {
-        "name": "Rayan Aït-Nouri",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Destiny Udogie",
+        "value": 11.137586471944658,
+        "position": "LB",
+        "totalMinutes": 1301,
+        "cumulative": 161
       },
       {
-        "name": "Ramy Bensebaini",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Antonee Robinson",
+        "value": 11,
+        "position": "LB",
+        "totalMinutes": 1530,
+        "cumulative": 187
       },
       {
-        "name": "Joakim Mæhle",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Milos Kerkez",
+        "value": 10.501029512697322,
+        "position": "LB",
+        "totalMinutes": 1457,
+        "cumulative": 170
+      },
+      {
+        "name": "Andrew Robertson",
+        "value": 10.283569641367807,
+        "position": "LB",
+        "totalMinutes": 1199,
+        "cumulative": 137
+      },
+      {
+        "name": "Antonino Gallo",
+        "value": 10.235294117647058,
+        "position": "LB",
+        "totalMinutes": 1020,
+        "cumulative": 116
       }
     ]
   },
@@ -1054,64 +555,74 @@
     "date": "MD18",
     "data": [
       {
-        "name": "Sergi Cardona",
-        "value": 2,
-        "appearances": 1,
-        "cumulative": 2
-      },
-      {
-        "name": "Johan Mojica",
-        "value": 2,
-        "appearances": 1,
-        "cumulative": 2
-      },
-      {
-        "name": "Milos Kerkez",
-        "value": 1.5,
-        "appearances": 2,
-        "cumulative": 3
-      },
-      {
         "name": "Alphonso Davies",
-        "value": 1.5,
-        "appearances": 2,
-        "cumulative": 3
+        "value": 18.053097345132745,
+        "position": "LB",
+        "totalMinutes": 1356,
+        "cumulative": 272
+      },
+      {
+        "name": "Joško Gvardiol",
+        "value": 17.67515923566879,
+        "position": "LB",
+        "totalMinutes": 942,
+        "cumulative": 185
       },
       {
         "name": "Nuno Tavares",
-        "value": 1.3333333333333333,
-        "appearances": 6,
-        "cumulative": 8
+        "value": 16.766409266409266,
+        "position": "LB",
+        "totalMinutes": 1036,
+        "cumulative": 193
       },
       {
-        "name": "Maximilian Mittelstädt",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Alejandro Balde",
+        "value": 12.265342960288809,
+        "position": "LB",
+        "totalMinutes": 1108,
+        "cumulative": 151
+      },
+      {
+        "name": "Juan Miranda",
+        "value": 12.17741935483871,
+        "position": "LB",
+        "totalMinutes": 1116,
+        "cumulative": 151
       },
       {
         "name": "Theo Hernández",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "value": 11.789667896678967,
+        "position": "LB",
+        "totalMinutes": 1084,
+        "cumulative": 142
       },
       {
-        "name": "Rayan Aït-Nouri",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Destiny Udogie",
+        "value": 11.209268645908763,
+        "position": "LB",
+        "totalMinutes": 1381,
+        "cumulative": 172
       },
       {
-        "name": "Ramy Bensebaini",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Andrew Robertson",
+        "value": 11.066147859922179,
+        "position": "LB",
+        "totalMinutes": 1285,
+        "cumulative": 158
       },
       {
-        "name": "Joakim Mæhle",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Antonee Robinson",
+        "value": 11,
+        "position": "LB",
+        "totalMinutes": 1530,
+        "cumulative": 187
+      },
+      {
+        "name": "Milos Kerkez",
+        "value": 10.530058177117,
+        "position": "LB",
+        "totalMinutes": 1547,
+        "cumulative": 181
       }
     ]
   },
@@ -1119,64 +630,74 @@
     "date": "MD19",
     "data": [
       {
-        "name": "Sergi Cardona",
-        "value": 2,
-        "appearances": 1,
-        "cumulative": 2
-      },
-      {
-        "name": "Johan Mojica",
-        "value": 2,
-        "appearances": 1,
-        "cumulative": 2
-      },
-      {
-        "name": "Milos Kerkez",
-        "value": 1.5,
-        "appearances": 2,
-        "cumulative": 3
-      },
-      {
         "name": "Alphonso Davies",
-        "value": 1.5,
-        "appearances": 2,
-        "cumulative": 3
+        "value": 18.053097345132745,
+        "position": "LB",
+        "totalMinutes": 1356,
+        "cumulative": 272
+      },
+      {
+        "name": "Joško Gvardiol",
+        "value": 17.67515923566879,
+        "position": "LB",
+        "totalMinutes": 942,
+        "cumulative": 185
       },
       {
         "name": "Nuno Tavares",
-        "value": 1.3333333333333333,
-        "appearances": 6,
-        "cumulative": 8
+        "value": 17.455516014234874,
+        "position": "LB",
+        "totalMinutes": 1124,
+        "cumulative": 218
       },
       {
         "name": "Maximilian Mittelstädt",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "value": 13.985200845665963,
+        "position": "LB",
+        "totalMinutes": 946,
+        "cumulative": 147
       },
       {
-        "name": "Rayan Aït-Nouri",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Alejandro Balde",
+        "value": 12.320534223706177,
+        "position": "LB",
+        "totalMinutes": 1198,
+        "cumulative": 164
       },
       {
-        "name": "Ramy Bensebaini",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Juan Miranda",
+        "value": 12.17741935483871,
+        "position": "LB",
+        "totalMinutes": 1116,
+        "cumulative": 151
       },
       {
-        "name": "Joakim Mæhle",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Destiny Udogie",
+        "value": 11.202797202797202,
+        "position": "LB",
+        "totalMinutes": 1430,
+        "cumulative": 178
+      },
+      {
+        "name": "Andrew Robertson",
+        "value": 11.200294550810014,
+        "position": "LB",
+        "totalMinutes": 1358,
+        "cumulative": 169
       },
       {
         "name": "Theo Hernández",
-        "value": 1.25,
-        "appearances": 4,
-        "cumulative": 5
+        "value": 11.115843270868824,
+        "position": "LB",
+        "totalMinutes": 1174,
+        "cumulative": 145
+      },
+      {
+        "name": "Antonee Robinson",
+        "value": 11,
+        "position": "LB",
+        "totalMinutes": 1530,
+        "cumulative": 187
       }
     ]
   },
@@ -1184,64 +705,74 @@
     "date": "MD20",
     "data": [
       {
-        "name": "Sergi Cardona",
-        "value": 2,
-        "appearances": 2,
-        "cumulative": 4
-      },
-      {
-        "name": "Johan Mojica",
-        "value": 2,
-        "appearances": 1,
-        "cumulative": 2
-      },
-      {
         "name": "Alphonso Davies",
-        "value": 1.5,
-        "appearances": 2,
-        "cumulative": 3
+        "value": 18.053097345132745,
+        "position": "LB",
+        "totalMinutes": 1356,
+        "cumulative": 272
+      },
+      {
+        "name": "Joško Gvardiol",
+        "value": 17.67515923566879,
+        "position": "LB",
+        "totalMinutes": 942,
+        "cumulative": 185
       },
       {
         "name": "Nuno Tavares",
-        "value": 1.3333333333333333,
-        "appearances": 6,
-        "cumulative": 8
-      },
-      {
-        "name": "Milos Kerkez",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "value": 17.455516014234874,
+        "position": "LB",
+        "totalMinutes": 1124,
+        "cumulative": 218
       },
       {
         "name": "Maximilian Mittelstädt",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "value": 13.71165644171779,
+        "position": "LB",
+        "totalMinutes": 978,
+        "cumulative": 149
       },
       {
-        "name": "Rayan Aït-Nouri",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Alejandro Balde",
+        "value": 12.927018633540373,
+        "position": "LB",
+        "totalMinutes": 1288,
+        "cumulative": 185
       },
       {
-        "name": "Ramy Bensebaini",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Gabriel Gudmundsson",
+        "value": 12.461538461538462,
+        "position": "LB",
+        "totalMinutes": 975,
+        "cumulative": 135
       },
       {
-        "name": "Joakim Mæhle",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Juan Miranda",
+        "value": 12.08955223880597,
+        "position": "LB",
+        "totalMinutes": 1206,
+        "cumulative": 162
       },
       {
         "name": "Theo Hernández",
-        "value": 1.25,
-        "appearances": 4,
-        "cumulative": 5
+        "value": 11.890822784810128,
+        "position": "LB",
+        "totalMinutes": 1264,
+        "cumulative": 167
+      },
+      {
+        "name": "Destiny Udogie",
+        "value": 11.202797202797202,
+        "position": "LB",
+        "totalMinutes": 1430,
+        "cumulative": 178
+      },
+      {
+        "name": "Andrew Robertson",
+        "value": 11.187845303867404,
+        "position": "LB",
+        "totalMinutes": 1448,
+        "cumulative": 180
       }
     ]
   },
@@ -1249,64 +780,74 @@
     "date": "MD21",
     "data": [
       {
-        "name": "Sergi Cardona",
-        "value": 2,
-        "appearances": 2,
-        "cumulative": 4
-      },
-      {
-        "name": "Johan Mojica",
-        "value": 2,
-        "appearances": 1,
-        "cumulative": 2
-      },
-      {
         "name": "Alphonso Davies",
-        "value": 1.5,
-        "appearances": 2,
-        "cumulative": 3
-      },
-      {
-        "name": "Antonee Robinson",
-        "value": 1.3333333333333333,
-        "appearances": 6,
-        "cumulative": 8
+        "value": 18.053097345132745,
+        "position": "LB",
+        "totalMinutes": 1356,
+        "cumulative": 272
       },
       {
         "name": "Nuno Tavares",
-        "value": 1.3333333333333333,
-        "appearances": 6,
-        "cumulative": 8
+        "value": 16.931438127090303,
+        "position": "LB",
+        "totalMinutes": 1196,
+        "cumulative": 225
       },
       {
-        "name": "Milos Kerkez",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Joško Gvardiol",
+        "value": 16.91860465116279,
+        "position": "LB",
+        "totalMinutes": 1032,
+        "cumulative": 194
+      },
+      {
+        "name": "Alejandro Balde",
+        "value": 13.897550111358573,
+        "position": "LB",
+        "totalMinutes": 1347,
+        "cumulative": 208
       },
       {
         "name": "Maximilian Mittelstädt",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "value": 13.71165644171779,
+        "position": "LB",
+        "totalMinutes": 978,
+        "cumulative": 149
       },
       {
-        "name": "Rayan Aït-Nouri",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Gabriel Gudmundsson",
+        "value": 12.807692307692307,
+        "position": "LB",
+        "totalMinutes": 1040,
+        "cumulative": 148
       },
       {
-        "name": "Ramy Bensebaini",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Juan Miranda",
+        "value": 12.108575924468923,
+        "position": "LB",
+        "totalMinutes": 1271,
+        "cumulative": 171
       },
       {
-        "name": "Joakim Mæhle",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Antonee Robinson",
+        "value": 11.722222222222223,
+        "position": "LB",
+        "totalMinutes": 1620,
+        "cumulative": 211
+      },
+      {
+        "name": "Theo Hernández",
+        "value": 11.698670605612998,
+        "position": "LB",
+        "totalMinutes": 1354,
+        "cumulative": 176
+      },
+      {
+        "name": "Destiny Udogie",
+        "value": 11.202797202797202,
+        "position": "LB",
+        "totalMinutes": 1430,
+        "cumulative": 178
       }
     ]
   },
@@ -1314,64 +855,74 @@
     "date": "MD22",
     "data": [
       {
-        "name": "Sergi Cardona",
-        "value": 2,
-        "appearances": 3,
-        "cumulative": 6
-      },
-      {
-        "name": "Johan Mojica",
-        "value": 2,
-        "appearances": 1,
-        "cumulative": 2
-      },
-      {
         "name": "Alphonso Davies",
-        "value": 1.5,
-        "appearances": 2,
-        "cumulative": 3
-      },
-      {
-        "name": "Antonee Robinson",
-        "value": 1.3333333333333333,
-        "appearances": 6,
-        "cumulative": 8
+        "value": 18.053097345132745,
+        "position": "LB",
+        "totalMinutes": 1356,
+        "cumulative": 272
       },
       {
         "name": "Nuno Tavares",
-        "value": 1.3333333333333333,
-        "appearances": 6,
-        "cumulative": 8
+        "value": 16.931438127090303,
+        "position": "LB",
+        "totalMinutes": 1196,
+        "cumulative": 225
+      },
+      {
+        "name": "Joško Gvardiol",
+        "value": 16.91860465116279,
+        "position": "LB",
+        "totalMinutes": 1032,
+        "cumulative": 194
+      },
+      {
+        "name": "Alejandro Balde",
+        "value": 13.792862141357594,
+        "position": "LB",
+        "totalMinutes": 1429,
+        "cumulative": 219
+      },
+      {
+        "name": "Caio Henrique Oliveira Silva",
+        "value": 13.788037775445959,
+        "position": "LB",
+        "totalMinutes": 953,
+        "cumulative": 146
       },
       {
         "name": "Maximilian Mittelstädt",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "value": 13.651685393258427,
+        "position": "LB",
+        "totalMinutes": 1068,
+        "cumulative": 162
       },
       {
-        "name": "Rayan Aït-Nouri",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Gabriel Gudmundsson",
+        "value": 13.052132701421801,
+        "position": "LB",
+        "totalMinutes": 1055,
+        "cumulative": 153
       },
       {
-        "name": "Ramy Bensebaini",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Juan Miranda",
+        "value": 12.317262830482115,
+        "position": "LB",
+        "totalMinutes": 1286,
+        "cumulative": 176
       },
       {
-        "name": "Joakim Mæhle",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Antonee Robinson",
+        "value": 11.722222222222223,
+        "position": "LB",
+        "totalMinutes": 1620,
+        "cumulative": 211
       },
       {
-        "name": "Milos Kerkez",
-        "value": 1.25,
-        "appearances": 4,
-        "cumulative": 5
+        "name": "Theo Hernández",
+        "value": 11.644031451036453,
+        "position": "LB",
+        "totalMinutes": 1399,
+        "cumulative": 181
       }
     ]
   },
@@ -1379,64 +930,74 @@
     "date": "MD23",
     "data": [
       {
-        "name": "Johan Mojica",
-        "value": 2,
-        "appearances": 1,
-        "cumulative": 2
-      },
-      {
-        "name": "Sergi Cardona",
-        "value": 1.75,
-        "appearances": 4,
-        "cumulative": 7
-      },
-      {
         "name": "Alphonso Davies",
-        "value": 1.5,
-        "appearances": 2,
-        "cumulative": 3
-      },
-      {
-        "name": "Antonee Robinson",
-        "value": 1.3333333333333333,
-        "appearances": 6,
-        "cumulative": 8
+        "value": 18.208092485549134,
+        "position": "LB",
+        "totalMinutes": 1384,
+        "cumulative": 280
       },
       {
         "name": "Nuno Tavares",
-        "value": 1.3333333333333333,
-        "appearances": 6,
-        "cumulative": 8
+        "value": 16.931438127090303,
+        "position": "LB",
+        "totalMinutes": 1196,
+        "cumulative": 225
       },
       {
-        "name": "Rayan Aït-Nouri",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Joško Gvardiol",
+        "value": 16.524064171122994,
+        "position": "LB",
+        "totalMinutes": 1122,
+        "cumulative": 206
       },
       {
-        "name": "Ramy Bensebaini",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
-      },
-      {
-        "name": "Joakim Mæhle",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
-      },
-      {
-        "name": "Milos Kerkez",
-        "value": 1.25,
-        "appearances": 4,
-        "cumulative": 5
+        "name": "Alejandro Balde",
+        "value": 13.792862141357594,
+        "position": "LB",
+        "totalMinutes": 1429,
+        "cumulative": 219
       },
       {
         "name": "Maximilian Mittelstädt",
-        "value": 1.25,
-        "appearances": 4,
-        "cumulative": 5
+        "value": 13.756476683937823,
+        "position": "LB",
+        "totalMinutes": 1158,
+        "cumulative": 177
+      },
+      {
+        "name": "Caio Henrique Oliveira Silva",
+        "value": 13.61963190184049,
+        "position": "LB",
+        "totalMinutes": 978,
+        "cumulative": 148
+      },
+      {
+        "name": "Juan Miranda",
+        "value": 12.644628099173554,
+        "position": "LB",
+        "totalMinutes": 1331,
+        "cumulative": 187
+      },
+      {
+        "name": "Andrew Robertson",
+        "value": 12.493857493857496,
+        "position": "LB",
+        "totalMinutes": 1628,
+        "cumulative": 226
+      },
+      {
+        "name": "Gabriel Gudmundsson",
+        "value": 12.262008733624453,
+        "position": "LB",
+        "totalMinutes": 1145,
+        "cumulative": 156
+      },
+      {
+        "name": "Theo Hernández",
+        "value": 11.544660846205508,
+        "position": "LB",
+        "totalMinutes": 1489,
+        "cumulative": 191
       }
     ]
   },
@@ -1444,64 +1005,74 @@
     "date": "MD24",
     "data": [
       {
-        "name": "Sergi Cardona",
-        "value": 1.75,
-        "appearances": 4,
-        "cumulative": 7
-      },
-      {
-        "name": "Deiver Machado",
-        "value": 1.5,
-        "appearances": 2,
-        "cumulative": 3
+        "name": "Nuno Tavares",
+        "value": 17.571428571428573,
+        "position": "LB",
+        "totalMinutes": 1260,
+        "cumulative": 246
       },
       {
         "name": "Alphonso Davies",
-        "value": 1.5,
-        "appearances": 2,
-        "cumulative": 3
+        "value": 17.387755102040817,
+        "position": "LB",
+        "totalMinutes": 1470,
+        "cumulative": 284
       },
       {
-        "name": "Johan Mojica",
-        "value": 1.5,
-        "appearances": 2,
-        "cumulative": 3
+        "name": "Joško Gvardiol",
+        "value": 15.816831683168315,
+        "position": "LB",
+        "totalMinutes": 1212,
+        "cumulative": 213
       },
       {
-        "name": "Nuno Tavares",
-        "value": 1.3333333333333333,
-        "appearances": 6,
-        "cumulative": 8
+        "name": "Alejandro Balde",
+        "value": 14.338380513495721,
+        "position": "LB",
+        "totalMinutes": 1519,
+        "cumulative": 242
       },
       {
-        "name": "Rayan Aït-Nouri",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Caio Henrique Oliveira Silva",
+        "value": 14.241573033707866,
+        "position": "LB",
+        "totalMinutes": 1068,
+        "cumulative": 169
       },
       {
-        "name": "Ramy Bensebaini",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Maximilian Mittelstädt",
+        "value": 13.413461538461538,
+        "position": "LB",
+        "totalMinutes": 1248,
+        "cumulative": 186
       },
       {
-        "name": "Joakim Mæhle",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Juan Miranda",
+        "value": 12.63629574309186,
+        "position": "LB",
+        "totalMinutes": 1339,
+        "cumulative": 188
       },
       {
-        "name": "Antonee Robinson",
-        "value": 1.2857142857142858,
-        "appearances": 7,
-        "cumulative": 9
+        "name": "Andrew Robertson",
+        "value": 12.10128055878929,
+        "position": "LB",
+        "totalMinutes": 1718,
+        "cumulative": 231
       },
       {
-        "name": "Milos Kerkez",
-        "value": 1.25,
-        "appearances": 4,
-        "cumulative": 5
+        "name": "Gabriel Gudmundsson",
+        "value": 11.985294117647058,
+        "position": "LB",
+        "totalMinutes": 1224,
+        "cumulative": 163
+      },
+      {
+        "name": "Theo Hernández",
+        "value": 11.513616212792906,
+        "position": "LB",
+        "totalMinutes": 1579,
+        "cumulative": 202
       }
     ]
   },
@@ -1509,64 +1080,74 @@
     "date": "MD25",
     "data": [
       {
-        "name": "Yuri Berchiche",
-        "value": 2,
-        "appearances": 1,
-        "cumulative": 2
-      },
-      {
-        "name": "Sergi Cardona",
-        "value": 1.75,
-        "appearances": 4,
-        "cumulative": 7
+        "name": "Nuno Tavares",
+        "value": 17.651006711409394,
+        "position": "LB",
+        "totalMinutes": 1341,
+        "cumulative": 263
       },
       {
         "name": "Alphonso Davies",
-        "value": 1.5,
-        "appearances": 2,
-        "cumulative": 3
+        "value": 17.387755102040817,
+        "position": "LB",
+        "totalMinutes": 1470,
+        "cumulative": 284
       },
       {
-        "name": "Johan Mojica",
-        "value": 1.5,
-        "appearances": 2,
-        "cumulative": 3
+        "name": "Nuno Mendes",
+        "value": 16.599999999999998,
+        "position": "LB",
+        "totalMinutes": 900,
+        "cumulative": 166
       },
       {
-        "name": "Nuno Tavares",
-        "value": 1.3333333333333333,
-        "appearances": 6,
-        "cumulative": 8
+        "name": "Joško Gvardiol",
+        "value": 15.254237288135592,
+        "position": "LB",
+        "totalMinutes": 1298,
+        "cumulative": 220
       },
       {
-        "name": "Rayan Aït-Nouri",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Alejandro Balde",
+        "value": 14.37538844002486,
+        "position": "LB",
+        "totalMinutes": 1609,
+        "cumulative": 257
       },
       {
-        "name": "Ramy Bensebaini",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Caio Henrique Oliveira Silva",
+        "value": 13.212435233160623,
+        "position": "LB",
+        "totalMinutes": 1158,
+        "cumulative": 170
       },
       {
-        "name": "Joakim Mæhle",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Maximilian Mittelstädt",
+        "value": 12.914798206278027,
+        "position": "LB",
+        "totalMinutes": 1338,
+        "cumulative": 192
       },
       {
-        "name": "Deiver Machado",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Juan Miranda",
+        "value": 12.848145556333101,
+        "position": "LB",
+        "totalMinutes": 1429,
+        "cumulative": 204
       },
       {
-        "name": "Antonee Robinson",
-        "value": 1.2857142857142858,
-        "appearances": 7,
-        "cumulative": 9
+        "name": "Andrew Robertson",
+        "value": 12.096238938053098,
+        "position": "LB",
+        "totalMinutes": 1808,
+        "cumulative": 243
+      },
+      {
+        "name": "Gabriel Gudmundsson",
+        "value": 11.985294117647058,
+        "position": "LB",
+        "totalMinutes": 1224,
+        "cumulative": 163
       }
     ]
   },
@@ -1574,64 +1155,74 @@
     "date": "MD26",
     "data": [
       {
-        "name": "Yuri Berchiche",
-        "value": 2,
-        "appearances": 1,
-        "cumulative": 2
-      },
-      {
-        "name": "Sergi Cardona",
-        "value": 1.75,
-        "appearances": 4,
-        "cumulative": 7
+        "name": "Nuno Tavares",
+        "value": 17.60028653295129,
+        "position": "LB",
+        "totalMinutes": 1396,
+        "cumulative": 273
       },
       {
         "name": "Alphonso Davies",
-        "value": 1.5,
-        "appearances": 2,
-        "cumulative": 3
+        "value": 17.387755102040817,
+        "position": "LB",
+        "totalMinutes": 1470,
+        "cumulative": 284
       },
       {
-        "name": "Johan Mojica",
-        "value": 1.5,
-        "appearances": 2,
-        "cumulative": 3
+        "name": "Nuno Mendes",
+        "value": 16.599999999999998,
+        "position": "LB",
+        "totalMinutes": 900,
+        "cumulative": 166
       },
       {
-        "name": "Nuno Tavares",
-        "value": 1.3333333333333333,
-        "appearances": 6,
-        "cumulative": 8
+        "name": "Joško Gvardiol",
+        "value": 15.69164265129683,
+        "position": "LB",
+        "totalMinutes": 1388,
+        "cumulative": 242
       },
       {
-        "name": "Rayan Aït-Nouri",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Alejandro Balde",
+        "value": 14.37538844002486,
+        "position": "LB",
+        "totalMinutes": 1609,
+        "cumulative": 257
       },
       {
-        "name": "Ramy Bensebaini",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Caio Henrique Oliveira Silva",
+        "value": 13.656174334140436,
+        "position": "LB",
+        "totalMinutes": 1239,
+        "cumulative": 188
       },
       {
-        "name": "Joakim Mæhle",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Juan Miranda",
+        "value": 12.831325301204819,
+        "position": "LB",
+        "totalMinutes": 1494,
+        "cumulative": 213
       },
       {
-        "name": "Deiver Machado",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Maximilian Mittelstädt",
+        "value": 12.622720897615707,
+        "position": "LB",
+        "totalMinutes": 1426,
+        "cumulative": 200
       },
       {
-        "name": "Antonee Robinson",
-        "value": 1.2857142857142858,
-        "appearances": 7,
-        "cumulative": 9
+        "name": "Theo Hernández",
+        "value": 12.535531552018192,
+        "position": "LB",
+        "totalMinutes": 1759,
+        "cumulative": 245
+      },
+      {
+        "name": "Gabriel Gudmundsson",
+        "value": 12.01388888888889,
+        "position": "LB",
+        "totalMinutes": 1296,
+        "cumulative": 173
       }
     ]
   },
@@ -1639,64 +1230,74 @@
     "date": "MD27",
     "data": [
       {
-        "name": "Yuri Berchiche",
-        "value": 2,
-        "appearances": 1,
-        "cumulative": 2
-      },
-      {
-        "name": "Sergi Cardona",
-        "value": 1.75,
-        "appearances": 4,
-        "cumulative": 7
+        "name": "Nuno Tavares",
+        "value": 18.10901749663526,
+        "position": "LB",
+        "totalMinutes": 1486,
+        "cumulative": 299
       },
       {
         "name": "Alphonso Davies",
-        "value": 1.5,
-        "appearances": 2,
-        "cumulative": 3
+        "value": 17.387755102040817,
+        "position": "LB",
+        "totalMinutes": 1470,
+        "cumulative": 284
       },
       {
-        "name": "Johan Mojica",
-        "value": 1.5,
-        "appearances": 2,
-        "cumulative": 3
+        "name": "Nuno Mendes",
+        "value": 16.599999999999998,
+        "position": "LB",
+        "totalMinutes": 900,
+        "cumulative": 166
       },
       {
-        "name": "Nuno Tavares",
-        "value": 1.3333333333333333,
-        "appearances": 6,
-        "cumulative": 8
+        "name": "Joško Gvardiol",
+        "value": 15.162381596752368,
+        "position": "LB",
+        "totalMinutes": 1478,
+        "cumulative": 249
       },
       {
-        "name": "Rayan Aït-Nouri",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Alejandro Balde",
+        "value": 14.316972205795388,
+        "position": "LB",
+        "totalMinutes": 1691,
+        "cumulative": 269
       },
       {
-        "name": "Ramy Bensebaini",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Caio Henrique Oliveira Silva",
+        "value": 13.137697516930022,
+        "position": "LB",
+        "totalMinutes": 1329,
+        "cumulative": 194
       },
       {
-        "name": "Joakim Mæhle",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Juan Miranda",
+        "value": 12.831325301204819,
+        "position": "LB",
+        "totalMinutes": 1494,
+        "cumulative": 213
       },
       {
-        "name": "Deiver Machado",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Maximilian Mittelstädt",
+        "value": 12.463382157123833,
+        "position": "LB",
+        "totalMinutes": 1502,
+        "cumulative": 208
       },
       {
-        "name": "Antonee Robinson",
-        "value": 1.2857142857142858,
-        "appearances": 7,
-        "cumulative": 9
+        "name": "Theo Hernández",
+        "value": 12.363439697133586,
+        "position": "LB",
+        "totalMinutes": 1849,
+        "cumulative": 254
+      },
+      {
+        "name": "Gabriel Gudmundsson",
+        "value": 12.032085561497327,
+        "position": "LB",
+        "totalMinutes": 1309,
+        "cumulative": 175
       }
     ]
   },
@@ -1704,64 +1305,74 @@
     "date": "MD28",
     "data": [
       {
-        "name": "Yuri Berchiche",
-        "value": 2,
-        "appearances": 1,
-        "cumulative": 2
-      },
-      {
-        "name": "Sergi Cardona",
-        "value": 1.75,
-        "appearances": 4,
-        "cumulative": 7
+        "name": "Nuno Tavares",
+        "value": 18.10901749663526,
+        "position": "LB",
+        "totalMinutes": 1486,
+        "cumulative": 299
       },
       {
         "name": "Alphonso Davies",
-        "value": 1.5,
-        "appearances": 2,
-        "cumulative": 3
+        "value": 17.387755102040817,
+        "position": "LB",
+        "totalMinutes": 1470,
+        "cumulative": 284
       },
       {
-        "name": "Johan Mojica",
-        "value": 1.5,
-        "appearances": 2,
-        "cumulative": 3
+        "name": "Nuno Mendes",
+        "value": 16.875,
+        "position": "LB",
+        "totalMinutes": 928,
+        "cumulative": 174
       },
       {
-        "name": "Nuno Tavares",
-        "value": 1.3333333333333333,
-        "appearances": 6,
-        "cumulative": 8
+        "name": "Joško Gvardiol",
+        "value": 15.784438775510205,
+        "position": "LB",
+        "totalMinutes": 1568,
+        "cumulative": 275
       },
       {
-        "name": "Rayan Aït-Nouri",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Alejandro Balde",
+        "value": 14.138513513513514,
+        "position": "LB",
+        "totalMinutes": 1776,
+        "cumulative": 279
       },
       {
-        "name": "Ramy Bensebaini",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Theo Hernández",
+        "value": 12.99638989169675,
+        "position": "LB",
+        "totalMinutes": 1939,
+        "cumulative": 280
       },
       {
-        "name": "Joakim Mæhle",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Caio Henrique Oliveira Silva",
+        "value": 12.875264270613107,
+        "position": "LB",
+        "totalMinutes": 1419,
+        "cumulative": 203
       },
       {
-        "name": "Deiver Machado",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Juan Miranda",
+        "value": 12.840909090909092,
+        "position": "LB",
+        "totalMinutes": 1584,
+        "cumulative": 226
       },
       {
-        "name": "Antonee Robinson",
-        "value": 1.2857142857142858,
-        "appearances": 7,
-        "cumulative": 9
+        "name": "Maximilian Mittelstädt",
+        "value": 12.463382157123833,
+        "position": "LB",
+        "totalMinutes": 1502,
+        "cumulative": 208
+      },
+      {
+        "name": "Andrew Robertson",
+        "value": 12.289719626168225,
+        "position": "LB",
+        "totalMinutes": 1926,
+        "cumulative": 263
       }
     ]
   },
@@ -1769,64 +1380,74 @@
     "date": "MD29",
     "data": [
       {
-        "name": "Yuri Berchiche",
-        "value": 2,
-        "appearances": 1,
-        "cumulative": 2
-      },
-      {
-        "name": "Sergi Cardona",
-        "value": 1.75,
-        "appearances": 4,
-        "cumulative": 7
+        "name": "Nuno Tavares",
+        "value": 18.10901749663526,
+        "position": "LB",
+        "totalMinutes": 1486,
+        "cumulative": 299
       },
       {
         "name": "Alphonso Davies",
-        "value": 1.5,
-        "appearances": 2,
-        "cumulative": 3
+        "value": 17.387755102040817,
+        "position": "LB",
+        "totalMinutes": 1470,
+        "cumulative": 284
       },
       {
-        "name": "Johan Mojica",
-        "value": 1.5,
-        "appearances": 2,
-        "cumulative": 3
+        "name": "Nuno Mendes",
+        "value": 16.380182002022245,
+        "position": "LB",
+        "totalMinutes": 989,
+        "cumulative": 180
       },
       {
-        "name": "Nuno Tavares",
-        "value": 1.3333333333333333,
-        "appearances": 6,
-        "cumulative": 8
+        "name": "Joško Gvardiol",
+        "value": 15.470446320868517,
+        "position": "LB",
+        "totalMinutes": 1658,
+        "cumulative": 285
       },
       {
-        "name": "Rayan Aït-Nouri",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Alejandro Balde",
+        "value": 14.138513513513514,
+        "position": "LB",
+        "totalMinutes": 1776,
+        "cumulative": 279
       },
       {
-        "name": "Ramy Bensebaini",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Juan Miranda",
+        "value": 13.279569892473118,
+        "position": "LB",
+        "totalMinutes": 1674,
+        "cumulative": 247
       },
       {
-        "name": "Joakim Mæhle",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Theo Hernández",
+        "value": 12.837701612903226,
+        "position": "LB",
+        "totalMinutes": 1984,
+        "cumulative": 283
       },
       {
-        "name": "Deiver Machado",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Caio Henrique Oliveira Silva",
+        "value": 12.644135188866798,
+        "position": "LB",
+        "totalMinutes": 1509,
+        "cumulative": 212
       },
       {
-        "name": "Antonee Robinson",
-        "value": 1.2857142857142858,
-        "appearances": 7,
-        "cumulative": 9
+        "name": "Maximilian Mittelstädt",
+        "value": 12.380653266331658,
+        "position": "LB",
+        "totalMinutes": 1592,
+        "cumulative": 219
+      },
+      {
+        "name": "Andrew Robertson",
+        "value": 12.142857142857142,
+        "position": "LB",
+        "totalMinutes": 2016,
+        "cumulative": 272
       }
     ]
   },
@@ -1834,64 +1455,74 @@
     "date": "MD30",
     "data": [
       {
-        "name": "Yuri Berchiche",
-        "value": 2,
-        "appearances": 1,
-        "cumulative": 2
-      },
-      {
-        "name": "Sergi Cardona",
-        "value": 1.75,
-        "appearances": 4,
-        "cumulative": 7
+        "name": "Nuno Tavares",
+        "value": 18.10901749663526,
+        "position": "LB",
+        "totalMinutes": 1486,
+        "cumulative": 299
       },
       {
         "name": "Alphonso Davies",
-        "value": 1.5,
-        "appearances": 2,
-        "cumulative": 3
+        "value": 17.387755102040817,
+        "position": "LB",
+        "totalMinutes": 1470,
+        "cumulative": 284
       },
       {
-        "name": "Johan Mojica",
-        "value": 1.5,
-        "appearances": 2,
-        "cumulative": 3
+        "name": "Nuno Mendes",
+        "value": 16.074582924435724,
+        "position": "LB",
+        "totalMinutes": 1019,
+        "cumulative": 182
       },
       {
-        "name": "Nuno Tavares",
-        "value": 1.3333333333333333,
-        "appearances": 6,
-        "cumulative": 8
+        "name": "Joško Gvardiol",
+        "value": 15.470446320868517,
+        "position": "LB",
+        "totalMinutes": 1658,
+        "cumulative": 285
       },
       {
-        "name": "Rayan Aït-Nouri",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Alejandro Balde",
+        "value": 13.913513513513514,
+        "position": "LB",
+        "totalMinutes": 1850,
+        "cumulative": 286
       },
       {
-        "name": "Ramy Bensebaini",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Theo Hernández",
+        "value": 12.888138862102219,
+        "position": "LB",
+        "totalMinutes": 2074,
+        "cumulative": 297
       },
       {
-        "name": "Joakim Mæhle",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Juan Miranda",
+        "value": 12.755102040816327,
+        "position": "LB",
+        "totalMinutes": 1764,
+        "cumulative": 250
       },
       {
-        "name": "Deiver Machado",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Maximilian Mittelstädt",
+        "value": 12.681331747919144,
+        "position": "LB",
+        "totalMinutes": 1682,
+        "cumulative": 237
       },
       {
-        "name": "Raphaël Guerreiro",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Andrew Robertson",
+        "value": 12.435897435897434,
+        "position": "LB",
+        "totalMinutes": 2106,
+        "cumulative": 291
+      },
+      {
+        "name": "Caio Henrique Oliveira Silva",
+        "value": 12.14059531348955,
+        "position": "LB",
+        "totalMinutes": 1579,
+        "cumulative": 213
       }
     ]
   },
@@ -1899,64 +1530,74 @@
     "date": "MD31",
     "data": [
       {
-        "name": "Yuri Berchiche",
-        "value": 2,
-        "appearances": 1,
-        "cumulative": 2
-      },
-      {
-        "name": "Sergi Cardona",
-        "value": 1.75,
-        "appearances": 4,
-        "cumulative": 7
+        "name": "Nuno Tavares",
+        "value": 17.83410138248848,
+        "position": "LB",
+        "totalMinutes": 1519,
+        "cumulative": 301
       },
       {
         "name": "Alphonso Davies",
-        "value": 1.5,
-        "appearances": 2,
-        "cumulative": 3
+        "value": 17.387755102040817,
+        "position": "LB",
+        "totalMinutes": 1470,
+        "cumulative": 284
       },
       {
-        "name": "Johan Mojica",
-        "value": 1.5,
-        "appearances": 2,
-        "cumulative": 3
+        "name": "Nuno Mendes",
+        "value": 15.987376014427412,
+        "position": "LB",
+        "totalMinutes": 1109,
+        "cumulative": 197
       },
       {
-        "name": "Nuno Tavares",
-        "value": 1.3333333333333333,
-        "appearances": 6,
-        "cumulative": 8
+        "name": "Joško Gvardiol",
+        "value": 15.470446320868517,
+        "position": "LB",
+        "totalMinutes": 1658,
+        "cumulative": 285
       },
       {
-        "name": "Rayan Aït-Nouri",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Alejandro Balde",
+        "value": 13.857142857142858,
+        "position": "LB",
+        "totalMinutes": 1890,
+        "cumulative": 291
       },
       {
-        "name": "Ramy Bensebaini",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Theo Hernández",
+        "value": 13.51663585951941,
+        "position": "LB",
+        "totalMinutes": 2164,
+        "cumulative": 325
       },
       {
-        "name": "Joakim Mæhle",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Maximilian Mittelstädt",
+        "value": 13.306997742663656,
+        "position": "LB",
+        "totalMinutes": 1772,
+        "cumulative": 262
       },
       {
-        "name": "Deiver Machado",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Juan Miranda",
+        "value": 12.572815533980583,
+        "position": "LB",
+        "totalMinutes": 1854,
+        "cumulative": 259
       },
       {
-        "name": "Raphaël Guerreiro",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Andrew Robertson",
+        "value": 12.42798353909465,
+        "position": "LB",
+        "totalMinutes": 2187,
+        "cumulative": 302
+      },
+      {
+        "name": "Maximilian Wittek",
+        "value": 11.975806451612902,
+        "position": "LB",
+        "totalMinutes": 992,
+        "cumulative": 132
       }
     ]
   },
@@ -1964,64 +1605,74 @@
     "date": "MD32",
     "data": [
       {
-        "name": "Yuri Berchiche",
-        "value": 2,
-        "appearances": 1,
-        "cumulative": 2
-      },
-      {
-        "name": "Sergi Cardona",
-        "value": 1.6,
-        "appearances": 5,
-        "cumulative": 8
+        "name": "Nuno Tavares",
+        "value": 17.83410138248848,
+        "position": "LB",
+        "totalMinutes": 1519,
+        "cumulative": 301
       },
       {
         "name": "Alphonso Davies",
-        "value": 1.5,
-        "appearances": 2,
-        "cumulative": 3
+        "value": 17.387755102040817,
+        "position": "LB",
+        "totalMinutes": 1470,
+        "cumulative": 284
       },
       {
-        "name": "Johan Mojica",
-        "value": 1.5,
-        "appearances": 2,
-        "cumulative": 3
+        "name": "Nuno Mendes",
+        "value": 15.987376014427412,
+        "position": "LB",
+        "totalMinutes": 1109,
+        "cumulative": 197
       },
       {
-        "name": "Nuno Tavares",
-        "value": 1.3333333333333333,
-        "appearances": 6,
-        "cumulative": 8
+        "name": "Joško Gvardiol",
+        "value": 15.470446320868517,
+        "position": "LB",
+        "totalMinutes": 1658,
+        "cumulative": 285
       },
       {
-        "name": "Rayan Aït-Nouri",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Alejandro Balde",
+        "value": 13.857142857142858,
+        "position": "LB",
+        "totalMinutes": 1890,
+        "cumulative": 291
       },
       {
-        "name": "Ramy Bensebaini",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Theo Hernández",
+        "value": 13.51663585951941,
+        "position": "LB",
+        "totalMinutes": 2164,
+        "cumulative": 325
       },
       {
-        "name": "Joakim Mæhle",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Maximilian Mittelstädt",
+        "value": 13.105857066093499,
+        "position": "LB",
+        "totalMinutes": 1861,
+        "cumulative": 271
       },
       {
-        "name": "Deiver Machado",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Juan Miranda",
+        "value": 12.546296296296296,
+        "position": "LB",
+        "totalMinutes": 1944,
+        "cumulative": 271
       },
       {
-        "name": "Raphaël Guerreiro",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Andrew Robertson",
+        "value": 12.294860234445446,
+        "position": "LB",
+        "totalMinutes": 2218,
+        "cumulative": 303
+      },
+      {
+        "name": "Caio Henrique Oliveira Silva",
+        "value": 12.092624356775302,
+        "position": "LB",
+        "totalMinutes": 1749,
+        "cumulative": 235
       }
     ]
   },
@@ -2029,64 +1680,74 @@
     "date": "MD33",
     "data": [
       {
-        "name": "Yuri Berchiche",
-        "value": 2,
-        "appearances": 1,
-        "cumulative": 2
-      },
-      {
-        "name": "Sergi Cardona",
-        "value": 1.6,
-        "appearances": 5,
-        "cumulative": 8
+        "name": "Nuno Tavares",
+        "value": 17.83410138248848,
+        "position": "LB",
+        "totalMinutes": 1519,
+        "cumulative": 301
       },
       {
         "name": "Alphonso Davies",
-        "value": 1.5,
-        "appearances": 2,
-        "cumulative": 3
+        "value": 17.387755102040817,
+        "position": "LB",
+        "totalMinutes": 1470,
+        "cumulative": 284
       },
       {
-        "name": "Johan Mojica",
-        "value": 1.5,
-        "appearances": 2,
-        "cumulative": 3
+        "name": "Nuno Mendes",
+        "value": 15.987376014427412,
+        "position": "LB",
+        "totalMinutes": 1109,
+        "cumulative": 197
       },
       {
-        "name": "Nuno Tavares",
-        "value": 1.3333333333333333,
-        "appearances": 6,
-        "cumulative": 8
+        "name": "Joško Gvardiol",
+        "value": 15.470446320868517,
+        "position": "LB",
+        "totalMinutes": 1658,
+        "cumulative": 285
       },
       {
-        "name": "Rayan Aït-Nouri",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Alejandro Balde",
+        "value": 13.857142857142858,
+        "position": "LB",
+        "totalMinutes": 1890,
+        "cumulative": 291
       },
       {
-        "name": "Ramy Bensebaini",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Maximilian Mittelstädt",
+        "value": 13.700666324961558,
+        "position": "LB",
+        "totalMinutes": 1951,
+        "cumulative": 297
       },
       {
-        "name": "Joakim Mæhle",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Theo Hernández",
+        "value": 13.51663585951941,
+        "position": "LB",
+        "totalMinutes": 2164,
+        "cumulative": 325
       },
       {
-        "name": "Deiver Machado",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Juan Miranda",
+        "value": 12.389380530973453,
+        "position": "LB",
+        "totalMinutes": 2034,
+        "cumulative": 280
       },
       {
-        "name": "Raphaël Guerreiro",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Andrew Robertson",
+        "value": 12.294860234445446,
+        "position": "LB",
+        "totalMinutes": 2218,
+        "cumulative": 303
+      },
+      {
+        "name": "Maximilian Wittek",
+        "value": 11.975806451612902,
+        "position": "LB",
+        "totalMinutes": 992,
+        "cumulative": 132
       }
     ]
   },
@@ -2094,64 +1755,74 @@
     "date": "MD34",
     "data": [
       {
-        "name": "Yuri Berchiche",
-        "value": 2,
-        "appearances": 1,
-        "cumulative": 2
-      },
-      {
-        "name": "Sergi Cardona",
-        "value": 1.6,
-        "appearances": 5,
-        "cumulative": 8
+        "name": "Nuno Tavares",
+        "value": 17.83410138248848,
+        "position": "LB",
+        "totalMinutes": 1519,
+        "cumulative": 301
       },
       {
         "name": "Alphonso Davies",
-        "value": 1.5,
-        "appearances": 2,
-        "cumulative": 3
+        "value": 17.387755102040817,
+        "position": "LB",
+        "totalMinutes": 1470,
+        "cumulative": 284
       },
       {
-        "name": "Johan Mojica",
-        "value": 1.5,
-        "appearances": 2,
-        "cumulative": 3
+        "name": "Nuno Mendes",
+        "value": 17.264386989157632,
+        "position": "LB",
+        "totalMinutes": 1199,
+        "cumulative": 230
       },
       {
-        "name": "Nuno Tavares",
-        "value": 1.3333333333333333,
-        "appearances": 6,
-        "cumulative": 8
+        "name": "Joško Gvardiol",
+        "value": 15.470446320868517,
+        "position": "LB",
+        "totalMinutes": 1658,
+        "cumulative": 285
       },
       {
-        "name": "Rayan Aït-Nouri",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Alejandro Balde",
+        "value": 13.857142857142858,
+        "position": "LB",
+        "totalMinutes": 1890,
+        "cumulative": 291
       },
       {
-        "name": "Ramy Bensebaini",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Maximilian Mittelstädt",
+        "value": 13.700666324961558,
+        "position": "LB",
+        "totalMinutes": 1951,
+        "cumulative": 297
       },
       {
-        "name": "Joakim Mæhle",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Theo Hernández",
+        "value": 13.51663585951941,
+        "position": "LB",
+        "totalMinutes": 2164,
+        "cumulative": 325
       },
       {
-        "name": "Deiver Machado",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Juan Miranda",
+        "value": 12.457627118644067,
+        "position": "LB",
+        "totalMinutes": 2124,
+        "cumulative": 294
       },
       {
-        "name": "Raphaël Guerreiro",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Andrew Robertson",
+        "value": 12.010398613518198,
+        "position": "LB",
+        "totalMinutes": 2308,
+        "cumulative": 308
+      },
+      {
+        "name": "Maximilian Wittek",
+        "value": 11.975806451612902,
+        "position": "LB",
+        "totalMinutes": 992,
+        "cumulative": 132
       }
     ]
   },
@@ -2159,64 +1830,74 @@
     "date": "MD35",
     "data": [
       {
-        "name": "Yuri Berchiche",
-        "value": 2,
-        "appearances": 1,
-        "cumulative": 2
-      },
-      {
-        "name": "Sergi Cardona",
-        "value": 1.6,
-        "appearances": 5,
-        "cumulative": 8
+        "name": "Nuno Tavares",
+        "value": 17.83410138248848,
+        "position": "LB",
+        "totalMinutes": 1519,
+        "cumulative": 301
       },
       {
         "name": "Alphonso Davies",
-        "value": 1.5,
-        "appearances": 2,
-        "cumulative": 3
+        "value": 17.387755102040817,
+        "position": "LB",
+        "totalMinutes": 1470,
+        "cumulative": 284
       },
       {
-        "name": "Johan Mojica",
-        "value": 1.5,
-        "appearances": 2,
-        "cumulative": 3
+        "name": "Nuno Mendes",
+        "value": 17.264386989157632,
+        "position": "LB",
+        "totalMinutes": 1199,
+        "cumulative": 230
       },
       {
-        "name": "Nuno Tavares",
-        "value": 1.3333333333333333,
-        "appearances": 6,
-        "cumulative": 8
+        "name": "Joško Gvardiol",
+        "value": 15.470446320868517,
+        "position": "LB",
+        "totalMinutes": 1658,
+        "cumulative": 285
       },
       {
-        "name": "Rayan Aït-Nouri",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Luca Pellegrini",
+        "value": 13.824451410658307,
+        "position": "LB",
+        "totalMinutes": 957,
+        "cumulative": 147
       },
       {
-        "name": "Ramy Bensebaini",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Alejandro Balde",
+        "value": 13.752598752598754,
+        "position": "LB",
+        "totalMinutes": 1924,
+        "cumulative": 294
       },
       {
-        "name": "Joakim Mæhle",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Maximilian Mittelstädt",
+        "value": 13.700666324961558,
+        "position": "LB",
+        "totalMinutes": 1951,
+        "cumulative": 297
       },
       {
-        "name": "Deiver Machado",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Theo Hernández",
+        "value": 13.51663585951941,
+        "position": "LB",
+        "totalMinutes": 2164,
+        "cumulative": 325
       },
       {
-        "name": "Raphaël Guerreiro",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Ian Maatsen",
+        "value": 12.981700753498385,
+        "position": "LB",
+        "totalMinutes": 929,
+        "cumulative": 134
+      },
+      {
+        "name": "Juan Miranda",
+        "value": 12.739726027397259,
+        "position": "LB",
+        "totalMinutes": 2190,
+        "cumulative": 310
       }
     ]
   },
@@ -2224,64 +1905,74 @@
     "date": "MD36",
     "data": [
       {
-        "name": "Yuri Berchiche",
-        "value": 2,
-        "appearances": 1,
-        "cumulative": 2
-      },
-      {
-        "name": "Sergi Cardona",
-        "value": 1.6,
-        "appearances": 5,
-        "cumulative": 8
+        "name": "Nuno Tavares",
+        "value": 17.83410138248848,
+        "position": "LB",
+        "totalMinutes": 1519,
+        "cumulative": 301
       },
       {
         "name": "Alphonso Davies",
-        "value": 1.5,
-        "appearances": 2,
-        "cumulative": 3
+        "value": 17.387755102040817,
+        "position": "LB",
+        "totalMinutes": 1470,
+        "cumulative": 284
       },
       {
-        "name": "Johan Mojica",
-        "value": 1.5,
-        "appearances": 2,
-        "cumulative": 3
+        "name": "Nuno Mendes",
+        "value": 17.264386989157632,
+        "position": "LB",
+        "totalMinutes": 1199,
+        "cumulative": 230
       },
       {
-        "name": "Nuno Tavares",
-        "value": 1.3333333333333333,
-        "appearances": 6,
-        "cumulative": 8
+        "name": "Joško Gvardiol",
+        "value": 15.446224256292906,
+        "position": "LB",
+        "totalMinutes": 1748,
+        "cumulative": 300
       },
       {
-        "name": "Rayan Aït-Nouri",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Maximilian Mittelstädt",
+        "value": 13.700666324961558,
+        "position": "LB",
+        "totalMinutes": 1951,
+        "cumulative": 297
       },
       {
-        "name": "Ramy Bensebaini",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Luca Pellegrini",
+        "value": 13.667621776504298,
+        "position": "LB",
+        "totalMinutes": 1047,
+        "cumulative": 159
       },
       {
-        "name": "Joakim Mæhle",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Alejandro Balde",
+        "value": 13.529710512950736,
+        "position": "LB",
+        "totalMinutes": 1969,
+        "cumulative": 296
       },
       {
-        "name": "Deiver Machado",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Theo Hernández",
+        "value": 13.51663585951941,
+        "position": "LB",
+        "totalMinutes": 2164,
+        "cumulative": 325
       },
       {
-        "name": "Raphaël Guerreiro",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Ian Maatsen",
+        "value": 12.981700753498385,
+        "position": "LB",
+        "totalMinutes": 929,
+        "cumulative": 134
+      },
+      {
+        "name": "Juan Miranda",
+        "value": 12.739726027397259,
+        "position": "LB",
+        "totalMinutes": 2190,
+        "cumulative": 310
       }
     ]
   },
@@ -2289,64 +1980,74 @@
     "date": "MD37",
     "data": [
       {
-        "name": "Yuri Berchiche",
-        "value": 2,
-        "appearances": 1,
-        "cumulative": 2
-      },
-      {
-        "name": "Sergi Cardona",
-        "value": 1.6,
-        "appearances": 5,
-        "cumulative": 8
+        "name": "Nuno Tavares",
+        "value": 17.73847125710676,
+        "position": "LB",
+        "totalMinutes": 1583,
+        "cumulative": 312
       },
       {
         "name": "Alphonso Davies",
-        "value": 1.5,
-        "appearances": 2,
-        "cumulative": 3
+        "value": 17.387755102040817,
+        "position": "LB",
+        "totalMinutes": 1470,
+        "cumulative": 284
       },
       {
-        "name": "Johan Mojica",
-        "value": 1.5,
-        "appearances": 2,
-        "cumulative": 3
+        "name": "Nuno Mendes",
+        "value": 17.264386989157632,
+        "position": "LB",
+        "totalMinutes": 1199,
+        "cumulative": 230
       },
       {
-        "name": "Nuno Tavares",
-        "value": 1.3333333333333333,
-        "appearances": 6,
-        "cumulative": 8
+        "name": "Joško Gvardiol",
+        "value": 14.83677910772579,
+        "position": "LB",
+        "totalMinutes": 1838,
+        "cumulative": 303
       },
       {
-        "name": "Rayan Aït-Nouri",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Maximilian Mittelstädt",
+        "value": 13.700666324961558,
+        "position": "LB",
+        "totalMinutes": 1951,
+        "cumulative": 297
       },
       {
-        "name": "Ramy Bensebaini",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Luca Pellegrini",
+        "value": 13.667621776504298,
+        "position": "LB",
+        "totalMinutes": 1047,
+        "cumulative": 159
       },
       {
-        "name": "Joakim Mæhle",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Alejandro Balde",
+        "value": 13.584905660377357,
+        "position": "LB",
+        "totalMinutes": 2014,
+        "cumulative": 304
       },
       {
-        "name": "Deiver Machado",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Theo Hernández",
+        "value": 13.51663585951941,
+        "position": "LB",
+        "totalMinutes": 2164,
+        "cumulative": 325
       },
       {
-        "name": "Raphaël Guerreiro",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Ian Maatsen",
+        "value": 13.24828263002944,
+        "position": "LB",
+        "totalMinutes": 1019,
+        "cumulative": 150
+      },
+      {
+        "name": "Juan Miranda",
+        "value": 12.608695652173914,
+        "position": "LB",
+        "totalMinutes": 2277,
+        "cumulative": 319
       }
     ]
   },
@@ -2354,64 +2055,74 @@
     "date": "MD38",
     "data": [
       {
-        "name": "Yuri Berchiche",
-        "value": 2,
-        "appearances": 1,
-        "cumulative": 2
-      },
-      {
-        "name": "Sergi Cardona",
-        "value": 1.6,
-        "appearances": 5,
-        "cumulative": 8
+        "name": "Nuno Tavares",
+        "value": 18.163141993957705,
+        "position": "LB",
+        "totalMinutes": 1655,
+        "cumulative": 334
       },
       {
         "name": "Alphonso Davies",
-        "value": 1.5,
-        "appearances": 2,
-        "cumulative": 3
+        "value": 17.387755102040817,
+        "position": "LB",
+        "totalMinutes": 1470,
+        "cumulative": 284
       },
       {
-        "name": "Johan Mojica",
-        "value": 1.5,
-        "appearances": 2,
-        "cumulative": 3
+        "name": "Nuno Mendes",
+        "value": 17.264386989157632,
+        "position": "LB",
+        "totalMinutes": 1199,
+        "cumulative": 230
       },
       {
-        "name": "Nuno Tavares",
-        "value": 1.3333333333333333,
-        "appearances": 6,
-        "cumulative": 8
+        "name": "Joško Gvardiol",
+        "value": 14.797717842323651,
+        "position": "LB",
+        "totalMinutes": 1928,
+        "cumulative": 317
       },
       {
-        "name": "Rayan Aït-Nouri",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Luca Pellegrini",
+        "value": 13.943661971830984,
+        "position": "LB",
+        "totalMinutes": 1065,
+        "cumulative": 165
       },
       {
-        "name": "Ramy Bensebaini",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Maximilian Mittelstädt",
+        "value": 13.700666324961558,
+        "position": "LB",
+        "totalMinutes": 1951,
+        "cumulative": 297
       },
       {
-        "name": "Joakim Mæhle",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Theo Hernández",
+        "value": 13.51663585951941,
+        "position": "LB",
+        "totalMinutes": 2164,
+        "cumulative": 325
       },
       {
-        "name": "Deiver Machado",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Alejandro Balde",
+        "value": 13.495702005730658,
+        "position": "LB",
+        "totalMinutes": 2094,
+        "cumulative": 314
       },
       {
-        "name": "Raphaël Guerreiro",
-        "value": 1.3333333333333333,
-        "appearances": 3,
-        "cumulative": 4
+        "name": "Juan Miranda",
+        "value": 12.608695652173914,
+        "position": "LB",
+        "totalMinutes": 2277,
+        "cumulative": 319
+      },
+      {
+        "name": "Ian Maatsen",
+        "value": 12.4165915238954,
+        "position": "LB",
+        "totalMinutes": 1109,
+        "cumulative": 153
       }
     ]
   }
