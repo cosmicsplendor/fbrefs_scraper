@@ -50,8 +50,8 @@ function loadAndMergeData(filePaths, FIELDS) {
             mergedData[matchdayNum].forEach(player => {
                 const playerName = player.player;
                 const playerValue = FIELDS.reduce((sum, field) => sum + (player[field] || 0), 0);
-                
-                if (!uniquePlayers.has(playerName) || 
+
+                if (!uniquePlayers.has(playerName) ||
                     FIELDS.reduce((sum, field) => sum + (uniquePlayers.get(playerName)[field] || 0), 0) < playerValue) {
                     uniquePlayers.set(playerName, player);
                 }
@@ -70,11 +70,34 @@ function loadAndMergeData(filePaths, FIELDS) {
     return { mergedData, maxMatchday };
 }
 
-function processGoalsData(filePaths, FIELDS, COUNT) {
+function processGoalsData(filePaths, FIELDS, COUNT, POSITION_FILTER = null) {
     console.log(`Processing data with fields: ${FIELDS.join(', ')}`);
-    
+    if (POSITION_FILTER && POSITION_FILTER.length > 0) {
+        console.log(`Filtering by positions: ${POSITION_FILTER.join(', ')}`);
+    } else {
+        console.log('No position filter applied');
+    }
+
     // Load and merge data from all files
     const { mergedData: data, maxMatchday } = loadAndMergeData(filePaths, FIELDS);
+
+    // Helper function to check if player matches position filter
+    const matchesPositionFilter = (player) => {
+        if (!POSITION_FILTER || POSITION_FILTER.length === 0) {
+            return true; // No filter applied
+        }
+        
+        const playerPosition = player.position;
+        if (!playerPosition) {
+            return false; // Player has no position data
+        }
+        
+        // Check if player's position matches any of the filtered positions
+        return POSITION_FILTER.some(pos => 
+            playerPosition.toLowerCase().includes(pos.toLowerCase()) ||
+            pos.toLowerCase().includes(playerPosition.toLowerCase())
+        );
+    };
 
     // Phase 1: Calculate final season totals for each player
     const finalTotals = {};
@@ -83,6 +106,11 @@ function processGoalsData(filePaths, FIELDS, COUNT) {
     for (let md = 1; md <= maxMatchday; md++) {
         if (data[md]) {
             data[md].forEach(player => {
+                // Apply position filter
+                if (!matchesPositionFilter(player)) {
+                    return;
+                }
+
                 const playerValue = FIELDS.reduce((sum, field) => sum + (player[field] || 0), 0);
                 if (playerValue > 0) { // Only players with positive values
                     finalTotals[player.player] = (finalTotals[player.player] || 0) + playerValue;
@@ -94,14 +122,24 @@ function processGoalsData(filePaths, FIELDS, COUNT) {
     // Phase 2: Process matchday by matchday with cumulative values
     const frames = [];
     let cumulativeValues = {}; // Track cumulative values for each player
+    let playerPositions = {}; // Track player positions for reference
 
     for (let md = 1; md <= maxMatchday; md++) {
         // Add values from current matchday
         if (data[md]) {
             data[md].forEach(player => {
+                // Apply position filter
+                if (!matchesPositionFilter(player)) {
+                    return;
+                }
+
                 const playerValue = FIELDS.reduce((sum, field) => sum + (player[field] || 0), 0);
                 if (playerValue > 0) { // Filter out zero values
                     cumulativeValues[player.player] = (cumulativeValues[player.player] || 0) + playerValue;
+                    // Store player position for reference
+                    if (player.position) {
+                        playerPositions[player.player] = player.position;
+                    }
                 }
             });
         }
@@ -110,7 +148,8 @@ function processGoalsData(filePaths, FIELDS, COUNT) {
         let playersArray = Object.entries(cumulativeValues).map(([name, value]) => ({
             name,
             value: value,
-            finalTotal: finalTotals[name] || 0
+            finalTotal: finalTotals[name] || 0,
+            position: playerPositions[name] || 'Unknown'
         }));
 
         // Sort by current values, then by final season total for ties
@@ -121,7 +160,7 @@ function processGoalsData(filePaths, FIELDS, COUNT) {
             return b.value - a.value; // Primary sort: current values descending
         });
 
-        // Keep top 10
+        // Keep top COUNT
         playersArray = playersArray.slice(0, COUNT);
 
         // Create frame for this matchday
@@ -129,7 +168,8 @@ function processGoalsData(filePaths, FIELDS, COUNT) {
             date: `MD${md}`,
             data: playersArray.map(p => ({
                 name: p.name,
-                value: p.value
+                value: p.value,
+                position: p.position
             }))
         };
 
@@ -150,10 +190,27 @@ const filePaths = [
     "./data/Liga_Nos.json"
     // Add more leagues as needed
 ];
-const FIELDS = ['progressive_passes', 'progressive_carries', ]; // Examples: ['goals'], ['assists'], ['goals', 'assists']
-const COUNT = 100
+
+const FIELDS = [
+    'progressive_passes',
+    'progressive_carries',
+    "take_ons_won",
+    "interceptions"
+]; // Examples: ['goals'], ['assists'], ['goals', 'assists']
+
+const COUNT = 100;
+
+// Position filter - set to null, empty array, or specific positions
+// Examples:
+// const POSITION_FILTER = null; // No filter
+// const POSITION_FILTER = []; // No filter
+// const POSITION_FILTER = ['Forward', 'Midfielder']; // Filter for forwards and midfielders
+// const POSITION_FILTER = ['GK']; // Filter for goalkeepers only
+// const POSITION_FILTER = ['CB', 'LB', 'RB']; // Filter for defenders
+const POSITION_FILTER = null; // Change this to filter by position
+
 // Process the data
-const frames = processGoalsData(filePaths, FIELDS, COUNT);
+const frames = processGoalsData(filePaths, FIELDS, COUNT, POSITION_FILTER);
 
 // Optional: Save processed data to file
 fs.writeFileSync('./scripts/data/multi_league_final.json', JSON.stringify(frames, null, 2));
@@ -170,9 +227,20 @@ if (frames.length > 0) {
 
 // Optional: Count unique players across all frames
 const allPlayers = new Set();
+const positionCounts = {};
 frames.forEach(frame => {
     frame.data.forEach(player => {
         allPlayers.add(player.name);
+        // Count positions
+        const pos = player.position || 'Unknown';
+        positionCounts[pos] = (positionCounts[pos] || 0) + 1;
     });
 });
+
 console.log(`Total unique players across all frames: ${allPlayers.size}`);
+console.log('Position distribution across frames:');
+Object.entries(positionCounts)
+    .sort((a, b) => b[1] - a[1])
+    .forEach(([position, count]) => {
+        console.log(`  ${position}: ${count} appearances`);
+    });
