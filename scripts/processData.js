@@ -1,9 +1,8 @@
 const fs = require('fs');
 
 // Configure fields here - change this array to modify what gets accumulated and sorted
-const FIELDS = ['assists']; // Examples: ['goals'], ['assists'], ['goals', 'assists']
 
-function loadAndMergeData(filePaths) {
+function loadAndMergeData(filePaths, FIELDS) {
     let mergedData = {};
     let maxMatchday = 0;
 
@@ -71,11 +70,11 @@ function loadAndMergeData(filePaths) {
     return { mergedData, maxMatchday };
 }
 
-function processGoalsData(filePaths) {
+function processGoalsData(filePaths, FIELDS) {
     console.log(`Processing data with fields: ${FIELDS.join(', ')}`);
     
     // Load and merge data from all files
-    const { mergedData: data, maxMatchday } = loadAndMergeData(filePaths);
+    const { mergedData: data, maxMatchday } = loadAndMergeData(filePaths, FIELDS);
 
     // Phase 1: Calculate final season totals for each player
     const finalTotals = {};
@@ -151,9 +150,9 @@ const filePaths = [
     "./data/Liga_Nos.json"
     // Add more leagues as needed
 ];
-
+const FIELDS = ['goals']; // Examples: ['goals'], ['assists'], ['goals', 'assists']
 // Process the data
-const frames = processGoalsData(filePaths);
+const frames = processGoalsData(filePaths, FIELDS);
 
 // Optional: Save processed data to file
 fs.writeFileSync('./scripts/data/multi_league_final.json', JSON.stringify(frames, null, 2));
@@ -176,6 +175,3 @@ frames.forEach(frame => {
     });
 });
 console.log(`Total unique players across all frames: ${allPlayers.size}`);
-
-// Export for use in other modules
-module.exports = { processGoalsData, loadAndMergeData, frames };
