@@ -70,7 +70,7 @@ function loadAndMergeData(filePaths, FIELDS) {
     return { mergedData, maxMatchday };
 }
 
-function processGoalsData(filePaths, FIELDS) {
+function processGoalsData(filePaths, FIELDS, COUNT) {
     console.log(`Processing data with fields: ${FIELDS.join(', ')}`);
     
     // Load and merge data from all files
@@ -122,7 +122,7 @@ function processGoalsData(filePaths, FIELDS) {
         });
 
         // Keep top 10
-        playersArray = playersArray.slice(0, 10);
+        playersArray = playersArray.slice(0, COUNT);
 
         // Create frame for this matchday
         const frame = {
@@ -150,9 +150,10 @@ const filePaths = [
     "./data/Liga_Nos.json"
     // Add more leagues as needed
 ];
-const FIELDS = ['goals']; // Examples: ['goals'], ['assists'], ['goals', 'assists']
+const FIELDS = ['progressive_passes', 'progressive_carries', ]; // Examples: ['goals'], ['assists'], ['goals', 'assists']
+const COUNT = 100
 // Process the data
-const frames = processGoalsData(filePaths, FIELDS);
+const frames = processGoalsData(filePaths, FIELDS, COUNT);
 
 // Optional: Save processed data to file
 fs.writeFileSync('./scripts/data/multi_league_final.json', JSON.stringify(frames, null, 2));
