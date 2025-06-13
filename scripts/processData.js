@@ -1,10 +1,24 @@
 const fs = require('fs');
+const METRIC_WEIGHTS = require("./metricWeights")
 
 // Configure fields here - change this array to modify what gets accumulated and sorted
 
 function loadAndMergeData(filePaths, FIELDS) {
     let mergedData = {};
     let maxMatchday = 0;
+
+    // NEW: Helper function to calculate weighted player value
+    const calculatePlayerValue = (player) => {
+        if (Array.isArray(FIELDS)) {
+            // Backwards compatibility: array format means all weights = 1
+            return FIELDS.reduce((sum, field) => sum + (player[field] || 0), 0);
+        } else {
+            // New format: object with weights
+            return Object.entries(FIELDS).reduce((sum, [field, weight]) => {
+                return sum + ((player[field] || 0) * weight);
+            }, 0);
+        }
+    };
 
     // Load and merge data from all files
     filePaths.forEach(filePath => {
@@ -46,9 +60,9 @@ function loadAndMergeData(filePaths, FIELDS) {
             const uniquePlayers = new Map();
             mergedData[matchdayNum].forEach(player => {
                 const playerName = player.player;
-                const playerValue = FIELDS.reduce((sum, field) => sum + (player[field] || 0), 0);
+                const playerValue = calculatePlayerValue(player);
                 if (!uniquePlayers.has(playerName) ||
-                    FIELDS.reduce((sum, field) => sum + (uniquePlayers.get(playerName)[field] || 0), 0) < playerValue) {
+                    calculatePlayerValue(uniquePlayers.get(playerName)) < playerValue) {
                     uniquePlayers.set(playerName, player);
                 }
             });
@@ -68,7 +82,29 @@ function processGoalsData(filePaths, FIELDS, COUNT, MIN_FULL_MATCHES_EQUIVALENT,
     // NEW: Calculate the minute threshold based on the "full matches" equivalent
     const MIN_MINUTES = MIN_FULL_MATCHES_EQUIVALENT * 90;
 
-    console.log(`Processing data with fields: ${FIELDS.join(', ')}`);
+    // NEW: Helper function to calculate weighted player value
+    const calculatePlayerValue = (player) => {
+        if (Array.isArray(FIELDS)) {
+            // Backwards compatibility: array format means all weights = 1
+            return FIELDS.reduce((sum, field) => sum + (player[field] || 0), 0);
+        } else {
+            // New format: object with weights
+            return Object.entries(FIELDS).reduce((sum, [field, weight]) => {
+                return sum + ((player[field] || 0) * weight);
+            }, 0);
+        }
+    };
+
+    // NEW: Helper function to get field names for logging
+    const getFieldNames = () => {
+        if (Array.isArray(FIELDS)) {
+            return FIELDS.join(', ');
+        } else {
+            return Object.entries(FIELDS).map(([field, weight]) => `${field}(x${weight})`).join(', ');
+        }
+    };
+
+    console.log(`Processing data with fields: ${getFieldNames()}`);
     console.log(`Value calculation type: ${VALUE_TYPE}`);
     if (VALUE_TYPE === "average") {
         console.log(`Minimum minutes for average consideration: ${MIN_MINUTES} (equivalent to ${MIN_FULL_MATCHES_EQUIVALENT} full 90s)`);
@@ -107,7 +143,7 @@ function processGoalsData(filePaths, FIELDS, COUNT, MIN_FULL_MATCHES_EQUIVALENT,
         if (data[md]) {
             data[md].forEach(player => {
                 if (!matchesPositionFilter(player) || !matchesPlayerNameFilter(player)) return;
-                const playerValue = FIELDS.reduce((sum, field) => sum + (player[field] || 0), 0);
+                const playerValue = calculatePlayerValue(player);
                 finalTotals[player.player] = (finalTotals[player.player] || 0) + playerValue;
             });
         }
@@ -131,7 +167,7 @@ function processGoalsData(filePaths, FIELDS, COUNT, MIN_FULL_MATCHES_EQUIVALENT,
                     playerPositions[player.player] = player.position;
                 }
                 
-                const playerValue = FIELDS.reduce((sum, field) => sum + (player[field] || 0), 0);
+                const playerValue = calculatePlayerValue(player);
                 if (playerValue > 0) {
                     cumulativeValues[player.player] = (cumulativeValues[player.player] || 0) + playerValue;
                 }
@@ -203,28 +239,18 @@ const filePaths = [
     './data/Serie_A.json',
 ];
 
-const FIELDS = [ 
-    "take_ons_won",
-    "shots_on_target"
-    // "shots_on_target",
-    // "take_ons_won"
-    // "goals",
-    // "progressive_carries",
-    // "assists",
-    // "xg_assist"
-    // "blocks", 
-    // "interceptions",
-    // "tackles",
-    // "progressive_carries"
-]; 
+// FIELDS can now be either an array of strings (weight = 1) or an object with weights
+const FIELDS = METRIC_WEIGHTS.goalContribution
+// Alternative format (backwards compatible):
+// const FIELDS = ["sca", "progressive_carries", "assists"]; // All have weight = 1 
 const COUNT = 12;
 // NEW: Define the minimum number of FULL 90-MINUTE MATCHES a player must have played.
 // The script will calculate the total minute requirement (e.g., 15 * 90 = 1350 minutes).
-const FULL_MATCHES = 0; 
+const FULL_MATCHES = 10; 
 const VALUE_TYPE = "aggregate"; 
-const POSITION_FILTER = [];
+const POSITION_FILTER = ["LW", "RW"];
 // NEW: Optional player name filter - if empty array or null, no filter is applied
-const PLAYER_NAME_FILTER = ["Cherki", "Aït-Nouri", "Reijnders", "Florian Wirtz", "Tijjani Reijnders", "milos kerkez", "frimpong"]; // Example: ["Messi", "Ronaldo"] or [] for no filter
+const PLAYER_NAME_FILTER = []; // Example: ["Messi", "Ronaldo"] or [] for no filter
 
 // MODIFIED: Pass the new PLAYER_NAME_FILTER parameter to the function
 const frames = processGoalsData(filePaths, FIELDS, COUNT, FULL_MATCHES, POSITION_FILTER, VALUE_TYPE, PLAYER_NAME_FILTER);
