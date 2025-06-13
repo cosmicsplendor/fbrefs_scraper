@@ -63,8 +63,8 @@ function loadAndMergeData(filePaths, FIELDS) {
     return { mergedData, maxMatchday };
 }
 
-// MODIFIED: Parameter changed from MIN_MATCHES to MIN_FULL_MATCHES_EQUIVALENT
-function processGoalsData(filePaths, FIELDS, COUNT, MIN_FULL_MATCHES_EQUIVALENT, POSITION_FILTER = null, VALUE_TYPE = "aggregate") {
+// MODIFIED: Added PLAYER_NAME_FILTER parameter
+function processGoalsData(filePaths, FIELDS, COUNT, MIN_FULL_MATCHES_EQUIVALENT, POSITION_FILTER = null, VALUE_TYPE = "aggregate", PLAYER_NAME_FILTER = null) {
     // NEW: Calculate the minute threshold based on the "full matches" equivalent
     const MIN_MINUTES = MIN_FULL_MATCHES_EQUIVALENT * 90;
 
@@ -78,6 +78,12 @@ function processGoalsData(filePaths, FIELDS, COUNT, MIN_FULL_MATCHES_EQUIVALENT,
     } else {
         console.log('No position filter applied');
     }
+    // NEW: Log player name filter
+    if (PLAYER_NAME_FILTER && PLAYER_NAME_FILTER.length > 0) {
+        console.log(`Filtering by player names: ${PLAYER_NAME_FILTER.join(', ')}`);
+    } else {
+        console.log('No player name filter applied');
+    }
 
     const { mergedData: data, maxMatchday } = loadAndMergeData(filePaths, FIELDS);
 
@@ -88,11 +94,19 @@ function processGoalsData(filePaths, FIELDS, COUNT, MIN_FULL_MATCHES_EQUIVALENT,
         return POSITION_FILTER.some(pos => playerPosition.toLowerCase() === pos.toLowerCase());
     };
 
+    // NEW: Player name filter function
+    const matchesPlayerNameFilter = (player) => {
+        if (!PLAYER_NAME_FILTER || PLAYER_NAME_FILTER.length === 0) return true;
+        const playerName = player.player;
+        if (!playerName) return false;
+        return PLAYER_NAME_FILTER.some(name => playerName.toLowerCase().includes(name.toLowerCase()));
+    };
+
     const finalTotals = {};
     for (let md = 1; md <= maxMatchday; md++) {
         if (data[md]) {
             data[md].forEach(player => {
-                if (!matchesPositionFilter(player)) return;
+                if (!matchesPositionFilter(player) || !matchesPlayerNameFilter(player)) return;
                 const playerValue = FIELDS.reduce((sum, field) => sum + (player[field] || 0), 0);
                 finalTotals[player.player] = (finalTotals[player.player] || 0) + playerValue;
             });
@@ -108,7 +122,7 @@ function processGoalsData(filePaths, FIELDS, COUNT, MIN_FULL_MATCHES_EQUIVALENT,
     for (let md = 1; md <= maxMatchday; md++) {
         if (data[md]) {
             data[md].forEach(player => {
-                if (!matchesPositionFilter(player)) return;
+                if (!matchesPositionFilter(player) || !matchesPlayerNameFilter(player)) return;
 
                 // MODIFIED: Accumulate minutes played.
                 playerMinutesPlayed[player.player] = (playerMinutesPlayed[player.player] || 0) + (player.minutes || 0);
@@ -190,17 +204,30 @@ const filePaths = [
 ];
 
 const FIELDS = [ 
-    "progressive_passes", "take_ons_won", "gca", "progressive_carries", "assists", "goals", "sca"
+    "take_ons_won",
+    "shots_on_target"
+    // "shots_on_target",
+    // "take_ons_won"
+    // "goals",
+    // "progressive_carries",
+    // "assists",
+    // "xg_assist"
+    // "blocks", 
+    // "interceptions",
+    // "tackles",
+    // "progressive_carries"
 ]; 
-const COUNT = 10;
+const COUNT = 12;
 // NEW: Define the minimum number of FULL 90-MINUTE MATCHES a player must have played.
 // The script will calculate the total minute requirement (e.g., 15 * 90 = 1350 minutes).
-const FULL_MATCHES = 10; 
-const VALUE_TYPE = "average"; 
-const POSITION_FILTER = ["LB"];
+const FULL_MATCHES = 0; 
+const VALUE_TYPE = "aggregate"; 
+const POSITION_FILTER = [];
+// NEW: Optional player name filter - if empty array or null, no filter is applied
+const PLAYER_NAME_FILTER = ["Cherki", "Aït-Nouri", "Reijnders", "Florian Wirtz", "Tijjani Reijnders", "milos kerkez", "frimpong"]; // Example: ["Messi", "Ronaldo"] or [] for no filter
 
-// MODIFIED: Pass the new constant to the function
-const frames = processGoalsData(filePaths, FIELDS, COUNT, FULL_MATCHES, POSITION_FILTER, VALUE_TYPE);
+// MODIFIED: Pass the new PLAYER_NAME_FILTER parameter to the function
+const frames = processGoalsData(filePaths, FIELDS, COUNT, FULL_MATCHES, POSITION_FILTER, VALUE_TYPE, PLAYER_NAME_FILTER);
 
 // Optional: Save processed data to file
 fs.writeFileSync('./scripts/data/multi_league_final.json', JSON.stringify(frames, null, 2));
