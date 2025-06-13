@@ -9,12 +9,12 @@
       },
       {
         "name": "Tijjani Reijnders",
-        "value": 1,
+        "value": 0,
         "position": "DM"
       },
       {
         "name": "Jeremie Frimpong",
-        "value": 1,
+        "value": 0,
         "position": "WB"
       },
       {
@@ -34,18 +34,18 @@
     "data": [
       {
         "name": "Florian Wirtz",
-        "value": 8,
+        "value": 2,
         "position": "AM"
       },
       {
-        "name": "Tijjani Reijnders",
-        "value": 5,
-        "position": "DM"
+        "name": "Jeremie Frimpong",
+        "value": 1,
+        "position": "WB"
       },
       {
-        "name": "Jeremie Frimpong",
-        "value": 4,
-        "position": "WB"
+        "name": "Tijjani Reijnders",
+        "value": 0,
+        "position": "DM"
       },
       {
         "name": "Rayan Aït-Nouri",
@@ -64,22 +64,22 @@
     "data": [
       {
         "name": "Florian Wirtz",
-        "value": 9,
+        "value": 3,
         "position": "AM"
       },
       {
-        "name": "Tijjani Reijnders",
-        "value": 5,
-        "position": "DM"
-      },
-      {
         "name": "Jeremie Frimpong",
-        "value": 4,
+        "value": 1,
         "position": "WB"
       },
       {
+        "name": "Tijjani Reijnders",
+        "value": 0,
+        "position": "DM"
+      },
+      {
         "name": "Rayan Aït-Nouri",
-        "value": 2,
+        "value": 0,
         "position": "LM"
       },
       {
@@ -94,23 +94,23 @@
     "data": [
       {
         "name": "Florian Wirtz",
-        "value": 21,
+        "value": 4,
         "position": "AM"
       },
       {
-        "name": "Rayan Aït-Nouri",
-        "value": 6,
-        "position": "LB"
+        "name": "Jeremie Frimpong",
+        "value": 1,
+        "position": "WB"
       },
       {
         "name": "Tijjani Reijnders",
-        "value": 6,
+        "value": 0,
         "position": "RM"
       },
       {
-        "name": "Jeremie Frimpong",
-        "value": 5,
-        "position": "WB"
+        "name": "Rayan Aït-Nouri",
+        "value": 0,
+        "position": "LB"
       },
       {
         "name": "Milos Kerkez",
@@ -124,23 +124,8 @@
     "data": [
       {
         "name": "Florian Wirtz",
-        "value": 22,
+        "value": 4,
         "position": "AM"
-      },
-      {
-        "name": "Tijjani Reijnders",
-        "value": 11,
-        "position": "DM,CM"
-      },
-      {
-        "name": "Rayan Aït-Nouri",
-        "value": 8,
-        "position": "LB"
-      },
-      {
-        "name": "Jeremie Frimpong",
-        "value": 5,
-        "position": "WB"
       },
       {
         "name": "Rayan Cherki",
@@ -148,8 +133,23 @@
         "position": "AM,CM"
       },
       {
-        "name": "Milos Kerkez",
+        "name": "Jeremie Frimpong",
         "value": 1,
+        "position": "WB"
+      },
+      {
+        "name": "Tijjani Reijnders",
+        "value": 0,
+        "position": "DM,CM"
+      },
+      {
+        "name": "Rayan Aït-Nouri",
+        "value": 0,
+        "position": "LB"
+      },
+      {
+        "name": "Milos Kerkez",
+        "value": 0,
         "position": "LB"
       }
     ]
@@ -159,32 +159,32 @@
     "data": [
       {
         "name": "Florian Wirtz",
-        "value": 28,
+        "value": 4,
         "position": "AM"
       },
       {
-        "name": "Tijjani Reijnders",
-        "value": 11,
-        "position": "DM"
-      },
-      {
-        "name": "Rayan Aït-Nouri",
-        "value": 9,
-        "position": "LB"
-      },
-      {
-        "name": "Jeremie Frimpong",
-        "value": 6,
-        "position": "WB"
-      },
-      {
         "name": "Rayan Cherki",
-        "value": 4,
+        "value": 1,
         "position": "LM"
       },
       {
+        "name": "Jeremie Frimpong",
+        "value": 1,
+        "position": "WB"
+      },
+      {
+        "name": "Rayan Aït-Nouri",
+        "value": 1,
+        "position": "LB"
+      },
+      {
+        "name": "Tijjani Reijnders",
+        "value": 0,
+        "position": "DM"
+      },
+      {
         "name": "Milos Kerkez",
-        "value": 2,
+        "value": 0,
         "position": "LB"
       }
     ]
@@ -194,27 +194,552 @@
     "data": [
       {
         "name": "Florian Wirtz",
-        "value": 32,
+        "value": 4,
         "position": "AM,FW"
       },
       {
         "name": "Rayan Aït-Nouri",
-        "value": 11,
+        "value": 2,
         "position": "LB"
       },
       {
-        "name": "Tijjani Reijnders",
-        "value": 11,
-        "position": "DM"
-      },
-      {
         "name": "Rayan Cherki",
-        "value": 9,
+        "value": 1,
         "position": "AM"
       },
       {
         "name": "Jeremie Frimpong",
+        "value": 1,
+        "position": "WB"
+      },
+      {
+        "name": "Tijjani Reijnders",
+        "value": 0,
+        "position": "DM"
+      },
+      {
+        "name": "Milos Kerkez",
+        "value": 0,
+        "position": "LB"
+      }
+    ]
+  },
+  {
+    "date": "MD8",
+    "data": [
+      {
+        "name": "Florian Wirtz",
+        "value": 4,
+        "position": "AM"
+      },
+      {
+        "name": "Rayan Aït-Nouri",
+        "value": 2,
+        "position": "WB"
+      },
+      {
+        "name": "Rayan Cherki",
+        "value": 1,
+        "position": "RW"
+      },
+      {
+        "name": "Jeremie Frimpong",
+        "value": 1,
+        "position": "WB"
+      },
+      {
+        "name": "Tijjani Reijnders",
+        "value": 0,
+        "position": "DM"
+      },
+      {
+        "name": "Milos Kerkez",
+        "value": 0,
+        "position": "LB"
+      }
+    ]
+  },
+  {
+    "date": "MD9",
+    "data": [
+      {
+        "name": "Florian Wirtz",
+        "value": 4,
+        "position": "AM"
+      },
+      {
+        "name": "Rayan Aït-Nouri",
+        "value": 3,
+        "position": "LB,WB"
+      },
+      {
+        "name": "Rayan Cherki",
+        "value": 1,
+        "position": "RM,RW"
+      },
+      {
+        "name": "Jeremie Frimpong",
+        "value": 1,
+        "position": "AM"
+      },
+      {
+        "name": "Tijjani Reijnders",
+        "value": 0,
+        "position": "DM,CM,AM"
+      },
+      {
+        "name": "Milos Kerkez",
+        "value": 0,
+        "position": "LB"
+      }
+    ]
+  },
+  {
+    "date": "MD10",
+    "data": [
+      {
+        "name": "Florian Wirtz",
+        "value": 4,
+        "position": "AM"
+      },
+      {
+        "name": "Rayan Aït-Nouri",
+        "value": 3,
+        "position": "WB,LB"
+      },
+      {
+        "name": "Rayan Cherki",
+        "value": 1,
+        "position": "RW"
+      },
+      {
+        "name": "Jeremie Frimpong",
+        "value": 1,
+        "position": "WB"
+      },
+      {
+        "name": "Tijjani Reijnders",
+        "value": 0,
+        "position": "DM,CM,AM"
+      },
+      {
+        "name": "Milos Kerkez",
+        "value": 0,
+        "position": "LB"
+      }
+    ]
+  },
+  {
+    "date": "MD11",
+    "data": [
+      {
+        "name": "Florian Wirtz",
+        "value": 4,
+        "position": "AM"
+      },
+      {
+        "name": "Rayan Aït-Nouri",
+        "value": 3,
+        "position": "LW"
+      },
+      {
+        "name": "Tijjani Reijnders",
+        "value": 1,
+        "position": "DM"
+      },
+      {
+        "name": "Rayan Cherki",
+        "value": 1,
+        "position": "RW"
+      },
+      {
+        "name": "Jeremie Frimpong",
+        "value": 1,
+        "position": "WB"
+      },
+      {
+        "name": "Milos Kerkez",
+        "value": 0,
+        "position": "LB"
+      }
+    ]
+  },
+  {
+    "date": "MD12",
+    "data": [
+      {
+        "name": "Florian Wirtz",
+        "value": 4,
+        "position": "CM"
+      },
+      {
+        "name": "Rayan Aït-Nouri",
+        "value": 3,
+        "position": "CB"
+      },
+      {
+        "name": "Rayan Cherki",
+        "value": 2,
+        "position": "AM,RW"
+      },
+      {
+        "name": "Jeremie Frimpong",
+        "value": 2,
+        "position": "RW"
+      },
+      {
+        "name": "Tijjani Reijnders",
+        "value": 1,
+        "position": "DM,CM"
+      },
+      {
+        "name": "Milos Kerkez",
+        "value": 0,
+        "position": "LB"
+      }
+    ]
+  },
+  {
+    "date": "MD13",
+    "data": [
+      {
+        "name": "Florian Wirtz",
+        "value": 5,
+        "position": "FW,CM"
+      },
+      {
+        "name": "Rayan Aït-Nouri",
+        "value": 3,
+        "position": "LB,CB,AM"
+      },
+      {
+        "name": "Rayan Cherki",
+        "value": 2,
+        "position": "RW"
+      },
+      {
+        "name": "Jeremie Frimpong",
+        "value": 2,
+        "position": "RM"
+      },
+      {
+        "name": "Tijjani Reijnders",
+        "value": 1,
+        "position": "LM,RM"
+      },
+      {
+        "name": "Milos Kerkez",
+        "value": 1,
+        "position": "LB"
+      }
+    ]
+  },
+  {
+    "date": "MD14",
+    "data": [
+      {
+        "name": "Florian Wirtz",
+        "value": 6,
+        "position": "AM,FW"
+      },
+      {
+        "name": "Tijjani Reijnders",
+        "value": 3,
+        "position": "DM,LM"
+      },
+      {
+        "name": "Rayan Cherki",
+        "value": 3,
+        "position": "RW"
+      },
+      {
+        "name": "Rayan Aït-Nouri",
+        "value": 3,
+        "position": "WB,LB"
+      },
+      {
+        "name": "Jeremie Frimpong",
+        "value": 2,
+        "position": "WB"
+      },
+      {
+        "name": "Milos Kerkez",
+        "value": 1,
+        "position": "LB"
+      }
+    ]
+  },
+  {
+    "date": "MD15",
+    "data": [
+      {
+        "name": "Florian Wirtz",
         "value": 7,
+        "position": "AM,FW"
+      },
+      {
+        "name": "Tijjani Reijnders",
+        "value": 3,
+        "position": "DM"
+      },
+      {
+        "name": "Rayan Cherki",
+        "value": 3,
+        "position": "LM"
+      },
+      {
+        "name": "Rayan Aït-Nouri",
+        "value": 3,
+        "position": "WB"
+      },
+      {
+        "name": "Jeremie Frimpong",
+        "value": 2,
+        "position": "WB"
+      },
+      {
+        "name": "Milos Kerkez",
+        "value": 1,
+        "position": "LB"
+      }
+    ]
+  },
+  {
+    "date": "MD16",
+    "data": [
+      {
+        "name": "Florian Wirtz",
+        "value": 7,
+        "position": "FW"
+      },
+      {
+        "name": "Tijjani Reijnders",
+        "value": 3,
+        "position": "DM"
+      },
+      {
+        "name": "Rayan Cherki",
+        "value": 3,
+        "position": "RW"
+      },
+      {
+        "name": "Rayan Aït-Nouri",
+        "value": 3,
+        "position": "WB,LB"
+      },
+      {
+        "name": "Jeremie Frimpong",
+        "value": 2,
+        "position": "RM"
+      },
+      {
+        "name": "Milos Kerkez",
+        "value": 1,
+        "position": "LB"
+      }
+    ]
+  },
+  {
+    "date": "MD17",
+    "data": [
+      {
+        "name": "Florian Wirtz",
+        "value": 7,
+        "position": "AM"
+      },
+      {
+        "name": "Tijjani Reijnders",
+        "value": 4,
+        "position": "AM"
+      },
+      {
+        "name": "Rayan Cherki",
+        "value": 3,
+        "position": "CM,RM"
+      },
+      {
+        "name": "Rayan Aït-Nouri",
+        "value": 3,
+        "position": "WB,LB"
+      },
+      {
+        "name": "Jeremie Frimpong",
+        "value": 2,
+        "position": "WB"
+      },
+      {
+        "name": "Milos Kerkez",
+        "value": 1,
+        "position": "LB"
+      }
+    ]
+  },
+  {
+    "date": "MD18",
+    "data": [
+      {
+        "name": "Florian Wirtz",
+        "value": 9,
+        "position": "AM"
+      },
+      {
+        "name": "Tijjani Reijnders",
+        "value": 5,
+        "position": "AM,LM"
+      },
+      {
+        "name": "Rayan Cherki",
+        "value": 3,
+        "position": "RW"
+      },
+      {
+        "name": "Rayan Aït-Nouri",
+        "value": 3,
+        "position": "WB"
+      },
+      {
+        "name": "Jeremie Frimpong",
+        "value": 2,
+        "position": "AM,WB"
+      },
+      {
+        "name": "Milos Kerkez",
+        "value": 1,
+        "position": "LB"
+      }
+    ]
+  },
+  {
+    "date": "MD19",
+    "data": [
+      {
+        "name": "Florian Wirtz",
+        "value": 9,
+        "position": "AM"
+      },
+      {
+        "name": "Tijjani Reijnders",
+        "value": 5,
+        "position": "AM"
+      },
+      {
+        "name": "Rayan Cherki",
+        "value": 3,
+        "position": "RW"
+      },
+      {
+        "name": "Rayan Aït-Nouri",
+        "value": 3,
+        "position": "WB"
+      },
+      {
+        "name": "Jeremie Frimpong",
+        "value": 2,
+        "position": "RW"
+      },
+      {
+        "name": "Milos Kerkez",
+        "value": 1,
+        "position": "LB"
+      }
+    ]
+  },
+  {
+    "date": "MD20",
+    "data": [
+      {
+        "name": "Florian Wirtz",
+        "value": 9,
+        "position": "AM,CM"
+      },
+      {
+        "name": "Tijjani Reijnders",
+        "value": 5,
+        "position": "LM,CM"
+      },
+      {
+        "name": "Rayan Cherki",
+        "value": 3,
+        "position": "RW"
+      },
+      {
+        "name": "Jeremie Frimpong",
+        "value": 3,
+        "position": "WB,RB"
+      },
+      {
+        "name": "Rayan Aït-Nouri",
+        "value": 3,
+        "position": "CB"
+      },
+      {
+        "name": "Milos Kerkez",
+        "value": 1,
+        "position": "LB"
+      }
+    ]
+  },
+  {
+    "date": "MD21",
+    "data": [
+      {
+        "name": "Florian Wirtz",
+        "value": 9,
+        "position": "AM"
+      },
+      {
+        "name": "Tijjani Reijnders",
+        "value": 5,
+        "position": "LM,CM"
+      },
+      {
+        "name": "Rayan Cherki",
+        "value": 4,
+        "position": "RW"
+      },
+      {
+        "name": "Jeremie Frimpong",
+        "value": 3,
+        "position": "WB"
+      },
+      {
+        "name": "Rayan Aït-Nouri",
+        "value": 3,
+        "position": "WB"
+      },
+      {
+        "name": "Milos Kerkez",
+        "value": 1,
+        "position": "LB"
+      }
+    ]
+  },
+  {
+    "date": "MD22",
+    "data": [
+      {
+        "name": "Florian Wirtz",
+        "value": 9,
+        "position": "FW,LM"
+      },
+      {
+        "name": "Tijjani Reijnders",
+        "value": 6,
+        "position": "LM,CM"
+      },
+      {
+        "name": "Rayan Cherki",
+        "value": 4,
+        "position": "RW"
+      },
+      {
+        "name": "Jeremie Frimpong",
+        "value": 3,
+        "position": "RM"
+      },
+      {
+        "name": "Rayan Aït-Nouri",
+        "value": 3,
         "position": "WB"
       },
       {
@@ -225,561 +750,36 @@
     ]
   },
   {
-    "date": "MD8",
-    "data": [
-      {
-        "name": "Florian Wirtz",
-        "value": 34,
-        "position": "AM"
-      },
-      {
-        "name": "Tijjani Reijnders",
-        "value": 13,
-        "position": "DM"
-      },
-      {
-        "name": "Rayan Aït-Nouri",
-        "value": 12,
-        "position": "WB"
-      },
-      {
-        "name": "Rayan Cherki",
-        "value": 10,
-        "position": "RW"
-      },
-      {
-        "name": "Jeremie Frimpong",
-        "value": 10,
-        "position": "WB"
-      },
-      {
-        "name": "Milos Kerkez",
-        "value": 4,
-        "position": "LB"
-      }
-    ]
-  },
-  {
-    "date": "MD9",
-    "data": [
-      {
-        "name": "Florian Wirtz",
-        "value": 40,
-        "position": "AM"
-      },
-      {
-        "name": "Rayan Aït-Nouri",
-        "value": 17,
-        "position": "LB,WB"
-      },
-      {
-        "name": "Jeremie Frimpong",
-        "value": 15,
-        "position": "AM"
-      },
-      {
-        "name": "Tijjani Reijnders",
-        "value": 13,
-        "position": "DM,CM,AM"
-      },
-      {
-        "name": "Rayan Cherki",
-        "value": 11,
-        "position": "RM,RW"
-      },
-      {
-        "name": "Milos Kerkez",
-        "value": 4,
-        "position": "LB"
-      }
-    ]
-  },
-  {
-    "date": "MD10",
-    "data": [
-      {
-        "name": "Florian Wirtz",
-        "value": 47,
-        "position": "AM"
-      },
-      {
-        "name": "Rayan Aït-Nouri",
-        "value": 18,
-        "position": "WB,LB"
-      },
-      {
-        "name": "Rayan Cherki",
-        "value": 17,
-        "position": "RW"
-      },
-      {
-        "name": "Jeremie Frimpong",
-        "value": 16,
-        "position": "WB"
-      },
-      {
-        "name": "Tijjani Reijnders",
-        "value": 13,
-        "position": "DM,CM,AM"
-      },
-      {
-        "name": "Milos Kerkez",
-        "value": 6,
-        "position": "LB"
-      }
-    ]
-  },
-  {
-    "date": "MD11",
-    "data": [
-      {
-        "name": "Florian Wirtz",
-        "value": 54,
-        "position": "AM"
-      },
-      {
-        "name": "Rayan Aït-Nouri",
-        "value": 22,
-        "position": "LW"
-      },
-      {
-        "name": "Rayan Cherki",
-        "value": 21,
-        "position": "RW"
-      },
-      {
-        "name": "Jeremie Frimpong",
-        "value": 16,
-        "position": "WB"
-      },
-      {
-        "name": "Tijjani Reijnders",
-        "value": 15,
-        "position": "DM"
-      },
-      {
-        "name": "Milos Kerkez",
-        "value": 6,
-        "position": "LB"
-      }
-    ]
-  },
-  {
-    "date": "MD12",
-    "data": [
-      {
-        "name": "Florian Wirtz",
-        "value": 54,
-        "position": "CM"
-      },
-      {
-        "name": "Rayan Cherki",
-        "value": 25,
-        "position": "AM,RW"
-      },
-      {
-        "name": "Rayan Aït-Nouri",
-        "value": 23,
-        "position": "CB"
-      },
-      {
-        "name": "Jeremie Frimpong",
-        "value": 17,
-        "position": "RW"
-      },
-      {
-        "name": "Tijjani Reijnders",
-        "value": 16,
-        "position": "DM,CM"
-      },
-      {
-        "name": "Milos Kerkez",
-        "value": 6,
-        "position": "LB"
-      }
-    ]
-  },
-  {
-    "date": "MD13",
-    "data": [
-      {
-        "name": "Florian Wirtz",
-        "value": 57,
-        "position": "FW,CM"
-      },
-      {
-        "name": "Rayan Cherki",
-        "value": 27,
-        "position": "RW"
-      },
-      {
-        "name": "Rayan Aït-Nouri",
-        "value": 25,
-        "position": "LB,CB,AM"
-      },
-      {
-        "name": "Tijjani Reijnders",
-        "value": 17,
-        "position": "LM,RM"
-      },
-      {
-        "name": "Jeremie Frimpong",
-        "value": 17,
-        "position": "RM"
-      },
-      {
-        "name": "Milos Kerkez",
-        "value": 7,
-        "position": "LB"
-      }
-    ]
-  },
-  {
-    "date": "MD14",
-    "data": [
-      {
-        "name": "Florian Wirtz",
-        "value": 60,
-        "position": "AM,FW"
-      },
-      {
-        "name": "Rayan Aït-Nouri",
-        "value": 29,
-        "position": "WB,LB"
-      },
-      {
-        "name": "Rayan Cherki",
-        "value": 28,
-        "position": "RW"
-      },
-      {
-        "name": "Tijjani Reijnders",
-        "value": 20,
-        "position": "DM,LM"
-      },
-      {
-        "name": "Jeremie Frimpong",
-        "value": 17,
-        "position": "WB"
-      },
-      {
-        "name": "Milos Kerkez",
-        "value": 8,
-        "position": "LB"
-      }
-    ]
-  },
-  {
-    "date": "MD15",
-    "data": [
-      {
-        "name": "Florian Wirtz",
-        "value": 67,
-        "position": "AM,FW"
-      },
-      {
-        "name": "Rayan Aït-Nouri",
-        "value": 31,
-        "position": "WB"
-      },
-      {
-        "name": "Rayan Cherki",
-        "value": 28,
-        "position": "LM"
-      },
-      {
-        "name": "Tijjani Reijnders",
-        "value": 21,
-        "position": "DM"
-      },
-      {
-        "name": "Jeremie Frimpong",
-        "value": 19,
-        "position": "WB"
-      },
-      {
-        "name": "Milos Kerkez",
-        "value": 8,
-        "position": "LB"
-      }
-    ]
-  },
-  {
-    "date": "MD16",
-    "data": [
-      {
-        "name": "Florian Wirtz",
-        "value": 67,
-        "position": "FW"
-      },
-      {
-        "name": "Rayan Aït-Nouri",
-        "value": 32,
-        "position": "WB,LB"
-      },
-      {
-        "name": "Rayan Cherki",
-        "value": 29,
-        "position": "RW"
-      },
-      {
-        "name": "Tijjani Reijnders",
-        "value": 24,
-        "position": "DM"
-      },
-      {
-        "name": "Jeremie Frimpong",
-        "value": 22,
-        "position": "RM"
-      },
-      {
-        "name": "Milos Kerkez",
-        "value": 8,
-        "position": "LB"
-      }
-    ]
-  },
-  {
-    "date": "MD17",
-    "data": [
-      {
-        "name": "Florian Wirtz",
-        "value": 72,
-        "position": "AM"
-      },
-      {
-        "name": "Rayan Cherki",
-        "value": 34,
-        "position": "CM,RM"
-      },
-      {
-        "name": "Rayan Aït-Nouri",
-        "value": 32,
-        "position": "WB,LB"
-      },
-      {
-        "name": "Tijjani Reijnders",
-        "value": 28,
-        "position": "AM"
-      },
-      {
-        "name": "Jeremie Frimpong",
-        "value": 26,
-        "position": "WB"
-      },
-      {
-        "name": "Milos Kerkez",
-        "value": 8,
-        "position": "LB"
-      }
-    ]
-  },
-  {
-    "date": "MD18",
-    "data": [
-      {
-        "name": "Florian Wirtz",
-        "value": 75,
-        "position": "AM"
-      },
-      {
-        "name": "Rayan Cherki",
-        "value": 38,
-        "position": "RW"
-      },
-      {
-        "name": "Rayan Aït-Nouri",
-        "value": 32,
-        "position": "WB"
-      },
-      {
-        "name": "Tijjani Reijnders",
-        "value": 31,
-        "position": "AM,LM"
-      },
-      {
-        "name": "Jeremie Frimpong",
-        "value": 26,
-        "position": "AM,WB"
-      },
-      {
-        "name": "Milos Kerkez",
-        "value": 9,
-        "position": "LB"
-      }
-    ]
-  },
-  {
-    "date": "MD19",
-    "data": [
-      {
-        "name": "Florian Wirtz",
-        "value": 82,
-        "position": "AM"
-      },
-      {
-        "name": "Rayan Cherki",
-        "value": 39,
-        "position": "RW"
-      },
-      {
-        "name": "Rayan Aït-Nouri",
-        "value": 33,
-        "position": "WB"
-      },
-      {
-        "name": "Tijjani Reijnders",
-        "value": 32,
-        "position": "AM"
-      },
-      {
-        "name": "Jeremie Frimpong",
-        "value": 26,
-        "position": "RW"
-      },
-      {
-        "name": "Milos Kerkez",
-        "value": 11,
-        "position": "LB"
-      }
-    ]
-  },
-  {
-    "date": "MD20",
-    "data": [
-      {
-        "name": "Florian Wirtz",
-        "value": 86,
-        "position": "AM,CM"
-      },
-      {
-        "name": "Rayan Cherki",
-        "value": 39,
-        "position": "RW"
-      },
-      {
-        "name": "Tijjani Reijnders",
-        "value": 36,
-        "position": "LM,CM"
-      },
-      {
-        "name": "Rayan Aït-Nouri",
-        "value": 35,
-        "position": "CB"
-      },
-      {
-        "name": "Jeremie Frimpong",
-        "value": 30,
-        "position": "WB,RB"
-      },
-      {
-        "name": "Milos Kerkez",
-        "value": 11,
-        "position": "LB"
-      }
-    ]
-  },
-  {
-    "date": "MD21",
-    "data": [
-      {
-        "name": "Florian Wirtz",
-        "value": 88,
-        "position": "AM"
-      },
-      {
-        "name": "Rayan Cherki",
-        "value": 42,
-        "position": "RW"
-      },
-      {
-        "name": "Rayan Aït-Nouri",
-        "value": 36,
-        "position": "WB"
-      },
-      {
-        "name": "Tijjani Reijnders",
-        "value": 36,
-        "position": "LM,CM"
-      },
-      {
-        "name": "Jeremie Frimpong",
-        "value": 30,
-        "position": "WB"
-      },
-      {
-        "name": "Milos Kerkez",
-        "value": 11,
-        "position": "LB"
-      }
-    ]
-  },
-  {
-    "date": "MD22",
-    "data": [
-      {
-        "name": "Florian Wirtz",
-        "value": 95,
-        "position": "FW,LM"
-      },
-      {
-        "name": "Rayan Cherki",
-        "value": 44,
-        "position": "RW"
-      },
-      {
-        "name": "Tijjani Reijnders",
-        "value": 40,
-        "position": "LM,CM"
-      },
-      {
-        "name": "Rayan Aït-Nouri",
-        "value": 36,
-        "position": "WB"
-      },
-      {
-        "name": "Jeremie Frimpong",
-        "value": 30,
-        "position": "RM"
-      },
-      {
-        "name": "Milos Kerkez",
-        "value": 15,
-        "position": "LB"
-      }
-    ]
-  },
-  {
     "date": "MD23",
     "data": [
       {
         "name": "Florian Wirtz",
-        "value": 98,
+        "value": 9,
         "position": "AM"
       },
       {
-        "name": "Rayan Cherki",
-        "value": 45,
-        "position": "FW,RW"
-      },
-      {
         "name": "Tijjani Reijnders",
-        "value": 43,
+        "value": 7,
         "position": "LM,DM,CM"
       },
       {
-        "name": "Rayan Aït-Nouri",
-        "value": 38,
-        "position": "WB"
+        "name": "Rayan Cherki",
+        "value": 5,
+        "position": "FW,RW"
       },
       {
         "name": "Jeremie Frimpong",
-        "value": 30,
+        "value": 3,
+        "position": "WB"
+      },
+      {
+        "name": "Rayan Aït-Nouri",
+        "value": 3,
         "position": "WB"
       },
       {
         "name": "Milos Kerkez",
-        "value": 15,
+        "value": 2,
         "position": "LB"
       }
     ]
@@ -789,32 +789,32 @@
     "data": [
       {
         "name": "Florian Wirtz",
-        "value": 101,
+        "value": 9,
         "position": "AM"
       },
       {
-        "name": "Rayan Cherki",
-        "value": 45,
-        "position": "RW"
-      },
-      {
         "name": "Tijjani Reijnders",
-        "value": 44,
+        "value": 7,
         "position": "DM"
       },
       {
-        "name": "Rayan Aït-Nouri",
-        "value": 41,
-        "position": "WB"
+        "name": "Rayan Cherki",
+        "value": 5,
+        "position": "RW"
       },
       {
         "name": "Jeremie Frimpong",
-        "value": 30,
+        "value": 3,
+        "position": "WB"
+      },
+      {
+        "name": "Rayan Aït-Nouri",
+        "value": 3,
         "position": "WB"
       },
       {
         "name": "Milos Kerkez",
-        "value": 15,
+        "value": 2,
         "position": "LB"
       }
     ]
@@ -824,32 +824,32 @@
     "data": [
       {
         "name": "Florian Wirtz",
-        "value": 101,
+        "value": 9,
         "position": "AM"
       },
       {
-        "name": "Rayan Cherki",
-        "value": 47,
-        "position": "AM,LW"
-      },
-      {
         "name": "Tijjani Reijnders",
-        "value": 47,
+        "value": 7,
         "position": "DM,AM"
       },
       {
-        "name": "Rayan Aït-Nouri",
-        "value": 43,
-        "position": "WB"
+        "name": "Rayan Cherki",
+        "value": 6,
+        "position": "AM,LW"
       },
       {
         "name": "Jeremie Frimpong",
-        "value": 31,
+        "value": 3,
+        "position": "WB"
+      },
+      {
+        "name": "Rayan Aït-Nouri",
+        "value": 3,
         "position": "WB"
       },
       {
         "name": "Milos Kerkez",
-        "value": 16,
+        "value": 2,
         "position": "LB"
       }
     ]
@@ -859,32 +859,32 @@
     "data": [
       {
         "name": "Florian Wirtz",
-        "value": 101,
+        "value": 9,
         "position": "AM"
       },
       {
         "name": "Tijjani Reijnders",
-        "value": 49,
+        "value": 8,
         "position": "DM,CM"
       },
       {
         "name": "Rayan Cherki",
-        "value": 48,
+        "value": 6,
         "position": "AM"
       },
       {
-        "name": "Rayan Aït-Nouri",
-        "value": 46,
-        "position": "WB"
-      },
-      {
         "name": "Jeremie Frimpong",
-        "value": 33,
+        "value": 4,
         "position": "RM"
       },
       {
+        "name": "Rayan Aït-Nouri",
+        "value": 3,
+        "position": "WB"
+      },
+      {
         "name": "Milos Kerkez",
-        "value": 16,
+        "value": 2,
         "position": "LB"
       }
     ]
@@ -894,32 +894,32 @@
     "data": [
       {
         "name": "Florian Wirtz",
-        "value": 101,
+        "value": 9,
         "position": "AM"
       },
       {
         "name": "Tijjani Reijnders",
-        "value": 52,
+        "value": 8,
         "position": "DM,AM,CM"
       },
       {
         "name": "Rayan Cherki",
-        "value": 51,
+        "value": 6,
         "position": "FW"
       },
       {
-        "name": "Rayan Aït-Nouri",
-        "value": 48,
+        "name": "Jeremie Frimpong",
+        "value": 4,
         "position": "WB"
       },
       {
-        "name": "Jeremie Frimpong",
-        "value": 35,
+        "name": "Rayan Aït-Nouri",
+        "value": 3,
         "position": "WB"
       },
       {
         "name": "Milos Kerkez",
-        "value": 18,
+        "value": 2,
         "position": "LB"
       }
     ]
@@ -929,32 +929,32 @@
     "data": [
       {
         "name": "Florian Wirtz",
-        "value": 101,
+        "value": 9,
         "position": "AM"
       },
       {
         "name": "Tijjani Reijnders",
-        "value": 54,
+        "value": 8,
         "position": "AM,DM"
       },
       {
         "name": "Rayan Cherki",
-        "value": 53,
+        "value": 7,
         "position": "RW"
       },
       {
-        "name": "Rayan Aït-Nouri",
-        "value": 50,
-        "position": "WB"
-      },
-      {
         "name": "Jeremie Frimpong",
-        "value": 35,
+        "value": 4,
         "position": "WB,AM,RM"
       },
       {
+        "name": "Rayan Aït-Nouri",
+        "value": 3,
+        "position": "WB"
+      },
+      {
         "name": "Milos Kerkez",
-        "value": 20,
+        "value": 2,
         "position": "LB"
       }
     ]
@@ -964,32 +964,32 @@
     "data": [
       {
         "name": "Florian Wirtz",
-        "value": 101,
+        "value": 9,
         "position": "AM"
       },
       {
-        "name": "Rayan Cherki",
-        "value": 55,
-        "position": "RW"
-      },
-      {
         "name": "Tijjani Reijnders",
-        "value": 55,
+        "value": 9,
         "position": "AM,DM"
       },
       {
-        "name": "Rayan Aït-Nouri",
-        "value": 52,
-        "position": "WB"
+        "name": "Rayan Cherki",
+        "value": 8,
+        "position": "RW"
       },
       {
         "name": "Jeremie Frimpong",
-        "value": 36,
+        "value": 4,
+        "position": "WB"
+      },
+      {
+        "name": "Rayan Aït-Nouri",
+        "value": 3,
         "position": "WB"
       },
       {
         "name": "Milos Kerkez",
-        "value": 22,
+        "value": 2,
         "position": "LB"
       }
     ]
@@ -999,32 +999,32 @@
     "data": [
       {
         "name": "Florian Wirtz",
-        "value": 102,
-        "position": "AM"
-      },
-      {
-        "name": "Rayan Cherki",
-        "value": 57,
+        "value": 9,
         "position": "AM"
       },
       {
         "name": "Tijjani Reijnders",
-        "value": 56,
+        "value": 9,
         "position": "DM,AM"
       },
       {
-        "name": "Rayan Aït-Nouri",
-        "value": 52,
-        "position": "WB"
+        "name": "Rayan Cherki",
+        "value": 8,
+        "position": "AM"
       },
       {
         "name": "Jeremie Frimpong",
-        "value": 36,
+        "value": 4,
+        "position": "WB"
+      },
+      {
+        "name": "Rayan Aït-Nouri",
+        "value": 3,
         "position": "WB"
       },
       {
         "name": "Milos Kerkez",
-        "value": 22,
+        "value": 2,
         "position": "LB"
       }
     ]
@@ -1034,32 +1034,32 @@
     "data": [
       {
         "name": "Florian Wirtz",
-        "value": 105,
+        "value": 9,
         "position": "FW"
       },
       {
-        "name": "Rayan Cherki",
-        "value": 59,
-        "position": "RW"
-      },
-      {
         "name": "Tijjani Reijnders",
-        "value": 58,
+        "value": 9,
         "position": "DM,AM"
       },
       {
-        "name": "Rayan Aït-Nouri",
-        "value": 55,
-        "position": "WB"
+        "name": "Rayan Cherki",
+        "value": 8,
+        "position": "RW"
       },
       {
         "name": "Jeremie Frimpong",
-        "value": 36,
+        "value": 4,
+        "position": "WB"
+      },
+      {
+        "name": "Rayan Aït-Nouri",
+        "value": 3,
         "position": "WB"
       },
       {
         "name": "Milos Kerkez",
-        "value": 22,
+        "value": 2,
         "position": "LB"
       }
     ]
@@ -1069,32 +1069,32 @@
     "data": [
       {
         "name": "Florian Wirtz",
-        "value": 108,
+        "value": 10,
         "position": "AM"
       },
       {
-        "name": "Rayan Cherki",
-        "value": 63,
-        "position": "RW"
-      },
-      {
         "name": "Tijjani Reijnders",
-        "value": 61,
+        "value": 10,
         "position": "CM,RW"
       },
       {
-        "name": "Rayan Aït-Nouri",
-        "value": 57,
-        "position": "WB"
+        "name": "Rayan Cherki",
+        "value": 8,
+        "position": "RW"
       },
       {
         "name": "Jeremie Frimpong",
-        "value": 37,
+        "value": 4,
+        "position": "WB"
+      },
+      {
+        "name": "Rayan Aït-Nouri",
+        "value": 4,
         "position": "WB"
       },
       {
         "name": "Milos Kerkez",
-        "value": 23,
+        "value": 2,
         "position": "LB"
       }
     ]
@@ -1104,32 +1104,32 @@
     "data": [
       {
         "name": "Florian Wirtz",
-        "value": 114,
-        "position": "AM"
-      },
-      {
-        "name": "Rayan Cherki",
-        "value": 63,
+        "value": 10,
         "position": "AM"
       },
       {
         "name": "Tijjani Reijnders",
-        "value": 62,
+        "value": 10,
         "position": "CM,DM"
       },
       {
-        "name": "Rayan Aït-Nouri",
-        "value": 58,
-        "position": "WB"
+        "name": "Rayan Cherki",
+        "value": 8,
+        "position": "AM"
       },
       {
         "name": "Jeremie Frimpong",
-        "value": 41,
+        "value": 5,
+        "position": "WB"
+      },
+      {
+        "name": "Rayan Aït-Nouri",
+        "value": 4,
         "position": "WB"
       },
       {
         "name": "Milos Kerkez",
-        "value": 24,
+        "value": 2,
         "position": "LB"
       }
     ]
@@ -1139,32 +1139,32 @@
     "data": [
       {
         "name": "Florian Wirtz",
-        "value": 117,
+        "value": 10,
         "position": "LW,AM"
       },
       {
-        "name": "Rayan Cherki",
-        "value": 67,
-        "position": "RW"
-      },
-      {
-        "name": "Rayan Aït-Nouri",
-        "value": 62,
-        "position": "WB"
-      },
-      {
         "name": "Tijjani Reijnders",
-        "value": 62,
+        "value": 10,
         "position": "CM"
       },
       {
+        "name": "Rayan Cherki",
+        "value": 8,
+        "position": "RW"
+      },
+      {
         "name": "Jeremie Frimpong",
-        "value": 41,
+        "value": 5,
+        "position": "WB"
+      },
+      {
+        "name": "Rayan Aït-Nouri",
+        "value": 4,
         "position": "WB"
       },
       {
         "name": "Milos Kerkez",
-        "value": 25,
+        "value": 2,
         "position": "LB"
       }
     ]
@@ -1174,32 +1174,32 @@
     "data": [
       {
         "name": "Florian Wirtz",
-        "value": 117,
+        "value": 10,
         "position": "LW,AM"
       },
       {
-        "name": "Rayan Cherki",
-        "value": 67,
-        "position": "RW"
-      },
-      {
-        "name": "Rayan Aït-Nouri",
-        "value": 64,
-        "position": "WB"
-      },
-      {
         "name": "Tijjani Reijnders",
-        "value": 63,
+        "value": 10,
         "position": "CM"
       },
       {
+        "name": "Rayan Cherki",
+        "value": 8,
+        "position": "RW"
+      },
+      {
         "name": "Jeremie Frimpong",
-        "value": 41,
+        "value": 5,
+        "position": "WB"
+      },
+      {
+        "name": "Rayan Aït-Nouri",
+        "value": 4,
         "position": "WB"
       },
       {
         "name": "Milos Kerkez",
-        "value": 25,
+        "value": 2,
         "position": "LB"
       }
     ]
@@ -1209,32 +1209,32 @@
     "data": [
       {
         "name": "Florian Wirtz",
-        "value": 117,
+        "value": 10,
         "position": "LW,AM"
       },
       {
-        "name": "Rayan Aït-Nouri",
-        "value": 70,
-        "position": "WB"
-      },
-      {
-        "name": "Rayan Cherki",
-        "value": 67,
-        "position": "RW"
-      },
-      {
         "name": "Tijjani Reijnders",
-        "value": 63,
+        "value": 10,
         "position": "CM,DM"
       },
       {
+        "name": "Rayan Cherki",
+        "value": 8,
+        "position": "RW"
+      },
+      {
         "name": "Jeremie Frimpong",
-        "value": 41,
+        "value": 5,
+        "position": "WB"
+      },
+      {
+        "name": "Rayan Aït-Nouri",
+        "value": 4,
         "position": "WB"
       },
       {
         "name": "Milos Kerkez",
-        "value": 26,
+        "value": 2,
         "position": "LB"
       }
     ]
@@ -1244,32 +1244,32 @@
     "data": [
       {
         "name": "Florian Wirtz",
-        "value": 117,
+        "value": 10,
         "position": "LW,AM"
       },
       {
-        "name": "Rayan Aït-Nouri",
-        "value": 72,
-        "position": "WB"
-      },
-      {
-        "name": "Rayan Cherki",
-        "value": 67,
-        "position": "RW"
-      },
-      {
         "name": "Tijjani Reijnders",
-        "value": 63,
+        "value": 10,
         "position": "CM"
       },
       {
+        "name": "Rayan Cherki",
+        "value": 8,
+        "position": "RW"
+      },
+      {
         "name": "Jeremie Frimpong",
-        "value": 41,
+        "value": 5,
+        "position": "WB"
+      },
+      {
+        "name": "Rayan Aït-Nouri",
+        "value": 4,
         "position": "WB"
       },
       {
         "name": "Milos Kerkez",
-        "value": 26,
+        "value": 2,
         "position": "LB,WB"
       }
     ]
@@ -1279,32 +1279,32 @@
     "data": [
       {
         "name": "Florian Wirtz",
-        "value": 117,
+        "value": 10,
         "position": "LW,AM"
       },
       {
-        "name": "Rayan Aït-Nouri",
-        "value": 73,
-        "position": "WB"
-      },
-      {
-        "name": "Rayan Cherki",
-        "value": 67,
-        "position": "RW"
-      },
-      {
         "name": "Tijjani Reijnders",
-        "value": 64,
+        "value": 10,
         "position": "DM"
       },
       {
+        "name": "Rayan Cherki",
+        "value": 8,
+        "position": "RW"
+      },
+      {
         "name": "Jeremie Frimpong",
-        "value": 41,
+        "value": 5,
+        "position": "WB"
+      },
+      {
+        "name": "Rayan Aït-Nouri",
+        "value": 4,
         "position": "WB"
       },
       {
         "name": "Milos Kerkez",
-        "value": 27,
+        "value": 2,
         "position": "LB"
       }
     ]
