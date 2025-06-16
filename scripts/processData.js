@@ -77,8 +77,8 @@ function loadAndMergeData(filePaths, FIELDS) {
     return { mergedData, maxMatchday };
 }
 
-// MODIFIED: Added PLAYER_NAME_FILTER parameter
-function processGoalsData(filePaths, FIELDS, COUNT, MIN_FULL_MATCHES_EQUIVALENT, POSITION_FILTER = null, VALUE_TYPE = "aggregate", PLAYER_NAME_FILTER = null) {
+// MODIFIED: Added nationality_FILTER parameter
+function processGoalsData(filePaths, FIELDS, COUNT, MIN_FULL_MATCHES_EQUIVALENT, POSITION_FILTER = null, nationality_FILTER = null, VALUE_TYPE = "aggregate", PLAYER_NAME_FILTER = null, EXTRA_FIELDS = []) {
     // NEW: Calculate the minute threshold based on the "full matches" equivalent
     const MIN_MINUTES = MIN_FULL_MATCHES_EQUIVALENT * 90;
 
@@ -114,11 +114,23 @@ function processGoalsData(filePaths, FIELDS, COUNT, MIN_FULL_MATCHES_EQUIVALENT,
     } else {
         console.log('No position filter applied');
     }
+    // NEW: Log nationality filter
+    if (nationality_FILTER && nationality_FILTER.length > 0) {
+        console.log(`Filtering by countries: ${nationality_FILTER.join(', ')}`);
+    } else {
+        console.log('No nationality filter applied');
+    }
     // NEW: Log player name filter
     if (PLAYER_NAME_FILTER && PLAYER_NAME_FILTER.length > 0) {
         console.log(`Filtering by player names: ${PLAYER_NAME_FILTER.join(', ')}`);
     } else {
         console.log('No player name filter applied');
+    }
+    // NEW: Log extra fields
+    if (EXTRA_FIELDS && EXTRA_FIELDS.length > 0) {
+        console.log(`Extra fields to include: ${EXTRA_FIELDS.join(', ')}`);
+    } else {
+        console.log('No extra fields specified');
     }
 
     const { mergedData: data, maxMatchday } = loadAndMergeData(filePaths, FIELDS);
@@ -128,6 +140,15 @@ function processGoalsData(filePaths, FIELDS, COUNT, MIN_FULL_MATCHES_EQUIVALENT,
         const playerPosition = player.position;
         if (!playerPosition) return false;
         return POSITION_FILTER.some(pos => playerPosition.toLowerCase() === pos.toLowerCase());
+    };
+    
+    // NEW: nationality filter function
+    const matchesnationalityFilter = (player) => {
+        if (!nationality_FILTER || nationality_FILTER.length === 0) return true;
+        // Assumes the player object has a 'nationality' field.
+        const playernationality = player.nationality; 
+        if (!playernationality) return false;
+        return nationality_FILTER.some(nationality => playernationality.toLowerCase() === nationality.toLowerCase());
     };
 
     // NEW: Player name filter function
@@ -142,7 +163,8 @@ function processGoalsData(filePaths, FIELDS, COUNT, MIN_FULL_MATCHES_EQUIVALENT,
     for (let md = 1; md <= maxMatchday; md++) {
         if (data[md]) {
             data[md].forEach(player => {
-                if (!matchesPositionFilter(player) || !matchesPlayerNameFilter(player)) return;
+                // MODIFIED: Added nationality filter check
+                if (!matchesPositionFilter(player) || !matchesPlayerNameFilter(player) || !matchesnationalityFilter(player)) return;
                 const playerValue = calculatePlayerValue(player);
                 finalTotals[player.player] = (finalTotals[player.player] || 0) + playerValue;
             });
@@ -154,11 +176,14 @@ function processGoalsData(filePaths, FIELDS, COUNT, MIN_FULL_MATCHES_EQUIVALENT,
     let playerPositions = {};
     // MODIFIED: This now tracks total minutes played, not just appearances.
     let playerMinutesPlayed = {};
+    // NEW: Track extra field values for each player
+    let playerExtraFields = {};
 
     for (let md = 1; md <= maxMatchday; md++) {
         if (data[md]) {
             data[md].forEach(player => {
-                if (!matchesPositionFilter(player) || !matchesPlayerNameFilter(player)) return;
+                // MODIFIED: Added nationality filter check
+                if (!matchesPositionFilter(player) || !matchesPlayerNameFilter(player) || !matchesnationalityFilter(player)) return;
 
                 // MODIFIED: Accumulate minutes played.
                 playerMinutesPlayed[player.player] = (playerMinutesPlayed[player.player] || 0) + (player.minutes || 0);
@@ -166,6 +191,17 @@ function processGoalsData(filePaths, FIELDS, COUNT, MIN_FULL_MATCHES_EQUIVALENT,
                 if (player.position) {
                     playerPositions[player.player] = player.position;
                 }
+
+                // NEW: Store extra field values for this player
+                if (!playerExtraFields[player.player]) {
+                    playerExtraFields[player.player] = {};
+                }
+                EXTRA_FIELDS.forEach(field => {
+                    // This check makes sure we store 'nationality' and other fields if they are in EXTRA_FIELDS
+                    if (player[field] !== undefined) { 
+                        playerExtraFields[player.player][field] = player[field];
+                    }
+                });
                 
                 const playerValue = calculatePlayerValue(player);
                 if (playerValue > 0) {
@@ -187,8 +223,7 @@ function processGoalsData(filePaths, FIELDS, COUNT, MIN_FULL_MATCHES_EQUIVALENT,
                 displayValue = cumulativeValue;
             }
             
-            return {
-                name,
+            return {name,
                 value: displayValue,
                 cumulativeValue: cumulativeValue,
                 totalMinutes: totalMinutes, // MODIFIED: Track total minutes
@@ -212,16 +247,33 @@ function processGoalsData(filePaths, FIELDS, COUNT, MIN_FULL_MATCHES_EQUIVALENT,
 
         const frame = {
             date: `MD${md}`,
-            data: playersArray.map(p => ({
-                name: p.name,
-                value: p.value,
-                position: playerPositions[p.name],
-                // MODIFIED: Include totalMinutes in the output frame data
-                ...(VALUE_TYPE === "average" && {
-                    totalMinutes: p.totalMinutes,
-                    cumulative: p.cumulativeValue
-                })
-            }))
+            data: playersArray.map(p => {
+                // Build the base player object
+                const playerData = {
+                    name: p.name,
+                    value: p.value
+                };
+
+                // Add position only if it's in EXTRA_FIELDS
+                if (EXTRA_FIELDS.includes('position') && playerPositions[p.name]) {
+                    playerData.position = playerPositions[p.name];
+                }
+
+                // Add other extra fields
+                EXTRA_FIELDS.forEach(field => {
+                    if (field !== 'position' && playerExtraFields[p.name] && playerExtraFields[p.name][field] !== undefined) {
+                        playerData[field] = playerExtraFields[p.name][field];
+                    }
+                });
+
+                // Add average mode specific fields
+                if (VALUE_TYPE === "average") {
+                    playerData.totalMinutes = p.totalMinutes;
+                    playerData.cumulative = p.cumulativeValue;
+                }
+
+                return playerData;
+            })
         };
         frames.push(frame);
     }
@@ -232,6 +284,7 @@ function processGoalsData(filePaths, FIELDS, COUNT, MIN_FULL_MATCHES_EQUIVALENT,
 
 // Example usage:
 const filePaths = [
+    './data/Liga_Nos.json',
     './data/Premier_League.json',
     './data/Bundesliga.json',
     './data/La_Liga.json',
@@ -246,14 +299,20 @@ const FIELDS = METRIC_WEIGHTS.goalContribution
 const COUNT = 12;
 // NEW: Define the minimum number of FULL 90-MINUTE MATCHES a player must have played.
 // The script will calculate the total minute requirement (e.g., 15 * 90 = 1350 minutes).
-const FULL_MATCHES = 10; 
+const FULL_MATCHES = 0; 
 const VALUE_TYPE = "aggregate"; 
-const POSITION_FILTER = ["LW", "RW"];
+const POSITION_FILTER = [];
+// NEW: Optional nationality filter. Assumes your data has a `nationality` field with 3-letter codes (e.g., "FRA", "ENG").
+// Use an empty array [] or null for no filter.
+const NATIONALITY_FILTER = ["BRA", "ARG", "URU", "COL", "PER", "VEN", "ECU", "BOL", "PAR", "CHI"];
 // NEW: Optional player name filter - if empty array or null, no filter is applied
-const PLAYER_NAME_FILTER = []; // Example: ["Messi", "Ronaldo"] or [] for no filter
+const PLAYER_NAME_FILTER = []; 
+// NEW: Extra fields to include in output (beyond name and value).
+// You can add 'nationality' here if you want it in the final JSON output.
+const EXTRA_FIELDS = ["club", "nationality"]; 
 
-// MODIFIED: Pass the new PLAYER_NAME_FILTER parameter to the function
-const frames = processGoalsData(filePaths, FIELDS, COUNT, FULL_MATCHES, POSITION_FILTER, VALUE_TYPE, PLAYER_NAME_FILTER);
+// MODIFIED: Pass the new nationality_FILTER parameter to the function
+const frames = processGoalsData(filePaths, FIELDS, COUNT, FULL_MATCHES, POSITION_FILTER, NATIONALITY_FILTER, VALUE_TYPE, PLAYER_NAME_FILTER, EXTRA_FIELDS);
 
 // Optional: Save processed data to file
 fs.writeFileSync('./scripts/data/multi_league_final.json', JSON.stringify(frames, null, 2));
@@ -277,7 +336,7 @@ if (VALUE_TYPE === "average") {
     console.log('\nAverage mode statistics:');
     const lastFrame = frames[frames.length - 1];
     if (lastFrame && lastFrame.data.length > 0) {
-        console.log(`Top ${lastFrame.data.length} players by 'per 90' value (final frame, min ${FULL_MATCHES} matches):`);
+        console.log(`Top ${lastFrame.data.length} players by 'per 90' value (final frame, min ${FULL_MATCHES * 90} minutes):`);
         lastFrame.data.slice(0, 10).forEach((player, index) => {
             console.log(`  ${index + 1}. ${player.name} (${player.value.toFixed(2)} per 90 | ${player.cumulative} total in ${player.totalMinutes} mins)`);
         });
