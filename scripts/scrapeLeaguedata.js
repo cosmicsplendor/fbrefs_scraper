@@ -29,10 +29,17 @@ const leagues = [
     // {
     //     "league": "Saudi",
     //     "seasonUrl": "https://fbref.com/en/comps/70/schedule/Saudi-Professional-League-Scores-and-Fixtures"
-    // }
+    // },
+    // {
+    //     "league": "Liga Nos",
+    //     "seasonUrl": "https://fbref.com/en/comps/32/schedule/Liga-Portugal-Scores-and-Fixtures"
+    // },
+    // { league: "Liga MX", seasonUrl: "https://fbref.com/en/comps/31/schedule/Liga-MX-Scores-and-Fixtures" },
+    // { league: "Argentina Liga Profesional", seasonUrl: "https://fbref.com/en/comps/21/schedule/Liga-Profesional-Argentina-Scores-and-Fixtures" },
+    // { league: "Brazilian Série A", seasonUrl: "https://fbref.com/en/comps/24/schedule/Serie-A-Scores-and-Fixtures" },
     {
-        "league": "Liga Nos",
-        "seasonUrl": "https://fbref.com/en/comps/32/schedule/Liga-Portugal-Scores-and-Fixtures"
+        league: "MLS",
+        seasonUrl: "https://fbref.com/en/comps/22/schedule/MLS-Scores-and-Fixtures"
     }
 ];
 

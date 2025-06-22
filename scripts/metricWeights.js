@@ -24,9 +24,9 @@ const METRIC_WEIGHTS = {
 
   // Category for moving the ball into dangerous areas.
   ballProgression: {
-    progressiveCarries: 1.5,
-    progressivePasses: 1.5,
-    takeOnsWon: 2.0,
+    progressive_carries: 1.5,
+    progressive_passes: 1.5,
+    take_ons_won: 2.0,
   },
 
   // Defensive contributions.
@@ -38,8 +38,8 @@ const METRIC_WEIGHTS = {
   
   // Negative actions.
   negativeImpact: {
-    cardsYellow: -5.0,
-    cardsRed: -20.0,
+    cards_yellow: -5.0,
+    cards_red: -20.0,
   }
 };
 module.exports = METRIC_WEIGHTS

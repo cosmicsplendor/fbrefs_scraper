@@ -296,7 +296,7 @@ const filePaths = [
 const FIELDS = METRIC_WEIGHTS.goalContribution
 // Alternative format (backwards compatible):
 // const FIELDS = ["sca", "progressive_carries", "assists"]; // All have weight = 1 
-const COUNT = 12;
+const COUNT = 10;
 // NEW: Define the minimum number of FULL 90-MINUTE MATCHES a player must have played.
 // The script will calculate the total minute requirement (e.g., 15 * 90 = 1350 minutes).
 const FULL_MATCHES = 0; 
@@ -304,7 +304,8 @@ const VALUE_TYPE = "aggregate";
 const POSITION_FILTER = [];
 // NEW: Optional nationality filter. Assumes your data has a `nationality` field with 3-letter codes (e.g., "FRA", "ENG").
 // Use an empty array [] or null for no filter.
-const NATIONALITY_FILTER = ["BRA", "ARG", "URU", "COL", "PER", "VEN", "ECU", "BOL", "PAR", "CHI"];
+// const NATIONALITY_FILTER = ["BRA", "ARG", "URU", "COL", "PER", "VEN", "ECU", "BOL", "PAR", "CHI"];
+const NATIONALITY_FILTER = ["FRA", "GER"];
 // NEW: Optional player name filter - if empty array or null, no filter is applied
 const PLAYER_NAME_FILTER = []; 
 // NEW: Extra fields to include in output (beyond name and value).
