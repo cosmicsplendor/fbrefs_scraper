@@ -196,4 +196,4 @@ async function getStealth(url) {
     }
 }
 
-module.exports = getStealth
+module.exports = {getStealth, stealthHeaders: rotatingHeaders};
