@@ -1,7 +1,7 @@
 // club_name,player_name,age,position,club_involved_name,fee,transfer_movement,transfer_period,fee_cleaned,league_name,year,season
 const axios = require('axios');
 const { JSDOM } = require('jsdom');
-const { stealthHeader } = require("../helpers/getStealth");
+const { stealthHeaders } = require("../helpers/getStealth");
 const fs = require("fs/promises");
 
 const leagueIdMap = {
@@ -80,16 +80,9 @@ const scrapeTransfers = async (league, season, window) => {
     const url = generateUrl(league, season, window);
     
     try {
+        const randomHeader = stealthHeaders[Math.floor(Math.random() * stealthHeaders.length)];
         const response = await axios.get(url, {
-            headers: {
-                ...stealthHeader(),
-                'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
-                'Accept-Language': 'en-US,en;q=0.5',
-                'Accept-Encoding': 'gzip, deflate, br',
-                'DNT': '1',
-                'Connection': 'keep-alive',
-                'Upgrade-Insecure-Requests': '1',
-            },
+            headers: randomHeader,
             timeout: 30000,
         });
         
@@ -111,7 +104,7 @@ const wait = (seconds) => {
 }
 
 const initScraping = async () => {
-    const seasons = range(1992, 2022);
+    const seasons = range(1992, 2025);
     const league = "premier-league";
     const data = [];
     
