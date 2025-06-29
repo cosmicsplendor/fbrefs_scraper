@@ -105,7 +105,7 @@ const wait = (seconds) => {
 
 const initScraping = async () => {
     const seasons = range(1992, 2025);
-    const league = "premier-league";
+    const league = "1-bundesliga";
     const data = [];
     
     for (const season of seasons) {
