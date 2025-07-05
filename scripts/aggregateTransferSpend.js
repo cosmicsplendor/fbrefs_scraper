@@ -5,11 +5,21 @@ const fs = require('fs/promises');
 // This is the single source of truth for settings.
 const CONFIG = {
     // To use topN, make sure this is an empty array: []
-    clubFilters: [],
-    
+    clubFilters: [
+        "Bayern Munich",
+        "SV Werder Bremen",
+        "Borussia Dortmund",
+        "VfB Stuttgart",
+        "Bayer 04 Leverkusen",
+        "1.FC Kaiserslautern",
+        "Hamburger SV",
+        "FC Schalke 04",
+        "Hertha BSC",
+        "VfL Wolfsburg",
+        "RB Leipzig"
+    ],
     // Set the desired number of top clubs here.
-    topN: 6,
-    
+    topN: 11,
     // Set the animation smoothness.
     striations: 12
 };
@@ -83,7 +93,7 @@ const processForGivenClubs = (data, clubList, config) => {
             // And then through the striations for THAT window.
             for (let striation = 0; striation < config.striations; striation++) {
                 const progressInWindow = (striation + 1) / config.striations;
-                
+
                 const frameData = clubList.map(club => {
                     const windowSpendingAmount = windowSpending[club][window.name];
                     const interpolatedSpending = windowSpendingAmount * progressInWindow;
@@ -96,7 +106,7 @@ const processForGivenClubs = (data, clubList, config) => {
 
                     const totalCurrentYearSpending = previousWindowsSpending + interpolatedSpending;
                     const accumulatedValue = cumulativeSpending[club] + totalCurrentYearSpending;
-                    
+
                     return { name: club, value: Math.round(accumulatedValue) };
                 }).sort((a, b) => b.value - a.value);
 
@@ -131,7 +141,7 @@ const processTransferData = (data, config) => {
     // This is the TopN logic path.
     console.log(`Processing to find the top ${config.topN} clubs for each individual frame...`);
     const allClubs = getAllClubs(data);
-    
+
     // Add a debug line to prove what the script is seeing.
     console.log(`[DEBUG] Found ${allClubs.length} unique clubs in the JSON file.`);
 
@@ -154,11 +164,11 @@ const processTransferData = (data, config) => {
 const aggregateTransferData = async () => {
     console.log('Starting transfer data aggregation...');
     console.log(`RUNNING WITH: Mode = ${CONFIG.clubFilters.length > 0 ? 'Filter' : 'TopN'}, TopN = ${CONFIG.topN}`);
-    
+
     const aggregatedData = processTransferData(transferData, CONFIG);
-    
+
     console.log(`Generated ${aggregatedData.length} data frames.`);
-    
+
     // Add a check to inspect the first frame of the output.
     if (aggregatedData.length > 0) {
         console.log(`[DEBUG] The first data frame contains ${aggregatedData[0].data.length} clubs.`);
