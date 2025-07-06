@@ -126,16 +126,26 @@ const interpolateMonthlyData = (dataPoints, playerName) => {
 
 /**
  * Fills missing months with interpolated values
+ * Only interpolates between existing data points, doesn't extrapolate backwards
  */
 const fillMissingMonths = (monthlyData, allMonths) => {
     if (!monthlyData || monthlyData.length === 0) {
-        return allMonths.map(month => ({ yearMonth: month, value: 0 }));
+        return [];
     }
     
     const filledData = [];
     const dataMap = new Map(monthlyData.map(d => [d.yearMonth, d]));
     
+    // Get player's first and last data points
+    const firstDataMonth = monthlyData[0].yearMonth;
+    const lastDataMonth = monthlyData[monthlyData.length - 1].yearMonth;
+    
     for (const month of allMonths) {
+        // Skip months before player's first appearance
+        if (month < firstDataMonth) {
+            continue;
+        }
+        
         if (dataMap.has(month)) {
             filledData.push(dataMap.get(month));
         } else {
@@ -146,19 +156,17 @@ const fillMissingMonths = (monthlyData, allMonths) => {
             let interpolatedValue = 0;
             
             if (beforeData && afterData) {
-                // Linear interpolation
+                // Linear interpolation between two known points
                 const beforeTime = new Date(beforeData.yearMonth + '-01').getTime();
                 const afterTime = new Date(afterData.yearMonth + '-01').getTime();
                 const currentTime = new Date(month + '-01').getTime();
                 
                 const ratio = (currentTime - beforeTime) / (afterTime - beforeTime);
                 interpolatedValue = Math.round(beforeData.value + (afterData.value - beforeData.value) * ratio);
-            } else if (beforeData) {
-                // Use the last known value (for active players)
+            } else if (beforeData && month > lastDataMonth) {
+                // For months after last data point, use the last known value (for active players)
+                // If last value is 0 (retired), they'll naturally drop off the sorted list
                 interpolatedValue = beforeData.value;
-            } else if (afterData) {
-                // Use the next known value (rare case)
-                interpolatedValue = afterData.value;
             }
             
             filledData.push({
@@ -286,17 +294,26 @@ const main = async () => {
         
         // Create bar racing format
         const barRacingData = allMonths.map(month => {
-            const monthData = processedPlayers.map(player => {
+            const monthData = [];
+            
+            // Only include players who have data for this month (i.e., they've appeared by this point)
+            for (const player of processedPlayers) {
                 const playerDataForMonth = player.data.find(d => d.yearMonth === month);
-                return {
-                    name: player.name,
-                    value: playerDataForMonth ? playerDataForMonth.value : 0
-                };
-            });
+                if (playerDataForMonth) {
+                    monthData.push({
+                        name: player.name,
+                        value: playerDataForMonth.value
+                    });
+                }
+            }
+            
+            // Sort by value (descending) and take top 10
+            monthData.sort((a, b) => b.value - a.value);
+            const top10 = monthData.slice(0, 10);
             
             return {
                 date: formatMonthYear(month),
-                data: monthData
+                data: top10
             };
         });
         
@@ -305,7 +322,7 @@ const main = async () => {
         
         console.log(`[SUCCESS] Bar racing data saved to: ${OUTPUT_FILE}`);
         console.log(`[INFO] Generated ${barRacingData.length} monthly data points`);
-        console.log(`[INFO] Each month contains data for ${processedPlayers.length} players`);
+        console.log(`[INFO] Each month contains top 10 players by market value`);
         
         // Print summary
         console.log('\n--- Processing Summary ---');
@@ -317,6 +334,11 @@ const main = async () => {
         if (barRacingData.length > 0) {
             console.log('\n--- Sample Data (First Month) ---');
             console.log(JSON.stringify(barRacingData[0], null, 2));
+            
+            if (barRacingData.length > 1) {
+                console.log('\n--- Sample Data (Last Month) ---');
+                console.log(JSON.stringify(barRacingData[barRacingData.length - 1], null, 2));
+            }
         }
         
     } catch (error) {
