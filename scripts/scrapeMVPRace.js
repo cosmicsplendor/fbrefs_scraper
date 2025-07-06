@@ -1,8 +1,7 @@
 // fetch_player_data.js
-
-import axios from 'axios';
-import fs from 'fs/promises';
-import path from 'path';
+const axios = require('axios');
+const fs = require('fs').promises;
+const path = require('path');
 
 // --- CONFIGURATION ---
 
