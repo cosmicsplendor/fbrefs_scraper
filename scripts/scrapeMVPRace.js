@@ -8,6 +8,7 @@ import path from 'path';
 
 // 1. List of players to process. Add more players here.
 const PLAYERS_TO_FETCH = [{"name":"Lionel Messi","src":"https://www.transfermarkt.com/lionel-messi/profil/spieler/28003"},{"name":"Cristiano Ronaldo","src":"https://www.transfermarkt.com/cristiano-ronaldo/profil/spieler/8198"},{"name":"Gareth Bale","src":"https://www.transfermarkt.com/gareth-bale/profil/spieler/39381"},{"name":"Neymar","src":"https://www.transfermarkt.com/neymar/profil/spieler/68290"},{"name":"Edinson Cavani","src":"https://www.transfermarkt.com/edinson-cavani/profil/spieler/48280"},{"name":"Falcao","src":"https://www.transfermarkt.com/falcao/profil/spieler/39152"},{"name":"Mario Götze","src":"https://www.transfermarkt.com/mario-gotze/profil/spieler/74842"},{"name":"Andrés Iniesta","src":"https://www.transfermarkt.com/andres-iniesta/profil/spieler/7600"},{"name":"James Rodríguez","src":"https://www.transfermarkt.com/james-rodriguez/profil/spieler/88103"},{"name":"Luis Suárez","src":"https://www.transfermarkt.com/luis-suarez/profil/spieler/44352"},{"name":"Ángel di María","src":"https://www.transfermarkt.com/angel-di-maria/profil/spieler/45320"},{"name":"Thomas Müller","src":"https://www.transfermarkt.com/thomas-muller/profil/spieler/58358"},{"name":"Eden Hazard","src":"https://www.transfermarkt.com/eden-hazard/profil/spieler/50202"},{"name":"Antoine Griezmann","src":"https://www.transfermarkt.com/antoine-griezmann/profil/spieler/125781"},{"name":"Paul Pogba","src":"https://www.transfermarkt.com/paul-pogba/profil/spieler/122153"},{"name":"Kylian Mbappé","src":"https://www.transfermarkt.com/kylian-mbappe/profil/spieler/342229"},{"name":"Harry Kane","src":"https://www.transfermarkt.com/harry-kane/profil/spieler/132098"},{"name":"Kevin De Bruyne","src":"https://www.transfermarkt.com/kevin-de-bruyne/profil/spieler/88755"},{"name":"Mohamed Salah","src":"https://www.transfermarkt.com/mohamed-salah/profil/spieler/148455"},{"name":"Raheem Sterling","src":"https://www.transfermarkt.com/raheem-sterling/profil/spieler/134425"},{"name":"Sadio Mané","src":"https://www.transfermarkt.com/sadio-mane/profil/spieler/200512"},{"name":"Jadon Sancho","src":"https://www.transfermarkt.com/jadon-sancho/profil/spieler/401173"},{"name":"Trent Alexander-Arnold","src":"https://www.transfermarkt.com/trent-alexander-arnold/profil/spieler/314353"},{"name":"Erling Haaland","src":"https://www.transfermarkt.com/erling-haaland/profil/spieler/418560"},{"name":"Romelu Lukaku","src":"https://www.transfermarkt.com/romelu-lukaku/profil/spieler/96341"},{"name":"Vinicius Junior","src":"https://www.transfermarkt.com/vinicius-junior/profil/spieler/371998"},{"name":"Bruno Fernandes","src":"https://www.transfermarkt.com/bruno-fernandes/profil/spieler/240306"},{"name":"Phil Foden","src":"https://www.transfermarkt.com/phil-foden/profil/spieler/406635"},{"name":"Dušan Vlahović","src":"https://www.transfermarkt.com/du-scaron-an-vlahovi%C4%87/profil/spieler/357498"},{"name":"Jude Bellingham","src":"https://www.transfermarkt.com/jude-bellingham/profil/spieler/581678"},{"name":"Pedri","src":"https://www.transfermarkt.com/pedri/profil/spieler/683840"},{"name":"Jamal Musiala","src":"https://www.transfermarkt.com/jamal-musiala/profil/spieler/580195"},{"name":"Bukayo Saka","src":"https://www.transfermarkt.com/bukayo-saka/profil/spieler/433177"},{"name":"Victor Osimhen","src":"https://www.transfermarkt.com/victor-osimhen/profil/spieler/401923"},{"name":"Lautaro Martínez","src":"https://www.transfermarkt.com/lautaro-martinez/profil/spieler/406625"},{"name":"Florian Wirtz","src":"https://www.transfermarkt.com/florian-wirtz/profil/spieler/598577"},{"name":"Lamine Yamal","src":"https://www.transfermarkt.com/lamine-yamal/profil/spieler/937958"},{"name":"Adriano","src":"https://www.transfermarkt.com/adriano/profil/spieler/3422"},{"name":"Sergio Agüero","src":"https://www.transfermarkt.com/sergio-aguero/profil/spieler/26399"},{"name":"Gianluigi Buffon","src":"https://www.transfermarkt.com/gianluigi-buffon/profil/spieler/5023"},{"name":"Fabio Cannavaro","src":"https://www.transfermarkt.com/fabio-cannavaro/profil/spieler/5775"},{"name":"Iker Casillas","src":"https://www.transfermarkt.com/iker-casillas/profil/spieler/3979"},{"name":"Didier Drogba","src":"https://www.transfermarkt.com/didier-drogba/profil/spieler/3922"},{"name":"Samuel Eto'o","src":"https://www.transfermarkt.com/samuel-etoo/profil/spieler/4257"},{"name":"Cesc Fàbregas","src":"https://www.transfermarkt.com/cesc-fabregas/profil/spieler/8806"},{"name":"Steven Gerrard","src":"https://www.transfermarkt.com/steven-gerrard/profil/spieler/3109"},{"name":"Thierry Henry","src":"https://www.transfermarkt.com/thierry-henry/profil/spieler/3207"},{"name":"Zlatan Ibrahimović","src":"https://www.transfermarkt.com/zlatan-ibrahimovic/profil/spieler/3455"},{"name":"Kaká","src":"https://www.transfermarkt.com/kaka/profil/spieler/3366"},{"name":"Frank Lampard","src":"https://www.transfermarkt.com/frank-lampard/profil/spieler/3163"},{"name":"Pavel Nedvěd","src":"https://www.transfermarkt.com/pavel-nedved/profil/spieler/3523"},{"name":"Gerard Piqué","src":"https://www.transfermarkt.com/gerard-pique/profil/spieler/18944"},{"name":"Franck Ribéry","src":"https://www.transfermarkt.com/franck-ribery/profil/spieler/22068"},{"name":"Ronaldinho","src":"https://www.transfermarkt.com/ronaldinho/profil/spieler/3373"},{"name":"Wayne Rooney","src":"https://www.transfermarkt.com/wayne-rooney/profil/spieler/3332"},{"name":"Andriy Shevchenko","src":"https://www.transfermarkt.com/andriy-shevchenko/profil/spieler/3522"},{"name":"Wesley Sneijder","src":"https://www.transfermarkt.com/wesley-sneijder/profil/spieler/4673"},{"name":"Fernando Torres","src":"https://www.transfermarkt.com/fernando-torres/profil/spieler/7767"},{"name":"Ruud van Nistelrooy","src":"https://www.transfermarkt.com/ruud-van-nistelrooy/profil/spieler/3407"},{"name":"Robin van Persie","src":"https://www.transfermarkt.com/robin-van-persie/profil/spieler/8749"},{"name":"Nemanja Vidić","src":"https://www.transfermarkt.com/nemanja-vidic/profil/spieler/19726"},{"name":"Xavi Hernández","src":"https://www.transfermarkt.com/xavi/profil/spieler/7607"},{"name":"Zinedine Zidane","src":"https://www.transfermarkt.com/zinedine-zidane/profil/spieler/3111"}]
+
 // 2. Directory to save the JSON output
 const OUTPUT_DIR = path.join('scripts', 'data');
 
@@ -19,8 +20,9 @@ const USER_AGENTS = [
     'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36'
 ];
 
-// 4. A small delay between requests to be respectful to the server.
-const REQUEST_DELAY_MS = 2000; // 2 seconds
+// 4. Random delay configuration (in milliseconds)
+const MIN_DELAY_MS = 2000;  // Minimum 2 seconds
+const MAX_DELAY_MS = 8000;  // Maximum 8 seconds
 
 // --- HELPER FUNCTIONS ---
 
@@ -61,6 +63,13 @@ const sanitizeFileName = (name) => {
  */
 const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
+/**
+ * Generates a random delay between MIN_DELAY_MS and MAX_DELAY_MS.
+ * @returns {number} Random delay in milliseconds.
+ */
+const getRandomDelay = () => {
+    return Math.floor(Math.random() * (MAX_DELAY_MS - MIN_DELAY_MS + 1)) + MIN_DELAY_MS;
+};
 
 // --- CORE LOGIC ---
 
@@ -131,6 +140,7 @@ const fetchPlayerTransferHistory = async (playerId, playerProfileUrl) => {
 const main = async () => {
     console.log('--- Starting Player Transfer History Scraper ---');
     console.log(`[INFO] Found ${PLAYERS_TO_FETCH.length} players to process.`);
+    console.log(`[INFO] Using random delays between ${MIN_DELAY_MS/1000}s and ${MAX_DELAY_MS/1000}s`);
 
     // Ensure the output directory exists
     try {
@@ -165,9 +175,10 @@ const main = async () => {
             console.error(`[FAIL] Could not complete process for ${player.name}. Skipping to next player. Reason: ${error.message}`);
         }
 
-        // 4. Wait before the next request
-        console.log(`[INFO] Waiting for ${REQUEST_DELAY_MS / 1000} seconds before next request...`);
-        await sleep(REQUEST_DELAY_MS);
+        // 4. Wait with random delay before the next request
+        const randomDelay = getRandomDelay();
+        console.log(`[INFO] Waiting for ${randomDelay / 1000} seconds before next request...`);
+        await sleep(randomDelay);
     }
 
     console.log('\n--------------------------------------------------');
