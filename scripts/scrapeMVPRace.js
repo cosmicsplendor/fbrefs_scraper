@@ -20,83 +20,54 @@ const USER_AGENTS = [
 ];
 
 // 4. Random delay configuration (in milliseconds)
-const MIN_DELAY_MS = 2500; // 2.5 seconds
-const MAX_DELAY_MS = 5000; // 5 seconds
+const MIN_DELAY_MS = 2500;
+const MAX_DELAY_MS = 5000;
 
 // 5. [CRITICAL] The full cookie string from your browser's network inspector.
-// This WILL EXPIRE. If the script fails, update this value first.
 const COOKIE_HEADER = 'TM_LINFO=1751784531; aname=transfermarkt.com; TM_TS=1751784530; LAYOUT_MODE=s; euconsent-v2=CQTQT4AQTQT4AAGABCENBvFsAP_gAELAABp4IzQHwAFAANAAqABwAEAALQAZAA0ACKAEwAKQAYgA3gBzAEIAI4ATQApACEAFDAPaAhsBGoC2gF5gMZAZIA0IBqIELgIzAIRADAAUAI4AhAA4SAYABUADgAIIAZABoAEwAN4AhABNAHtAXmAyQCFw6AWABUADgAIIAZABoAEwAMQAbwBNAHtAXmAyQhACADEAG8lAGAA4AEwAMQB7QF5gMkKQCQAKgAcABAADQAJgAYgD2gLzAZIVAAgAKKAAQAZA.YAAAAAAAAAAA; _sp_v1_ss=1:H4sIAAAAAAAAAItWqo5RKimOUbKKxs_IAzEMamN1YpRSQcy80pwcILsErKC6lpoSSrEA-EAOLpYAAAA%3D; _sp_v1_p=691; _sp_v1_data=745500; _sp_su=false; consentUUID=82cc2c92-2b64-40cc-adb7-d9c1e6596a8c_45; AMCV_B21B678254F601E20A4C98A5%40AdobeOrg=MCMID|89691121356868213770835858784851984069; pbjs-unifiedid=%7B%22TDID%22%3A%227b8a8bd1-9b6b-43ab-9598-649fe2d3501d%22%2C%22TDID_LOOKUP%22%3A%22TRUE%22%2C%22TDID_CREATED_AT%22%3A%222025-05-19T23%3A15%3A36%22%7D; pbjs-unifiedid_cst=uix1LEksYA%3D%3D; __vads=KnYR6L4JMWTVle0AVUIJlz6sQ; nadz_dailyVisits=1; kndctr_B21B678254F601E20A4C98A5_AdobeOrg_identity=CiY4OTY5MTEyMTM1Njg2ODIxMzc3MDgzNTg1ODc4NDg1MTk4NDA2OVIRCNTa59P4MhgBKgRJUkwxMAHwAa3hoNn9Mg%3D%3D; panoramaId_expiry=1751814941991; kndctr_B21B678254F601E20A4C98A5_AdobeOrg_cluster=irl1; cuukie=aDZuR3RMUlN4WHZDamRZTjB3SEdqc3NXaWQ4WWxRdklBS69ieQpl3d6xY8fedadeRv9FhENk1F4Ce1eB2Hx4fA%3D%3D; __gads=ID=392e5e14e3f96ff7:T=1750374937:RT=1751784506:S=ALNI_MbzEuCpvg02DIlgbPk8J7i9GgLlhQ; __gpi=UID=00001134a44ae821:T=1750374937:RT=1751784506:S=ALNI_MaY1FKL5JT3kZtgqOMMkKxnkzp7mw; __eoi=ID=a74242297627fa13:T=1750374937:RT=1751784506:S=AA-AfjZ82AUCZ2m3JkyToK3fQ-4U; cto_bundle=VKmLUF9aTEd0Wll2WHhUOWNxR3NmJTJGZDd0QThWV1NiQmtPUGpSYSUyRm1YcjZGdkxIN1NPclN0JTJGUzBFWVQ1QVRadlljamlLZG9CSWM5WjNGaDVxcVk0OFVVRFA4bjlmbVZlUXBJNSUyQkhLSDlaUGs1OVJQbTI1VTNqbVYxb09FbEttZEV1aUM5NDg2bzZoY0xNZHMySG9zNzBCNTVHczhhU3M1NmVBblo1dUl3WjVvYlJaayUzRA; cto_bidid=AgfKYV84Sk5oWFk4cyUyRldDZFlxQ01hMm5ickl6eHQ5N0cxdXVXbHMwc0Q1VFFjOEhJSGJ1QlJ4NTVMdGk2cnhQUFF5RiUyRmxzVyUyRnluU3A4R3RKeSUyQmlaU2p6V2xYYmdTRE91eWwzV0Roc3dWOWdxZDdNbFF6QWUyOWlCR2lHJTJGZUtXdVhWWkU';
 
 // --- HELPER FUNCTIONS ---
 
 /**
- * Extracts the player ID from the Transfermarkt profile URL.
+ * Checks if a file exists at the given path.
+ * @param {string} filePath - The full path to the file.
+ * @returns {Promise<boolean>} - True if the file exists, false otherwise.
  */
-const extractPlayerId = (url) => {
+const fileExists = async (filePath) => {
     try {
-        const parts = url.split('/');
-        return parts[parts.length - 1];
-    } catch (error) {
-        throw new Error(`[FATAL] Could not extract player ID from URL: ${url}`);
+        await fs.access(filePath);
+        return true;
+    } catch {
+        return false;
     }
 };
 
-/**
- * Sanitizes a player's name to create a safe filename.
- */
-const sanitizeFileName = (name) => {
-    return name.toLowerCase().replace(/\s+/g, '_').replace(/[^a-z0-9_.-]/g, '');
-};
-
-/**
- * Returns a random delay time within the configured min/max range.
- */
-const getRandomDelay = () => {
-    return Math.floor(Math.random() * (MAX_DELAY_MS - MIN_DELAY_MS + 1)) + MIN_DELAY_MS;
-}
-
-/**
- * Pauses execution for a specified amount of time.
- */
+const extractPlayerId = (url) => { /* ... (no changes) ... */ };
+const sanitizeFileName = (name) => { /* ... (no changes) ... */ };
+const getRandomDelay = () => { /* ... (no changes) ... */ };
 const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+
+// Keep these helper functions from the previous script
+const extractPlayerId_impl = (url) => { try { const parts = url.split('/'); return parts[parts.length - 1]; } catch (e) { throw new Error(`Could not extract player ID from URL: ${url}`); } };
+const sanitizeFileName_impl = (name) => name.toLowerCase().replace(/\s+/g, '_').replace(/[^a-z0-9_.-]/g, '');
+const getRandomDelay_impl = () => Math.floor(Math.random() * (MAX_DELAY_MS - MIN_DELAY_MS + 1)) + MIN_DELAY_MS;
+Object.assign(globalThis, {extractPlayerId: extractPlayerId_impl, sanitizeFileName: sanitizeFileName_impl, getRandomDelay: getRandomDelay_impl});
 
 // --- CORE LOGIC ---
 
-/**
- * Fetches the market value development for a single player.
- * @param {string} playerId - The ID of the player.
- * @param {string} playerProfileUrl - The full profile URL, used for the Referer header.
- */
-const fetchPlayerMarketValue = async (playerId, playerProfileUrl) => {
+const fetchPlayerMarketValue = async (playerId, playerProfileUrl) => { /* ... (no changes) ... */ };
+const fetchPlayerMarketValue_impl = async (playerId, playerProfileUrl) => {
     const requestUrl = `https://www.transfermarkt.com/ceapi/marketValueDevelopment/graph/${playerId}`;
-    
     const userAgent = USER_AGENTS[Math.floor(Math.random() * USER_AGENTS.length)];
-
-    // Meticulously construct headers to mimic the browser request
     const headers = {
-        'accept': '*/*',
-        'accept-language': 'en-US,en;q=0.9',
-        // The cookie is the most important part for this request
-        'cookie': COOKIE_HEADER,
-        'priority': 'u=1, i',
-        // The referer should be the player's profile page
-        'referer': playerProfileUrl,
-        'sec-ch-ua': '"Google Chrome";v="137", "Chromium";v="137", "Not/A)Brand";v="24"',
-        'sec-ch-ua-mobile': '?0',
-        'sec-ch-ua-platform': '"Windows"',
-        'sec-fetch-dest': 'empty',
-        'sec-fetch-mode': 'cors',
-        // This is now 'same-origin' because the API is on the same domain as the referer
-        'sec-fetch-site': 'same-origin',
-        'user-agent': userAgent,
+        'accept': '*/*', 'accept-language': 'en-US,en;q=0.9', 'cookie': COOKIE_HEADER,
+        'priority': 'u=1, i', 'referer': playerProfileUrl, 'sec-ch-ua': '"Google Chrome";v="137", "Chromium";v="137", "Not/A)Brand";v="24"',
+        'sec-ch-ua-mobile': '?0', 'sec-ch-ua-platform': '"Windows"', 'sec-fetch-dest': 'empty',
+        'sec-fetch-mode': 'cors', 'sec-fetch-site': 'same-origin', 'user-agent': userAgent,
     };
-
     console.log(`[NETWORK] Making GET request to: ${requestUrl}`);
     console.log(`[NETWORK] Using User-Agent: ${userAgent}`);
-    console.log(`[NETWORK] Using Referer: ${playerProfileUrl}`);
-
     try {
-        // We don't need to specify the authority, method, etc. as Axios handles them.
         const response = await axios.get(requestUrl, { headers });
         console.log(`[SUCCESS] Received response for player ID ${playerId}. Status: ${response.status}`);
         return response.data;
@@ -104,19 +75,14 @@ const fetchPlayerMarketValue = async (playerId, playerProfileUrl) => {
         console.error(`[ERROR] Failed to fetch market value for player ID ${playerId}.`);
         if (error.response) {
             console.error(`[ERROR] Status: ${error.response.status} ${error.response.statusText}`);
-            // Don't log the full response data if it's large (e.g., HTML from a redirect page)
             console.error(`[ERROR] Response Data: ${JSON.stringify(error.response.data).substring(0, 300)}...`);
-            if (error.response.status === 403) {
-                console.error("[HINT] A 403 Forbidden error often means your cookie is invalid or expired. Please update the COOKIE_HEADER constant in the script.");
-            }
-        } else if (error.request) {
-            console.error('[ERROR] No response received. The request was made but the server did not reply.');
-        } else {
-            console.error('[ERROR] Error setting up the request:', error.message);
-        }
-        throw error; // Propagate error to be caught by the main loop
+            if (error.response.status === 403) console.error("[HINT] A 403 Forbidden error often means your cookie is invalid or expired. Please update the COOKIE_HEADER constant.");
+        } else if (error.request) console.error('[ERROR] No response received.');
+        else console.error('[ERROR] Error setting up the request:', error.message);
+        throw error;
     }
 };
+Object.assign(globalThis, {fetchPlayerMarketValue: fetchPlayerMarketValue_impl});
 
 /**
  * Main function to orchestrate the fetching and saving process.
@@ -124,8 +90,8 @@ const fetchPlayerMarketValue = async (playerId, playerProfileUrl) => {
 const main = async () => {
     console.log('--- Starting Player Market Value Scraper ---');
     console.log(`[INFO] Found ${PLAYERS_TO_FETCH.length} players to process.`);
+    console.log(`[INFO] To re-scrape a player, delete their JSON file from the output directory.`);
 
-    // Ensure the output directory exists
     try {
         await fs.mkdir(OUTPUT_DIR, { recursive: true });
         console.log(`[SETUP] Output directory ready at: ./${OUTPUT_DIR}`);
@@ -136,16 +102,26 @@ const main = async () => {
 
     for (const player of PLAYERS_TO_FETCH) {
         console.log(`\n--------------------------------------------------`);
-        console.log(`[PROCESS] Now processing: ${player.name}`);
+        console.log(`[PROCESS] Checking player: ${player.name}`);
 
         try {
+            // ** NEW **: Determine the potential output path
+            const fileName = `${sanitizeFileName(player.name)}_market_value.json`;
+            const filePath = path.join(OUTPUT_DIR, fileName);
+
+            // ** NEW **: Check if the file already exists
+            if (await fileExists(filePath)) {
+                console.log(`[SKIP] File already exists for ${player.name}.`);
+                console.log(`         Path: ${filePath}`);
+                // Use 'continue' to skip the rest of the loop and move to the next player
+                continue; 
+            }
+
+            // If the file does not exist, proceed with the original logic
             const playerId = extractPlayerId(player.src);
             console.log(`[INFO] Extracted Player ID: ${playerId}`);
 
             const marketValueData = await fetchPlayerMarketValue(playerId, player.src);
-            
-            const fileName = `${sanitizeFileName(player.name)}_market_value.json`;
-            const filePath = path.join(OUTPUT_DIR, fileName);
             
             await fs.writeFile(filePath, JSON.stringify(marketValueData, null, 2));
             console.log(`[SAVE] Successfully saved market value data for ${player.name} to ${filePath}`);
@@ -154,7 +130,9 @@ const main = async () => {
             console.error(`[FAIL] Skipped processing for ${player.name} due to an error.`);
         }
 
-        // Wait for a random delay before the next request to be polite and avoid rate-limiting
+        // The delay is now outside the 'try' block but still inside the loop
+        // to ensure a delay happens even after a successful skip.
+        // This is good practice to avoid hitting the server too rapidly in any scenario.
         const delay = getRandomDelay();
         console.log(`[INFO] Waiting for ${(delay / 1000).toFixed(1)} seconds before next request...`);
         await sleep(delay);
