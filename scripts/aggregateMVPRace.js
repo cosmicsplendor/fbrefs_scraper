@@ -38,55 +38,58 @@ const parseMarketValue = (marketValueStr) => {
 };
 
 /**
- * Converts timestamp to YYYY-MM format
+ * Converts timestamp to YYYY-WW format (year-week)
  */
-const timestampToMonthYear = (timestamp) => {
+const timestampToYearWeek = (timestamp) => {
     const date = new Date(timestamp);
     const year = date.getFullYear();
-    const month = String(date.getMonth() + 1).padStart(2, '0');
-    return `${year}-${month}`;
+    
+    // Calculate week number
+    const startOfYear = new Date(year, 0, 1);
+    const dayOfYear = Math.floor((date - startOfYear) / (24 * 60 * 60 * 1000)) + 1;
+    const weekNumber = Math.ceil(dayOfYear / 7);
+    
+    return `${year}-${String(weekNumber).padStart(2, '0')}`;
 };
 
 /**
- * Converts YYYY-MM to readable "Month Year" format
+ * Converts YYYY-WW to just the year
  */
-const formatMonthYear = (yearMonth) => {
-    const [year, month] = yearMonth.split('-');
-    const monthNames = [
-        'January', 'February', 'March', 'April', 'May', 'June',
-        'July', 'August', 'September', 'October', 'November', 'December'
-    ];
-    return `${monthNames[parseInt(month) - 1]} ${year}`;
+const formatYear = (yearWeek) => {
+    const [year] = yearWeek.split('-');
+    return year;
 };
 
 /**
- * Generates all months between start and end dates (inclusive)
+ * Generates all weeks between start and end dates (inclusive)
  */
-const generateMonthRange = (startYearMonth, endYearMonth) => {
-    const months = [];
-    const [startYear, startMonth] = startYearMonth.split('-').map(Number);
-    const [endYear, endMonth] = endYearMonth.split('-').map(Number);
+const generateWeekRange = (startYearWeek, endYearWeek) => {
+    const weeks = [];
+    const [startYear, startWeek] = startYearWeek.split('-').map(Number);
+    const [endYear, endWeek] = endYearWeek.split('-').map(Number);
     
     let currentYear = startYear;
-    let currentMonth = startMonth;
+    let currentWeek = startWeek;
     
-    while (currentYear < endYear || (currentYear === endYear && currentMonth <= endMonth)) {
-        months.push(`${currentYear}-${String(currentMonth).padStart(2, '0')}`);
+    while (currentYear < endYear || (currentYear === endYear && currentWeek <= endWeek)) {
+        weeks.push(`${currentYear}-${String(currentWeek).padStart(2, '0')}`);
         
-        currentMonth++;
-        if (currentMonth > 12) {
-            currentMonth = 1;
+        currentWeek++;
+        // Approximate 52 weeks per year (some years have 53)
+        const weeksInYear = currentYear % 4 === 0 ? 53 : 52;
+        if (currentWeek > weeksInYear) {
+            currentWeek = 1;
             currentYear++;
         }
     }
     
-    return months;
+    return weeks;
 };
 
 /**
- * Interpolates market value data to monthly granularity
+ * Interpolates market value data to weekly granularity
  */
-const interpolateMonthlyData = (dataPoints, playerName) => {
+const interpolateWeeklyData = (dataPoints, playerName) => {
     if (!dataPoints || dataPoints.length === 0) {
         console.warn(`[WARNING] No data points for player: ${playerName}`);
         return [];
@@ -109,68 +112,69 @@ const interpolateMonthlyData = (dataPoints, playerName) => {
         return [];
     }
     
-    // Convert to monthly data with parsed values
-    const monthlyData = filteredData.map(point => ({
-        yearMonth: timestampToMonthYear(point.x),
+    // Convert to weekly data with parsed values
+    const weeklyData = filteredData.map(point => ({
+        yearWeek: timestampToYearWeek(point.x),
         value: parseMarketValue(point.mw),
         originalTimestamp: point.x,
         club: point.verein,
         age: point.age
     }));
     
-    // Sort by yearMonth
-    monthlyData.sort((a, b) => a.yearMonth.localeCompare(b.yearMonth));
+    // Sort by yearWeek
+    weeklyData.sort((a, b) => a.yearWeek.localeCompare(b.yearWeek));
     
-    return monthlyData;
+    return weeklyData;
 };
 
 /**
- * Fills missing months with interpolated values
+ * Fills missing weeks with interpolated values
  * Only interpolates between existing data points, doesn't extrapolate backwards
  */
-const fillMissingMonths = (monthlyData, allMonths) => {
-    if (!monthlyData || monthlyData.length === 0) {
+const fillMissingWeeks = (weeklyData, allWeeks) => {
+    if (!weeklyData || weeklyData.length === 0) {
         return [];
     }
     
     const filledData = [];
-    const dataMap = new Map(monthlyData.map(d => [d.yearMonth, d]));
+    const dataMap = new Map(weeklyData.map(d => [d.yearWeek, d]));
     
     // Get player's first and last data points
-    const firstDataMonth = monthlyData[0].yearMonth;
-    const lastDataMonth = monthlyData[monthlyData.length - 1].yearMonth;
+    const firstDataWeek = weeklyData[0].yearWeek;
+    const lastDataWeek = weeklyData[weeklyData.length - 1].yearWeek;
     
-    for (const month of allMonths) {
-        // Skip months before player's first appearance
-        if (month < firstDataMonth) {
+    for (const week of allWeeks) {
+        // Skip weeks before player's first appearance
+        if (week < firstDataWeek) {
             continue;
         }
         
-        if (dataMap.has(month)) {
-            filledData.push(dataMap.get(month));
+        if (dataMap.has(week)) {
+            filledData.push(dataMap.get(week));
         } else {
             // Find the closest data points for interpolation
-            const beforeData = monthlyData.filter(d => d.yearMonth < month).slice(-1)[0];
-            const afterData = monthlyData.filter(d => d.yearMonth > month)[0];
+            const beforeData = weeklyData.filter(d => d.yearWeek < week).slice(-1)[0];
+            const afterData = weeklyData.filter(d => d.yearWeek > week)[0];
             
             let interpolatedValue = 0;
             
             if (beforeData && afterData) {
                 // Linear interpolation between two known points
-                const beforeTime = new Date(beforeData.yearMonth + '-01').getTime();
-                const afterTime = new Date(afterData.yearMonth + '-01').getTime();
-                const currentTime = new Date(month + '-01').getTime();
+                const beforeTime = new Date(beforeData.originalTimestamp);
+                const afterTime = new Date(afterData.originalTimestamp);
+                const [currentYear, currentWeek] = week.split('-').map(Number);
+                const currentTime = new Date(currentYear, 0, 1 + (currentWeek - 1) * 7);
                 
                 const ratio = (currentTime - beforeTime) / (afterTime - beforeTime);
                 interpolatedValue = Math.round(beforeData.value + (afterData.value - beforeData.value) * ratio);
-            } else if (beforeData && month > lastDataMonth) {
-                // For months after last data point, use the last known value (for active players)
+            } else if (beforeData && week > lastDataWeek) {
+                // For weeks after last data point, use the last known value (for active players)
                 // If last value is 0 (retired), they'll naturally drop off the sorted list
                 interpolatedValue = beforeData.value;
             }
             
             filledData.push({
-                yearMonth: month,
+                yearWeek: week,
                 value: Math.max(0, interpolatedValue), // Ensure non-negative
                 interpolated: true
             });
@@ -195,13 +199,13 @@ const processPlayerData = async (filePath, playerName) => {
         
         console.log(`[PROCESS] Processing ${playerName} - ${data.list.length} data points`);
         
-        const monthlyData = interpolateMonthlyData(data.list, playerName);
+        const weeklyData = interpolateWeeklyData(data.list, playerName);
         
         return {
             name: playerName,
             rawDataPoints: data.list.length,
-            monthlyDataPoints: monthlyData.length,
-            data: monthlyData
+            weeklyDataPoints: weeklyData.length,
+            data: weeklyData
         };
         
     } catch (error) {
@@ -266,53 +270,53 @@ const main = async () => {
         }
         
         // Find the overall date range
-        let earliestMonth = null;
-        let latestMonth = null;
+        let earliestWeek = null;
+        let latestWeek = null;
         
         for (const player of playersData) {
             for (const dataPoint of player.data) {
-                if (!earliestMonth || dataPoint.yearMonth < earliestMonth) {
-                    earliestMonth = dataPoint.yearMonth;
+                if (!earliestWeek || dataPoint.yearWeek < earliestWeek) {
+                    earliestWeek = dataPoint.yearWeek;
                 }
-                if (!latestMonth || dataPoint.yearMonth > latestMonth) {
-                    latestMonth = dataPoint.yearMonth;
+                if (!latestWeek || dataPoint.yearWeek > latestWeek) {
+                    latestWeek = dataPoint.yearWeek;
                 }
             }
         }
         
-        console.log(`[INFO] Date range: ${earliestMonth} to ${latestMonth}`);
+        console.log(`[INFO] Date range: ${earliestWeek} to ${latestWeek}`);
         
-        // Generate all months in the range
-        const allMonths = generateMonthRange(earliestMonth, latestMonth);
-        console.log(`[INFO] Total months to process: ${allMonths.length}`);
+        // Generate all weeks in the range
+        const allWeeks = generateWeekRange(earliestWeek, latestWeek);
+        console.log(`[INFO] Total weeks to process: ${allWeeks.length}`);
         
-        // Fill missing months for each player
+        // Fill missing weeks for each player
         const processedPlayers = playersData.map(player => ({
             name: player.name,
-            data: fillMissingMonths(player.data, allMonths)
+            data: fillMissingWeeks(player.data, allWeeks)
         }));
         
         // Create bar racing format
-        const barRacingData = allMonths.map(month => {
-            const monthData = [];
+        const barRacingData = allWeeks.map(week => {
+            const weekData = [];
             
-            // Only include players who have data for this month (i.e., they've appeared by this point)
+            // Only include players who have data for this week (i.e., they've appeared by this point)
             for (const player of processedPlayers) {
-                const playerDataForMonth = player.data.find(d => d.yearMonth === month);
-                if (playerDataForMonth) {
-                    monthData.push({
+                const playerDataForWeek = player.data.find(d => d.yearWeek === week);
+                if (playerDataForWeek) {
+                    weekData.push({
                         name: player.name,
-                        value: playerDataForMonth.value
+                        value: playerDataForWeek.value
                     });
                 }
             }
             
             // Sort by value (descending) and take top 10
-            monthData.sort((a, b) => b.value - a.value);
-            const top10 = monthData.slice(0, 10);
+            weekData.sort((a, b) => b.value - a.value);
+            const top10 = weekData.slice(0, 10);
             
             return {
-                date: formatMonthYear(month),
+                date: formatYear(week),
                 data: top10
             };
         });
@@ -327,8 +331,6 @@ const main = async () => {
         // Print summary
         console.log('\n--- Processing Summary ---');
         console.log(`Total players processed: ${processedPlayers.length}`);
-        console.log(`Date range: ${formatMonthYear(earliestMonth)} to ${formatMonthYear(latestMonth)}`);
-        console.log(`Total months: ${allMonths.length}`);
         
         // Show sample data for verification
         if (barRacingData.length > 0) {
