@@ -4,13 +4,14 @@
 async function scrapeGoalData() {
   const startYear = 1992;
   const endYear = 2024;
-  const totalSeasons = endYear - startYear + 1;
-  const totalRequests = totalSeasons * 38; 
+  const TRANSITION_YEAR = 2016; // Seasons >= this year use /matchweeks endpoint (e.g., 2016/17 season)
+  const INTERPOLATION_STEPS = 24; // User requested 24 artificial matchdays for interpolated seasons
   
-  console.log(`Starting scrape for ${totalSeasons} seasons (${totalRequests} total requests estimated)`);
-  console.log(`Estimated time with 1-2 second delays: ${Math.round(totalRequests * 1.5 / 60)} minutes`);
+  console.log(`Starting scrape for ${endYear - startYear + 1} seasons.`);
+  console.log(`Live matchday data from ${TRANSITION_YEAR}/${TRANSITION_YEAR + 1} onwards.`);
+  console.log(`Interpolating ${INTERPOLATION_STEPS} points for seasons prior to ${TRANSITION_YEAR}.`);
   
-  const allSeasonData = []; // Will store { displayYear: ..., actualSeasonYear: ..., matchday: ..., data: [...] }
+  const allProcessedDataPoints = []; // This will store all final snapshots (real and interpolated) for createCumulativeData
   
   // Helper function to add random delay (1-2 seconds)
   const randomDelay = () => new Promise(resolve => 
@@ -18,58 +19,130 @@ async function scrapeGoalData() {
   );
   
   // Helper function to determine season display format (for bar racing axis label)
+  // This is used to get the "half" year for display (e.g., 1992 or 1993 for 1992/93 season)
   const getDisplayYear = (seasonStartYear, matchday) => {
-    // Split season roughly in half - first 19 matchdays = start year, last 19 = end year
-    return matchday <= 19 ? seasonStartYear : seasonStartYear + 1;
+    // For real matchdays, split season roughly in half. For interpolated, just use start year.
+    return matchday <= 19 || matchday <= Math.ceil(INTERPOLATION_STEPS / 2) ? seasonStartYear : seasonStartYear + 1;
   };
 
-  // --- Season ID mapping (UPDATED with your findings) ---
+  // --- Season ID mapping (Consolidated and adjusted based on your findings) ---
   const seasonIdMap = {
-    1992: 11, // 1992/93
-    1993: 12, // 1993/94
-    1994: 13, // 1994/95
-    1995: 14, // 1995/96
-    1996: 15, // 1996/97
-    1997: 16, // 1997/98
-    1998: 9,  // 1998/99
-    1999: 10, // 1999/00
-    2000: 1,  // 2000/01
-    2001: 2,  // 2001/02
-    2002: 3,  // 2002/03
-    2003: 4,  // 2003/04
-    2004: 5,  // 2004/05
-    2005: 6,  // 2005/06
-    2006: 7,  // 2006/07
-    2007: 8   // 2007/08
+    1992: 11, 1993: 12, 1994: 13, 1995: 14, 1996: 15, 1997: 16, 1998: 9, 1999: 10,
+    2000: 1, 2001: 2, 2002: 3, 2003: 4, 2004: 5, 2005: 6, 2006: 7, 2007: 8,
+    2008: 2008, 2009: 2009, 2010: 2010, 2011: 2011, 2012: 2012, 2013: 2013,
+    2014: 2014, 2015: 2015 // Explicitly include 2015 as it needs final standings
   };
 
   const getSeasonId = (seasonYear) => {
-    // For seasons 2008/09 (startYear 2008) onwards, the ID is simply the year itself.
-    if (seasonYear >= 2008) {
-      return seasonYear;
-    }
-    // For earlier seasons, use the lookup table.
     if (seasonIdMap[seasonYear]) {
       return seasonIdMap[seasonYear];
+    }
+    // For years beyond those in the map, assume the year itself is the ID (e.g., 2016, 2017...)
+    if (seasonYear > 2015) { // Updated logic based on map going up to 2015
+        return seasonYear;
     }
     console.warn(`No season ID found for year ${seasonYear}. This season might be skipped.`);
     return null;
   };
   // --- END Season ID mapping ---
-  
-  // Process each season
-  for (let seasonYear = startYear; seasonYear <= endYear; seasonYear++) {
-    console.log(`\n--- Processing ${seasonYear}/${seasonYear + 1} season ---`);
-    
+
+  // --- Phase 1: Fetch Final Goals for Older Seasons (1992 to TRANSITION_YEAR - 1) ---
+  const historicalFinalGoals = new Map(); // Map: seasonYear -> Map<teamName, totalGoalsForThatSeason>
+
+  for (let seasonYear = startYear; seasonYear < TRANSITION_YEAR; seasonYear++) {
+    console.log(`\n--- Fetching FINAL standings for OLD season: ${seasonYear}/${seasonYear + 1} ---`);
     const seasonId = getSeasonId(seasonYear);
+    if (seasonId === null) {
+      continue;
+    }
+
+    try {
+      const url = `https://sdp-prem-prod.premier-league-prod.pulselive.com/api/v5/competitions/8/seasons/${seasonId}/standings?live=false`;
+      console.log(`Fetching final standings for ${seasonYear}/${seasonYear + 1}...`);
+      const response = await fetch(url);
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      const data = await response.json();
+      if (!data.tables || !data.tables[0] || !data.tables[0].entries) {
+        throw new Error('Invalid data structure received for final standings');
+      }
+
+      const finalGoalsMap = new Map();
+      data.tables[0].entries.forEach(entry => {
+        finalGoalsMap.set(entry.team.shortName, entry.overall.goalsFor); // goalsFor is season total
+      });
+      historicalFinalGoals.set(seasonYear, finalGoalsMap);
+      console.log(`✓ Processed final standings for ${seasonYear}/${seasonYear + 1}. ${finalGoalsMap.size} teams.`);
+      await randomDelay();
+
+    } catch (error) {
+      console.error(`Error fetching final standings for ${seasonYear}/${seasonYear + 1}:`, error.message);
+      // Retry once on error
+      await new Promise(resolve => setTimeout(resolve, 5000));
+      try {
+        console.log(`Retrying final standings for ${seasonYear}/${seasonYear + 1}...`);
+        const url = `https://sdp-prem-prod.premier-league-prod.pulselive.com/api/v5/competitions/8/seasons/${seasonId}/standings?live=false`;
+        const response = await fetch(url);
+        if (!response.ok) throw new Error(`HTTP error on retry! status: ${response.status}`);
+        const data = await response.json();
+        if (!data.tables || !data.tables[0] || !data.tables[0].entries) throw new Error('Invalid data structure received on retry');
+        const finalGoalsMap = new Map();
+        data.tables[0].entries.forEach(entry => {
+          finalGoalsMap.set(entry.team.shortName, entry.overall.goalsFor);
+        });
+        historicalFinalGoals.set(seasonYear, finalGoalsMap);
+        console.log(`✓ Retry successful for final standings ${seasonYear}/${seasonYear + 1}.`);
+      } catch(retryError) {
+        console.error(`Retry failed for final standings ${seasonYear}/${seasonYear + 1}:`, retryError.message);
+      }
+      await randomDelay();
+    }
+  }
+
+  // --- Phase 2: Generate Interpolated Data for Older Seasons ---
+  console.log('\n--- Generating INTERPOLATED data points for old seasons ---');
+  for (let seasonYear = startYear; seasonYear < TRANSITION_YEAR; seasonYear++) {
+    if (historicalFinalGoals.has(seasonYear)) {
+      const finalGoalsMap = historicalFinalGoals.get(seasonYear);
+      const allTeamsInSeason = new Set(finalGoalsMap.keys()); // Teams active in this season
+
+      for (let i = 1; i <= INTERPOLATION_STEPS; i++) {
+        const stepFactor = i / INTERPOLATION_STEPS;
+        const interpolatedGoals = [];
+        
+        allTeamsInSeason.forEach(teamName => {
+          const teamFinalGoals = finalGoalsMap.get(teamName) || 0;
+          const currentInterpolated = Math.round(teamFinalGoals * stepFactor);
+          interpolatedGoals.push({ name: teamName, goals: currentInterpolated });
+        });
+
+        allProcessedDataPoints.push({
+          displayYear: getDisplayYear(seasonYear, Math.ceil(i * 38 / INTERPOLATION_STEPS)), // Use artificial MD mapping for display year
+          actualSeasonYear: seasonYear,
+          matchday: i, // Artificial matchday (1 to INTERPOLATION_STEPS)
+          isInterpolated: true, // Flag this as interpolated data
+          data: interpolatedGoals
+        });
+      }
+      console.log(`Generated ${INTERPOLATION_STEPS} interpolated points for ${seasonYear}/${seasonYear + 1}.`);
+    } else {
+      console.warn(`Skipping interpolation for ${seasonYear}/${seasonYear + 1} as final data was not retrieved.`);
+    }
+  }
+
+
+  // --- Phase 3: Scrape Real Matchday Data for Newer Seasons (TRANSITION_YEAR to endYear) ---
+  for (let seasonYear = TRANSITION_YEAR; seasonYear <= endYear; seasonYear++) {
+    console.log(`\n--- Fetching REAL matchday data for NEW season: ${seasonYear}/${seasonYear + 1} ---`);
+    
+    const seasonId = getSeasonId(seasonYear); 
     if (seasonId === null) {
         console.error(`Skipping season ${seasonYear}/${seasonYear + 1} due to missing season ID.`);
         continue;
     }
     
     console.log(`Using seasonId: ${seasonId} for ${seasonYear}/${seasonYear + 1}`);
-    
-    // We can directly push to allSeasonData here, no need for an intermediate seasonData array
     
     for (let matchday = 1; matchday <= 38; matchday++) {
       try {
@@ -86,7 +159,7 @@ async function scrapeGoalData() {
               break; 
             }
             await randomDelay(); 
-            continue; // Skip this matchday
+            continue; 
           }
           throw new Error(`HTTP error! status: ${response.status}`);
         }
@@ -106,16 +179,12 @@ async function scrapeGoalData() {
           goals: entry.overall.goalsFor // This is cumulative goals for *this season* up to *this matchday*
         }));
         
-        if (seasonYear < 1995 && matchday <= 3) {
-          console.log(`${seasonYear}/${seasonYear + 1} MD${matchday} teams:`, teamGoals.map(t => t.name).join(', '));
-        }
-        
-        // --- MATCHDAY INJECTION HERE ---
-        allSeasonData.push({
-          displayYear: getDisplayYear(seasonYear, matchday), // For the racing chart label (e.g., 1992 or 1993)
-          actualSeasonYear: seasonYear, // The start year of the season (e.g., 1992)
-          matchday: matchday, // The matchday number (1 to 38)
-          data: teamGoals // Store all teams' data for this snapshot
+        allProcessedDataPoints.push({
+          displayYear: getDisplayYear(seasonYear, matchday),
+          actualSeasonYear: seasonYear,
+          matchday: matchday,
+          isInterpolated: false, // Flag to indicate real data
+          data: teamGoals
         });
         
         console.log(`✓ Processed MD${matchday} - ${teamGoals.length} teams tracked`);
@@ -124,51 +193,42 @@ async function scrapeGoalData() {
         
       } catch (error) {
         console.error(`Error fetching ${seasonYear}/${seasonYear + 1} MD${matchday}:`, error.message);
-        
         await new Promise(resolve => setTimeout(resolve, 5000));
-        
         try {
           console.log(`Retrying ${seasonYear}/${seasonYear + 1} MD${matchday}...`);
           const url = `https://sdp-prem-prod.premier-league-prod.pulselive.com/api/v5/competitions/8/seasons/${seasonId}/matchweeks/${matchday}/standings?live=false`;
           const response = await fetch(url);
-          if (!response.ok) {
-              throw new Error(`HTTP error on retry! status: ${response.status}`);
-          }
+          if (!response.ok) throw new Error(`HTTP error on retry! status: ${response.status}`);
           const data = await response.json();
-          
-          if (!data.tables || !data.tables[0] || !data.tables[0].entries) {
-              throw new Error('Invalid data structure received on retry');
-          }
+          if (!data.tables || !data.tables[0] || !data.tables[0].entries) throw new Error('Invalid data structure received on retry');
 
           const teamGoals = data.tables[0].entries.map(entry => ({
             name: entry.team.shortName,
             goals: entry.overall.goalsFor
           }));
           
-          // --- MATCHDAY INJECTION ON RETRY AS WELL ---
-          allSeasonData.push({
+          allProcessedDataPoints.push({
             displayYear: getDisplayYear(seasonYear, matchday),
             actualSeasonYear: seasonYear,
             matchday: matchday,
+            isInterpolated: false,
             data: teamGoals
           });
-          
           console.log(`✓ Retry successful for MD${matchday}`);
         } catch (retryError) {
           console.error(`Retry failed for ${seasonYear}/${seasonYear + 1} MD${matchday}:`, retryError.message);
         }
-        
         await randomDelay();
       }
     }
-    console.log(`Completed ${seasonYear}/${seasonYear + 1} season - ${allSeasonData.filter(d => d.actualSeasonYear === seasonYear).length} matchdays processed for this season`);
+    console.log(`Completed ${seasonYear}/${seasonYear + 1} season.`);
   }
   
   console.log('\n=== SCRAPING COMPLETE ===');
-  console.log(`Total raw data points collected: ${allSeasonData.length}`);
-  console.log(`Expected max possible points: ${totalRequests}`); 
+  console.log(`Total raw data points collected: ${allProcessedDataPoints.length}`);
   
-  const cumulativeData = createCumulativeData(allSeasonData);
+  // The createCumulativeData function processes the mixed (real + interpolated) data
+  const cumulativeData = createCumulativeData(allProcessedDataPoints);
   
   return cumulativeData;
 }
@@ -178,10 +238,11 @@ function createCumulativeData(allData) {
   
   const allTimeGoals = new Map();         // Key: Team Name, Value: All-time cumulative goals
   const seasonProgressGoals = new Map();  // Key: Team Name, Value: Goals for current season up to last matchday
+                                          // This map effectively resets for new seasons.
   const cumulativeResults = [];
   let uniqueTeamsCount = 0;
   
-  // --- Crucial: Sort allData chronologically using the new properties ---
+  // Crucial: Sort allData chronologically using the new properties for proper accumulation
   allData.sort((a, b) => {
       if (a.actualSeasonYear !== b.actualSeasonYear) {
           return a.actualSeasonYear - b.actualSeasonYear;
@@ -194,26 +255,32 @@ function createCumulativeData(allData) {
   allData.forEach((entry, entryIndex) => {
     const currentActualSeasonYear = entry.actualSeasonYear;
     const currentMatchday = entry.matchday;
-    // --- USING INJECTED MATCHDAY FOR GRANULAR LABEL ---
-    const displayLabel = `${entry.displayYear}/${entry.displayYear + 1} MD ${currentMatchday}`; 
+    
+    // Construct the display label, differentiating interpolated points
+    const displayLabel = entry.isInterpolated 
+                         ? `${entry.displayYear}/${entry.displayYear + 1} (Interp. ${currentMatchday}/${INTERPOLATION_STEPS})`
+                         : `${entry.displayYear}/${entry.displayYear + 1} MD ${currentMatchday}`; 
 
     // If a new season starts, clear the `seasonProgressGoals` map.
-    // This is crucial because `goalsFor` from the API resets to 0 for each new season.
+    // This is crucial because `goalsFor` from the API (and our interpolation logic)
+    // resets to 0 for each new season's cumulative tally.
     if (currentActualSeasonYear !== lastProcessedActualSeasonYear) {
         seasonProgressGoals.clear();
         lastProcessedActualSeasonYear = currentActualSeasonYear;
     }
 
+    // Process each team's goals for the current snapshot (real or interpolated)
     entry.data.forEach(team => {
         const teamName = team.name;
-        const currentSeasonGoalsForTeam = team.goals; // Total goals for *this season* up to *this matchday*
+        const currentSeasonGoalsForTeam = team.goals; // Total goals for *this season* up to *this snapshot*
 
-        // Get the goals for this team from the *previous matchday in this season*.
-        // If the team is new to this matchday or new season, prevSeasonGoalsForTeam will be 0.
+        // Get the goals for this team from the *previous snapshot in this season*.
+        // If the team is new to this snapshot or new season, prevSeasonGoalsForTeam will be 0.
         const prevSeasonGoalsForTeam = seasonProgressGoals.get(teamName) || 0;
 
-        // Calculate goals scored *in this specific matchday* (or since last update).
-        // This difference should represent only the new goals added by this team *since the last time we updated them for THIS season*.
+        // Calculate goals scored *in this specific interval/step*.
+        // This difference should represent only the new goals added by this team
+        // since the last time we updated them for THIS season.
         const goalsScoredInThisInterval = currentSeasonGoalsForTeam - prevSeasonGoalsForTeam;
 
         // Update all-time goals for the team.
@@ -224,8 +291,13 @@ function createCumulativeData(allData) {
         seasonProgressGoals.set(teamName, currentSeasonGoalsForTeam);
 
         // Track unique teams appearing in the dataset
-        if (currentAllTime === 0 && goalsScoredInThisInterval > 0) {
-            uniqueTeamsCount++;
+        if (!allTimeGoals.has(teamName) || (currentAllTime === 0 && goalsScoredInThisInterval > 0)) {
+             // Only count as unique if it's truly a new team, or it's its first goal.
+             // This logic needs to be careful not to overcount on interpolation where team "goals" go from 0 to something.
+             // A team is unique if it's the first time we ever see it.
+             if (!allTimeGoals.has(teamName)) { // If team not in allTimeGoals, it's new
+                 uniqueTeamsCount++;
+             }
         }
     });
 
@@ -241,13 +313,13 @@ function createCumulativeData(allData) {
     });
     
     if ((entryIndex + 1) % 100 === 0) {
-      console.log(`Processed ${entryIndex + 1}/${allData.length} entries - ${uniqueTeamsCount} unique teams tracked`);
+      console.log(`Processed ${entryIndex + 1}/${allData.length} entries.`);
     }
   });
   
   console.log('✓ Cumulative data creation complete');
   console.log(`Final data contains ${cumulativeResults.length} time points`);
-  console.log(`Total unique teams ever tracked: ${uniqueTeamsCount}`);
+  console.log(`Total unique teams ever tracked: ${Array.from(allTimeGoals.keys()).length}`); // More accurate unique team count
   
   return cumulativeResults;
 }
@@ -276,9 +348,9 @@ function logFinalData(data) {
   });
   console.log(`\nUnique teams (${allTeams.size}):`, Array.from(allTeams).sort().join(', '));
   
-  // Full data output
+  // Full data output (uncomment if you want to see the full JSON)
   // console.log('\n=== COMPLETE DATA OUTPUT ===');
-  // console.log(JSON.stringify(data, null, 2)); // Uncomment if you want to see the full JSON
+  // console.log(JSON.stringify(data, null, 2)); 
 }
 
 // Run the scraper
