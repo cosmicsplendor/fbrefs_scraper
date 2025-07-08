@@ -14,7 +14,7 @@ async function scrapeGoalData() {
   
   // Helper function to add random delay
   const randomDelay = () => new Promise(resolve => 
-    setTimeout(resolve, Math.random() * 1000 + 1000) // 1-2 seconds
+    setTimeout(resolve, Math.random() * 1000) // 1-2 seconds
   );
   
   // Helper function to determine season display format
@@ -29,6 +29,8 @@ async function scrapeGoalData() {
     
     const season = seasonYear;
     const compSeasonId = season - 2015 + 42; // API formula for season ID
+    
+    console.log(`Using compSeasonId: ${compSeasonId} for ${seasonYear}/${seasonYear + 1}`);
     
     const seasonData = [];
     
@@ -46,11 +48,28 @@ async function scrapeGoalData() {
         
         const data = await response.json();
         
+        // Validate data quality
+        if (!data.tables || !data.tables[0] || !data.tables[0].entries) {
+          throw new Error('Invalid data structure received');
+        }
+        
+        const teamCount = data.tables[0].entries.length;
+        const expectedTeams = seasonYear <= 1994 ? 22 : 20; // 22 teams until 1994-95
+        
+        if (teamCount !== expectedTeams) {
+          console.warn(`⚠️ Expected ${expectedTeams} teams for ${seasonYear}/${seasonYear + 1}, but got ${teamCount}`);
+        }
+        
         // Extract team goal data (keep ALL teams, not just top 12)
         const teamGoals = data.tables[0].entries.map(entry => ({
           name: entry.team.shortName,
           goals: entry.overall.goalsFor
         }));
+        
+        // Debug: show team names for first few matchdays of early seasons
+        if (seasonYear <= 1994 && matchday <= 3) {
+          console.log(`${seasonYear}/${seasonYear + 1} MD${matchday} teams:`, teamGoals.map(t => t.name).join(', '));
+        }
         
         seasonData.push({
           date: getSeasonYear(seasonYear, matchday),
@@ -114,24 +133,29 @@ function createCumulativeData(allData) {
   
   const teamTotals = new Map();
   const cumulativeResults = [];
-  
-  // Track all teams that have appeared
-  const allTeams = new Set();
-  allData.forEach(entry => {
-    entry.data.forEach(team => allTeams.add(team.name));
-  });
-  
-  console.log(`Tracking ${allTeams.size} unique teams across all seasons`);
-  
-  // Initialize all teams with 0 goals
-  allTeams.forEach(team => teamTotals.set(team, 0));
+  let uniqueTeamsCount = 0;
   
   allData.forEach((entry, index) => {
+    // Track new teams as they appear
+    let newTeamsThisEntry = 0;
+    
     // Add current matchday goals to cumulative totals for ALL teams
     entry.data.forEach(team => {
-      const currentTotal = teamTotals.get(team.name) || 0;
+      if (!teamTotals.has(team.name)) {
+        // This is a new team we've never seen before
+        teamTotals.set(team.name, 0);
+        newTeamsThisEntry++;
+        uniqueTeamsCount++;
+      }
+      
+      const currentTotal = teamTotals.get(team.name);
       teamTotals.set(team.name, currentTotal + team.goals);
     });
+    
+    // Log when new teams appear
+    if (newTeamsThisEntry > 0) {
+      console.log(`📈 ${newTeamsThisEntry} new team(s) appeared - Total unique teams: ${uniqueTeamsCount}`);
+    }
     
     // NOW sort and slice to get top 12 teams by cumulative goals
     const sortedTeams = Array.from(teamTotals.entries())
@@ -146,12 +170,13 @@ function createCumulativeData(allData) {
     
     // Log progress every 100 entries
     if ((index + 1) % 100 === 0) {
-      console.log(`Processed ${index + 1}/${allData.length} entries`);
+      console.log(`Processed ${index + 1}/${allData.length} entries - ${uniqueTeamsCount} unique teams tracked`);
     }
   });
   
   console.log('✓ Cumulative data creation complete');
   console.log(`Final data contains ${cumulativeResults.length} time points`);
+  console.log(`Total unique teams ever tracked: ${uniqueTeamsCount}`);
   
   return cumulativeResults;
 }
