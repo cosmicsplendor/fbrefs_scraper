@@ -19,10 +19,10 @@ async function scrapeGoalData() {
   );
   
   // Helper function to determine season display format (for bar racing axis label)
-  // This is used to get the "half" year for display (e.g., 1992 or 1993 for 1992/93 season)
   const getDisplayYear = (seasonStartYear, matchday) => {
     // For real matchdays, split season roughly in half. For interpolated, just use start year.
-    return matchday <= 19 || matchday <= Math.ceil(INTERPOLATION_STEPS / 2) ? seasonStartYear : seasonStartYear + 1;
+    // This logic ensures the 'YYYY' part of 'YYYY/YYYY+1' display is correct for interpolated points too.
+    return matchday <= Math.ceil(38 / 2) ? seasonStartYear : seasonStartYear + 1;
   };
 
   // --- Season ID mapping (Consolidated and adjusted based on your findings) ---
@@ -38,7 +38,7 @@ async function scrapeGoalData() {
       return seasonIdMap[seasonYear];
     }
     // For years beyond those in the map, assume the year itself is the ID (e.g., 2016, 2017...)
-    if (seasonYear > 2015) { // Updated logic based on map going up to 2015
+    if (seasonYear > 2015) { 
         return seasonYear;
     }
     console.warn(`No season ID found for year ${seasonYear}. This season might be skipped.`);
@@ -187,7 +187,8 @@ async function scrapeGoalData() {
           data: teamGoals
         });
         
-        console.log(`✓ Processed MD${matchday} - ${teamGoals.length} teams tracked`);
+        // --- CLARIFIED LOG MESSAGE ---
+        console.log(`✓ Processed MD${matchday} - ${teamGoals.length} teams *in league this season* tracked`); 
         
         await randomDelay();
         
@@ -240,7 +241,6 @@ function createCumulativeData(allData) {
   const seasonProgressGoals = new Map();  // Key: Team Name, Value: Goals for current season up to last matchday
                                           // This map effectively resets for new seasons.
   const cumulativeResults = [];
-  let uniqueTeamsCount = 0;
   
   // Crucial: Sort allData chronologically using the new properties for proper accumulation
   allData.sort((a, b) => {
@@ -289,22 +289,12 @@ function createCumulativeData(allData) {
 
         // Update season progress map for the next iteration (within the same season).
         seasonProgressGoals.set(teamName, currentSeasonGoalsForTeam);
-
-        // Track unique teams appearing in the dataset
-        if (!allTimeGoals.has(teamName) || (currentAllTime === 0 && goalsScoredInThisInterval > 0)) {
-             // Only count as unique if it's truly a new team, or it's its first goal.
-             // This logic needs to be careful not to overcount on interpolation where team "goals" go from 0 to something.
-             // A team is unique if it's the first time we ever see it.
-             if (!allTimeGoals.has(teamName)) { // If team not in allTimeGoals, it's new
-                 uniqueTeamsCount++;
-             }
-        }
     });
 
     // Create the bar racing frame based on the current all-time totals.
     const sortedTeams = Array.from(allTimeGoals.entries())
         .sort((a, b) => b[1] - a[1]) // Sort by all-time goals (descending)
-        .slice(0, 12) // Get top 12 teams
+        // --- REMOVED .slice(0, 12) --- All teams that have scored will be included
         .map(([name, value]) => ({ name, value }));
     
     cumulativeResults.push({
@@ -319,7 +309,7 @@ function createCumulativeData(allData) {
   
   console.log('✓ Cumulative data creation complete');
   console.log(`Final data contains ${cumulativeResults.length} time points`);
-  console.log(`Total unique teams ever tracked: ${Array.from(allTimeGoals.keys()).length}`); // More accurate unique team count
+  console.log(`Total unique teams ever tracked: ${Array.from(allTimeGoals.keys()).length}`); // This shows the true count of all teams that ever scored
   
   return cumulativeResults;
 }
@@ -332,25 +322,28 @@ function logFinalData(data) {
   // Show first few entries
   console.log('\nFirst 3 entries:');
   data.slice(0, 3).forEach(entry => {
-    console.log(`${entry.date}:`, entry.data.slice(0, 3).map(d => `${d.name}: ${d.value}`).join(', '));
+    // Show up to 5 teams in the sample for clarity, as there are now many more
+    console.log(`${entry.date}:`, entry.data.slice(0, 5).map(d => `${d.name}: ${d.value}`).join(', '));
   });
   
   // Show last few entries
   console.log('\nLast 3 entries:');
   data.slice(-3).forEach(entry => {
-    console.log(`${entry.date}:`, entry.data.slice(0, 3).map(d => `${d.name}: ${d.value}`).join(', '));
+    // Show up to 5 teams in the sample for clarity
+    console.log(`${entry.date}:`, entry.data.slice(0, 5).map(d => `${d.name}: ${d.value}`).join(', '));
   });
   
-  // Show all unique teams
-  const allTeams = new Set();
+  // Show all unique teams that ever scored based on the final accumulated data
+  const allTeamsInOutput = new Set();
   data.forEach(entry => {
-    entry.data.forEach(team => allTeams.add(team.name));
+    entry.data.forEach(team => allTeamsInOutput.add(team.name));
   });
-  console.log(`\nUnique teams (${allTeams.size}):`, Array.from(allTeams).sort().join(', '));
+  // This will now match the "Total unique teams ever tracked" from createCumulativeData if all frames have all teams
+  console.log(`\nUnique teams (from all output frames): ${allTeamsInOutput.size}`); 
   
-  // Full data output (uncomment if you want to see the full JSON)
-  // console.log('\n=== COMPLETE DATA OUTPUT ===');
-  // console.log(JSON.stringify(data, null, 2)); 
+  // Full data output - THIS IS NOW UNCOMMENTED AND SHOULD LOG ALL DATA
+  console.log('\n=== COMPLETE DATA OUTPUT ===');
+  console.log(JSON.stringify(data, null, 2)); 
 }
 
 // Run the scraper
