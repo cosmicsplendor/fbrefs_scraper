@@ -1,5 +1,5 @@
-// Simplified Premier League Goal Scraper - Final Standings Only (1992-2024)
-// This script fetches ONLY final standings for each season to get accurate total goals
+// Premier League Goal Scraper - Bar Race Ready (1992-2024)
+// This script fetches final standings and outputs ALL data for bar race visualization
 
 async function scrapeFinalStandings() {
   const startYear = 1992;
@@ -12,7 +12,7 @@ async function scrapeFinalStandings() {
     setTimeout(resolve, Math.random() * 1000 + 500) // 0.5-1.5 seconds
   );
   
-  // Season ID mapping (from your original script)
+  // Season ID mapping
   const seasonIdMap = {
     1992: 11, 1993: 12, 1994: 13, 1995: 14, 1996: 15, 1997: 16, 1998: 9, 1999: 10,
     2000: 1, 2001: 2, 2002: 3, 2003: 4, 2004: 5, 2005: 6, 2006: 7, 2007: 8,
@@ -50,6 +50,7 @@ async function scrapeFinalStandings() {
       const seasonFinalData = {
         season: `${seasonYear}/${seasonYear + 1}`,
         seasonYear: seasonYear,
+        date: seasonYear,
         teams: []
       };
       
@@ -101,6 +102,7 @@ async function scrapeFinalStandings() {
         const seasonFinalData = {
           season: `${seasonYear}/${seasonYear + 1}`,
           seasonYear: seasonYear,
+          date: seasonYear,
           teams: []
         };
         
@@ -135,92 +137,107 @@ async function scrapeFinalStandings() {
   console.log('\n=== SCRAPING COMPLETE ===');
   console.log(`Successfully scraped ${allSeasonData.length} seasons`);
   
-  // Calculate all-time totals
-  const allTimeGoals = calculateAllTimeTotals(allSeasonData);
+  // Generate bar race data
+  const barRaceData = generateBarRaceData(allSeasonData);
   
   return {
     seasonData: allSeasonData,
-    allTimeTotals: allTimeGoals
+    barRaceData: barRaceData
   };
 }
 
-function calculateAllTimeTotals(seasonData) {
-  console.log('\n--- Calculating All-Time Goal Totals ---');
+function generateBarRaceData(seasonData) {
+  console.log('\n--- Generating Bar Race Data with Interpolation ---');
   
-  const allTimeGoals = new Map();
-  const teamSeasonCount = new Map();
+  const interpolationSteps = 10; // Number of interpolated frames between seasons
+  const topTeamsCount = 11; // Only show top 11 teams per frame
   
-  seasonData.forEach(season => {
+  // Track cumulative goals for each team
+  const teamCumulativeGoals = new Map();
+  const barRaceFrames = [];
+  
+  for (let i = 0; i < seasonData.length; i++) {
+    const season = seasonData[i];
     console.log(`Processing ${season.season}...`);
     
+    // Store previous state for interpolation
+    const prevState = new Map(teamCumulativeGoals);
+    
+    // Update cumulative goals for each team in this season
     season.teams.forEach(team => {
       const teamName = team.name;
-      const currentTotal = allTimeGoals.get(teamName) || 0;
-      const currentSeasonCount = teamSeasonCount.get(teamName) || 0;
-      
-      allTimeGoals.set(teamName, currentTotal + team.goalsFor);
-      teamSeasonCount.set(teamName, currentSeasonCount + 1);
+      const currentCumulative = teamCumulativeGoals.get(teamName) || 0;
+      teamCumulativeGoals.set(teamName, currentCumulative + team.goalsFor);
     });
-  });
+    
+    // Create interpolated frames
+    for (let step = 0; step <= interpolationSteps; step++) {
+      const progress = step / interpolationSteps;
+      const frameDate = season.date + progress;
+      
+      // Interpolate between previous and current state
+      const interpolatedGoals = new Map();
+      
+      // Get all teams that exist in either state
+      const allTeams = new Set([...prevState.keys(), ...teamCumulativeGoals.keys()]);
+      
+      allTeams.forEach(teamName => {
+        const prevGoals = prevState.get(teamName) || 0;
+        const currentGoals = teamCumulativeGoals.get(teamName) || 0;
+        const interpolatedValue = prevGoals + (currentGoals - prevGoals) * progress;
+        interpolatedGoals.set(teamName, interpolatedValue);
+      });
+      
+      // Sort and take top 11
+      const sortedTeams = Array.from(interpolatedGoals.entries())
+        .sort((a, b) => b[1] - a[1])
+        .slice(0, topTeamsCount)
+        .map(([name, goals]) => ({
+          name: name,
+          value: Math.round(goals)
+        }));
+      
+      barRaceFrames.push({
+        date: frameDate,
+        data: sortedTeams
+      });
+    }
+    
+    console.log(`  Created ${interpolationSteps + 1} interpolated frames for ${season.season}`);
+  }
   
-  // Sort by total goals
-  const sortedTeams = Array.from(allTimeGoals.entries())
-    .sort((a, b) => b[1] - a[1])
-    .map(([name, goals]) => ({
-      name,
-      totalGoals: goals,
-      seasons: teamSeasonCount.get(name)
-    }));
-  
-  console.log('\n=== ALL-TIME GOAL TOTALS ===');
-  sortedTeams.forEach((team, index) => {
-    console.log(`${index + 1}. ${team.name}: ${team.totalGoals} goals (${team.seasons} seasons)`);
-  });
-  
-  return sortedTeams;
+  return barRaceFrames;
 }
 
-function analyzeData(data) {
-  console.log('\n=== DATA ANALYSIS ===');
+function logAllData(data) {
+  console.log('\n=== LOGGING ALL DATA FOR BAR RACE ===');
   
-  // Show sample season data
-  console.log('\nSample Season Data (first 3 seasons):');
-  data.seasonData.slice(0, 3).forEach(season => {
-    console.log(`\n${season.season}:`);
-    season.teams.slice(0, 5).forEach(team => {
-      console.log(`  ${team.position}. ${team.name}: ${team.goalsFor} goals`);
-    });
+  console.log(`\nTotal seasons scraped: ${data.seasonData.length}`);
+  console.log(`Total interpolated frames: ${data.barRaceData.length}`);
+  
+  // Show sample frames
+  console.log(`\nSample frames:`);
+  console.log(`First frame (${data.barRaceData[0].date}): ${data.barRaceData[0].data.length} teams`);
+  console.log(`Last frame (${data.barRaceData[data.barRaceData.length - 1].date}): ${data.barRaceData[data.barRaceData.length - 1].data.length} teams`);
+  
+  // Show final top 11
+  const finalFrame = data.barRaceData[data.barRaceData.length - 1];
+  console.log(`\nFinal top 11:`);
+  finalFrame.data.forEach((team, index) => {
+    console.log(`${index + 1}. ${team.name}: ${team.value} goals`);
   });
   
-  // Show all unique teams
-  const allTeams = new Set();
-  data.seasonData.forEach(season => {
-    season.teams.forEach(team => {
-      allTeams.add(team.name);
-    });
-  });
+  // LOG COMPLETE BAR RACE JSON
+  console.log('\n=== BAR RACE JSON FORMAT ===');
+  console.log(JSON.stringify(data.barRaceData));
   
-  console.log(`\nTotal unique teams across all seasons: ${allTeams.size}`);
-  console.log('All teams:', Array.from(allTeams).sort());
-  
-  // Show top 10 all-time
-  console.log('\nTop 10 All-Time Goal Scorers:');
-  data.allTimeTotals.slice(0, 10).forEach((team, index) => {
-    console.log(`${index + 1}. ${team.name}: ${team.totalGoals} goals (${team.seasons} seasons)`);
-  });
-  
-  // Full data output
-  console.log('\n=== COMPLETE SEASON DATA ===');
-  console.log(JSON.stringify(data.seasonData, null, 2));
-  
-  console.log('\n=== COMPLETE ALL-TIME TOTALS ===');
-  console.log(JSON.stringify(data.allTimeTotals, null, 2));
+  console.log('\n=== DATA LOGGING COMPLETE ===');
 }
 
 // Run the scraper
 scrapeFinalStandings()
   .then(data => {
-    analyzeData(data);
+    logAllData(data);
   })
   .catch(error => {
     console.error('Scraping failed:', error);
@@ -228,5 +245,5 @@ scrapeFinalStandings()
 
 // Export for use in other scripts
 if (typeof module !== 'undefined' && module.exports) {
-  module.exports = { scrapeFinalStandings, calculateAllTimeTotals };
+  module.exports = { scrapeFinalStandings, generateBarRaceData };
 }
