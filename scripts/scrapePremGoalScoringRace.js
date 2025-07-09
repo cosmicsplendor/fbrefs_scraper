@@ -149,7 +149,7 @@ async function scrapeFinalStandings() {
 function generateBarRaceData(seasonData) {
   console.log('\n--- Generating Bar Race Data with Interpolation ---');
   
-  const interpolationSteps = 10; // Number of interpolated frames between seasons
+  const interpolationSteps = 12; // Number of interpolated frames between seasons
   const topTeamsCount = 11; // Only show top 11 teams per frame
   
   // Track cumulative goals for each team
@@ -170,8 +170,8 @@ function generateBarRaceData(seasonData) {
       teamCumulativeGoals.set(teamName, currentCumulative + team.goalsFor);
     });
     
-    // Create interpolated frames
-    for (let step = 0; step <= interpolationSteps; step++) {
+    // Create interpolated frames (0 to interpolationSteps-1, not including the final state)
+    for (let step = 0; step < interpolationSteps; step++) {
       const progress = step / interpolationSteps;
       const frameDate = season.date + progress;
       
@@ -203,8 +203,22 @@ function generateBarRaceData(seasonData) {
       });
     }
     
-    console.log(`  Created ${interpolationSteps + 1} interpolated frames for ${season.season}`);
+    console.log(`  Created ${interpolationSteps} interpolated frames for ${season.season}`);
   }
+  
+  // Add the final frame at the end (the complete final state)
+  const finalSortedTeams = Array.from(teamCumulativeGoals.entries())
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, topTeamsCount)
+    .map(([name, goals]) => ({
+      name: name,
+      value: goals
+    }));
+  
+  barRaceFrames.push({
+    date: seasonData[seasonData.length - 1].date + 1,
+    data: finalSortedTeams
+  });
   
   return barRaceFrames;
 }
