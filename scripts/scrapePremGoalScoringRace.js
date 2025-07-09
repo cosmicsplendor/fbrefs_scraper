@@ -15,7 +15,7 @@ async function scrapeGoalData() {
   
   // Helper function to add random delay (1-2 seconds)
   const randomDelay = () => new Promise(resolve => 
-    setTimeout(resolve, 1000 + Math.random() * 1000) 
+    setTimeout(resolve, Math.random() * 500) 
   );
   
   // Helper function to determine season display format (for bar racing axis label)
@@ -228,13 +228,13 @@ async function scrapeGoalData() {
   console.log('\n=== SCRAPING COMPLETE ===');
   console.log(`Total raw data points collected: ${allProcessedDataPoints.length}`);
   
-  // The createCumulativeData function processes the mixed (real + interpolated) data
-  const cumulativeData = createCumulativeData(allProcessedDataPoints);
+  // Pass INTERPOLATION_STEPS to createCumulativeData
+  const cumulativeData = createCumulativeData(allProcessedDataPoints, INTERPOLATION_STEPS);
   
   return cumulativeData;
 }
 
-function createCumulativeData(allData) {
+function createCumulativeData(allData, interpolationSteps) {
   console.log('\n--- Creating ALL-TIME cumulative bar racing data ---');
   
   const allTimeGoals = new Map();         // Key: Team Name, Value: All-time cumulative goals
@@ -258,7 +258,7 @@ function createCumulativeData(allData) {
     
     // Construct the display label, differentiating interpolated points
     const displayLabel = entry.isInterpolated 
-                         ? `${entry.displayYear}/${entry.displayYear + 1} (Interp. ${currentMatchday}/${INTERPOLATION_STEPS})`
+                         ? `${entry.displayYear}/${entry.displayYear + 1} (Interp. ${currentMatchday}/${interpolationSteps})`
                          : `${entry.displayYear}/${entry.displayYear + 1} MD ${currentMatchday}`; 
 
     // If a new season starts, clear the `seasonProgressGoals` map.
