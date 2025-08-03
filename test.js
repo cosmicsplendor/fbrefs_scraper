@@ -1,28 +1,8 @@
-const { scrapeMatchList, scrapeMatchdayStats } = require("./helpers");
+const { scrapeMatchList, scrapeMatchdayStats, RateLimiter } = require("./helpers");
 const path = require("path");
 const fs = require("fs");
 
-// Simple rate limiter implementation
-class RateLimiter {
-    constructor(delayMs = 1000) {
-        this.delayMs = delayMs;
-        this.lastRequest = 0;
-    }
-    
-    async executeWithRateLimit(fn) {
-        const now = Date.now();
-        const timeSinceLastRequest = now - this.lastRequest;
-        
-        if (timeSinceLastRequest < this.delayMs) {
-            await new Promise(resolve => setTimeout(resolve, this.delayMs - timeSinceLastRequest));
-        }
-        
-        this.lastRequest = Date.now();
-        return await fn();
-    }
-}
-
-const rateLimiter = new RateLimiter(1000); // 1 second delay between requests
+const rateLimiter =  new RateLimiter(10, 60000); // 1 second delay between requests
 
 const urls = [
     // ronaldo
