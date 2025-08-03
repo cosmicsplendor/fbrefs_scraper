@@ -9,8 +9,8 @@ const urls = [
     "https://fbref.com/en/squads/6baef27f/2023-2024/matchlogs/c70/schedule/Al-Nassr-Scores-and-Fixtures-Saudi-Professional-League",
     "https://fbref.com/en/squads/6baef27f/2024-2025/matchlogs/c70/schedule/Al-Nassr-Scores-and-Fixtures-Saudi-Professional-League",
     // messi
+    "https://fbref.com/en/squads/cb8b86a2/2024/matchlogs/c22/schedule/Inter-Miami-Scores-and-Fixtures-Major-League-Soccer",
     "https://fbref.com/en/squads/cb8b86a2/2025/matchlogs/c22/schedule/Inter-Miami-Scores-and-Fixtures-Major-League-Soccer",
-    "https://fbref.com/en/squads/cb8b86a2/2024-2025/matchlogs/c22/schedule/Inter-Miami-Scores-and-Fixtures-Major-League-Soccer"
 ];
 
 async function processUrlsSerially() {
