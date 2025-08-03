@@ -1,5 +1,5 @@
 const { JSDOM } = require('jsdom');
-const getStealth = require("./getStealth")
+const {getStealth} = require("./getStealth")
 // --- Main Scraper Function ---
 /**
  * Scrapes match statistics tables from a FBRef match URL.
