@@ -1,6 +1,9 @@
 const METRIC_WEIGHTS = {
   // Category for what the player ACTUALLY produced on the scoresheet.
   // All metrics here are mutually exclusive.
+  goals: {
+    goals: 1,          // Still valuable, but less so than an open-play goal.
+  },
   goalContribution: {
     goals: 1,          // Still valuable, but less so than an open-play goal.
     assists: 1,

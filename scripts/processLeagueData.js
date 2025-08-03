@@ -284,16 +284,17 @@ function processGoalsData(filePaths, FIELDS, COUNT, MIN_FULL_MATCHES_EQUIVALENT,
 
 // Example usage:
 const filePaths = [
-    './data/Liga_Nos.json',
-    './data/Premier_League.json',
+    // './data/Liga_Nos.json',
     './data/Bundesliga.json',
+    './data/Premier_League.json',
     './data/La_Liga.json',
-    './data/Ligue_1.json',
-    './data/Serie_A.json',
+    './data/Saudi.json',
+    // './data/Ligue_1.json',
+    // './data/Serie_A.json',
 ];
 
 // FIELDS can now be either an array of strings (weight = 1) or an object with weights
-const FIELDS = METRIC_WEIGHTS.goalContribution
+const FIELDS = METRIC_WEIGHTS.goals
 // Alternative format (backwards compatible):
 // const FIELDS = ["sca", "progressive_carries", "assists"]; // All have weight = 1 
 const COUNT = 10;
@@ -305,12 +306,12 @@ const POSITION_FILTER = [];
 // NEW: Optional nationality filter. Assumes your data has a `nationality` field with 3-letter codes (e.g., "FRA", "ENG").
 // Use an empty array [] or null for no filter.
 // const NATIONALITY_FILTER = ["BRA", "ARG", "URU", "COL", "PER", "VEN", "ECU", "BOL", "PAR", "CHI"];
-const NATIONALITY_FILTER = ["FRA", "GER"];
+const NATIONALITY_FILTER = [];
 // NEW: Optional player name filter - if empty array or null, no filter is applied
-const PLAYER_NAME_FILTER = []; 
+const PLAYER_NAME_FILTER = ["Kylian Mbappé", "Mohamed Salah", "Robert Lewandowski", "Cristiano Ronaldo", "Harry Kane"]; 
 // NEW: Extra fields to include in output (beyond name and value).
 // You can add 'nationality' here if you want it in the final JSON output.
-const EXTRA_FIELDS = ["club", "nationality"]; 
+const EXTRA_FIELDS = ["nationality"]; 
 
 // MODIFIED: Pass the new nationality_FILTER parameter to the function
 const frames = processGoalsData(filePaths, FIELDS, COUNT, FULL_MATCHES, POSITION_FILTER, NATIONALITY_FILTER, VALUE_TYPE, PLAYER_NAME_FILTER, EXTRA_FIELDS);
