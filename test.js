@@ -1,70 +1,53 @@
-const fs = require('fs');
-const path = require('path');
+const { scrapeMatchList, scrapeMatchdayStats } = require("./helpers");
+const path = require("path")
+const urls = [
+    // ronaldo
+    "https://fbref.com/en/squads/6baef27f/2023-2024/matchlogs/c70/schedule/Al-Nassr-Scores-and-Fixtures-Saudi-Professional-League",
+    "https://fbref.com/en/squads/6baef27f/2024-2025/matchlogs/c70/schedule/Al-Nassr-Scores-and-Fixtures-Saudi-Professional-League",
+    // messi
+    "https://fbref.com/en/squads/cb8b86a2/2025/matchlogs/c22/schedule/Inter-Miami-Scores-and-Fixtures-Major-League-Soccer",
+    "https://fbref.com/en/squads/cb8b86a2/2024/matchlogs/c22/schedule/Inter-Miami-Scores-and-Fixtures-Major-League-Soccer"
+]
+Promise.all(urls.map(url => scrapeMatchList(url, "matchlogs_for")))
+    .then(async data => {
+        const matchDayList = data.flat()
+        const leagueData = {}
+        // Process each matchday entry from the list
+        for (let i = 0; i < matchDayList.length; i++) {
+            const matchday = matchDayList[i];
 
-// Define the source directory and the output file path
-const testDir = path.join(__dirname, 'test');
-const outputFile = path.join(__dirname, 'final.json');
+            // Handle flexible property names from scrapeMatchList
+            const gameweek = i + 1;
+            const date = matchday.date || 'Unknown';
+            const matchUrl = matchday.matchdayUrl || matchday.url;
 
-try {
-    // 1. Read all filenames from the 'test' directory
-    const allFiles = fs.readdirSync(testDir);
+            console.log(`\nProcessing matchday ${i + 1}/${matchDayList.length}: ${league.league}, Gameweek ${gameweek} (${date})`);
 
-    // Filter for .json files only, in case other files are present (e.g., .DS_Store)
-    const jsonFiles = allFiles.filter(file => path.extname(file).toLowerCase() === '.json');
-    
-    if (jsonFiles.length === 0) {
-        console.log("No JSON files found in the 'test' directory.");
-        return;
-    }
-
-    console.log(`Found ${jsonFiles.length} JSON files to process...`);
-
-    let combinedPlayers = [];
-
-    // 2. Loop through each JSON file
-    for (const file of jsonFiles) {
-        const filePath = path.join(testDir, file);
-        const fileContent = fs.readFileSync(filePath, 'utf-8');
-        
-        try {
-            const playersFromFile = JSON.parse(fileContent);
-            
-            // 3. Slice the top 8 players and add them to our combined list
-            if (Array.isArray(playersFromFile)) {
-                const top8 = playersFromFile.slice(0, 8);
-                combinedPlayers.push(...top8);
-            } else {
-                console.warn(`! Warning: ${file} does not contain a JSON array. Skipping.`);
+            // Skip if no URL available
+            if (!matchUrl) {
+                console.log(`No URL found for matchday entry, skipping...`);
+                continue;
             }
-        } catch (e) {
-            console.warn(`! Warning: Could not parse JSON from ${file}. Skipping.`);
+
+            // Use executeWithRateLimit to properly account for request duration
+            console.log(`Scraping matchday stats...`);
+            const matchDayStats = await rateLimiter.executeWithRateLimit(async () => {
+                return await scrapeMatchdayStats(matchUrl);
+            });
+
+            // Aggregate data by gameweek
+            if (!leagueData[gameweek]) {
+                leagueData[gameweek] = [];
+            }
+            // Append all stats from this matchday to the corresponding gameweek array
+            leagueData[gameweek].push(...matchDayStats); // Use spread syntax to push individual match objects
+
+            console.log(`✓ Aggregated ${matchDayStats.length} matches for Gameweek ${gameweek}. Total for gameweek: ${leagueData[gameweek].length}`);
         }
-    }
+        const dataDir = path.join(__dirname, 'data');
+        const filepath = path.join(dataDir, "messi_vs_ronaldo.json");
+        fs.writeFileSync(filepath, JSON.stringify(leagueData, null, 2));
 
-    // 4. Generate unique data using a Map (efficient for uniqueness by a key)
-    const uniquePlayersMap = new Map();
-    for (const player of combinedPlayers) {
-        // The Map will only store the *first* entry for any given name.
-        if (player && player.name && !uniquePlayersMap.has(player.name)) {
-            uniquePlayersMap.set(player.name, player);
-        }
-    }
-
-    // Convert the Map values back to an array
-    const uniquePlayersArray = Array.from(uniquePlayersMap.values());
-
-    console.log(`\nCollected ${combinedPlayers.length} players in total.`);
-    console.log(`Found ${uniquePlayersArray.length} unique players.`);
-
-    // 5. Store the output to 'final.json' with pretty formatting
-    fs.writeFileSync(outputFile, JSON.stringify(uniquePlayersArray, null, 2), 'utf-8');
-
-    console.log(`\n✅ Success! Unique data has been saved to '${outputFile}'.`);
-
-} catch (error) {
-    if (error.code === 'ENOENT') {
-        console.error(`Error: The directory '${testDir}' does not exist. Please create it.`);
-    } else {
-        console.error("An unexpected error occurred:", error);
-    }
-}
+        console.log(`\n✓ All data for ${league.league} (aggregated by gameweek) saved to ${filepath}`);
+        console.log(`Total gameweeks processed: ${Object.keys(leagueData).length}`);
+    })
