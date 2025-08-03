@@ -1,5 +1,5 @@
 const { JSDOM } = require('jsdom');
-const getStealth = require("./getStealth"); // Assuming this helper exists
+const {getStealth} = require("./getStealth"); // Assuming this helper exists
 
 // --- Scraper Function ---
 /**
@@ -13,7 +13,7 @@ const getStealth = require("./getStealth"); // Assuming this helper exists
  *                             Each object in the data array will be { date: string, gameweek: number }.
  * @throws {Error} If fetching or parsing fails.
  */
-async function scrapeMatchdayList(pageUrl) {
+async function scrapeMatchdayList(pageUrl, id="sched") {
   console.log(`scrapeMatchdayList: Function started for URL: ${pageUrl}`);
 
   let htmlContent;
@@ -41,12 +41,12 @@ async function scrapeMatchdayList(pageUrl) {
   const matchdayEntries = []; // Array to hold objects with date and gameweek
 
   // Select tables with class 'stats_table' and id containing 'sched'
-  const tables = Array.from(document.querySelectorAll(".stats_table[id*='sched']"));
+  const tables = Array.from(document.querySelectorAll(`.stats_table[id*='${id}']`));
 
-  console.log(`scrapeMatchdayList: Found ${tables.length} tables with class '.stats_table' and ID containing 'sched'.`);
+  console.log(`scrapeMatchdayList: Found ${tables.length} tables with class '.stats_table' and ID containing '${id}'.`);
 
   if (tables.length === 0) {
-    console.warn("scrapeMatchdayList: No relevant tables found on the page matching 'sched'. Returning empty data.");
+    console.warn(`scrapeMatchdayList: No relevant tables found on the page matching '${id}'. Returning empty data.`);
     // Return the requested format even if no tables are found
     return {
       data: [],
@@ -74,7 +74,6 @@ async function scrapeMatchdayList(pageUrl) {
       // Get only direct children <tr> elements of the <tbody>
       const rows = tbody.querySelectorAll(":scope > tr");
       console.log(`scrapeMatchdayList: Table '${tableId}': found ${rows.length} potential data rows within <tbody>.`);
-
       rows.forEach((row, rowIndex) => {
         try {
           // Skip rows that are likely headers or spacers
@@ -93,14 +92,13 @@ async function scrapeMatchdayList(pageUrl) {
           const gameweekCell = row.querySelector('[data-stat="gameweek"]');
           const matchdayUrlCell = row.querySelector('[data-stat="match_report"] a')
 
-
           // Ensure both required cells are found
-          if (dateCell && gameweekCell) {
+          if (dateCell) {
              const dateValue = dateCell.textContent.trim();
-             const gameweekText = gameweekCell.textContent.trim();
+             const gameweekText = gameweekCell && gameweekCell.textContent.trim();
              let matchdayUrlHref = matchdayUrlCell ? matchdayUrlCell.getAttribute("href").trim() : null;
              let matchdayUrl = matchdayUrlHref ? "https://fbref.com" + (matchdayUrlHref.startsWith("/") ? "" : "/") + matchdayUrlHref : null;
-             let gameweekValue = parseInt(gameweekText, 10); // Convert gameweek to a number
+             let gameweekValue = gameweekText && parseInt(gameweekText, 10); // Convert gameweek to a number
 
              // Add validation in case parsing fails (though unlikely for gameweek)
              if (isNaN(gameweekValue)) {
@@ -141,7 +139,7 @@ async function scrapeMatchdayList(pageUrl) {
   // console.log(matchdayEntries); // Optional: Log the final array
 
   // 3. Return results in the specified format
-  return matchdayEntries;
+  return matchdayEntries.filter(x => !x.matchdayUrl.includes("stathead"));
 }
 
 module.exports = scrapeMatchdayList;
