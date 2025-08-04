@@ -1,4 +1,4 @@
-const data = require("./data/messi_vs_ronaldo.json");
+const data = require("../data/messi_vs_ronaldo.json");
 
 // Extract all games for each player with their goals and chronological order
 function processPlayerData() {

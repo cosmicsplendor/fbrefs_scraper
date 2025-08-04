@@ -6,7 +6,7 @@ const INPUT_DIR = path.join('scripts', 'market_value_data');
 const OUTPUT_FILE = path.join('scripts', 'bar_racing_data.json');
 
 // NEW: Choose granularity - 'year', 'month', or 'week'
-const GRANULARITY = 'month'; // Change this to 'year', 'month', or 'week'
+const GRANULARITY = 'week'; // Change this to 'year', 'month', or 'week'
 
 // --- HELPER FUNCTIONS ---
 
