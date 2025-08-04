@@ -5,6 +5,9 @@ const path = require('path');
 const INPUT_DIR = path.join('scripts', 'market_value_data');
 const OUTPUT_FILE = path.join('scripts', 'bar_racing_data.json');
 
+// NEW: Choose granularity - 'year', 'month', or 'week'
+const GRANULARITY = 'month'; // Change this to 'year', 'month', or 'week'
+
 // --- HELPER FUNCTIONS ---
 
 /**
@@ -28,54 +31,119 @@ const parseMarketValue = (marketValueStr) => {
 };
 
 /**
- * Converts timestamp to YYYY-WW format (year-week)
+ * Converts timestamp to different formats based on granularity
  */
-const timestampToYearWeek = (timestamp) => {
+const timestampToFormat = (timestamp, granularity) => {
     const date = new Date(timestamp);
     const year = date.getFullYear();
-    const startOfYear = new Date(year, 0, 1);
-    const dayOfYear = Math.floor((date - startOfYear) / (24 * 60 * 60 * 1000)) + 1;
-    const weekNumber = Math.ceil(dayOfYear / 7);
-    return `${year}-${String(weekNumber).padStart(2, '0')}`;
-};
-
-/**
- * Converts YYYY-WW to just the year
- */
-const formatYear = (yearWeek) => {
-    const [year] = yearWeek.split('-');
-    return year;
-};
-
-/**
- * Generates all weeks between start and end dates (inclusive)
- */
-const generateWeekRange = (startYearWeek, endYearWeek) => {
-    const weeks = [];
-    const [startYear, startWeek] = startYearWeek.split('-').map(Number);
-    const [endYear, endWeek] = endYearWeek.split('-').map(Number);
-    let currentYear = startYear;
-    let currentWeek = startWeek;
-    while (currentYear < endYear || (currentYear === endYear && currentWeek <= endWeek)) {
-        weeks.push(`${currentYear}-${String(currentWeek).padStart(2, '0')}`);
-        currentWeek++;
-        const weeksInYear = new Date(currentYear, 11, 31).getDay() === 4 || new Date(currentYear - 1, 11, 31).getDay() === 3 ? 53 : 52;
-        if (currentWeek > weeksInYear) {
-            currentWeek = 1;
-            currentYear++;
-        }
+    
+    switch (granularity) {
+        case 'year':
+            return year.toString();
+        
+        case 'month':
+            const month = String(date.getMonth() + 1).padStart(2, '0');
+            return `${year}-${month}`;
+        
+        case 'week':
+            const startOfYear = new Date(year, 0, 1);
+            const dayOfYear = Math.floor((date - startOfYear) / (24 * 60 * 60 * 1000)) + 1;
+            const weekNumber = Math.ceil(dayOfYear / 7);
+            return `${year}-${String(weekNumber).padStart(2, '0')}`;
+        
+        default:
+            throw new Error(`Invalid granularity: ${granularity}`);
     }
-    return weeks;
 };
 
 /**
- * Interpolates market value data to weekly granularity
+ * Formats the period for display
  */
-const interpolateWeeklyData = (dataPoints, playerName) => {
+const formatPeriod = (period, granularity) => {
+    switch (granularity) {
+        case 'year':
+            return period;
+        
+        case 'month':
+            const [year, month] = period.split('-');
+            const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+                              'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+            return `${monthNames[parseInt(month) - 1]} ${year}`;
+        
+        case 'week':
+            const [weekYear] = period.split('-');
+            return weekYear; // For weeks, we'll just show the year to avoid clutter
+        
+        default:
+            return period;
+    }
+};
+
+/**
+ * Generates all periods between start and end (inclusive)
+ */
+const generatePeriodRange = (startPeriod, endPeriod, granularity) => {
+    const periods = [];
+    
+    switch (granularity) {
+        case 'year':
+            const startYear = parseInt(startPeriod);
+            const endYear = parseInt(endPeriod);
+            for (let year = startYear; year <= endYear; year++) {
+                periods.push(year.toString());
+            }
+            break;
+        
+        case 'month':
+            const [startY, startM] = startPeriod.split('-').map(Number);
+            const [endY, endM] = endPeriod.split('-').map(Number);
+            let currentYear = startY;
+            let currentMonth = startM;
+            
+            while (currentYear < endY || (currentYear === endY && currentMonth <= endM)) {
+                periods.push(`${currentYear}-${String(currentMonth).padStart(2, '0')}`);
+                currentMonth++;
+                if (currentMonth > 12) {
+                    currentMonth = 1;
+                    currentYear++;
+                }
+            }
+            break;
+        
+        case 'week':
+            const [startWY, startWW] = startPeriod.split('-').map(Number);
+            const [endWY, endWW] = endPeriod.split('-').map(Number);
+            let currentWYear = startWY;
+            let currentWeek = startWW;
+            
+            while (currentWYear < endWY || (currentWYear === endWY && currentWeek <= endWW)) {
+                periods.push(`${currentWYear}-${String(currentWeek).padStart(2, '0')}`);
+                currentWeek++;
+                const weeksInYear = new Date(currentWYear, 11, 31).getDay() === 4 || 
+                                  new Date(currentWYear - 1, 11, 31).getDay() === 3 ? 53 : 52;
+                if (currentWeek > weeksInYear) {
+                    currentWeek = 1;
+                    currentWYear++;
+                }
+            }
+            break;
+        
+        default:
+            throw new Error(`Invalid granularity: ${granularity}`);
+    }
+    
+    return periods;
+};
+
+/**
+ * Interpolates market value data to specified granularity
+ */
+const interpolateData = (dataPoints, playerName, granularity) => {
     if (!dataPoints || dataPoints.length === 0) {
         console.warn(`[WARNING] No data points for player: ${playerName}`);
         return [];
     }
+    
     const sortedData = dataPoints.sort((a, b) => a.x - b.x);
     const filteredData = sortedData.filter((point, index) => {
         if (point.y === 0 || point.mw === '-') {
@@ -83,62 +151,66 @@ const interpolateWeeklyData = (dataPoints, playerName) => {
         }
         return true;
     });
+    
     if (filteredData.length === 0) {
         console.warn(`[WARNING] No valid data points after filtering for player: ${playerName}`);
         return [];
     }
-    const weeklyData = filteredData.map(point => ({
-        yearWeek: timestampToYearWeek(point.x),
+    
+    const periodData = filteredData.map(point => ({
+        period: timestampToFormat(point.x, granularity),
         value: parseMarketValue(point.mw),
         originalTimestamp: point.x,
         club: point.verein,
         age: point.age
     }));
-    weeklyData.sort((a, b) => a.yearWeek.localeCompare(b.yearWeek));
-    return weeklyData;
+    
+    periodData.sort((a, b) => a.period.localeCompare(b.period));
+    return periodData;
 };
 
 /**
- * [CORRECTED VERSION] Fills missing weeks with interpolated values. This version correctly
- * propagates the 'club' field through all interpolated points.
+ * Fills missing periods with interpolated values
  */
-const fillMissingWeeks = (weeklyData, allWeeks) => {
-    if (!weeklyData || weeklyData.length === 0) {
+const fillMissingPeriods = (periodData, allPeriods) => {
+    if (!periodData || periodData.length === 0) {
         return [];
     }
 
     const filledData = [];
-    const dataMap = new Map(weeklyData.map(d => [d.yearWeek, d]));
-    
-    // This will hold the most recent *real* data point we've encountered.
-    let lastKnownPoint = null; 
+    const dataMap = new Map(periodData.map(d => [d.period, d]));
+    let lastKnownPoint = null;
 
-    for (const week of allWeeks) {
-        // If there's a real data point for this week, use it and update our "memory".
-        if (dataMap.has(week)) {
-            const currentPoint = dataMap.get(week);
+    for (const period of allPeriods) {
+        if (dataMap.has(period)) {
+            const currentPoint = dataMap.get(period);
             filledData.push(currentPoint);
-            lastKnownPoint = currentPoint; // Update the last known state
+            lastKnownPoint = currentPoint;
             continue;
         }
 
-        // If we haven't encountered any data for this player yet, skip.
         if (!lastKnownPoint) {
             continue;
         }
 
-        // --- Robust interpolation logic ---
-        // Find the next real data point *after* the current week.
-        const nextPoint = weeklyData.find(d => d.yearWeek > week);
-        
-        let interpolatedValue = lastKnownPoint.value; // Default to last known value (extrapolation)
+        const nextPoint = periodData.find(d => d.period > period);
+        let interpolatedValue = lastKnownPoint.value;
 
-        // If there is a future point, we interpolate between lastKnown and next.
         if (nextPoint) {
             const beforeTime = new Date(lastKnownPoint.originalTimestamp);
             const afterTime = new Date(nextPoint.originalTimestamp);
-            const [currentYear, currentWeek] = week.split('-').map(Number);
-            const currentTime = new Date(currentYear, 0, 1 + (currentWeek - 1) * 7);
+            
+            // Create approximate timestamp for current period
+            let currentTime;
+            if (GRANULARITY === 'year') {
+                currentTime = new Date(parseInt(period), 0, 1);
+            } else if (GRANULARITY === 'month') {
+                const [year, month] = period.split('-').map(Number);
+                currentTime = new Date(year, month - 1, 1);
+            } else { // week
+                const [year, week] = period.split('-').map(Number);
+                currentTime = new Date(year, 0, 1 + (week - 1) * 7);
+            }
 
             if (afterTime > beforeTime) {
                 const ratio = (currentTime - beforeTime) / (afterTime - beforeTime);
@@ -147,17 +219,15 @@ const fillMissingWeeks = (weeklyData, allWeeks) => {
         }
         
         filledData.push({
-            yearWeek: week,
+            period: period,
             value: Math.max(0, interpolatedValue),
             interpolated: true,
-            // Always use the club from the last known real data point.
             club: lastKnownPoint.club,
         });
     }
 
     return filledData;
 };
-
 
 /**
  * Processes a single player's market value data
@@ -171,12 +241,12 @@ const processPlayerData = async (filePath, playerName) => {
             return null;
         }
         console.log(`[PROCESS] Processing ${playerName} - ${data.list.length} data points`);
-        const weeklyData = interpolateWeeklyData(data.list, playerName);
+        const periodData = interpolateData(data.list, playerName, GRANULARITY);
         return {
             name: playerName,
             rawDataPoints: data.list.length,
-            weeklyDataPoints: weeklyData.length,
-            data: weeklyData
+            periodDataPoints: periodData.length,
+            data: periodData
         };
     } catch (error) {
         console.error(`[ERROR] Failed to process ${playerName}:`, error.message);
@@ -201,19 +271,25 @@ const extractPlayerName = (filename) => {
  */
 const main = async () => {
     console.log('--- Starting Market Value Data Processing ---');
+    console.log(`[INFO] Using granularity: ${GRANULARITY.toUpperCase()}`);
+    
     try {
         const inputDirExists = await fs.access(INPUT_DIR).then(() => true).catch(() => false);
         if (!inputDirExists) {
             console.error(`[FATAL] Input directory does not exist: ${INPUT_DIR}`);
             return;
         }
+        
         const files = await fs.readdir(INPUT_DIR);
         const jsonFiles = files.filter(file => file.endsWith('_market_value.json'));
+        
         if (jsonFiles.length === 0) {
             console.error(`[FATAL] No market value JSON files found in ${INPUT_DIR}`);
             return;
         }
+        
         console.log(`[INFO] Found ${jsonFiles.length} player data files`);
+        
         const playersData = [];
         for (const file of jsonFiles) {
             const playerName = extractPlayerName(file);
@@ -223,66 +299,78 @@ const main = async () => {
                 playersData.push(playerData);
             }
         }
+        
         if (playersData.length === 0) {
             console.error('[FATAL] No valid player data was processed');
             return;
         }
-        let earliestWeek = null;
-        let latestWeek = null;
+        
+        let earliestPeriod = null;
+        let latestPeriod = null;
         for (const player of playersData) {
             for (const dataPoint of player.data) {
-                if (!earliestWeek || dataPoint.yearWeek < earliestWeek) {
-                    earliestWeek = dataPoint.yearWeek;
+                if (!earliestPeriod || dataPoint.period < earliestPeriod) {
+                    earliestPeriod = dataPoint.period;
                 }
-                if (!latestWeek || dataPoint.yearWeek > latestWeek) {
-                    latestWeek = dataPoint.yearWeek;
+                if (!latestPeriod || dataPoint.period > latestPeriod) {
+                    latestPeriod = dataPoint.period;
                 }
             }
         }
-        console.log(`[INFO] Date range: ${earliestWeek} to ${latestWeek}`);
-        const allWeeks = generateWeekRange(earliestWeek, latestWeek);
-        console.log(`[INFO] Total weeks to process: ${allWeeks.length}`);
+        
+        console.log(`[INFO] Date range: ${earliestPeriod} to ${latestPeriod}`);
+        
+        const allPeriods = generatePeriodRange(earliestPeriod, latestPeriod, GRANULARITY);
+        console.log(`[INFO] Total ${GRANULARITY}s to process: ${allPeriods.length}`);
+        
         const processedPlayers = playersData.map(player => ({
             name: player.name,
-            data: fillMissingWeeks(player.data, allWeeks)
+            data: fillMissingPeriods(player.data, allPeriods)
         }));
         
         // Create bar racing format
-        const barRacingData = allWeeks.map(week => {
-            const weekData = [];
+        const barRacingData = allPeriods.map(period => {
+            const periodData = [];
             for (const player of processedPlayers) {
-                const playerDataForWeek = player.data.find(d => d.yearWeek === week);
-                if (playerDataForWeek) {
-                    // [CORRECTED] Include the club in the final output
-                    weekData.push({
+                const playerDataForPeriod = player.data.find(d => d.period === period);
+                if (playerDataForPeriod) {
+                    periodData.push({
                         name: player.name,
-                        value: playerDataForWeek.value,
-                        club: playerDataForWeek.club
+                        value: playerDataForPeriod.value,
+                        club: playerDataForPeriod.club
                     });
                 }
             }
-            weekData.sort((a, b) => b.value - a.value);
-            const top10 = weekData.slice(0, 10);
+            periodData.sort((a, b) => b.value - a.value);
+            const top10 = periodData.slice(0, 10);
             return {
-                date: formatYear(week),
+                date: formatPeriod(period, GRANULARITY),
                 data: top10
             };
         });
 
-        await fs.writeFile(OUTPUT_FILE, JSON.stringify(barRacingData, null, 2));
-        console.log(`[SUCCESS] Bar racing data saved to: ${OUTPUT_FILE}`);
-        console.log(`[INFO] Generated ${barRacingData.length} weekly data points`);
-        console.log(`[INFO] Each week contains top 10 players by market value`);
+        // Update the output filename to include granularity
+        const outputFile = OUTPUT_FILE.replace('.json', `_${GRANULARITY}.json`);
+        await fs.writeFile(outputFile, JSON.stringify(barRacingData, null, 2));
+        
+        console.log(`[SUCCESS] Bar racing data saved to: ${outputFile}`);
+        console.log(`[INFO] Generated ${barRacingData.length} ${GRANULARITY}ly data points`);
+        console.log(`[INFO] Each ${GRANULARITY} contains top 10 players by market value`);
+        
         console.log('\n--- Processing Summary ---');
+        console.log(`Granularity: ${GRANULARITY.toUpperCase()}`);
         console.log(`Total players processed: ${processedPlayers.length}`);
+        console.log(`Total ${GRANULARITY}s: ${barRacingData.length}`);
+        
         if (barRacingData.length > 0) {
-            console.log('\n--- Sample Data (First Month) ---');
+            console.log(`\n--- Sample Data (First ${GRANULARITY}) ---`);
             console.log(JSON.stringify(barRacingData[0], null, 2));
             if (barRacingData.length > 1) {
-                console.log('\n--- Sample Data (Last Month) ---');
+                console.log(`\n--- Sample Data (Last ${GRANULARITY}) ---`);
                 console.log(JSON.stringify(barRacingData[barRacingData.length - 1], null, 2));
             }
         }
+        
     } catch (error) {
         console.error('[FATAL] Unexpected error:', error.message);
     }
