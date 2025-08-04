@@ -6,7 +6,7 @@ const INPUT_DIR = path.join('scripts', 'market_value_data');
 const OUTPUT_FILE = path.join('scripts', 'bar_racing_data.json');
 
 // NEW: Choose granularity - 'year', 'month', or 'week'
-const GRANULARITY = 'week'; // Change this to 'year', 'month', or 'week'
+const GRANULARITY = 'month'; // Change this to 'year', 'month', or 'week'
 
 // --- HELPER FUNCTIONS ---
 
@@ -51,6 +51,13 @@ const timestampToFormat = (timestamp, granularity) => {
             const weekNumber = Math.ceil(dayOfYear / 7);
             return `${year}-${String(weekNumber).padStart(2, '0')}`;
         
+        case 'fortnight': {
+            // Calculate the nth fortnight of the year (1-based)
+            const startOfYear = new Date(year, 0, 1);
+            const dayOfYear = Math.floor((date - startOfYear) / (24 * 60 * 60 * 1000)) + 1;
+            const fortnightNumber = Math.ceil(dayOfYear / 14);
+            return `${year}-F${String(fortnightNumber).padStart(2, '0')}`;
+        }
         default:
             throw new Error(`Invalid granularity: ${granularity}`);
     }
