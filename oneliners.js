@@ -1,1 +1,3 @@
 const uniquePlayers = [...new Set(frames.flatMap(frame => frame.data.map(p => p.name)))];
+// fb refs entire table extraction
+Array.from(document.querySelector(".stats_table tbody").querySelectorAll("[data-row]")).filter(x => x.classList.length === 0).map(row => ["home_team", "away_team", "gameweek", "score"].reduce((d, f) => Object.assign(d, { [f]: row.querySelector(`[data-stat='${f}']`).textContent }), {})).sort((a, b) => a.gameweek - b.gameweek)
