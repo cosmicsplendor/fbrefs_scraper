@@ -141,24 +141,58 @@ async function countWins() {
       console.log(`${i+1}. ${team}: ${wins} wins`);
     });
     
-    // Recreate monthly data with only top N teams
-    const finalResult = [];
-    const topNRunningTotals = new Map();
+    // Find ALL teams that were ever in top N at any point in time
+    const everTopNTeams = new Set();
+    const allRunningTotals = new Map();
     
-    topNTeams.forEach(team => topNRunningTotals.set(team, 0));
+    // Initialize running totals for all teams
+    trackedTeams.forEach(team => allRunningTotals.set(team, 0));
+    
+    // Track which teams enter top N over time
+    for (const month of sortedMonths) {
+      const monthData = monthlyWins.get(month);
+      
+      // Update running totals
+      trackedTeams.forEach(team => {
+        const monthWinsCount = monthData.get(team) || 0;
+        allRunningTotals.set(team, allRunningTotals.get(team) + monthWinsCount);
+      });
+      
+      // Get top N teams for this month
+      const monthTopN = Array.from(allRunningTotals.entries())
+        .sort((a, b) => b[1] - a[1])
+        .slice(0, TOP_N)
+        .map(entry => entry[0]);
+      
+      // Add these teams to our "ever top N" set
+      monthTopN.forEach(team => everTopNTeams.add(team));
+    }
+    
+    const dynamicTeamList = Array.from(everTopNTeams);
+    console.log(`\n=== TEAMS THAT WERE EVER IN TOP ${TOP_N} ===`);
+    console.log(`Found ${dynamicTeamList.length} teams that were in top ${TOP_N} at some point:`);
+    dynamicTeamList.forEach(team => {
+      console.log(`- ${team}: ${teamWins.get(team)} final wins`);
+    });
+    
+    // Recreate monthly data with all teams that were ever in top N
+    const finalResult = [];
+    const dynamicRunningTotals = new Map();
+    
+    dynamicTeamList.forEach(team => dynamicRunningTotals.set(team, 0));
     
     for (const month of sortedMonths) {
       const monthData = monthlyWins.get(month);
       
-      topNTeams.forEach(team => {
+      dynamicTeamList.forEach(team => {
         const monthWinsCount = monthData.get(team) || 0;
-        topNRunningTotals.set(team, topNRunningTotals.get(team) + monthWinsCount);
+        dynamicRunningTotals.set(team, dynamicRunningTotals.get(team) + monthWinsCount);
       });
       
       // Create data array and sort by current wins
-      const sortedMonthData = topNTeams.map(team => ({
+      const sortedMonthData = dynamicTeamList.map(team => ({
         name: team,
-        value: topNRunningTotals.get(team)
+        value: dynamicRunningTotals.get(team)
       })).sort((a, b) => b.value - a.value); // Sort by wins descending
       
       finalResult.push({
@@ -167,9 +201,9 @@ async function countWins() {
       });
     }
     
-    // Save only top N teams
+    // Save all teams that were ever in top N
     fs.writeFileSync('team_wins.json', JSON.stringify(finalResult, null, 2));
-    console.log(`Saved ${finalResult.length} monthly entries with top ${TOP_N} teams to team_wins.json`);
+    console.log(`Saved ${finalResult.length} monthly entries with ${dynamicTeamList.length} teams (all who were ever in top ${TOP_N}) to team_wins.json`);
     
   } catch (error) {
     console.error('Error:', error);
