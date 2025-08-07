@@ -189,11 +189,13 @@ async function countWins() {
         dynamicRunningTotals.set(team, dynamicRunningTotals.get(team) + monthWinsCount);
       });
       
-      // Create data array and sort by current wins
+      // Create data array, sort by current wins, and keep only top N
       const sortedMonthData = dynamicTeamList.map(team => ({
         name: team,
         value: dynamicRunningTotals.get(team)
-      })).sort((a, b) => b.value - a.value); // Sort by wins descending
+      }))
+      .sort((a, b) => b.value - a.value) // Sort by wins descending
+      .slice(0, TOP_N); // Keep only top N teams for this month
       
       finalResult.push({
         date: month,
