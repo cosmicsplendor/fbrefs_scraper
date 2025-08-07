@@ -155,12 +155,15 @@ async function countWins() {
         topNRunningTotals.set(team, topNRunningTotals.get(team) + monthWinsCount);
       });
       
+      // Create data array and sort by current wins
+      const sortedMonthData = topNTeams.map(team => ({
+        name: team,
+        value: topNRunningTotals.get(team)
+      })).sort((a, b) => b.value - a.value); // Sort by wins descending
+      
       finalResult.push({
         date: month,
-        data: topNTeams.map(team => ({
-          name: team,
-          value: topNRunningTotals.get(team)
-        }))
+        data: sortedMonthData
       });
     }
     
