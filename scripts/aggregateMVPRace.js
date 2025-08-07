@@ -116,6 +116,33 @@ const generatePeriodRange = (startPeriod, endPeriod, granularity) => {
                 }
             }
             break;
+        case 'fortnight': {
+            // startPeriod and endPeriod are like "2020-F01"
+            const parseFortnight = (period) => {
+            const [year, f] = period.split('-F');
+            return { year: parseInt(year), fortnight: parseInt(f) };
+            };
+            const { year: startYear, fortnight: startF } = parseFortnight(startPeriod);
+            const { year: endYear, fortnight: endF } = parseFortnight(endPeriod);
+
+            let currentYear = startYear;
+            let currentF = startF;
+
+            while (currentYear < endYear || (currentYear === endYear && currentF <= endF)) {
+            periods.push(`${currentYear}-F${String(currentF).padStart(2, '0')}`);
+            currentF++;
+            // There are either 26 or 27 fortnights in a year (52 or 53 weeks)
+            // Calculate number of fortnights in current year
+            const weeksInYear = new Date(currentYear, 11, 31).getDay() === 4 ||
+                        new Date(currentYear - 1, 11, 31).getDay() === 3 ? 53 : 52;
+            const fortnightsInYear = Math.ceil(weeksInYear / 2);
+            if (currentF > fortnightsInYear) {
+                currentF = 1;
+                currentYear++;
+            }
+            }
+            break;
+        }
         
         case 'week':
             const [startWY, startWW] = startPeriod.split('-').map(Number);

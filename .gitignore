@@ -4,3 +4,5 @@ scripts/market_value_data
 test
 test.html
 data
+test.js
+*.csv

@@ -5,11 +5,9 @@ async function countWins() {
   const inputFile = 'Matches.csv';
   
   // Teams to track
-  const trackedTeams = [
-    'Arsenal', 'Tottenham', 'Chelsea', 'Liverpool', 
-    'Manchester United', 'Manchester City', 'Barcelona', 
-    'Real Madrid', 'Bayern Munich', 'Juventus'
-  ];
+  const trackedTeams = ['Man United', 'Valencia', 'Lazio', 'Barcelona', 'Real Madrid', 'Arsenal', 'Bayern Munich', 'Juventus', 'Zaragoza', 'La Coruna', 'Milan', 'Mallorca', 'Roma', 'Leeds', 'Liverpool', 'Celta', 'Leverkusen', 'Dortmund', 'Inter', 'Sociedad', 'Chelsea', 'Monaco', 'Lyon', 'Villarreal', 'Sevilla', 'Ath Madrid', 'Everton', 'Bordeaux', 'Marseille', 'Werder Bremen', 'Tottenham', 'Man City', 'Schalke 04', 'Paris SG', 'Wolfsburg', 'Napoli', 'Ath Bilbao', 'RB Leipzig', 'Newcastle', 'Aston Villa', 'Atalanta'];
+  
+  const TOP_N = 12; // Only keep top 12 teams in final output
   
   const teamWins = new Map();
   const teamMatches = new Map();
@@ -124,19 +122,51 @@ async function countWins() {
       });
     }
     
-    // Save
-    fs.writeFileSync('team_wins.json', JSON.stringify(result, null, 2));
-    console.log(`Saved ${result.length} monthly entries to team_wins.json`);
-    
-    // Show final rankings
+    // Show final rankings for ALL teams
     const rankings = trackedTeams
       .map(team => ({ name: team, wins: teamWins.get(team) }))
       .sort((a, b) => b.wins - a.wins);
-    
-    console.log('\n=== FINAL RANKINGS ===');
+
+    console.log('\n=== FINAL RANKINGS (ALL TRACKED TEAMS) ===');
     rankings.forEach((team, i) => {
       console.log(`${i+1}. ${team.name}: ${team.wins} wins`);
     });
+    
+    // Get top N teams for the JSON output
+    const topNTeams = rankings.slice(0, TOP_N).map(team => team.name);
+    
+    console.log(`\n=== TOP ${TOP_N} TEAMS FOR JSON OUTPUT ===`);
+    topNTeams.forEach((team, i) => {
+      const wins = teamWins.get(team);
+      console.log(`${i+1}. ${team}: ${wins} wins`);
+    });
+    
+    // Recreate monthly data with only top N teams
+    const finalResult = [];
+    const topNRunningTotals = new Map();
+    
+    topNTeams.forEach(team => topNRunningTotals.set(team, 0));
+    
+    for (const month of sortedMonths) {
+      const monthData = monthlyWins.get(month);
+      
+      topNTeams.forEach(team => {
+        const monthWinsCount = monthData.get(team) || 0;
+        topNRunningTotals.set(team, topNRunningTotals.get(team) + monthWinsCount);
+      });
+      
+      finalResult.push({
+        date: month,
+        data: topNTeams.map(team => ({
+          name: team,
+          value: topNRunningTotals.get(team)
+        }))
+      });
+    }
+    
+    // Save only top N teams
+    fs.writeFileSync('team_wins.json', JSON.stringify(finalResult, null, 2));
+    console.log(`Saved ${finalResult.length} monthly entries with top ${TOP_N} teams to team_wins.json`);
     
   } catch (error) {
     console.error('Error:', error);

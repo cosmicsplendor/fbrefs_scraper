@@ -1,4 +1,4 @@
-const season = 2015
+const season = 2013
 const urls = Array(38).fill(0).map((_, i) => 
   `https://footballapi.pulselive.com/football/standings?compSeasons=${season - 2015 + 42}&altIds=true&detail=2&FOOTBALL_COMPETITION=1&gameweekNumbers=1-${i + 1}`
 )
