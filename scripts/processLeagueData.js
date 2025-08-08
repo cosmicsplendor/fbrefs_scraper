@@ -77,8 +77,19 @@ function loadAndMergeData(filePaths, FIELDS) {
     return { mergedData, maxMatchday };
 }
 
-// MODIFIED: Added nationality_FILTER parameter
-function processGoalsData(filePaths, FIELDS, COUNT, MIN_FULL_MATCHES_EQUIVALENT, POSITION_FILTER = null, nationality_FILTER = null, VALUE_TYPE = "aggregate", PLAYER_NAME_FILTER = null, EXTRA_FIELDS = []) {
+// NEW: Helper function to parse age from "age-days" format
+function parseAge(ageString) {
+    if (!ageString || typeof ageString !== 'string') return null;
+    const parts = ageString.split('-');
+    if (parts.length >= 1) {
+        const age = parseInt(parts[0]);
+        return isNaN(age) ? null : age;
+    }
+    return null;
+}
+
+// MODIFIED: Added AGE_FILTER parameter
+function processGoalsData(filePaths, FIELDS, COUNT, MIN_FULL_MATCHES_EQUIVALENT, POSITION_FILTER = null, NATIONALITY_FILTER = null, VALUE_TYPE = "aggregate", PLAYER_NAME_FILTER = null, EXTRA_FIELDS = [], AGE_FILTER = null) {
     // NEW: Calculate the minute threshold based on the "full matches" equivalent
     const MIN_MINUTES = MIN_FULL_MATCHES_EQUIVALENT * 90;
 
@@ -114,19 +125,28 @@ function processGoalsData(filePaths, FIELDS, COUNT, MIN_FULL_MATCHES_EQUIVALENT,
     } else {
         console.log('No position filter applied');
     }
-    // NEW: Log nationality filter
-    if (nationality_FILTER && nationality_FILTER.length > 0) {
-        console.log(`Filtering by countries: ${nationality_FILTER.join(', ')}`);
+    // Log nationality filter
+    if (NATIONALITY_FILTER && NATIONALITY_FILTER.length > 0) {
+        console.log(`Filtering by countries: ${NATIONALITY_FILTER.join(', ')}`);
     } else {
         console.log('No nationality filter applied');
     }
-    // NEW: Log player name filter
+    // Log player name filter
     if (PLAYER_NAME_FILTER && PLAYER_NAME_FILTER.length > 0) {
         console.log(`Filtering by player names: ${PLAYER_NAME_FILTER.join(', ')}`);
     } else {
         console.log('No player name filter applied');
     }
-    // NEW: Log extra fields
+    // NEW: Log age filter
+    if (AGE_FILTER && (AGE_FILTER.min !== undefined || AGE_FILTER.max !== undefined)) {
+        const ageFilterMsg = [];
+        if (AGE_FILTER.min !== undefined) ageFilterMsg.push(`min: ${AGE_FILTER.min}`);
+        if (AGE_FILTER.max !== undefined) ageFilterMsg.push(`max: ${AGE_FILTER.max}`);
+        console.log(`Filtering by age: ${ageFilterMsg.join(', ')}`);
+    } else {
+        console.log('No age filter applied');
+    }
+    // Log extra fields
     if (EXTRA_FIELDS && EXTRA_FIELDS.length > 0) {
         console.log(`Extra fields to include: ${EXTRA_FIELDS.join(', ')}`);
     } else {
@@ -142,16 +162,16 @@ function processGoalsData(filePaths, FIELDS, COUNT, MIN_FULL_MATCHES_EQUIVALENT,
         return POSITION_FILTER.some(pos => playerPosition.toLowerCase() === pos.toLowerCase());
     };
     
-    // NEW: nationality filter function
-    const matchesnationalityFilter = (player) => {
-        if (!nationality_FILTER || nationality_FILTER.length === 0) return true;
+    // Nationality filter function
+    const matchesNationalityFilter = (player) => {
+        if (!NATIONALITY_FILTER || NATIONALITY_FILTER.length === 0) return true;
         // Assumes the player object has a 'nationality' field.
-        const playernationality = player.nationality; 
-        if (!playernationality) return false;
-        return nationality_FILTER.some(nationality => playernationality.toLowerCase() === nationality.toLowerCase());
+        const playerNationality = player.nationality; 
+        if (!playerNationality) return false;
+        return NATIONALITY_FILTER.some(nationality => playerNationality.toLowerCase() === nationality.toLowerCase());
     };
 
-    // NEW: Player name filter function
+    // Player name filter function
     const matchesPlayerNameFilter = (player) => {
         if (!PLAYER_NAME_FILTER || PLAYER_NAME_FILTER.length === 0) return true;
         const playerName = player.player;
@@ -159,12 +179,29 @@ function processGoalsData(filePaths, FIELDS, COUNT, MIN_FULL_MATCHES_EQUIVALENT,
         return PLAYER_NAME_FILTER.some(name => playerName.toLowerCase().includes(name.toLowerCase()));
     };
 
+    // NEW: Age filter function
+    const matchesAgeFilter = (player) => {
+        if (!AGE_FILTER || (AGE_FILTER.min === undefined && AGE_FILTER.max === undefined)) return true;
+        const playerAge = parseAge(player.age);
+        if (playerAge === null) return false; // Exclude players with unparseable ages
+        
+        let passesFilter = true;
+        if (AGE_FILTER.min !== undefined) {
+            passesFilter = passesFilter && playerAge >= AGE_FILTER.min;
+        }
+        if (AGE_FILTER.max !== undefined) {
+            passesFilter = passesFilter && playerAge <= AGE_FILTER.max;
+        }
+        return passesFilter;
+    };
+
     const finalTotals = {};
     for (let md = 1; md <= maxMatchday; md++) {
         if (data[md]) {
             data[md].forEach(player => {
-                // MODIFIED: Added nationality filter check
-                if (!matchesPositionFilter(player) || !matchesPlayerNameFilter(player) || !matchesnationalityFilter(player)) return;
+                // MODIFIED: Added age filter check
+                if (!matchesPositionFilter(player) || !matchesPlayerNameFilter(player) || 
+                    !matchesNationalityFilter(player) || !matchesAgeFilter(player)) return;
                 const playerValue = calculatePlayerValue(player);
                 finalTotals[player.player] = (finalTotals[player.player] || 0) + playerValue;
             });
@@ -174,30 +211,31 @@ function processGoalsData(filePaths, FIELDS, COUNT, MIN_FULL_MATCHES_EQUIVALENT,
     const frames = [];
     let cumulativeValues = {};
     let playerPositions = {};
-    // MODIFIED: This now tracks total minutes played, not just appearances.
+    // This now tracks total minutes played, not just appearances.
     let playerMinutesPlayed = {};
-    // NEW: Track extra field values for each player
+    // Track extra field values for each player
     let playerExtraFields = {};
 
     for (let md = 1; md <= maxMatchday; md++) {
         if (data[md]) {
             data[md].forEach(player => {
-                // MODIFIED: Added nationality filter check
-                if (!matchesPositionFilter(player) || !matchesPlayerNameFilter(player) || !matchesnationalityFilter(player)) return;
+                // MODIFIED: Added age filter check
+                if (!matchesPositionFilter(player) || !matchesPlayerNameFilter(player) || 
+                    !matchesNationalityFilter(player) || !matchesAgeFilter(player)) return;
 
-                // MODIFIED: Accumulate minutes played.
+                // Accumulate minutes played.
                 playerMinutesPlayed[player.player] = (playerMinutesPlayed[player.player] || 0) + (player.minutes || 0);
 
                 if (player.position) {
                     playerPositions[player.player] = player.position;
                 }
 
-                // NEW: Store extra field values for this player
+                // Store extra field values for this player
                 if (!playerExtraFields[player.player]) {
                     playerExtraFields[player.player] = {};
                 }
                 EXTRA_FIELDS.forEach(field => {
-                    // This check makes sure we store 'nationality' and other fields if they are in EXTRA_FIELDS
+                    // This check makes sure we store 'nationality', 'age' and other fields if they are in EXTRA_FIELDS
                     if (player[field] !== undefined) { 
                         playerExtraFields[player.player][field] = player[field];
                     }
@@ -210,7 +248,7 @@ function processGoalsData(filePaths, FIELDS, COUNT, MIN_FULL_MATCHES_EQUIVALENT,
             });
         }
 
-        // MODIFIED: Build the array from all players who have played any minutes.
+        // Build the array from all players who have played any minutes.
         let playersArray = Object.keys(playerMinutesPlayed).map(name => {
             const totalMinutes = playerMinutesPlayed[name];
             const cumulativeValue = cumulativeValues[name] || 0;
@@ -226,12 +264,12 @@ function processGoalsData(filePaths, FIELDS, COUNT, MIN_FULL_MATCHES_EQUIVALENT,
             return {name,
                 value: displayValue,
                 cumulativeValue: cumulativeValue,
-                totalMinutes: totalMinutes, // MODIFIED: Track total minutes
+                totalMinutes: totalMinutes,
                 finalTotal: finalTotals[name] || 0
             };
         });
 
-        // MODIFIED: Filter by MIN_MINUTES instead of MIN_MATCHES
+        // Filter by MIN_MINUTES instead of MIN_MATCHES
         if (VALUE_TYPE === "average") {
             playersArray = playersArray.filter(player => player.totalMinutes >= MIN_MINUTES);
         }
@@ -280,7 +318,7 @@ function processGoalsData(filePaths, FIELDS, COUNT, MIN_FULL_MATCHES_EQUIVALENT,
     return frames;
 }
 
-// --- Your existing usage code remains the same ---
+// --- Your existing usage code with age filter added ---
 
 // Example usage:
 const filePaths = [
@@ -298,23 +336,32 @@ const FIELDS = METRIC_WEIGHTS.goals
 // Alternative format (backwards compatible):
 // const FIELDS = ["sca", "progressive_carries", "assists"]; // All have weight = 1 
 const COUNT = 10;
-// NEW: Define the minimum number of FULL 90-MINUTE MATCHES a player must have played.
+// Define the minimum number of FULL 90-MINUTE MATCHES a player must have played.
 // The script will calculate the total minute requirement (e.g., 15 * 90 = 1350 minutes).
 const FULL_MATCHES = 0; 
 const VALUE_TYPE = "aggregate"; 
 const POSITION_FILTER = [];
-// NEW: Optional nationality filter. Assumes your data has a `nationality` field with 3-letter codes (e.g., "FRA", "ENG").
+// Optional nationality filter. Assumes your data has a `nationality` field with 3-letter codes (e.g., "FRA", "ENG").
 // Use an empty array [] or null for no filter.
 // const NATIONALITY_FILTER = ["BRA", "ARG", "URU", "COL", "PER", "VEN", "ECU", "BOL", "PAR", "CHI"];
 const NATIONALITY_FILTER = [];
-// NEW: Optional player name filter - if empty array or null, no filter is applied
-const PLAYER_NAME_FILTER = ["Kylian Mbappé", "Mohamed Salah", "Robert Lewandowski", "Cristiano Ronaldo", "Harry Kane"]; 
-// NEW: Extra fields to include in output (beyond name and value).
-// You can add 'nationality' here if you want it in the final JSON output.
-const EXTRA_FIELDS = ["nationality"]; 
+// Optional player name filter - if empty array or null, no filter is applied
+const PLAYER_NAME_FILTER = []; 
 
-// MODIFIED: Pass the new nationality_FILTER parameter to the function
-const frames = processGoalsData(filePaths, FIELDS, COUNT, FULL_MATCHES, POSITION_FILTER, NATIONALITY_FILTER, VALUE_TYPE, PLAYER_NAME_FILTER, EXTRA_FIELDS);
+// NEW: Age filter configuration - set min and/or max age
+// Examples:
+// const AGE_FILTER = { min: 21, max: 30 }; // Players between 21-30 years old
+// const AGE_FILTER = { min: 25 }; // Players 25 and older
+// const AGE_FILTER = { max: 23 }; // Players 23 and younger
+// const AGE_FILTER = null; // No age filter
+const AGE_FILTER = { min: 21, max: 30 }; // Example: only players between 21-30
+
+// Extra fields to include in output (beyond name and value).
+// You can add 'nationality' and 'age' here if you want them in the final JSON output.
+const EXTRA_FIELDS = ["nationality", "age"]; 
+
+// MODIFIED: Pass the new AGE_FILTER parameter to the function
+const frames = processGoalsData(filePaths, FIELDS, COUNT, FULL_MATCHES, POSITION_FILTER, NATIONALITY_FILTER, VALUE_TYPE, PLAYER_NAME_FILTER, EXTRA_FIELDS, AGE_FILTER);
 
 // Optional: Save processed data to file
 fs.writeFileSync('./scripts/data/multi_league_final.json', JSON.stringify(frames, null, 2));
@@ -333,7 +380,7 @@ const allPlayers = new Set();
 frames.forEach(frame => frame.data.forEach(player => allPlayers.add(player.name)));
 console.log(`Total unique players across all frames (respecting filters): ${allPlayers.size}`);
 
-// MODIFIED: Update logging for average mode to show minutes
+// Update logging for average mode to show minutes
 if (VALUE_TYPE === "average") {
     console.log('\nAverage mode statistics:');
     const lastFrame = frames[frames.length - 1];
