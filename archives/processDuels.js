@@ -43,8 +43,8 @@ function createHeadToHeadComparison() {
     console.log(`Using most recent ${minGames} games for comparison`);
     
     // Take the most recent games for both players
-    const recentMessiGames = messiGames.slice(-minGames);
-    const recentRonaldoGames = ronaldoGames.slice(-minGames);
+    const recentMessiGames = messiGames.slice(0,minGames);
+    const recentRonaldoGames = ronaldoGames.slice(0,minGames);
     
     // Create the final comparison data with accumulated goals
     const comparisonData = [];
