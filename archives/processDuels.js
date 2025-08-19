@@ -15,6 +15,7 @@ function processPlayerData() {
             messiGames.push({
                 matchNumber: matchKey,
                 goals: messiData.goals || 0, // assuming goals field exists
+                assists: messiData.assists || 0, // assuming goals field exists
                 date: messiData.date || matchKey
             });
         }
@@ -25,6 +26,7 @@ function processPlayerData() {
             ronaldoGames.push({
                 matchNumber: matchKey,
                 goals: ronaldoData.goals || 0,
+                assists: ronaldoData.assists || 0,
                 date: ronaldoData.date || matchKey
             });
         }
@@ -52,8 +54,8 @@ function createHeadToHeadComparison() {
     let ronaldoAccumulated = 0;
     
     for (let i = 0; i < minGames; i++) {
-        messiAccumulated += recentMessiGames[i].goals;
-        ronaldoAccumulated += recentRonaldoGames[i].goals;
+        messiAccumulated += recentMessiGames[i].goals + recentMessiGames[i].assists;
+        ronaldoAccumulated += recentRonaldoGames[i].goals + recentRonaldoGames[i].assists;
         
         comparisonData.push({
             date: `Game ${i + 1}`, // or use actual dates if available
